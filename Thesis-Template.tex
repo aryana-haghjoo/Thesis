@@ -224,7 +224,7 @@ Where $x_i$ is the observed data, $\mu_i$ is the expected value with respect to 
     \label{eq:chi-square matrix}
 \end{gather}
 Where d is the array containing the data points.\par
-We continue by calculating the first two derivatives of the above expression, leading to the construction of the gradient decent model.
+We continue by calculating the first two derivatives of the above expression, leading to the construction of the gradient decent method.
 \begin{gather}
         \frac{d \chi^2}{dm} = - (\frac{dA(m)}{dm})^T N^{-1} (d-A(m)) - (d-A(m))^T N^{-1} \frac{dA(m)}{dm} \label{eq:csq_first_deriv}
 \end{gather}
@@ -290,16 +290,15 @@ A flow chart summary of this method is shown in \ref{fig:LM_flow}. The Python co
 \end{figure}
 %--------------------------------------------------------------------------------
 \section{Markov Chain Monte Carlo (MCMC)}
-Talk about the acceptance ratio\par
 Given that Levenberg-Marquardt (LM) is not always effective in finding the best-fit point for complex likelihood spaces, a more powerful algorithm such as Markov Chain Monte Carlo (MCMC) is necessary in many real-life applications. \par
 MCMC is particularly effective in fitting non-Gaussian likelihood spaces and has a guaranteed convergence, regardless of the starting point in parameter space. However, the algorithm is computationally heavy due to its iterative process, which is based on the evaluation of chi-square on each step. Initially, an arbitrary point in parameter space is given to MCMC as its initial trial step and the associated chi-square is calculated. Then, a random point is drawn from a Gaussian distribution, where the mean is set at the last point in the chain \footnote{In Python applications, the numpy.randn function is used to serve this purpose.}. Subsequently, the new chi-square is compared to the previous one from the last trial step. If the new chi-square is lower, the new trial point is accepted in the chain. If the new chi-square is higher, the trial point is accepted with a probability determined by a specific criterion.\par
 The above-mentioned probability threshold is typically defined as:
 \begin{equation}
     Probability = e^{\frac{-1}{2}(\chi_{new}^2 - \chi^2)}
 \end{equation}
-Which again has Gaussian insights.par
-As a measure of MCMC performance, the acceptance ratio is used to determine the fraction of trial steps that are accepted into the chain. An ideal MCMC would typically have an acceptance ratio of 25 percent. However, if the acceptance ratio is lower than this, the MCMC can still converge, but it will require more trial steps.
-A visual summary of MCMC is shown in \ref{fig:MCMC_flow}, and the Python code is available at \ref{chap:appendix,sub:MCMC}.
+Which again has Gaussian insights.\par
+As a measure of MCMC performance, the acceptance ratio is used to determine the fraction of trial steps that end up getting accepted into the chain. An ideal MCMC would typically have an acceptance ratio of 25 percent. However, even with a lower acceptance ratio, the MCMC can still converge, but it will require more trial steps.\par
+A visual summary of MCMC algorithm is shown in \ref{fig:MCMC_flow}, and the Python code is available at \ref{chap:appendix,sub:MCMC}.
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.9]{MCMC_flow.png}
@@ -309,7 +308,7 @@ A visual summary of MCMC is shown in \ref{fig:MCMC_flow}, and the Python code is
 %-----------------------------------------------------------------------------
 \subsection{Convergence Test}
 The MCMC algorithm is designed to explore different regions of the parameter space in order to reach convergence. Various methods have been developed to ensure that the MCMC has converged, one of which is to check the power spectrum.\par
-The power spectrum represents the distribution of power at different frequencies in the MCMC chain. A converged MCMC chain must have the behaviour of a white noise, with power uniformly distributed among all frequencies. On the other hand, an unconverged chain will show more power at lower frequencies compared to higher ones. Therefore, the criterion for checking the convergence of an MCMC chain is the flatness of the power spectrum in low frequencies when plotted on a log-log scale. \ref{fig:MCMC_unconverged} and \ref{fig:MCMC_converged} illustrates the difference between a converged and an unconverged chain.\par
+The power spectrum represents the distribution of power at different frequencies in the MCMC chain. A converged MCMC chain must have the behaviour of a white noise, with power uniformly distributed among all frequencies. On the other hand, an unconverged chain will show more power at lower frequencies compared to higher ones. Therefore, the criterion for checking the convergence of an MCMC chain is the flatness of the power spectrum in low frequencies when plotted on a log-log scale. Figure \ref{fig:MCMC_unconverged} and \ref{fig:MCMC_converged} illustrates the difference between a converged and an unconverged chain.\par
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.9]{mcmc_uncoverged.jpg}
@@ -330,8 +329,8 @@ We previously discussed that parameters of a model might be correlated (\ref{cha
 Since the covariance matrix of these samples is already in hand, we are able to easily generate a set of correlated noise samples. The procedure to do so is described in the following section.\par
 \subsection{Generating correlated noise}
 \label{chap:method,sub:correlated noise}
-As discussed before, the off-diagonal elements of a covariance matrix correspond to the inverse of covariance between each pair of parameters. Thus, if we draw samples from the inverse of covariance matrix (which needs to be calculated at the point of best-fit"), you are essentially sampling from the multivariate normal distribution with the deviation values describing the uncertainties in the parameters.\par
-The equivalent methods can be used to generate correlated noise: Cholesky and eigenvalue decomposition\footnote{Normally, calculating the Cholesky decomposition takes a shorter amount of time}. For practical reasons, we prefer to use the eigenvalue decomposition. The procedure is a s follows: A matrix of normal gaussian-drawn random variables is constructed in the desired shape ($n \times m$, corresponding to the number of samples and number of parameters respectively). Then, it is multiplied by the eigenvalue matrix and scaled by the square root of the eigenvalues. The transpose of the product will give us the correlated samples. \par
+As discussed before, the off-diagonal elements of a covariance matrix correspond to the inverse of covariance between each pair of parameters. Thus, if we draw samples from the inverse of covariance matrix (which needs to be calculated at the point of "best-fit"), you are essentially sampling from the multivariate normal distribution with the deviation values describing the uncertainties in the parameters.\par
+The equivalent methods can be used to generate correlated noise: Cholesky and eigenvalue decomposition\footnote{Normally, calculating the Cholesky decomposition takes a shorter amount of time}. For practical reasons, we prefer to use the eigenvalue decomposition for 21cm applications. The procedure is a s follows: A matrix of normal gaussian-drawn random variables is constructed in the desired shape ($n \times m$, corresponding to the number of samples and number of parameters respectively). Then, it is multiplied by the eigenvalue matrix and scaled by the square root of the eigenvalues. The transpose of the product will give us the correlated samples. \par
 To gain more precision, is it possible to use the eigenvalues decomposition of the normalized covariance matrix (where diagonal samples all equal unity). The normalization process is done by multiplying the covariance matrix with its own diagonal. Eventually, the drawn samples need to be scaled by the square root of the diagonal matrix.\par
 The Python implementation of the above-mentioned procedure is given in \ref{chap:appendix,sub:draw}, and the flowchart is shown in \ref{fig:combined_flow}.
 \begin{figure}[h!]
@@ -341,7 +340,7 @@ The Python implementation of the above-mentioned procedure is given in \ref{chap
 \label{fig:combined_flow}
 \end{figure}
 \section{Testing the Algorithm}
-The complicated algorithm described in the previous sections, does not always behave as expected. Thus, naturally, one seeks options to weigh the output. In sections \ref{chap:method,sub:test,subsub:chi}, \ref{chap:method,sub:test,subsub:plot}, we introduce two methods to measure the overall quality of the model fitting.\par
+The complicated algorithm described in the previous sections, does not always behave as expected. Thus, naturally, one seeks options to weigh the output. In sections \ref{chap:method,sub:test,subsub:chi} and \ref{chap:method,sub:test,subsub:plot}, we introduce two methods to measure the overall quality of the model fitting.\par
 \subsection{The chi-square test}
 \label{chap:method,sub:test,subsub:chi}
 This method is more focused on inspecting the output of LM and drawn samples. A large number of samples are drawn from the covariance matrix and the corresponding chi-squares are calculated. Since the covariance matrix describes the uncertainties in the parameters, we expect that the average difference in the chi-square statistics for two different samples should be of order unity per each parameter. This comes from the fact that the chi-square statistic scales with the uncertainties in the data and model, which are typically of order 1.\par
