@@ -109,7 +109,7 @@
 			Montr\'eal, Qu\'ebec, Canada
 			
 			\vspace{5mm}
-			August 15, 2023
+			August 2023
 			\small
 			\vspace{0.5cm}
 			{\color{red} \hrule height 0.75mm}
@@ -170,14 +170,36 @@ I also do not want to forget the huge impact of help of my two favorite Persian 
 	% start of mainmatter
 %###########################################################
 \chapter{Introduction}
+\label{chap:intro}
+Reminder: The preface can be expanded, I should come back to writing this chapter after I am done with chapter 2 and 3. I guess it would help to have some addressing of those information here. \par
+21cm cosmology in a relatively new opened window in the study of universe during its early states. It has been proven to be one of the only available probes of large-scale structure in the most distant reaches of the universe\cite{primordial_universe}.\par
+In this chapter we will talk bout the importance of this signal and its applications. Then, we will describe the motivations of this research to clarify the effects non-standard physics on this signal. Although this signal can be studied in various forms (e.g. power spectrum, fluctuations, global signal, and etc.), we will only focus on the global 21cm signal.\par
+Finally, in the last section of this chapter, we will briefly go over all the materials provided in this thesis.\par
 %-----------------------------------------------------------
 \section{Background and motivation}
+Reminder: needs rephrasing\par
+During the very early states of the universe, when there were not yet any galaxies or stars, the universe was composed of huge clouds of gas (mostly from hydrogen and helium) and the remaining photons from the big bang which we call cosmic microwave background (CMB). \par
+Neutral hydrogen has a special spin-flip transition in its ground state which results in absorption or emission of a radio signal with the wavelength of 21cm. When the CMB photons redshift through time, there comes a period when they reach wavelengths of approximately 21cm. During this period, hydrogen molecules are able to absorb CMB photons (which we will later recall as coupling of $T_s$ with $T_k$). This process (which changes the brightness temperature of 21cm signal), happens roughly during the dark ages/epoch of reionization. This change in the brightness temperature ($T_b$) can be detected through precise observation using radio telescopes. These observations are capable of giving us valuable information about the distribution of neutral hydrogen and evolution of cosmic structure over time\cite{low_frequency}\par.
+The global 21cm signal is the average over the brightness temperature of 21cm signal across the entire sky. It is a measure of overall state of intergalactic medium (IGM) which might present as absorption or emission during different redshits. Global 21cm signal can give us information about the temperature, density and reionization state of IGM in the early universe. These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}\par.
+Moreover, the global 21cm signal is a Strong probe for non-standard physics during the dark ages. It can show effects dark matter/dark energy, existence of cosmic strings, and etc. These effects will be discussed more in \ref{chap:global21cm,sub:non_standard}.\par
 %-----------------------------------------------------------
 \section{Research questions and objectives}
+Reminder: citations, rephrasing \par
+The effects of non-standard physics in 21cm signal has gained lots of attraction in the recent literature (cite). However, most of the reported effects has been investigated only using analytical methods, regardless of the observational data.\par
+We aim to fill this research gap by probing these effects using semi-analytical simulations of the global 21cm signal. By having the recent released data in hand (cite edges) and comparing them to theoretical simulated data (cite ares), we first estimate the physical parameters of these models assuming only the standard physics. \par
+In future studies, we will upgrade our simulator to include arbitrary non-standard effects. We will again fit our upgraded theoretical model to the observational data to check if any of the best-fit physical parameters show patterns of change.
 %-----------------------------------------------------------
 \section{Overview of the thesis}
+Reminder: citations, rephrasing\par
+This thesis consists of two major sections: the literature review and the research.\par
+The literature review:\par
+In chapter \ref{chap:global21cm}, we first talk about the global 21cm signal and the physical theory behind it. we will explain each bump in the plot. In section \ref{chap:global21cm,sub:non_standard}, we explore the effects of non-standard physics on global 21cm signal mentioned in the literature. Finally, in section \ref{chap:global21cm,sub:parameter_estimation}, we talk about the importance of estimating the parameters of this signal and how these estimations affects future proposed observations. Furthermore, we briefly talk about different methods used to serve this purpose and advantages of each one.\par
+In chapter \ref{chap:observations} we will briefly introduce all of the past, present and future observational project who aim to detect the global 21cm signal. From all these experiments, we will specifically talk about two of them in detail.\par
+The research:\par
+In the research half of this thesis, we will talk about the parameter estimation of global 21cm signal. The specific method used in this this study is described in chapter \ref{chap:param_estimate} in detail. The results of using this method to fit the edges data are shown in chapter \ref{chap:results}. Finally, in chapter \ref{chap:discussion}, we talk interpret the results and talk the implications of these results for cosmology and astrophysics. Also, the limitations and the future prospective of the project is mentioned in this chapter.\par
 %###########################################################
 \chapter{The Global 21cm Signal}
+\label{chap:global21cm}
 %-----------------------------------------------------------
 \section{Theoretical basis and physical principles of the Global 21cm Signal}
 %-----------------------------------------------------------
@@ -186,13 +208,17 @@ I also do not want to forget the huge impact of help of my two favorite Persian 
 \subsection{21cmFast}
 %------------------------------------------------------------
 \section{Effects of non-standard physics on the global 21cm signal}
+\label{chap:global21cm,sub:non_standard}
 \subsection{Cosmic Strings}
 \subsection{Dark Matter}
 \subsection{Other non-standard effects}
 \section{Parameter estimation of global 21cm signal}
 \label{chap:global21cm,sub:parameter_estimation}
+\subsection{Machine Learning}
+\subsection{MCMC}
 %##############################################################
 \chapter{Observations of the Global 21cm Signal}
+\label{chap:observations}
 %--------------------------------------------------------------
 \section{Experiment to Detect the Global EoR Signature (EDGES)}
 \subsection{error bars and foreground removal}
@@ -201,6 +227,7 @@ I also do not want to forget the huge impact of help of my two favorite Persian 
 \section{The Shaped Antenna to measure the background Radio Spectrum (SARAS)}
 %#################################################################
 \chapter{Parameter Estimation Methods}
+\label{chap:param_estimate}
 Reminder: The chapter preface still needs to improve. The reason for choosing MCMC rather than ML methods is not correct and require revision. \par
 We briefly discussed the parameter estimation and model fitting of global 21cm in \ref{chap:global21cm,sub:parameter_estimation}. Various computational algorithms, including machine learning and neural networks (cite relevant sources), have been used to accomplish this task. While neural networks have been shown to be effective, one drawback is the lack of clear physical interpretation of the resulting parameter values. In contrast, sampling algorithms like Markov chain Monte Carlo (MCMC), which preserve the basis vectors of the parameter space, can overcome this limitation. The parameters used in these methods are directly linked to the underlying physical mechanisms of the model.\par
 In this chapter, we describe the main fitting algorithm used in our study, which combines Levenberg-Marquardt and MCMC. We explain why we used both of these algorithms for this particular fitting challenge and provide a detailed explanation of how we combined them. We also discuss two different tests that we used to measure the quality of the proposed fit.\par
@@ -366,10 +393,11 @@ Figure \ref{fig:csq_params} demonstrates chi-square vs parameters plots for the 
 \label{chap:results}
 \section{Parameter estimates of EDGES data and uncertainties}
 Talk about the choice of parameters
-talk about the sensivity of the model due to each param
+talk about the sensitivity of the model due to each param
 \section{Comparison with previous studies and observations}
 %-----------------------------------------------------------------------------------------
 \chapter{Discussion and Conclusion}
+\label{chap:discussion}
 \section{Interpretation of the results}
 %\section{Implications for cosmology and astrophysics}
 \section{Summary of the main findings}
