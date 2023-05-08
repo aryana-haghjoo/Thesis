@@ -179,8 +179,8 @@ Finally, in the last section of this chapter, we will briefly go over all the ma
 \section{Background and motivation}
 Reminder: needs rephrasing\par
 During the very early states of the universe, when there were not yet any galaxies or stars, the universe was composed of huge clouds of gas (mostly from hydrogen and helium) and the remaining photons from the big bang which we call cosmic microwave background (CMB). \par
-Neutral hydrogen has a special spin-flip transition in its ground state which results in absorption or emission of a radio signal with the wavelength of 21cm. When the CMB photons redshift through time, there comes a period when they reach wavelengths of approximately 21cm. During this period, hydrogen molecules are able to absorb CMB photons (which we will later recall as coupling of $T_s$ with $T_k$). This process (which changes the brightness temperature of 21cm signal), happens roughly during the dark ages/epoch of reionization. This change in the brightness temperature ($T_b$) can be detected through precise observation using radio telescopes. These observations are capable of giving us valuable information about the distribution of neutral hydrogen and evolution of cosmic structure over time\cite{low_frequency}\par.
-The global 21cm signal is the average over the brightness temperature of 21cm signal across the entire sky. It is a measure of overall state of intergalactic medium (IGM) which might present as absorption or emission during different redshits. Global 21cm signal can give us information about the temperature, density and reionization state of IGM in the early universe. These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}\par.
+Neutral hydrogen has a special spin-flip transition in its ground state which results in absorption or emission of a radio signal with the wavelength of 21cm. When the CMB photons redshift through time, there comes a period when they reach wavelengths of approximately 21cm. During this period, hydrogen molecules are able to absorb CMB photons (which we will later recall as coupling of $T_s$ with $T_k$). This process (which changes the brightness temperature of 21cm signal), happens roughly during the dark ages/epoch of reionization. This change in the brightness temperature ($T_b$) can be detected through precise observation using radio telescopes. These observations are capable of giving us valuable information about the distribution of neutral hydrogen and evolution of cosmic structure over time\cite{low_frequency}.\par
+The global 21cm signal is the average over the brightness temperature of 21cm signal across the entire sky. It is a measure of overall state of intergalactic medium (IGM) which might present as absorption or emission during different redshits. Global 21cm signal can give us information about the temperature, density and reionization state of IGM in the early universe. These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}.\par
 Moreover, the global 21cm signal is a Strong probe for non-standard physics during the dark ages. It can show effects dark matter/dark energy, existence of cosmic strings, and etc. These effects will be discussed more in \ref{chap:global21cm,sub:non_standard}.\par
 %-----------------------------------------------------------
 \section{Research questions and objectives}
@@ -219,12 +219,43 @@ In the research half of this thesis, we will talk about the parameter estimation
 %##############################################################
 \chapter{Observations of the Global 21cm Signal}
 \label{chap:observations}
+List of experiments (reminder: rephrasing):\par
+\begin{enumerate}
+\item EDGES (Experiment to Detect the Global EoR Signature): This was the first experiment to report a detection of the global 21cm signal in 2018, by measuring the absorption of radio waves from distant sources by neutral hydrogen in the intergalactic medium.
+
+\item SARAS (Small Array for Research in Astrophysics of the South): This is a radio telescope located in India that has been used to study the global 21cm signal since 2015.
+
+\item SCI-HI (Small Radio Telescope for Cosmic Hydrogen Intensity Mapping): This is a low-frequency radio telescope located in the United States that was designed to detect the global 21cm signal during the epoch of reionization.
+
+\item BIGHORNS (Broadband Instrument for Global HydrOgen ReioNisation Signal): This is a radio interferometer located in Australia that was designed to detect the global 21cm signal during the epoch of reionization.
+
+\item HERA (Hydrogen Epoch of Reionization Array): This is a radio interferometer located in South Africa that is designed to detect the global 21cm signal during the epoch of reionization and cosmic dawn.
+
+\item Tianlai: This is a radio interferometer located in China that is designed to detect the global 21cm signal during the epoch of reionization and cosmic dawn.
+
+\item Murchison Widefield Array: This is a radio interferometer located in Australia that is used to study the early Universe, including the global 21cm signal.
+
+\item LOFAR (Low-Frequency Array): This is a radio interferometer located in the Netherlands that is used to study a wide range of astrophysical phenomena, including the global 21cm signal.
+\item PRIZM (Polarized Radiometer In Space) is another experiment designed to study the global 21cm signal. It is a small satellite mission developed by NASA's Goddard Space Flight Center in collaboration with the Korean Astronomy and Space Science Institute (KASI).
+
+The PRIZM mission aims to detect the global 21cm signal from the cosmic dawn era using a radiometer operating at a frequency range of 30-50 MHz. The satellite was launched in December 2018 as a secondary payload on a SpaceX Falcon 9 rocket and is in a low-Earth orbit.
+
+PRIZM's scientific goals include measuring the temperature and polarization of the cosmic microwave background radiation, studying the reionization epoch, and detecting the global 21cm signal. It is expected to be the first space-based mission to detect the global 21cm signal and could provide crucial insights into the early Universe.
+These are just a few of the experiments designed to detect the global 21cm signal. Other experiments include the Canadian Hydrogen Intensity Mapping Experiment (CHIME), the Dark Ages Radio Explorer (DARE), and the Square Kilometer Array (SKA).
+\end{enumerate}
+
+
+
+
+
+
+
 %--------------------------------------------------------------
 \section{Experiment to Detect the Global EoR Signature (EDGES)}
 \subsection{error bars and foreground removal}
 \subsection{theoretical model and associated parameters}
 %---------------------------------------------------------------
-\section{The Shaped Antenna to measure the background Radio Spectrum (SARAS)}
+\section{Small Array for Research in Astrophysics of the South (SARAS)}
 %#################################################################
 \chapter{Parameter Estimation Methods}
 \label{chap:param_estimate}
@@ -339,14 +370,14 @@ The power spectrum represents the distribution of power at different frequencies
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.9]{mcmc_uncoverged.jpg}
-\caption{An unconverged MCMC chain (left panel) and its power spectrum (right panel): The power tend to increase in lower frequencies, the chain itself does not indicate the behaviour of white noise, plot from Jonathan Sievers}
+\caption[An unconverged MCMC chain and its power spectrum]{An unconverged MCMC chain (left panel) and its power spectrum (right panel): The power tend to increase in lower frequencies, the chain itself does not indicate the behaviour of white noise, plot from Jonathan Sievers}
 \label{fig:MCMC_unconverged}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.9]{mcmc_converged.jpg}
-\caption{A converged MCMC chain (left panel) and its power spectrum (right panel): Note the flatness on low frequencies, plot from Jonathan Sievers}
+\caption[A converged MCMC chain and its power spectrum]{A converged MCMC chain (left panel) and its power spectrum (right panel): Note the flatness on low frequencies, plot from Jonathan Sievers}
 \label{fig:MCMC_converged}
 \end{figure}
 %------------------------------------------------------------------------------------------------------
@@ -375,7 +406,7 @@ Figure \ref{fig:csq_test} shows an example of the distribution of difference bet
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.9]{chi-sqaure test.jpg}
-\caption{Histogram illustrating the distribution of the values of difference between the chi-squares of drawn samples for a four variable model. The average is 3.97 and the standard deviation is 2.83, in agreement with our expectations. The best-fit parameters is considered as a "good fit".}
+\caption[Histogram of difference in the chi-square values of drawn samples]{Histogram illustrating the distribution of the values of difference between the chi-squares of drawn samples for a four variable model. The average is 3.97 and the standard deviation is 2.83, in agreement with our expectations. The best-fit parameters is considered as a "good fit".}
 \label{fig:csq_test}
 \end{figure}
 \subsection{Chi-Square vs Parameters Plots}
@@ -385,7 +416,7 @@ Figure \ref{fig:csq_params} demonstrates chi-square vs parameters plots for the 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.9]{csq_params.jpg}
-\caption{Plots of the values of chi-square of drawn samples versus the values of parameters for a four variable model. The parabolic behaviour is obvious.}
+\caption[Chi-Square vs parameters plots]{Plots of the values of chi-square of drawn samples versus the values of parameters for a four variable model. The parabolic behaviour is obvious.}
 \label{fig:csq_params}
 \end{figure}
 %-----------------------------------------------------------------------------------------
