@@ -219,7 +219,7 @@ In the research half of this thesis, we will talk about the parameter estimation
 %##############################################################
 \chapter{Observations of the Global 21cm Signal}
 \label{chap:observations}
-List of experiments (reminder: rephrasing):\par
+List of experiments (reminder: rephrasing and citing each of them,  things that I need for each experiment: dipole antenna, location, time frame of results, frequency range):\par
 \begin{enumerate}
 \item EDGES (Experiment to Detect the Global EoR Signature): This was the first experiment to report a detection of the global 21cm signal in 2018, by measuring the absorption of radio waves from distant sources by neutral hydrogen in the intergalactic medium.
 
@@ -383,20 +383,30 @@ The power spectrum represents the distribution of power at different frequencies
 %------------------------------------------------------------------------------------------------------
 \section{Combination of MCMC and LM}
 As mentioned before, MCMC is a computationally heavy algorithm due to its iterative nature. If calculating the chi-square takes a long time on each step, the MCMC itself will have a rather long run time before reaching the converged state. Different methods have been proposed to deal with this issue and help the MCMC to converge faster, one of which is to use the insights from running LM.\par
-We previously discussed that parameters of a model might be correlated (\ref{chap:method,sub:cov_mat}). During a simple MCMC, we are drawing random samples from a gaussian distribution. This samples do not take the possible correlations into account. However, if we generate samples with such characteristics, the probability of them getting accepted into the actual chain is higher. Therefore, this approach (feeding the MCMC with a posterior distribution) will eventually assist the MCMC to explore more efficient regions of parameter space, and converge faster.\par
-Since the covariance matrix of these samples is already in hand, we are able to easily generate a set of correlated noise samples. The procedure to do so is described in the following section.\par
-\subsection{Generating correlated noise}
-\label{chap:method,sub:correlated noise}
-As discussed before, the off-diagonal elements of a covariance matrix correspond to the inverse of covariance between each pair of parameters. Thus, if we draw samples from the inverse of covariance matrix (which needs to be calculated at the point of "best-fit"), you are essentially sampling from the multivariate normal distribution with the deviation values describing the uncertainties in the parameters.\par
-The equivalent methods can be used to generate correlated noise: Cholesky and eigenvalue decomposition\footnote{Normally, calculating the Cholesky decomposition takes a shorter amount of time}. For practical reasons, we prefer to use the eigenvalue decomposition for 21cm applications. The procedure is a s follows: A matrix of normal gaussian-drawn random variables is constructed in the desired shape ($n \times m$, corresponding to the number of samples and number of parameters respectively). Then, it is multiplied by the eigenvalue matrix and scaled by the square root of the eigenvalues. The transpose of the product will give us the correlated samples. \par
-To gain more precision, is it possible to use the eigenvalues decomposition of the normalized covariance matrix (where diagonal samples all equal unity). The normalization process is done by multiplying the covariance matrix with its own diagonal. Eventually, the drawn samples need to be scaled by the square root of the diagonal matrix.\par
-The Python implementation of the above-mentioned procedure is given in \ref{chap:appendix,sub:draw}, and the flowchart is shown in \ref{fig:combined_flow}.
+We previously discussed that parameters of a model might be correlated (\ref{chap:method,sub:cov_mat}). During a simple MCMC, we are drawing random samples from a gaussian distribution. This samples do not take the possible correlations into account. However, if we generate samples with such characteristics, the probability of them getting accepted into the actual chain is higher. Therefore, this approach (feeding the MCMC with a posterior distribution) will eventually assist the MCMC to explore more efficient regions of parameter space, and converge faster. Figure \ref{fig:combined_flow} illustrates this technique briefly.\par
+Since the covariance matrix of these needed samples is already in hand, we are able to easily generate a set of correlated noise samples from that. This procedure is described in the following section.\par
+
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.9]{combined_flow.png}
 \caption{Flow chart of the procedure to combine MCMC and LM}
 \label{fig:combined_flow}
 \end{figure}
+
+\subsection{Generating correlated noise}
+\label{chap:method,sub:correlated noise}
+As discussed before, the off-diagonal elements of a covariance matrix correspond to the inverse of covariance between each pair of parameters. Thus, if we draw samples from the inverse of covariance matrix (which needs to be calculated at the point of "best-fit"), we are essentially sampling from the multivariate normal distribution with the deviation values describing the uncertainties in the parameters\footnote{Figure \ref{fig:corner_plots}, which shows the corner plots for a four-variable gaussian model, emphasizes the importance of sampling from a multivariate normal distribution and taking the correlations between the parameters into account.}.\par
+The equivalent methods can be used to generate correlated noise: Cholesky and eigenvalue decomposition\footnote{Normally, calculating the Cholesky decomposition takes a shorter amount of time.}. For practical reasons, we prefer to use the eigenvalue decomposition for 21cm applications. The procedure is a s follows: A matrix of normal gaussian-drawn random variables is constructed in the desired shape ($n \times m$, corresponding to the number of samples and number of parameters respectively). Then, it is multiplied by the eigenvalue matrix and scaled by the square root of the eigenvalues. The transpose of the product will give us the correlated samples. \par
+To gain more precision, is it possible to use the eigenvalues decomposition of the normalized covariance matrix (where diagonal samples all equal unity). The normalization process is done by multiplying the covariance matrix with its own diagonal. Eventually, the drawn samples need to be scaled by the square root of the diagonal matrix.\par
+The Python implementation of the above-mentioned procedure is given in \ref{chap:appendix,sub:draw}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.6]{corner_plot_chain.png}
+\caption[Corner plots of an MCMC chain]{Corner plots (parameter vs parameter) of a typical MCMC chain imposed on a four-variable gaussian model. The lower right panel clearly shows patterns of correlation between a pair of parameters. Sampling from a multivariate normal distribution based on the covariance matrix of these samples helps taking the correlations between these parameters into account.}
+\label{fig:corner_plots}
+\end{figure}
+
 \section{Testing the Algorithm}
 The complicated algorithm described in the previous sections, does not always behave as expected. Thus, naturally, one seeks options to weigh the output. In sections \ref{chap:method,sub:test,subsub:chi} and \ref{chap:method,sub:test,subsub:plot}, we introduce two methods to measure the overall quality of the model fitting.\par
 \subsection{The chi-square test}
@@ -422,9 +432,11 @@ Figure \ref{fig:csq_params} demonstrates chi-square vs parameters plots for the 
 %-----------------------------------------------------------------------------------------
 \chapter{Results and Analysis}
 \label{chap:results}
+Reminder: Talk about the choice of parameters, sensitivity of the model due to each param\par
+As discussed in chapter \ref{chap:global21cm}, 
+\section{Parameter Estimation of an ARES generated curve}
 \section{Parameter estimates of EDGES data and uncertainties}
-Talk about the choice of parameters
-talk about the sensitivity of the model due to each param
+\subsection{error bar calculation}
 \section{Comparison with previous studies and observations}
 %-----------------------------------------------------------------------------------------
 \chapter{Discussion and Conclusion}
