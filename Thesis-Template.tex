@@ -144,11 +144,14 @@ La connaissance de ces paramètres de meilleur ajustement nous aidera à contrai
 \chapter*{Acknowledgements}\markboth{Acknowledgements}{}
 	\label{chap:acknowledgments}
 %	\addcontentsline{toc}{section}{\nameref{chap:acknowledgments}}
-I thank my supervisors, Jonathan Sievers and Oscar Hernandez for their help throughout this project. I thank my dear parents for their ever-lasting support even from thousands of kilometers away. I thank all my new friends in Montreal, with whom I gained a ton of new experiences.\par
-I also want to mention the great help of my therapist at McGill Wellness Hub, Romeo Bidar, whose constant presence was a miracle in my graduate experience journey.\par
-I also do not want to forget the huge impact of help of my two favorite Persian singers, Kamran and Hooman, whose spotify playlist was the reason that I could keep debugging my code. \par
- Last but not least, I want to thank me, for my perseverance and hard work which led to a lot of new experience and a wide insight.\par
- To all the life long doers: you are changing the world every day
+
+
+Revised: 
+I would like to express my gratitude to my supervisors, Jonathan Sievers and Oscar Hernandez, for their invaluable support throughout this project. I am also deeply grateful to my parents for their unwavering support, even from thousands of kilometers away. Additionally, I want to thank my new friends in Montreal for the wonderful experiences we shared.\par
+Furthermore, I would like to acknowledge the significant role that my therapist at McGill Wellness Hub, Romeo Bidar, played in my graduate journey. His constant presence was a true blessing.\par
+I must also mention the immense help that my two favorite Persian singers, Kamran and Hooman, provided through their Spotify playlist, which kept me motivated while debugging my code.\par
+Lastly, I want to acknowledge my own perseverance and hard work, which enabled me to gain new experiences and insights.\par
+ To all the lifelong learners and doers: you are changing the world every day.
  % Start of ToC, LoT, gls
 	\tableofcontents\thispagestyle{plain}
 
@@ -196,7 +199,7 @@ The literature review:\par
 In chapter \ref{chap:global21cm}, we first talk about the global 21cm signal and the physical theory behind it. we will explain each bump in the plot. In section \ref{chap:global21cm,sub:non_standard}, we explore the effects of non-standard physics on global 21cm signal mentioned in the literature. Finally, in section \ref{chap:global21cm,sub:parameter_estimation}, we talk about the importance of estimating the parameters of this signal and how these estimations affects future proposed observations. Furthermore, we briefly talk about different methods used to serve this purpose and advantages of each one.\par
 In chapter \ref{chap:observations} we will briefly introduce all of the past, present and future observational project who aim to detect the global 21cm signal. From all these experiments, we will specifically talk about two of them in detail.\par
 The research:\par
-In the research half of this thesis, we will talk about the parameter estimation of global 21cm signal. The specific method used in this this study is described in chapter \ref{chap:param_estimate} in detail. The results of using this method to fit the edges data are shown in chapter \ref{chap:results}. Finally, in chapter \ref{chap:discussion}, we talk interpret the results and talk the implications of these results for cosmology and astrophysics. Also, the limitations and the future prospective of the project is mentioned in this chapter.\par
+In the research half of this thesis, we will talk about the parameter estimation of global 21cm signal. The specific method used in this this study is described in chapter \ref{chap:method} in detail. The results of using this method to fit the edges data are shown in chapter \ref{chap:results}. Finally, in chapter \ref{chap:discussion}, we talk interpret the results and talk the implications of these results for cosmology and astrophysics. Also, the limitations and the future prospective of the project is mentioned in this chapter.\par
 %###########################################################
 \chapter{The Global 21cm Signal}
 \label{chap:global21cm}
@@ -243,13 +246,6 @@ The PRIZM mission aims to detect the global 21cm signal from the cosmic dawn era
 PRIZM's scientific goals include measuring the temperature and polarization of the cosmic microwave background radiation, studying the reionization epoch, and detecting the global 21cm signal. It is expected to be the first space-based mission to detect the global 21cm signal and could provide crucial insights into the early Universe.
 These are just a few of the experiments designed to detect the global 21cm signal. Other experiments include the Canadian Hydrogen Intensity Mapping Experiment (CHIME), the Dark Ages Radio Explorer (DARE), and the Square Kilometer Array (SKA).
 \end{enumerate}
-
-
-
-
-
-
-
 %--------------------------------------------------------------
 \section{Experiment to Detect the Global EoR Signature (EDGES)}
 \subsection{error bars and foreground removal}
@@ -258,7 +254,7 @@ These are just a few of the experiments designed to detect the global 21cm signa
 \section{Small Array for Research in Astrophysics of the South (SARAS)}
 %#################################################################
 \chapter{Parameter Estimation Methods}
-\label{chap:param_estimate}
+\label{chap:method}
 Reminder: The chapter preface still needs to improve. The reason for choosing MCMC rather than ML methods is not correct and require revision. \par
 We briefly discussed the parameter estimation and model fitting of global 21cm in \ref{chap:global21cm,sub:parameter_estimation}. Various computational algorithms, including machine learning and neural networks (cite relevant sources), have been used to accomplish this task. While neural networks have been shown to be effective, one drawback is the lack of clear physical interpretation of the resulting parameter values. In contrast, sampling algorithms like Markov chain Monte Carlo (MCMC), which preserve the basis vectors of the parameter space, can overcome this limitation. The parameters used in these methods are directly linked to the underlying physical mechanisms of the model.\par
 In this chapter, we describe the main fitting algorithm used in our study, which combines Levenberg-Marquardt and MCMC. We explain why we used both of these algorithms for this particular fitting challenge and provide a detailed explanation of how we combined them. We also discuss two different tests that we used to measure the quality of the proposed fit.\par
@@ -429,16 +425,108 @@ Figure \ref{fig:csq_params} demonstrates chi-square vs parameters plots for the 
 \caption[Chi-Square vs parameters plots]{Plots of the values of chi-square of drawn samples versus the values of parameters for a four variable model. The parabolic behaviour is obvious.}
 \label{fig:csq_params}
 \end{figure}
-%-----------------------------------------------------------------------------------------
+%###################################################################################
 \chapter{Results and Analysis}
 \label{chap:results}
-Reminder: Talk about the choice of parameters, sensitivity of the model due to each param\par
-As discussed in chapter \ref{chap:global21cm}, 
+Reminder: citations for physical explanation of parameters\par
+Chapter \ref{chap:method} carefully described a specific method to fit an experimental data set to its corresponding theoretical model. In this chapter, we are going to impose this method to actual global 21cm curves. We chose to use ARES as our simulator to generate these curves. \par
+As discussed in chapter \ref{chap:global21cm}, the physical model of 21cm curve is dependent on a large number of parameters. However, this model can be effectively described using the following parameters:
+\begin{enumerate}
+    \item \textbf{$N_{lw}$}: Number of photons emitted in the Lyman-Werner band ($11.2-13.6eV$) per baryon of star formation (This parameter is referred to as \emph{pop\_rad\_yield\_0\_} in ARES documentation)
+    \item \textbf{$N_{ion}$}: Mean number of ionizing photons produced per baryon of star formation (This parameter is referred to as \emph{pop\_rad\_yield\_2\_} in ARES documentation)
+    \item \textbf{$f_{esc}$}: Fraction of ionizing photons that escape their host galaxy into the IGM
+    \item \textbf{$f_X$}: High-redshift normalization factor in the relation between X-ray luminosity and SFR
+\end{enumerate}
+Figure \ref{fig:sensivity} shows the effect of changing these parameters on an actual 21cm curve.\par
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.6]{sensivity.png}
+\caption[Behaviour of global 21cm model in reaction to change in four parameter]{Behaviour of ARES-generated global 21cm models with respect to four parameters: \emph{pop\_rad\_yield\_0\_}, \emph{pop\_rad\_yield\_2\_}, $f_{esc}$, and $f_X$. In each panel, the corresponding parameter posses 10 different values and all other parameters are kept at default values by ARES}
+\label{fig:sensivity}
+\end{figure}
+We take the above-mentioned physical parameters as fitting parameters and we try to find their best-fit values and corresponding error-bars.\par
+%-----------------------------------------------------------------------------------
 \section{Parameter Estimation of an ARES generated curve}
+Before using our developed script to fit actual data, we use it to fit a known ARES curve as a verification test. We generate an ARES curve with a fixed set of parameters and we use these curve as the imaginary "data". If the algorithm returns the same parameter values (with in the error-bar range), we can make sure that it is working correctly.\par
+We begin by using the LM and we find inverse of covariance matrix for our chosen combination of parameters:\par
+Parameters:
+\begin{equation}
+\emph{pop\_rad\_yield\_0\_}: 10^4, \quad \emph{pop\_rad\_yield\_2\_}: 10^3,\quad f_{esc}: 0.1,\quad f_X: 0.1 
+\end{equation}
+Inverse of covariance matrix for this set of parameters:
+\begin{equation}
+    \begin{pmatrix}
+    1.64\times 10^{-3} & 1.96 \times 10^{-2} &  -4.39 \times 10^{-7} &  -5.37 \times 10^{-8} \\
+    1.96 \times 10^{-2} &  1.60 \times 10^{1} &  -1.44 \times 10^{-3} &  -5.94 \times 10^{-6} \\
+    -4.39 \times 10^{-7} &  -1.44 \times 10^{-3} &  1.38 \times 10^{-7} &  2.15 \times 10^{-10} \\
+    -5.37 \times 10^{-8} &  -5.94 \times 10^{-6} &  2.15 \times 10^{-10} &  1.38 \times 10^{-11} 
+    \end{pmatrix}
+\end{equation}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.6]{histograms_known_curve.png}
+\caption[Histogram of distribution of samples]{Histogram of distribution of samples before feeding to MCMC}
+\label{fig:histogram_samples_known_curve}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.9]{csq_hist_known_curve.png}
+\caption[Histogram of Chi-Square of drawn samples]{Histogram of Chi-Square of drawn samples}
+\label{fig:csq_hist_known_curve}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.5]{csq_vs_params_knwon_curve.png}
+\caption[Chi-Square of Drawn samples vs parameter values]{Chi-Square of Drawn samples vs parameter values}
+\label{fig:csq_vs_params_knwon_curve}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.5]{csq_vs_params_zoomed_known_curve.png}
+\caption[Chi-Square of Drawn samples vs parameter values, zoomed]{Chi-Square of Drawn samples vs parameter values, zoomed}
+\label{fig:csq_vs_params_zoomed_known_curve}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.9]{csq_trend_knwon_curve.png}
+\caption[Trend of chi-square]{Trend of chi-square}
+\label{fig:csq_trend_knwon_curve}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.5]{power_spectrum_known_curve.png}
+\caption[Power spectrum of the chain]{Power spectrum of the chain}
+\label{fig:power_spectrum_known_curve}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.5]{chain_known_curve.png}
+\caption[Trend of parameters]{Trend of parameters}
+\label{fig:chain_known_curve}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.6]{corner_plots_known_curve.png}
+\caption[Corner plots of the chain]{Corner plots of the chain}
+\label{fig:corner_plots_known_curve}
+\end{figure}
+%------------------------------------------------------------
+\section{Choice of "multiplication factor"}
+%-----------------------------------------------------------------------------------
 \section{Parameter estimates of EDGES data and uncertainties}
 \subsection{error bar calculation}
+%-----------------------------------------------------------------------------------
 \section{Comparison with previous studies and observations}
-%-----------------------------------------------------------------------------------------
+I will write this section after the literature review
+%###################################################################################
 \chapter{Discussion and Conclusion}
 \label{chap:discussion}
 \section{Interpretation of the results}
