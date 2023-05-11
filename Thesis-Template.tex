@@ -27,7 +27,7 @@
 \usepackage{fancyhdr}
 \usepackage{lmodern}
 \usepackage{listings}
-
+\usepackage{diagbox} % for diagonal line command
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}} % Ensure List of Figs, ToC, and glossary are named in the header
 
 \setglossarystyle{long}
@@ -146,7 +146,7 @@ La connaissance de ces paramètres de meilleur ajustement nous aidera à contrai
 %	\addcontentsline{toc}{section}{\nameref{chap:acknowledgments}}
 
 
-Revised: 
+Reminder: name of my friends, my roommates, something in Persian if allowed \par 
 I would like to express my gratitude to my supervisors, Jonathan Sievers and Oscar Hernandez, for their invaluable support throughout this project. I am also deeply grateful to my parents for their unwavering support, even from thousands of kilometers away. Additionally, I want to thank my new friends in Montreal for the wonderful experiences we shared.\par
 Furthermore, I would like to acknowledge the significant role that my therapist at McGill Wellness Hub, Romeo Bidar, played in my graduate journey. His constant presence was a true blessing.\par
 I must also mention the immense help that my two favorite Persian singers, Kamran and Hooman, provided through their Spotify playlist, which kept me motivated while debugging my code.\par
@@ -176,30 +176,27 @@ Lastly, I want to acknowledge my own perseverance and hard work, which enabled m
 \label{chap:intro}
 Reminder: The preface can be expanded, I should come back to writing this chapter after I am done with chapter 2 and 3. I guess it would help to have some addressing of those information here. \par
 21cm cosmology in a relatively new opened window in the study of universe during its early states. It has been proven to be one of the only available probes of large-scale structure in the most distant reaches of the universe\cite{primordial_universe}.\par
-In this chapter we will talk bout the importance of this signal and its applications. Then, we will describe the motivations of this research to clarify the effects non-standard physics on this signal. Although this signal can be studied in various forms (e.g. power spectrum, fluctuations, global signal, and etc.), we will only focus on the global 21cm signal.\par
+In this chapter we will talk bout the importance of this signal and its applications. Then, we will describe the motivations of this research to clarify the effects of non-standard physics on this signal. Although this signal can be studied in various forms (e.g. power spectrum, fluctuations, global signal, and etc.), we will only focus on the global 21cm signal.\par
 Finally, in the last section of this chapter, we will briefly go over all the materials provided in this thesis.\par
 %-----------------------------------------------------------
 \section{Background and motivation}
-Reminder: needs rephrasing\par
-During the very early states of the universe, when there were not yet any galaxies or stars, the universe was composed of huge clouds of gas (mostly from hydrogen and helium) and the remaining photons from the big bang which we call cosmic microwave background (CMB). \par
-Neutral hydrogen has a special spin-flip transition in its ground state which results in absorption or emission of a radio signal with the wavelength of 21cm. When the CMB photons redshift through time, there comes a period when they reach wavelengths of approximately 21cm. During this period, hydrogen molecules are able to absorb CMB photons (which we will later recall as coupling of $T_s$ with $T_k$). This process (which changes the brightness temperature of 21cm signal), happens roughly during the dark ages/epoch of reionization. This change in the brightness temperature ($T_b$) can be detected through precise observation using radio telescopes. These observations are capable of giving us valuable information about the distribution of neutral hydrogen and evolution of cosmic structure over time\cite{low_frequency}.\par
-The global 21cm signal is the average over the brightness temperature of 21cm signal across the entire sky. It is a measure of overall state of intergalactic medium (IGM) which might present as absorption or emission during different redshits. Global 21cm signal can give us information about the temperature, density and reionization state of IGM in the early universe. These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}.\par
-Moreover, the global 21cm signal is a Strong probe for non-standard physics during the dark ages. It can show effects dark matter/dark energy, existence of cosmic strings, and etc. These effects will be discussed more in \ref{chap:global21cm,sub:non_standard}.\par
+Not very long after the big bang, before the formation of stars and galaxies, the universe was composed of huge clouds of gas (mostly from hydrogen and helium) and the remaining photons from the big bang called cosmic microwave background (CMB). \par
+Neutral hydrogen has a special spin-flip transition in its ground state which results in absorption or emission of a radio signal with the wavelength of 21cm. When the CMB photons redshift through expansion of universe, there comes a period when they reach wavelengths close to that of hydrogen intrinsic bands. During this period, hydrogen molecules are able to absorb CMB photons (which later, in chapter \ref{chap:global21cm}, will be recalled as coupling of spin temperature $T_s$ with kinetic temperature of the gas $T_k$). This mechanism happens roughly during the dark ages/epoch of reionization (EoR) and will leave the brightness temperature of 21cm line affected. This change can be detected through precise observation using radio telescopes. These observations are capable of giving us valuable information about the distribution of neutral hydrogen and evolution of cosmic structure over time\cite{low_frequency}.\par
+The global 21cm signal is the average over the brightness temperature of 21cm line across the entire sky. It is a measure of overall state of intergalactic medium (IGM) which might present as absorption or emission in different redshift regions. This radiation is an observational evidence for certain characteristics of the IGM in the early universe (e.g. temperature, density and reionization state). These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}.\par
+Besides all the above-mentioned applications, the global 21cm signal is a \textbf{strong probe for non-standard physics} during the dark ages. It has the potential to shed a light on mysteries surrounding dark matter/dark energy, existence of cosmic strings, and even certain particle interaction (citation) \footnote{These effects will be discussed more in \ref{chap:global21cm,sub:non_standard}}. This capacity of global 21cm signal is the main motivation of this research.\par
 %-----------------------------------------------------------
 \section{Research questions and objectives}
-Reminder: citations, rephrasing \par
+Reminder: citations \par
 The effects of non-standard physics in 21cm signal has gained lots of attraction in the recent literature (cite). However, most of the reported effects has been investigated only using analytical methods, regardless of the observational data.\par
-We aim to fill this research gap by probing these effects using semi-analytical simulations of the global 21cm signal. By having the recent released data in hand (cite edges) and comparing them to theoretical simulated data (cite ares), we first estimate the physical parameters of these models assuming only the standard physics. \par
-In future studies, we will upgrade our simulator to include arbitrary non-standard effects. We will again fit our upgraded theoretical model to the observational data to check if any of the best-fit physical parameters show patterns of change.
+We aim to fill this research gap by probing these effects using semi-analytical simulations of the global 21cm signal. With the recently released data at one's disposal (cite edges), we use certain fitting algorithms to compare them to theoretical simulated models (cite ares). We first estimate the physical parameters of theses curves by only taking the standard physical mechanisms into account.\par
+In future studies, we will upgrade our simulator to include arbitrary non-standard effects. We will again fit the observational data to the upgraded version of theoretical model to check if any of the best-fit physical parameters show patterns of change.\par
 %-----------------------------------------------------------
 \section{Overview of the thesis}
-Reminder: citations, rephrasing\par
-This thesis consists of two major sections: the literature review and the research.\par
-The literature review:\par
-In chapter \ref{chap:global21cm}, we first talk about the global 21cm signal and the physical theory behind it. we will explain each bump in the plot. In section \ref{chap:global21cm,sub:non_standard}, we explore the effects of non-standard physics on global 21cm signal mentioned in the literature. Finally, in section \ref{chap:global21cm,sub:parameter_estimation}, we talk about the importance of estimating the parameters of this signal and how these estimations affects future proposed observations. Furthermore, we briefly talk about different methods used to serve this purpose and advantages of each one.\par
+Reminder: citations\par
+This thesis consists of two major components: the literature review and the research.\par
+The literature review chapters (which go half way through this document), we first talk about the global 21cm signal and the its physical principals in chapter \ref{chap:global21cm}. In section \ref{chap:global21cm,sub:non_standard}, we explore the effects of non-standard physics on global 21cm signal mentioned in the literature. Finally, in section \ref{chap:global21cm,sub:parameter_estimation}, we talk about the importance of estimating the parameters of this signal and how these estimations affects future proposed observations. Furthermore, we briefly talk about different methods used to serve this purpose and advantages of each one.\par
 In chapter \ref{chap:observations} we will briefly introduce all of the past, present and future observational project who aim to detect the global 21cm signal. From all these experiments, we will specifically talk about two of them in detail.\par
-The research:\par
-In the research half of this thesis, we will talk about the parameter estimation of global 21cm signal. The specific method used in this this study is described in chapter \ref{chap:method} in detail. The results of using this method to fit the edges data are shown in chapter \ref{chap:results}. Finally, in chapter \ref{chap:discussion}, we talk interpret the results and talk the implications of these results for cosmology and astrophysics. Also, the limitations and the future prospective of the project is mentioned in this chapter.\par
+In the research half of this thesis, we will talk about the parameter estimation of global 21cm signal. The specific method used in this this study is described in chapter \ref{chap:method} thoroughly. Subsequently, we apply this method to fit the chosen observational data. The results are demonstrated in chapter \ref{chap:results}. Finally, in chapter \ref{chap:discussion}, we interpret the outcome and talk the implications of these results for cosmology and astrophysics. Also, the limitations and the future prospective of the project is mentioned in this chapter.\par
 %###########################################################
 \chapter{The Global 21cm Signal}
 \label{chap:global21cm}
@@ -217,6 +214,8 @@ In the research half of this thesis, we will talk about the parameter estimation
 \subsection{Other non-standard effects}
 \section{Parameter estimation of global 21cm signal}
 \label{chap:global21cm,sub:parameter_estimation}
+talk about different methods used to serve this purpose and advantages of each one\par
+While neural networks have been shown to be effective, one drawback is the lack of clear physical interpretation of the resulting parameter values. In contrast, sampling algorithms like Markov chain Monte Carlo (MCMC), which preserve the basis vectors of the parameter space, can overcome this limitation. The parameters used in these methods are directly linked to the underlying physical mechanisms of the model.
 \subsection{Machine Learning}
 \subsection{MCMC}
 %##############################################################
@@ -255,9 +254,8 @@ These are just a few of the experiments designed to detect the global 21cm signa
 %#################################################################
 \chapter{Parameter Estimation Methods}
 \label{chap:method}
-Reminder: The chapter preface still needs to improve. The reason for choosing MCMC rather than ML methods is not correct and require revision. \par
-We briefly discussed the parameter estimation and model fitting of global 21cm in \ref{chap:global21cm,sub:parameter_estimation}. Various computational algorithms, including machine learning and neural networks (cite relevant sources), have been used to accomplish this task. While neural networks have been shown to be effective, one drawback is the lack of clear physical interpretation of the resulting parameter values. In contrast, sampling algorithms like Markov chain Monte Carlo (MCMC), which preserve the basis vectors of the parameter space, can overcome this limitation. The parameters used in these methods are directly linked to the underlying physical mechanisms of the model.\par
-In this chapter, we describe the main fitting algorithm used in our study, which combines Levenberg-Marquardt and MCMC. We explain why we used both of these algorithms for this particular fitting challenge and provide a detailed explanation of how we combined them. We also discuss two different tests that we used to measure the quality of the proposed fit.\par
+We formerly discussed the parameter estimation and model fitting of global 21cm in \ref{chap:global21cm,sub:parameter_estimation}. Various computational algorithms, including machine learning and neural networks, have been used to accomplish this task. While neural networks have been shown to be effective, certain drawbacks put sampling algorithms like MCMC on an advantaged position for global 21cm applications.\par
+In this chapter, we describe the main fitting algorithm used in our study, which combines Levenberg-Marquardt and MCMC. We explain the reason behind utilzing both of these algorithms for this particular fitting challenge and provide a detailed explanation of the procedure to combine them. We also discuss two different tests used to measure the quality of the proposed fit.\par
 In chapter \ref{chap:results}, we present the results of applying this fitting method to the observed global 21cm curve\footnote{released by the EDGES group} and its corresponding theoretical model\footnote{generated using ARES}.
 %------------------------------------------------------------------
 \section{Levenberg-Marquardt (LM)}
@@ -345,7 +343,7 @@ A flow chart summary of this method is shown in \ref{fig:LM_flow}. The Python co
 %--------------------------------------------------------------------------------
 \section{Markov Chain Monte Carlo (MCMC)}
 Given that Levenberg-Marquardt (LM) is not always effective in finding the best-fit point for complex likelihood spaces, a more powerful algorithm such as Markov Chain Monte Carlo (MCMC) is necessary in many real-life applications. \par
-MCMC is particularly effective in fitting non-Gaussian likelihood spaces and has a guaranteed convergence, regardless of the starting point in parameter space. However, the algorithm is computationally heavy due to its iterative process, which is based on the evaluation of chi-square on each step. Initially, an arbitrary point in parameter space is given to MCMC as its initial trial step and the associated chi-square is calculated. Then, a random point is drawn from a Gaussian distribution, where the mean is set at the last point in the chain \footnote{In Python applications, the numpy.randn function is used to serve this purpose.}. Subsequently, the new chi-square is compared to the previous one from the last trial step. If the new chi-square is lower, the new trial point is accepted in the chain. If the new chi-square is higher, the trial point is accepted with a probability determined by a specific criterion.\par
+MCMC is particularly effective in fitting non-Gaussian likelihood spaces and has a guaranteed convergence, regardless of the starting point in parameter space. However, the algorithm is computationally heavy due to its iterative process, which is based on the evaluation of chi-square on each step. Initially, an arbitrary point in parameter space is given to MCMC as its initial trial step and the associated chi-square is calculated. Then, a random point is drawn from a Gaussian distribution, where the mean is set at the last point in the chain\footnote{In Python applications, the numpy.randn function is used to serve this purpose.}. Subsequently, the new chi-square is compared to the previous one from the last trial step. If the new chi-square is lower, the new trial point is accepted in the chain. If the new chi-square is higher, the trial point is accepted with a probability determined by a specific criterion.\par
 The above-mentioned probability threshold is typically defined as:
 \begin{equation}
     Probability = e^{\frac{-1}{2}(\chi_{new}^2 - \chi^2)}
@@ -404,6 +402,7 @@ The Python implementation of the above-mentioned procedure is given in \ref{chap
 \end{figure}
 
 \section{Testing the Algorithm}
+\label{chap:method,sub:test}
 The complicated algorithm described in the previous sections, does not always behave as expected. Thus, naturally, one seeks options to weigh the output. In sections \ref{chap:method,sub:test,subsub:chi} and \ref{chap:method,sub:test,subsub:plot}, we introduce two methods to measure the overall quality of the model fitting.\par
 \subsection{The chi-square test}
 \label{chap:method,sub:test,subsub:chi}
@@ -439,23 +438,19 @@ As discussed in chapter \ref{chap:global21cm}, the physical model of 21cm curve 
 \end{enumerate}
 Figure \ref{fig:sensivity} shows the effect of changing these parameters on an actual 21cm curve.\par
 
-\begin{figure}[h!]
-\centering
-\includegraphics[scale =0.6]{sensivity.png}
-\caption[Behaviour of global 21cm model in reaction to change in four parameter]{Behaviour of ARES-generated global 21cm models with respect to four parameters: \emph{pop\_rad\_yield\_0\_}, \emph{pop\_rad\_yield\_2\_}, $f_{esc}$, and $f_X$. In each panel, the corresponding parameter posses 10 different values and all other parameters are kept at default values by ARES}
-\label{fig:sensivity}
-\end{figure}
 We take the above-mentioned physical parameters as fitting parameters and we try to find their best-fit values and corresponding error-bars.\par
 %-----------------------------------------------------------------------------------
 \section{Parameter Estimation of an ARES generated curve}
 Before using our developed script to fit actual data, we use it to fit a known ARES curve as a verification test. We generate an ARES curve with a fixed set of parameters and we use these curve as the imaginary "data". If the algorithm returns the same parameter values (with in the error-bar range), we can make sure that it is working correctly.\par
-We begin by using the LM and we find inverse of covariance matrix for our chosen combination of parameters:\par
+We begin by using the LM and we find inverse of covariance matrix for our chosen combination of parameters, which we will later use to generate our correlated samples.\par
 Parameters:
 \begin{equation}
 \emph{pop\_rad\_yield\_0\_}: 10^4, \quad \emph{pop\_rad\_yield\_2\_}: 10^3,\quad f_{esc}: 0.1,\quad f_X: 0.1 
+\label{eq:parameter_values}
 \end{equation}
 Inverse of covariance matrix for this set of parameters:
 \begin{equation}
+\label{eq:cov_mat_known_curve}
     \begin{pmatrix}
     1.64\times 10^{-3} & 1.96 \times 10^{-2} &  -4.39 \times 10^{-7} &  -5.37 \times 10^{-8} \\
     1.96 \times 10^{-2} &  1.60 \times 10^{1} &  -1.44 \times 10^{-3} &  -5.94 \times 10^{-6} \\
@@ -463,59 +458,110 @@ Inverse of covariance matrix for this set of parameters:
     -5.37 \times 10^{-8} &  -5.94 \times 10^{-6} &  2.15 \times 10^{-10} &  1.38 \times 10^{-11} 
     \end{pmatrix}
 \end{equation}
+Now, we are prepared to draws our samples based on method described in \ref{chap:method,sub:correlated noise}. Figure \ref{fig:histogram_samples_known_curve} illustrates the distribution of samples for the above-mentioned four parameters. As a sanity check, we calculate the mean and standard deviation of these distribution. We expect the mean to be close to values of \ref{eq:parameter_values}. Table \ref{tab:samples_mean_known_curve} represents the values of mean and standard deviation, which is in agreement with the expectations.\par
+
+\begin{table}
+\centering
+\caption[Mean and standard deviation of samples]{Mean and standard deviation of samples drawn from the covariance matrix \ref{eq:cov_mat_known_curve}}
+\label{tab:samples_mean_known_curve}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\diagbox{Value}{Parameter} & \emph{pop\_rad\_yield\_0\_} & \emph{pop\_rad\_yield\_2\_} & \emph{$f_{esc}$} & \emph{$f_X$}\\
+\hline
+Mean & $9.99999993 \times 10^{3}$ & $1.00002933 \times 10^{3}$ & $9.99962873 \times 10^{2}$ & $1.00000029 \times 10^{1}$\\
+\hline
+Standard Deviation & $4.08174690 \times 10^{2}$ & $4.03138658 \times 10^{0}$ & $3.74407952 \times 10^{4}$ & $3.72581029 \times 10^{6}$\\
+\hline
+\end{tabular}
+\end{table}
+
+
+In section \ref{chap:method,sub:test}, we introduced two methods to check the algorithm and the quality of fit. Performing the chi-square test on our samples showed that the average difference between the chi-square of drawn samples is 49.20, which we expected to be ~4. Although it is approximately one order of magnitude bigger that the expectations, it can be still considered a good fit.\par
+
+We proceed by performing the second test, which is plotting the values of ch-square of samples versus the parameter values. The results are shown in \ref{fig:csq_hist_known_curve}. In the hypothetical ideal case, We expected to see a parabolic behaviour. Figure \ref{fig:csq_vs_params_zoomed_known_curve} shows the zoomed version of results. We can infer a parabolic behaviour in low values of chi-square.\par
+
+Now that we have our samples, we proceed to run the MCMC chain with them. The overall results of the fit and the final resulting curve are shown in \ref{tab:mcmc_results_known_curve} and \ref{} respectively.
+Figure \ref{fig:chain_known_curve} indicates the white-noise behaviour of parameters throughout the chain which is consistent with our anticipation for a converged chain. We confirm the convergence by looking at the power spectrum in Figure \ref{fig:power_spectrum_known_curve}. Flat behaviour in low frequencies is apparent.\par
 \begin{figure}[h!]
 \centering
-\includegraphics[scale =0.6]{histograms_known_curve.png}
-\caption[Histogram of distribution of samples]{Histogram of distribution of samples before feeding to MCMC}
+\includegraphics[scale =0.6]{sensivity.png}
+\caption[Behaviour of global 21cm model with respect to chosen parameters]{Behaviour of ARES-generated global 21cm models with respect to four parameters: \emph{pop\_rad\_yield\_0\_}, \emph{pop\_rad\_yield\_2\_}, $f_{esc}$, and $f_X$. In each panel, the corresponding parameter posses 10 different values and all other parameters are kept at default values by ARES}
+\label{fig:sensivity}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.5]{histograms_known_curve.png}
+\caption[Histogram of distribution of samples]{Histogram of distribution of samples before feeding to MCMC, The mean of these distributions are consistent with values given in \ref{eq:parameter_values}.}
 \label{fig:histogram_samples_known_curve}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
-\includegraphics[scale =0.9]{csq_hist_known_curve.png}
-\caption[Histogram of Chi-Square of drawn samples]{Histogram of Chi-Square of drawn samples}
+\includegraphics[scale =0.7]{csq_hist_known_curve.png}
+\caption[Histogram of Chi-Square of drawn samples]{Histogram of Chi-Square of drawn samples, the mean is 49.20 with standard deviation of 41.98.}
 \label{fig:csq_hist_known_curve}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.5]{csq_vs_params_knwon_curve.png}
-\caption[Chi-Square of Drawn samples vs parameter values]{Chi-Square of Drawn samples vs parameter values}
+\caption[Chi-Square of Drawn samples vs parameter values]{Chi-Square of Drawn samples versus parameter values for a known ARES curve with four parameters, The parabolic behaviour is not obvious in these plots.}
 \label{fig:csq_vs_params_knwon_curve}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.5]{csq_vs_params_zoomed_known_curve.png}
-\caption[Chi-Square of Drawn samples vs parameter values, zoomed]{Chi-Square of Drawn samples vs parameter values, zoomed}
+\caption[Chi-Square of Drawn samples vs parameter values, zoomed]{Zoomed version of figure \ref{fig:csq_vs_params_knwon_curve}, A weak parabolic behaviour is observed for low values of $\chi^2$.}
 \label{fig:csq_vs_params_zoomed_known_curve}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{table}
 \centering
-\includegraphics[scale =0.9]{csq_trend_knwon_curve.png}
-\caption[Trend of chi-square]{Trend of chi-square}
-\label{fig:csq_trend_knwon_curve}
-\end{figure}
+\caption[Results of fitting a known ARES curve with MCMC chain]{Results of fitting a known ARES curve with MCMC chain}
+\label{tab:mcmc_results_known_curve}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\diagbox{Value}{Parameter} & \emph{pop\_rad\_yield\_0\_} & \emph{pop\_rad\_yield\_2\_} & \emph{$f_{esc}$} & \emph{$f_X$}\\
+\hline
+True values & $1 \times 10^ {4}$ & $1 \times 10^ {3}$ & 0.1 & 0.1\\
+\hline
+Fitted values & $9.99998275 \times 10^ {3}$ & $9.99419824 \times 10^ {2}$ & $1.00025031 \times 10^ {-1}$ & $1.00001169 \times 10^ {-1}$ \\
+\hline
+Error-bar of fit & $3.54171104 \times 10^ {-2}$ & $3.86126208 \times 10^ {0}$& $3.57822431 \times 10^ {-4}$ & $3.39295495 \times 10^ {-6}$ \\
+\hline
+Fitting Error & 0.00013093\% & 0.02645403 \%& 0.01527014\%& 0.00032365\%\\
+\hline
+\end{tabular}
+\end{table}
 
 \begin{figure}[h!]
 \centering
-\includegraphics[scale =0.5]{power_spectrum_known_curve.png}
-\caption[Power spectrum of the chain]{Power spectrum of the chain}
-\label{fig:power_spectrum_known_curve}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[scale =0.5]{chain_known_curve.png}
-\caption[Trend of parameters]{Trend of parameters}
+\includegraphics[scale =0.3]{chain_known_curve.png}
+\caption[Trend of parameters]{Trend of parameters in the MCMC chain, White noise behaviour is considered as a sign of convergence. The acceptance ratio of the chain is $22.12\%.$}
 \label{fig:chain_known_curve}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
+\includegraphics[scale =0.3]{power_spectrum_known_curve.png}
+\caption[Power spectrum of the chain]{Power spectrum of the chain, Flat behaviour in low frequencies is in agreement with results of \ref{fig:chain_known_curve}.}
+\label{fig:power_spectrum_known_curve}
+\end{figure}
+Figure \ref{fig:csq_trend_knwon_curve} and \ref{fig:corner_plots_known_curve} present the trend of values of chi-square throughout the chain and corner plots of parameters.\par
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.6]{csq_trend_knwon_curve.png}
+\caption[Trend of chi-square]{Trend of chi-square in the MCMC chain, The chain seems to have reached an equilibrium state.}
+\label{fig:csq_trend_knwon_curve}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
 \includegraphics[scale =0.6]{corner_plots_known_curve.png}
-\caption[Corner plots of the chain]{Corner plots of the chain}
+\caption[Corner plots of the chain]{Corner plots of the chain indicating the correlation between the parameters specially in the lower left panel}
 \label{fig:corner_plots_known_curve}
 \end{figure}
 %------------------------------------------------------------
