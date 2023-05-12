@@ -131,7 +131,7 @@
 %	\addcontentsline{toc}{section}{\nameref{chap:engAbstract}}
 The global 21cm signal has been used to study the period between the end of the cosmic dark ages and the formation of the first stars and galaxies. \par
 In this study, we explore the potential of this signal to reveal non-standard physics by means of providing a new path to test fundamental physical theories. The 21cm signal is sensitive to the density and temperature of neutral hydrogen in the early universe and the presence of the first stars and galaxies. Therefore, any deviation from the predictions of the standard cosmological model of this signal could indicate the presence of new physics beyond the standard model.\par
-We adopt the Markov Chain Monte Carlo (MCMC) method combined with the Levenberg Marquardt (LM) algorithm to estimate the best-fit physical parameters (e.g., clumping factor, star formation efficiency) of the theoretical 21cm curves. We use the Accelerated Reionization Era Simulations (ARES) to generate models for the global 21-cm signal. Our method is flexible to the choice of parameters from ARES.
+We adopt the Markov Chain Monte Carlo (MCMC) method combined with the Levenberg Marquardt (LM) algorithm to estimate the best-fit physical parameters (e.g., clumping factor, star formation efficiency) of the theoretical 21cm curves. We use the Accelerated Reionization Era Simulations (ARES) to generate models for the global 21-cm signal. Our method is flexible to the choice of parameters from ARES.\par
 The knowledge of these best-fit parameters will help us to constrain future proposed models and set theoretical limits for the precision of upcoming experiments to observe non-standard effects.\par
 
 \chapter*{Abrégé}\markboth{Abrégé}{}
@@ -139,7 +139,7 @@ The knowledge of these best-fit parameters will help us to constrain future prop
 %	\addcontentsline{toc}{section}{\nameref{chap:frAbstract}}
 Le signal global de 21 cm a été utilisé pour étudier la période entre la fin de l'âge sombre cosmique et la formation des premières étoiles et galaxies. \par
 Dans cette étude, nous explorons le potentiel de ce signal pour révéler la physique non standard en fournissant une nouvelle voie pour tester les théories physiques fondamentales. Le signal de 21 cm est sensible à la densité et à la température de l'hydrogène neutre dans l'univers primordial et à la présence des premières étoiles et galaxies. Par conséquent, tout écart par rapport aux prédictions du modèle cosmologique standard de ce signal pourrait indiquer la présence d'une nouvelle physique au-delà du modèle standard.\par
-Nous adoptons la méthode Markov Chain Monte Carlo (MCMC) combinée à l'algorithme de Levenberg Marquardt (LM) pour estimer les paramètres physiques les mieux adaptés (par exemple, facteur d'agrégation, efficacité de formation d'étoiles) des courbes théoriques de 21 cm. Nous utilisons les simulations d'ère de réionisation accélérée (ARES) pour générer des modèles pour le signal global de 21 cm. Notre méthode est flexible au choix des paramètres d'ARES.
+Nous adoptons la méthode Markov Chain Monte Carlo (MCMC) combinée à l'algorithme de Levenberg Marquardt (LM) pour estimer les paramètres physiques les mieux adaptés (par exemple, facteur d'agrégation, efficacité de formation d'étoiles) des courbes théoriques de 21 cm. Nous utilisons les simulations d'ère de réionisation accélérée (ARES) pour générer des modèles pour le signal global de 21 cm. Notre méthode est flexible au choix des paramètres d'ARES.\par
 La connaissance de ces paramètres de meilleur ajustement nous aidera à contraindre les futurs modèles proposés et à fixer des limites théoriques pour la précision des expériences à venir pour observer les effets non standard.\par
 \chapter*{Acknowledgements}\markboth{Acknowledgements}{}
 	\label{chap:acknowledgments}
@@ -482,9 +482,38 @@ We proceed by performing the second test, which is plotting the values of ch-squ
 
 Now that we have our samples, we proceed to run the MCMC chain with them. The overall results of the fit and the final resulting curve are shown in \ref{tab:mcmc_results_known_curve} and \ref{} respectively.
 Figure \ref{fig:chain_known_curve} indicates the white-noise behaviour of parameters throughout the chain which is consistent with our anticipation for a converged chain. We confirm the convergence by looking at the power spectrum in Figure \ref{fig:power_spectrum_known_curve}. Flat behaviour in low frequencies is apparent.\par
+
+
+\begin{table}
+\centering
+\caption[Results of fitting a known ARES curve with MCMC chain]{Results of fitting a known ARES curve with MCMC chain}
+\label{tab:mcmc_results_known_curve}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\diagbox{Value}{Parameter} & \emph{pop\_rad\_yield\_0\_} & \emph{pop\_rad\_yield\_2\_} & \emph{$f_{esc}$} & \emph{$f_X$}\\
+\hline
+True values & $1 \times 10^ {4}$ & $1 \times 10^ {3}$ & 0.1 & 0.1\\
+\hline
+Fitted values & $9.99998275 \times 10^ {3}$ & $9.99419824 \times 10^ {2}$ & $1.00025031 \times 10^ {-1}$ & $1.00001169 \times 10^ {-1}$ \\
+\hline
+Error-bar of fit & $3.54171104 \times 10^ {-2}$ & $3.86126208 \times 10^ {0}$& $3.57822431 \times 10^ {-4}$ & $3.39295495 \times 10^ {-6}$ \\
+\hline
+Fitting Error & 0.00013093\% & 0.02645403 \%& 0.01527014\%& 0.00032365\%\\
+\hline
+\end{tabular}
+\end{table}
+%------------------------------------------------------------
+\section{Choice of "multiplication factor"}
+%-----------------------------------------------------------------------------------
+\section{Parameter estimates of EDGES data and uncertainties}
+\subsection{error bar calculation}
+%-----------------------------------------------------------------------------------
+\section{Comparison with previous studies and observations}
+I will write this section after the literature review
+% -------------------------------------------------------------------------------------
 \begin{figure}[h!]
 \centering
-\includegraphics[scale =0.6]{sensivity.png}
+\includegraphics[scale =0.5]{sensivity.png}
 \caption[Behaviour of global 21cm model with respect to chosen parameters]{Behaviour of ARES-generated global 21cm models with respect to four parameters: \emph{pop\_rad\_yield\_0\_}, \emph{pop\_rad\_yield\_2\_}, $f_{esc}$, and $f_X$. In each panel, the corresponding parameter posses 10 different values and all other parameters are kept at default values by ARES}
 \label{fig:sensivity}
 \end{figure}
@@ -517,35 +546,16 @@ Figure \ref{fig:chain_known_curve} indicates the white-noise behaviour of parame
 \label{fig:csq_vs_params_zoomed_known_curve}
 \end{figure}
 
-\begin{table}
-\centering
-\caption[Results of fitting a known ARES curve with MCMC chain]{Results of fitting a known ARES curve with MCMC chain}
-\label{tab:mcmc_results_known_curve}
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\diagbox{Value}{Parameter} & \emph{pop\_rad\_yield\_0\_} & \emph{pop\_rad\_yield\_2\_} & \emph{$f_{esc}$} & \emph{$f_X$}\\
-\hline
-True values & $1 \times 10^ {4}$ & $1 \times 10^ {3}$ & 0.1 & 0.1\\
-\hline
-Fitted values & $9.99998275 \times 10^ {3}$ & $9.99419824 \times 10^ {2}$ & $1.00025031 \times 10^ {-1}$ & $1.00001169 \times 10^ {-1}$ \\
-\hline
-Error-bar of fit & $3.54171104 \times 10^ {-2}$ & $3.86126208 \times 10^ {0}$& $3.57822431 \times 10^ {-4}$ & $3.39295495 \times 10^ {-6}$ \\
-\hline
-Fitting Error & 0.00013093\% & 0.02645403 \%& 0.01527014\%& 0.00032365\%\\
-\hline
-\end{tabular}
-\end{table}
-
 \begin{figure}[h!]
 \centering
-\includegraphics[scale =0.3]{chain_known_curve.png}
+\includegraphics[scale =0.5]{chain_known_curve.png}
 \caption[Trend of parameters]{Trend of parameters in the MCMC chain, White noise behaviour is considered as a sign of convergence. The acceptance ratio of the chain is $22.12\%.$}
 \label{fig:chain_known_curve}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
-\includegraphics[scale =0.3]{power_spectrum_known_curve.png}
+\includegraphics[scale =0.5]{power_spectrum_known_curve.png}
 \caption[Power spectrum of the chain]{Power spectrum of the chain, Flat behaviour in low frequencies is in agreement with results of \ref{fig:chain_known_curve}.}
 \label{fig:power_spectrum_known_curve}
 \end{figure}
@@ -564,14 +574,56 @@ Figure \ref{fig:csq_trend_knwon_curve} and \ref{fig:corner_plots_known_curve} pr
 \caption[Corner plots of the chain]{Corner plots of the chain indicating the correlation between the parameters specially in the lower left panel}
 \label{fig:corner_plots_known_curve}
 \end{figure}
-%------------------------------------------------------------
-\section{Choice of "multiplication factor"}
-%-----------------------------------------------------------------------------------
-\section{Parameter estimates of EDGES data and uncertainties}
-\subsection{error bar calculation}
-%-----------------------------------------------------------------------------------
-\section{Comparison with previous studies and observations}
-I will write this section after the literature review
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.5]{histograms_edges.png}
+\caption[Histogram of distribution of samples]{Histogram of distribution of samples before feeding to MCMC, The mean of these distributions are consistent with values given in \ref{eq:parameter_values}.}
+\label{fig:histogram_samples_known_curve}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.7]{csq_hist_edges.png}
+\caption[Histogram of Chi-Square of drawn samples]{Histogram of Chi-Square of drawn samples, the mean is 49.20 with standard deviation of 41.98.}
+\label{fig:csq_hist_known_curve}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.5]{csq_vs_params_edges.png}
+\caption[Chi-Square of Drawn samples vs parameter values]{Chi-Square of Drawn samples versus parameter values for a known ARES curve with four parameters, The parabolic behaviour is not obvious in these plots.}
+\label{fig:csq_vs_params_knwon_curve}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.5]{chain_edges.png}
+\caption[Trend of parameters]{Trend of parameters in the MCMC chain, White noise behaviour is considered as a sign of convergence. The acceptance ratio of the chain is $22.12\%.$}
+\label{fig:chain_known_curve}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.5]{power_spectrum_edges.png}
+\caption[Power spectrum of the chain]{Power spectrum of the chain, Flat behaviour in low frequencies is in agreement with results of \ref{fig:chain_known_curve}.}
+\label{fig:power_spectrum_known_curve}
+\end{figure}
+Figure \ref{fig:csq_trend_knwon_curve} and \ref{fig:corner_plots_known_curve} present the trend of values of chi-square throughout the chain and corner plots of parameters.\par
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.6]{csq_trend_edges.png}
+\caption[Trend of chi-square]{Trend of chi-square in the MCMC chain, The chain seems to have reached an equilibrium state.}
+\label{fig:csq_trend_knwon_curve}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.5]{corner_plots_edges.png}
+\caption[Corner plots of the chain]{Corner plots of the chain indicating the correlation between the parameters specially in the lower left panel}
+\label{fig:corner_plots_known_curve}
+\end{figure}
 %###################################################################################
 \chapter{Discussion and Conclusion}
 \label{chap:discussion}
