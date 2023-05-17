@@ -1,0 +1,48 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Background and motivation}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Research questions and objectives}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Overview of the thesis}{4}{section.1.3}%
+\contentsline {chapter}{\numberline {2}The Global 21cm Signal}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Theoretical basis and physical principles of the Global 21cm Signal}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Simulating the global 21cm signal}{7}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}The Accelerated Reionization Era Simulations (ARES)}{7}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}21cmFast}{7}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Effects of non-standard physics on the global 21cm signal}{7}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Cosmic Strings}{7}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Dark Matter}{7}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Other non-standard effects}{7}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Parameter estimation of global 21cm signal}{7}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Machine Learning}{8}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}MCMC}{8}{subsection.2.4.2}%
+\contentsline {chapter}{\numberline {3}Observations of the Global 21cm Signal}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Experiment to Detect the Global EoR Signature (EDGES)}{12}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}error bars and foreground removal}{12}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}theoretical model and associated parameters}{12}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Small Array for Research in Astrophysics of the South (SARAS)}{12}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Parameter Estimation Methods}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Levenberg-Marquardt (LM)}{14}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Covariance Matrix}{15}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Derivation of the Levenberg-Marquardt Algorithm}{17}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Markov Chain Monte Carlo (MCMC)}{19}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Convergence Test}{21}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Combination of MCMC and LM}{21}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Generating correlated noise}{22}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}Testing the Algorithm}{23}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}The chi-square test}{24}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Chi-Square vs Parameters Plots}{24}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {5}Results and Analysis}{32}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Parameter Estimation of an ARES generated curve}{33}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Choice of "multiplication factor"}{38}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Parameter estimates of EDGES data and uncertainties}{38}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}error bar calculation}{38}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.4}Comparison with previous studies and observations}{38}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Discussion and Conclusion}{43}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Interpretation of the results}{43}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Summary of the main findings}{43}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Contributions and significance of the research}{43}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Limitations and future work}{43}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Appendices}{44}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Code snippets and scripts}{44}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Levenberg-Marquardt}{44}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Markov Chain Monte Carlo}{44}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}drawing samples from covariance matrix}{44}{subsection.7.1.3}%

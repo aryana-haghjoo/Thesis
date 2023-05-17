@@ -2,4 +2,23 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Flow chart of Levenberg-Marquardt algorithm\relax }}{25}{figure.caption.7}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Flow chart of MCMC algorithm\relax }}{26}{figure.caption.8}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces An unconverged MCMC chain and its power spectrum}}{27}{figure.caption.9}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces A converged MCMC chain and its power spectrum}}{27}{figure.caption.10}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Flow chart of the procedure to combine MCMC and LM\relax }}{28}{figure.caption.11}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Corner plots of an MCMC chain}}{29}{figure.caption.12}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Histogram of difference in the chi-square values of drawn samples}}{30}{figure.caption.13}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Chi-Square vs parameters plots}}{31}{figure.caption.14}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Behaviour of global 21cm model with respect to chosen parameters}}{35}{figure.caption.16}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Histogram of distribution of samples}}{36}{figure.caption.17}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Histogram of Chi-Square of drawn samples}}{37}{figure.caption.18}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Chi-Square of Drawn samples vs parameter values}}{38}{figure.caption.19}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Chi-Square of Drawn samples vs parameter values, zoomed}}{39}{figure.caption.20}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Trend of parameters}}{40}{figure.caption.22}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Power spectrum of the chain}}{40}{figure.caption.23}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Trend of chi-square}}{41}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Corner plots of the chain}}{42}{figure.caption.25}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }
