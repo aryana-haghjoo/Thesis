@@ -95,9 +95,11 @@
 			
 			\textit{Aryana Haghjoo}
 			
-			\vspace{1.2cm}
+			\vspace{2cm}
 			
-			\includegraphics[width=0.25\textwidth]{mcglogo.png}
+			\includegraphics[width=0.5\textwidth]{McGill_logo.png}
+			
+			\vspace{2cm}
 			
 			\Large
 			Department of Physics
@@ -117,7 +119,7 @@
 			\vspace{0.2cm}
 			
 			A thesis presented for the degree of
-			Masters of Physics
+			\emph{Master's of Science}
 		
 			\copyright\hspace{0.5mm}2023 Author
 			
@@ -133,14 +135,14 @@ The global 21cm signal has been used to study the period between the end of the 
 In this study, we explore the potential of this signal to reveal non-standard physics by means of providing a new path to test fundamental physical theories. The 21cm signal is sensitive to the density and temperature of neutral hydrogen in the early universe and the presence of the first stars and galaxies. Therefore, any deviation from the predictions of the standard cosmological model of this signal could indicate the presence of new physics beyond the standard model.\par
 We adopt the Markov Chain Monte Carlo (MCMC) method combined with the Levenberg Marquardt (LM) algorithm to estimate the best-fit physical parameters (e.g., clumping factor, star formation efficiency) of the theoretical 21cm curves. We use the Accelerated Reionization Era Simulations (ARES) to generate models for the global 21-cm signal. Our method is flexible to the choice of parameters from ARES.\par
 The knowledge of these best-fit parameters will help us to constrain future proposed models and set theoretical limits for the precision of upcoming experiments to observe non-standard effects.\par
-
+La connaissance de ces paramètres les mieux adaptés nous aidera à contraindre les modèles proposés à l'avenir et à fixer des limites théoriques pour la précision des expériences à venir visant à observer des effets non standard.\par
 \chapter*{Abrégé}\markboth{Abrégé}{}
 	\label{chap:frAbstract}
 %	\addcontentsline{toc}{section}{\nameref{chap:frAbstract}}
-Le signal global de 21 cm a été utilisé pour étudier la période entre la fin de l'âge sombre cosmique et la formation des premières étoiles et galaxies. \par
-Dans cette étude, nous explorons le potentiel de ce signal pour révéler la physique non standard en fournissant une nouvelle voie pour tester les théories physiques fondamentales. Le signal de 21 cm est sensible à la densité et à la température de l'hydrogène neutre dans l'univers primordial et à la présence des premières étoiles et galaxies. Par conséquent, tout écart par rapport aux prédictions du modèle cosmologique standard de ce signal pourrait indiquer la présence d'une nouvelle physique au-delà du modèle standard.\par
-Nous adoptons la méthode Markov Chain Monte Carlo (MCMC) combinée à l'algorithme de Levenberg Marquardt (LM) pour estimer les paramètres physiques les mieux adaptés (par exemple, facteur d'agrégation, efficacité de formation d'étoiles) des courbes théoriques de 21 cm. Nous utilisons les simulations d'ère de réionisation accélérée (ARES) pour générer des modèles pour le signal global de 21 cm. Notre méthode est flexible au choix des paramètres d'ARES.\par
-La connaissance de ces paramètres de meilleur ajustement nous aidera à contraindre les futurs modèles proposés et à fixer des limites théoriques pour la précision des expériences à venir pour observer les effets non standard.\par
+Le signal global à 21 cm a été utilisé pour étudier la période entre la fin des âges sombres cosmiques et la formation des premières étoiles et galaxies. \Par
+Dans cette étude, nous explorons le potentiel de ce signal pour révéler la physique non standard en fournissant une nouvelle voie pour tester les théories physiques fondamentales. Le signal de 21 cm est sensible à la densité et à la température de l'hydrogène neutre dans l'univers primitif et à la présence des premières étoiles et galaxies. Par conséquent, tout écart par rapport aux prédictions du modèle cosmologique standard de ce signal pourrait indiquer la présence d'une nouvelle physique au-delà du modèle standard.\par
+Nous adoptons la méthode de Markov Chain Monte Carlo (MCMC) combinée à l'algorithme de Levenberg Marquardt (LM) pour estimer les paramètres physiques les mieux ajustés (par exemple, le facteur d'agglomération, l'efficacité de la formation d'étoiles) des courbes théoriques de 21 cm. Nous utilisons les simulations de l'ère de réionisation accélérée (ARES) pour générer des modèles pour le signal global de 21 cm. Notre méthode est flexible quant au choix des paramètres d'ARES.\par
+
 \chapter*{Acknowledgements}\markboth{Acknowledgements}{}
 	\label{chap:acknowledgments}
 %	\addcontentsline{toc}{section}{\nameref{chap:acknowledgments}}
@@ -149,8 +151,6 @@ La connaissance de ces paramètres de meilleur ajustement nous aidera à contrai
 Reminder: name of my friends, my roommates, something in Persian if allowed \par 
 I would like to express my gratitude to my supervisors, Jonathan Sievers and Oscar Hernandez, for their invaluable support throughout this project. I am also deeply grateful to my parents for their unwavering support, even from thousands of kilometers away. Additionally, I want to thank my new friends in Montreal for the wonderful experiences we shared.\par
 Furthermore, I would like to acknowledge the significant role that my therapist at McGill Wellness Hub, Romeo Bidar, played in my graduate journey. His constant presence was a true blessing.\par
-I must also mention the immense help that my two favorite Persian singers, Kamran and Hooman, provided through their Spotify playlist, which kept me motivated while debugging my code.\par
-Lastly, I want to acknowledge my own perseverance and hard work, which enabled me to gain new experiences and insights.\par
  To all the lifelong learners and doers: you are changing the world every day.
  % Start of ToC, LoT, gls
 	\tableofcontents\thispagestyle{plain}
@@ -181,7 +181,7 @@ Finally, in the last section of this chapter, we will briefly go over all the ma
 %-----------------------------------------------------------
 \section{Background and motivation}
 Not very long after the big bang, before the formation of stars and galaxies, the universe was composed of huge clouds of gas (mostly from hydrogen and helium) and the remaining photons from the big bang called cosmic microwave background (CMB). \par
-Neutral hydrogen has a special spin-flip transition in its ground state which results in absorption or emission of a radio signal with the wavelength of 21cm. When the CMB photons redshift through expansion of universe, there comes a period when they reach wavelengths close to that of hydrogen intrinsic bands. During this period, hydrogen molecules are able to absorb CMB photons (which later, in chapter \ref{chap:global21cm}, will be recalled as coupling of spin temperature $T_s$ with kinetic temperature of the gas $T_k$). This mechanism happens roughly during the dark ages/epoch of reionization (EoR) and will leave the brightness temperature of 21cm line affected. This change can be detected through precise observation using radio telescopes. These observations are capable of giving us valuable information about the distribution of neutral hydrogen and evolution of cosmic structure over time\cite{low_frequency}.\par
+Neutral hydrogen has a special spin-flip transition between two hyperfine split on its ground state which results in absorption or emission of a radio signal with the frequency of 1420MHz corresponding to a wavelength of 21cm. When the CMB photons redshift through expansion of universe, there comes a period when they reach wavelengths close to that of hydrogen intrinsic bands. During this period, hydrogen molecules are able to absorb CMB photons (which later, in chapter \ref{chap:global21cm}, will be recalled as coupling of spin temperature $T_s$ with kinetic temperature of the gas $T_k$). This mechanism happens roughly during the dark ages/epoch of reionization (EoR) and will leave the brightness temperature of 21cm line affected. This change can be detected through precise observation using radio telescopes. These observations are capable of giving us valuable information about the distribution of neutral hydrogen and evolution of cosmic structure over time\cite{low_frequency}.\par
 The global 21cm signal is the average over the brightness temperature of 21cm line across the entire sky. It is a measure of overall state of intergalactic medium (IGM) which might present as absorption or emission in different redshift regions. This radiation is an observational evidence for certain characteristics of the IGM in the early universe (e.g. temperature, density and reionization state). These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}.\par
 Besides all the above-mentioned applications, the global 21cm signal is a \textbf{strong probe for non-standard physics} during the dark ages. It has the potential to shed a light on mysteries surrounding dark matter/dark energy, existence of cosmic strings, and even certain particle interaction (citation) \footnote{These effects will be discussed more in \ref{chap:global21cm,sub:non_standard}}. This capacity of global 21cm signal is the main motivation of this research.\par
 %-----------------------------------------------------------
@@ -200,8 +200,14 @@ In the research half of this thesis, we will talk about the parameter estimation
 %###########################################################
 \chapter{The Global 21cm Signal}
 \label{chap:global21cm}
+As previously mentioned, the global 21cm signal is a new window to extract data and build a better understanding of the early universe. To achieve this goal, we need to carefully construct the physical theory, try to simulate the signal, build radio telescopes to observe it and finally, analyse the observational data and compare them to our theoretical models.\par
+In this chapter, we will present the latest findings about the physical background, simulations and effects of non-standard physics on global 21cm signal. In the last section of this chapter, we will talk about the importance of parameter estimation and its methods.\par
+In chapter \ref{chap:observations}, we will talk about the attempts of observing this signal and foreground removal challenges.\par
 %-----------------------------------------------------------
-\section{Theoretical basis and physical principles of the Global 21cm Signal}
+\section{Theoretical basis and physical principles of the 21cm Signal}
+\subsection{evolution of global 21cm through cosmic history}
+
+
 %-----------------------------------------------------------
 \section{Simulating the global 21cm signal}
 \subsection{The Accelerated Reionization Era Simulations (ARES)}
@@ -238,6 +244,9 @@ List of experiments (reminder: rephrasing and citing each of them,  things that 
 \item Murchison Widefield Array: This is a radio interferometer located in Australia that is used to study the early Universe, including the global 21cm signal.
 
 \item LOFAR (Low-Frequency Array): This is a radio interferometer located in the Netherlands that is used to study a wide range of astrophysical phenomena, including the global 21cm signal.
+
+\item SKA
+\item REACH
 \item PRIZM (Polarized Radiometer In Space) is another experiment designed to study the global 21cm signal. It is a small satellite mission developed by NASA's Goddard Space Flight Center in collaboration with the Korean Astronomy and Space Science Institute (KASI).
 
 The PRIZM mission aims to detect the global 21cm signal from the cosmic dawn era using a radiometer operating at a frequency range of 30-50 MHz. The satellite was launched in December 2018 as a secondary payload on a SpaceX Falcon 9 rocket and is in a low-Earth orbit.
@@ -441,6 +450,7 @@ Figure \ref{fig:sensivity} shows the effect of changing these parameters on an a
 We take the above-mentioned physical parameters as fitting parameters and we try to find their best-fit values and corresponding error-bars.\par
 %-----------------------------------------------------------------------------------
 \section{Parameter Estimation of an ARES generated curve}
+\label{chap:results,sub:known_curve}
 Before using our developed script to fit actual data, we use it to fit a known ARES curve as a verification test. We generate an ARES curve with a fixed set of parameters and we use these curve as the imaginary "data". If the algorithm returns the same parameter values (with in the error-bar range), we can make sure that it is working correctly.\par
 We begin by using the LM and we find inverse of covariance matrix for our chosen combination of parameters, which we will later use to generate our correlated samples.\par
 Parameters:
@@ -504,9 +514,61 @@ Fitting Error & 0.00013093\% & 0.02645403 \%& 0.01527014\%& 0.00032365\%\\
 \end{table}
 %------------------------------------------------------------
 \section{Choice of "multiplication factor"}
+\label{chap:results,sub:m_factor}
 %-----------------------------------------------------------------------------------
 \section{Parameter estimates of EDGES data and uncertainties}
 \subsection{error bar calculation}
+Reminder: not exactly sure where this equation comes from\par
+
+We need to know the error bar of the observational data (EDGES) to run the MCMC chain. These error bars are usually taken from the noise model. In order to make our life easy, instead of dealing with the EDGES noise model which is hard and messy, we use the following straight forward equation which comes from the radiometer equation:\par
+\begin{equation}
+    \frac{\delta T}{T_{sys}} = \frac{1}{\sqrt{Bt}}
+\end{equation}
+Where B is the bandwidth, t is the exposure time and $T_{sys}$ is the system temperature. Assuming the bandwidth of $10^6$, exposure time of one day and and temperature of 3000K, we get:
+$\delta T = 10 ^{-2}K = 10mK$
+\subsection{results}
+We proceed by doing the same procedure as section \ref{chap:results,sub:known_curve}. However, this time we use the EDGES data (with half of the actual amplitude) as our observational data in MCMC. This half amplitude is chosen using the insights from section \ref{chap:results,sub:m_factor}. One of the main issues is that since the shape of the EDGES data is not very close to the predicted theoretical curve, the resulting fit is not very perfect. We first run the LM to find the covariance matrix and generate our samples. 
+\begin{equation}
+\label{eq:cov_mat_edges}
+    \begin{pmatrix}
+    3.24\times 10^{4} & 5.68 \times 10^{6} &  -8.51 \times 10^{2} &  5.65 \times 10^{-1} \\
+    5.68 \times 10^{6} &  2.43 \times 10^{10} &  -3.63 \times 10^{6} &  5.64 \times 10^{0} \\
+    -8.51 \times 10^{2} &  -3.63 \times 10^{6} &  5.44 \times 10^{2} &  -9.80 \times 10^{-4} \\
+    5.65 \times 10^{-1} &  5.64\times 10^{00} &  -9.80\times 10^{-4} &  3.92 \times 10^{-5} 
+    \end{pmatrix}
+\end{equation}
+
+\begin{table}
+\centering
+\caption[Mean and standard deviation of samples]{Mean and standard deviation of samples drawn from the covariance matrix \ref{eq:cov_mat_edges}}
+\label{tab:samples_edges}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\diagbox{Value}{Parameter} & \emph{pop\_rad\_yield\_0\_} & \emph{pop\_rad\_yield\_2\_} & \emph{$f_{esc}$} & \emph{$f_X$}\\
+\hline
+Mean & $4.54933238 \times 10^{3}$ & $2.47654876 \times 10^{3}$ & $3.70006283 \times 10^{-1}$ & $1.36397845 \times 10^{-1}$\\
+
+\hline
+Standard Deviation & $1.81616137 \times 10^{-1}$ & $1.56788160 \times 10^{2}$ & $2.34431702 \times 10^{-2}$ & $6.32705006 \times 10^{-6}$\\
+
+\hline
+\end{tabular}
+\end{table}
+We again run the MCMC from the drawn samples. The results are shown in table \ref{tab:mcmc_results_known_curve}. Figure \ref{fig:csq_trend_knwon_curve} and \ref{fig:corner_plots_known_curve} present the trend of values of chi-square throughout the chain and corner plots of parameters.Figure \ref{fig:csq_trend_knwon_curve} and \ref{fig:corner_plots_known_curve} present the trend of values of chi-square throughout the chain and corner plots of parameters.\par
+\begin{table}
+\centering
+\caption[Results of fitting EDGES data with MCMC chain]{Results of fitting EDGES data with MCMC chain}
+\label{tab:mcmc_results_known_curve}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\diagbox{Value}{Parameter} & \emph{pop\_rad\_yield\_0\_} & \emph{pop\_rad\_yield\_2\_} & \emph{$f_{esc}$} & \emph{$f_X$}\\
+\hline
+Fitted values & $9.99998275 \times 10^ {3}$ & $9.99419824 \times 10^ {2}$ & $1.00025031 \times 10^ {-1}$ & $1.00001169 \times 10^ {-1}$ \\
+\hline
+Error-bar of fit & $3.54171104 \times 10^ {-2}$ & $3.86126208 \times 10^ {0}$& $3.57822431 \times 10^ {-4}$ & $3.39295495 \times 10^ {-6}$ \\
+\hline
+\end{tabular}
+\end{table}
 %-----------------------------------------------------------------------------------
 \section{Comparison with previous studies and observations}
 I will write this section after the literature review
@@ -559,7 +621,6 @@ I will write this section after the literature review
 \caption[Power spectrum of the chain]{Power spectrum of the chain, Flat behaviour in low frequencies is in agreement with results of \ref{fig:chain_known_curve}.}
 \label{fig:power_spectrum_known_curve}
 \end{figure}
-Figure \ref{fig:csq_trend_knwon_curve} and \ref{fig:corner_plots_known_curve} present the trend of values of chi-square throughout the chain and corner plots of parameters.\par
 
 \begin{figure}[h!]
 \centering
@@ -609,7 +670,6 @@ Figure \ref{fig:csq_trend_knwon_curve} and \ref{fig:corner_plots_known_curve} pr
 \caption[Power spectrum of the chain]{Power spectrum of the chain, Flat behaviour in low frequencies is in agreement with results of \ref{fig:chain_known_curve}.}
 \label{fig:power_spectrum_known_curve}
 \end{figure}
-Figure \ref{fig:csq_trend_knwon_curve} and \ref{fig:corner_plots_known_curve} present the trend of values of chi-square throughout the chain and corner plots of parameters.\par
 
 \begin{figure}[h!]
 \centering
@@ -631,9 +691,18 @@ Figure \ref{fig:csq_trend_knwon_curve} and \ref{fig:corner_plots_known_curve} pr
 %\section{Implications for cosmology and astrophysics}
 \section{Summary of the main findings}
 \section{Contributions and significance of the research}
-\section{Limitations and future work}
+\section{Limitations}
+We faced certain limitation while working on this research. Most of those emerged during the implementation of python script. 
+The method described in chapter \ref{chap:method}, is flexible to the change of parameters included in ARES's documentation\footnote{ARES documentation can be found \hyperlink{https://ares.readthedocs.io/en/latest/}{here}}. However, these parameters are only physically meaningful in a limited region of phase space. Going beyond this safe region will result in a failure in calculating the global 21cm curve due to ARES's inability to handle the combination of parameters. The code presented in this thesis is designed to handle this issue and stop it from aborting the whole run \footnote{The MCMC will return an arbitrary large chi-square for those combination of parameters which ARES is unable to handle. Therefore, the probability of these points getting accepted into the chain will be systematically low.}, but the MCMC might not be able to reach convergence if the algorithm faces a lot of samples beyond the allowed region.\par
+Another strongly limiting obstacle is the ARES's run time which is in the order of a few seconds per each simulation (approximately 4 to 5 seconds for different combination of parameters). Given than ARES is computationally heavy, it will make it hard to use algorithms based on using ARES on each iteration \footnote{ As an example, the run time for the MCMC results presented in chapter \ref{chap:results} was approximately 13 hours.}. This was main reason that led us to combine the MCMC with LM in order to have a more efficient chain and guarantee the convergence.\par 
+%----------------------------------------------------------------------------
+\section{Future work}
+As the first step, the developed script is going to be published as a python package in near future. There will be a corresponding paper describing a summary of the results shown in chapter \ref{chap:results}.\par
+We plan to take the analysis further and add some of the previously mentioned non-standard effects to ARES simulations and run the same described method to observe the difference the best-fit curve. The results will hopefully tell us if EDGES observational data is a sign of new physics and can be explained through physics beyond standard cosmological model.\par
+
 %##############################################################################
 \chapter{Appendices}
+\section{Derivation of radiometer equation}
 \section{Code snippets and scripts}	
 \subsection{Levenberg-Marquardt}
 \label{chap:appendix,sub:LM}
