@@ -95,17 +95,20 @@
 			
 			\textit{Aryana Haghjoo}
 			
-			\vspace{2cm}
+			\vspace{1cm}
 			
-			\includegraphics[width=0.5\textwidth]{McGill_logo.png}
+			\includegraphics[width=0.6\textwidth]{McGill_logo.png}
 			
-			\vspace{2cm}
+			\vspace{1cm}
 			
 			\Large
 			Department of Physics
 			
 			\vspace{-5mm}
 			McGill University
+			
+			\vspace{-5mm}
+			Trottier Space Institute
 			
 			\vspace{-5mm}
 			Montr\'eal, Qu\'ebec, Canada
@@ -118,8 +121,8 @@
 			
 			\vspace{0.2cm}
 			
-			A thesis presented for the degree of
-			\emph{Master's of Science}
+			A thesis submitted to McGill University in partial fulfillment of the requirements of the degree of
+			\emph{Master's of Science in Physics}
 		
 			\copyright\hspace{0.5mm}2023 Author
 			
@@ -131,24 +134,30 @@
 \chapter*{Abstract}\markboth{Abstract}{}
 	\label{chap:engAbstract}
 %	\addcontentsline{toc}{section}{\nameref{chap:engAbstract}}
-The global 21cm signal has been used to study the period between the end of the cosmic dark ages and the formation of the first stars and galaxies. \par
-In this study, we explore the potential of this signal to reveal non-standard physics by means of providing a new path to test fundamental physical theories. The 21cm signal is sensitive to the density and temperature of neutral hydrogen in the early universe and the presence of the first stars and galaxies. Therefore, any deviation from the predictions of the standard cosmological model of this signal could indicate the presence of new physics beyond the standard model.\par
-We adopt the Markov Chain Monte Carlo (MCMC) method combined with the Levenberg Marquardt (LM) algorithm to estimate the best-fit physical parameters (e.g., clumping factor, star formation efficiency) of the theoretical 21cm curves. We use the Accelerated Reionization Era Simulations (ARES) to generate models for the global 21-cm signal. Our method is flexible to the choice of parameters from ARES.\par
+The global 21cm signal has emerged as a crucial observable in cosmology and astrophysics, providing valuable insights in the of study of the period between the end of the cosmic dark ages and the formation of the first stars and galaxies.\par
+The 21cm signal is sensitive to the density and temperature of neutral hydrogen in the early universe and the presence of the first stars and galaxies. Therefore, any deviation from the predictions of the standard cosmological model of this signal could indicate the presence of new physics beyond the standard model. In this study, we explore the potential of this signal to reveal non-standard physics by means of providing a new path to test fundamental physical theories. \par
+The literature review  provides a comprehensive overview of the global 21cm signal by exploring the physical principles, simulations, imprints of non-standard effects, parameter estimation, and observation attempts associated with the global 21cm signal. The physical principles encompass the mechanisms involved in forming the global 21cm signal and its evolution through cosmic history. Simulations play a pivotal role in generating models of the global 21cm signal, aiding in understanding the influence of different astrophysical scenarios on the ultimate behaviour of this signal. Furthermore, the effects of non-standard physics on the global 21cm signal are examined, encompassing scenarios such as cosmic strings, exotic particle interactions, or additional dark matter components. Additionally, parameter estimation techniques are discussed, highlighting the methodologies employed to extract valuable astrophysical information from observed 21cm data. The review also delves into the ongoing efforts and challenges in observing the global 21cm signal and complexities of foreground removal.\par
+Ultimately, this thesis focuses on a specific parameter estimation method. We adopt the Markov Chain Monte Carlo (MCMC) method combined with the Levenberg Marquardt (LM) algorithm to estimate the best-fit physical parameters (e.g., clumping factor, star formation efficiency) of the theoretical 21cm curves. We use the Accelerated Reionization Era Simulations (ARES) to generate models for the global 21-cm signal. Our method is flexible to the choice of parameters from ARES.\par
 The knowledge of these best-fit parameters will help us to constrain future proposed models and set theoretical limits for the precision of upcoming experiments to observe non-standard effects.\par
-La connaissance de ces paramètres les mieux adaptés nous aidera à contraindre les modèles proposés à l'avenir et à fixer des limites théoriques pour la précision des expériences à venir visant à observer des effets non standard.\par
-\chapter*{Abrégé}\markboth{Abrégé}{}
+\chapter*{Résumé}\markboth{Résumé}{}
 	\label{chap:frAbstract}
 %	\addcontentsline{toc}{section}{\nameref{chap:frAbstract}}
-Le signal global à 21 cm a été utilisé pour étudier la période entre la fin des âges sombres cosmiques et la formation des premières étoiles et galaxies. \Par
-Dans cette étude, nous explorons le potentiel de ce signal pour révéler la physique non standard en fournissant une nouvelle voie pour tester les théories physiques fondamentales. Le signal de 21 cm est sensible à la densité et à la température de l'hydrogène neutre dans l'univers primitif et à la présence des premières étoiles et galaxies. Par conséquent, tout écart par rapport aux prédictions du modèle cosmologique standard de ce signal pourrait indiquer la présence d'une nouvelle physique au-delà du modèle standard.\par
-Nous adoptons la méthode de Markov Chain Monte Carlo (MCMC) combinée à l'algorithme de Levenberg Marquardt (LM) pour estimer les paramètres physiques les mieux ajustés (par exemple, le facteur d'agglomération, l'efficacité de la formation d'étoiles) des courbes théoriques de 21 cm. Nous utilisons les simulations de l'ère de réionisation accélérée (ARES) pour générer des modèles pour le signal global de 21 cm. Notre méthode est flexible quant au choix des paramètres d'ARES.\par
+Le signal global à 21 cm est devenu une observable cruciale en cosmologie et en astrophysique, fournissant des informations précieuses pour l'étude de la période entre la fin des âges sombres cosmiques et la formation des premières étoiles et galaxies.\par
+
+Le signal à 21 cm est sensible à la densité et à la température de l'hydrogène neutre dans l'univers primitif et à la présence des premières étoiles et galaxies. Par conséquent, tout écart par rapport aux prédictions du modèle cosmologique standard de ce signal pourrait indiquer la présence d'une nouvelle physique au-delà du modèle standard. Dans cette étude, nous explorons le potentiel de ce signal à révéler une physique non standard en fournissant une nouvelle voie pour tester les théories physiques fondamentales. \par
+
+La revue de la littérature fournit une vue d'ensemble du signal global de 21 cm en explorant les principes physiques, les simulations, les empreintes d'effets non standard, l'estimation des paramètres et les tentatives d'observation associées au signal global de 21 cm. Les principes physiques englobent les mécanismes impliqués dans la formation du signal global à 21 cm et son évolution au cours de l'histoire cosmique. Les simulations jouent un rôle essentiel dans la génération de modèles du signal global de 21 cm, aidant à comprendre l'influence de différents scénarios astrophysiques sur le comportement final de ce signal. En outre, les effets de la physique non standard sur le signal global de 21 cm sont examinés, englobant des scénarios tels que les cordes cosmiques, les interactions de particules exotiques ou des composants supplémentaires de matière noire. En outre, les techniques d'estimation des paramètres sont discutées, mettant en évidence les méthodologies employées pour extraire des informations astrophysiques précieuses des données observées à 21 cm. La revue se penche également sur les efforts et les défis en cours dans l'observation du signal global de 21cm et sur les complexités de l'élimination de l'avant-plan.\par
+
+En fin de compte, cette thèse se concentre sur une méthode spécifique d'estimation des paramètres. Nous adoptons la méthode de Monte Carlo par chaîne de Markov (MCMC) combinée à l'algorithme de Levenberg Marquardt (LM) pour estimer les paramètres physiques les mieux ajustés (par exemple, le facteur d'agglomération, l'efficacité de la formation d'étoiles) des courbes théoriques à 21 cm. Nous utilisons les simulations de l'ère de réionisation accélérée (ARES) pour générer des modèles pour le signal global de 21 cm. Notre méthode est flexible quant au choix des paramètres d'ARES.\par
+
+La connaissance de ces paramètres les mieux adaptés nous aidera à contraindre les modèles proposés à l'avenir et à fixer des limites théoriques pour la précision des expériences à venir visant à observer des effets non standard.\par
 
 \chapter*{Acknowledgements}\markboth{Acknowledgements}{}
 	\label{chap:acknowledgments}
 %	\addcontentsline{toc}{section}{\nameref{chap:acknowledgments}}
 
 
-Reminder: name of my friends, my roommates, something in Persian if allowed \par 
+Reminder: name of my friends, my roommates, something in Persian if allowed, computational resources Niagara \par 
 I would like to express my gratitude to my supervisors, Jonathan Sievers and Oscar Hernandez, for their invaluable support throughout this project. I am also deeply grateful to my parents for their unwavering support, even from thousands of kilometers away. Additionally, I want to thank my new friends in Montreal for the wonderful experiences we shared.\par
 Furthermore, I would like to acknowledge the significant role that my therapist at McGill Wellness Hub, Romeo Bidar, played in my graduate journey. His constant presence was a true blessing.\par
  To all the lifelong learners and doers: you are changing the world every day.
@@ -180,10 +189,11 @@ In this chapter we will talk bout the importance of this signal and its applicat
 Finally, in the last section of this chapter, we will briefly go over all the materials provided in this thesis.\par
 %-----------------------------------------------------------
 \section{Background and motivation}
-Not very long after the big bang, before the formation of stars and galaxies, the universe was composed of huge clouds of gas (mostly from hydrogen and helium) and the remaining photons from the big bang called cosmic microwave background (CMB). \par
-Neutral hydrogen has a special spin-flip transition between two hyperfine split on its ground state which results in absorption or emission of a radio signal with the frequency of 1420MHz corresponding to a wavelength of 21cm. When the CMB photons redshift through expansion of universe, there comes a period when they reach wavelengths close to that of hydrogen intrinsic bands. During this period, hydrogen molecules are able to absorb CMB photons (which later, in chapter \ref{chap:global21cm}, will be recalled as coupling of spin temperature $T_s$ with kinetic temperature of the gas $T_k$). This mechanism happens roughly during the dark ages/epoch of reionization (EoR) and will leave the brightness temperature of 21cm line affected. This change can be detected through precise observation using radio telescopes. These observations are capable of giving us valuable information about the distribution of neutral hydrogen and evolution of cosmic structure over time\cite{low_frequency}.\par
-The global 21cm signal is the average over the brightness temperature of 21cm line across the entire sky. It is a measure of overall state of intergalactic medium (IGM) which might present as absorption or emission in different redshift regions. This radiation is an observational evidence for certain characteristics of the IGM in the early universe (e.g. temperature, density and reionization state). These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}.\par
-Besides all the above-mentioned applications, the global 21cm signal is a \textbf{strong probe for non-standard physics} during the dark ages. It has the potential to shed a light on mysteries surrounding dark matter/dark energy, existence of cosmic strings, and even certain particle interaction (citation) \footnote{These effects will be discussed more in \ref{chap:global21cm,sub:non_standard}}. This capacity of global 21cm signal is the main motivation of this research.\par
+Not very long after the big bang, before the formation of stars and galaxies, the universe was composed of huge clouds of gas ($75\%$ hydrogen, the rest helium and small amounts of heavy elements\cite{21century}), and the remaining photons from the big bang called cosmic microwave background (CMB) \cite{map_universe}. \par
+Since neutral hydrogen is the most frequent component of the intergalactic medium (IGM), it provides us a convenient tracer for the behaviour of baryonic matter in the early universe. Neutral hydrogen has a hyperfine splitting on its 1S ground state caused by the interaction between the magnetic moment of the proton and electron ($\Delta E = 5.9 \times 10 ^{-6}eV$\cite{21century}). This spin-flip transition results in absorption or emission of a radio signal with the frequency of $1420.4057MHz$\cite{low_frequency} corresponding to a wavelength of $21.1cm$\cite{21century}\footnote{The existence of this spectral line was theoretically predicted by van de Hulst in 1942 and the first ever detection was reported by Ewen and Purcell in 1951\cite{21century}.}.\par
+When the CMB photons redshift through expansion of universe, there comes a period when they reach wavelengths close to that of hydrogen intrinsic bands. During this period, hydrogen molecules are able to absorb CMB photons (which later, in chapter \ref{chap:global21cm}, will be recalled as coupling of spin temperature $T_s$ with kinetic temperature of the gas $T_k$). This mechanism happens roughly during the dark ages/epoch of reionization (EoR) and will leaves the brightness temperature of 21cm line affected. This change can be detected through precise observation using modern radio interferometers \footnote{As a result of redshift, the 21cm signal reaches frequencies of order 30-200MHz, making it a reachable target for our radio interferometers\cite{low_frequency}}. These observations are capable of giving us valuable information about the distribution of neutral hydrogen and evolution of cosmic structure over time\cite{low_frequency}.\par
+The global 21cm signal is the average over the brightness temperature of 21cm line across the entire sky. It is a measure of overall state of intergalactic medium (IGM) which might present as an excess absorption or emission in different redshift regions. This radiation is an observational evidence for certain characteristics of the IGM in the early universe (e.g. temperature, density and reionization state). These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}.\par
+Besides all the above-mentioned applications, the global 21cm signal is a \textbf{strong probe for non-standard physics} during the dark ages. It has the potential to shed a light on mysteries surrounding dark matter/dark energy, existence of cosmic strings, and even certain particle interaction (citation) \footnote{These effects will be discussed more in \ref{chap:global21cm,sub:non_standard}.}. This capacity of the global 21cm signal is the main motivation of this research.\par
 %-----------------------------------------------------------
 \section{Research questions and objectives}
 Reminder: citations \par
@@ -204,10 +214,19 @@ As previously mentioned, the global 21cm signal is a new window to extract data 
 In this chapter, we will present the latest findings about the physical background, simulations and effects of non-standard physics on global 21cm signal. In the last section of this chapter, we will talk about the importance of parameter estimation and its methods.\par
 In chapter \ref{chap:observations}, we will talk about the attempts of observing this signal and foreground removal challenges.\par
 %-----------------------------------------------------------
-\section{Theoretical basis and physical principles of the 21cm Signal}
-\subsection{evolution of global 21cm through cosmic history}
-
-
+\section{Theoretical basis and physical principles of the 21cm signal}
+\subsection{evolution of global 21cm signal through cosmic history}
+Reminder: read the more precise papers and add the exact redshift ranges \par
+400000 years after the Big Bang, the universe becomes cool enough for subatomic particles to combine and form neutral hydrogen. As a result, baryonic matter experiences thermal decoupling from the CMB, making it possible for the non-relativistic gas to cool adiabatically with the expansion of universe\cite{21century}. The temperature of the gas and CMB drops as $T\propto a^{-2}$ and $T\propto a^{-1}$ respectively\footnote{a is the expansion scale factor}. This rate discrepancy leaves the gas cooler than radiation, while effectively stopping the heat exchange between these two components. As a result, the gas spin temperate decouples from the CMB temperature. Since the gas density is sufficiently high, the effect of collisional coupling becomes significant and force the spin temperature to couple to the gas kinetic temperate ($T_S \rightarrow T_K$). Consequently, the 21cm brightness temperature becomes negative (compared to the CMB background) in the average spectrum corresponding to this redshift\cite{map_universe}.\par
+As the density keeps dropping, the influence of collisional couplings becomes less important, causing the spin temperature to again couple with the CMB temperature ($T_S \rightarrow T_\gamma$). Thus, the 21cm brightness signal goes back to zero again\cite{map_universe}. The first blue regions in the upper panel of figure \ref{fig:global_signal_pritchard_loeb} and corresponding absorption through in the lower panel depict the above-mentioned process.\par
+The second fluctuation in figure \ref{fig:global_signal_pritchard_loeb} is emerged though the formation of first stars and galaxies. As large halos begin to collapse to form first stars and galaxies, they generate $Ly\alpha$ photons through two mechanisms: 1) Continuum radiation redshifted to $Ly\alpha$ wavelength and 2) Ionization and deexcitation of IGM gas. This produced $Ly\alpha$ background, strongly couples the excitation of the 21cm line spin states and the gas spin temperature ($T_S \rightarrow T_K$) through the Wouthuysen-Field effect. Therefore, we will again observe the 21cm absorption through\cite{map_universe}\cite{21century}.\par
+Eventually, the gas is reheated by ionizing x-ray photons from galaxies\cite{21century}, and the 21cm brightness temperature goes back to zero (second absorption through in the lower panel of figure \ref{fig:global_signal_pritchard_loeb}). The influence of this reheating mechanism is such strong that we even expect to observe 21cm emission in this redshift range (red region in the upper panel of figure \ref{fig:global_signal_pritchard_loeb}). From this point on in the thermal history of universe, we do not expect to see anymore 21cm signal from IGM since most of the gas will be ionized by emergent stars, galaxies and accreting blackholes. Therefore, the 21cm brightness temperature goes to zero (black region in the upper panel of figure \ref{fig:global_signal_pritchard_loeb}). However, in the regions with higher recombination rate inside galaxies and dark matter halos, the neutral hydrogen is shielded and preserved. Thus, its 21cm signature originating from inside the galaxies is still observable\cite{map_universe}.\par
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.8]{global_signal_pritchard_loeb.jpg}
+\caption[Time evolution of the fluctuations in the 21cm brightness temperature]{Time evolution of the fluctuations in the 21cm brightness temperature compared to the CMB background (dashed line). The top panel is a color plot showing fluctuations arising from variation in density. The coloration clearly shows the two absorption phases of 21cm brightness temperature (coupling of $T_S$ to $T_K$, blue), emission phase (red), and the regions where it disappears completely (coupling of $T_S$ to $T_\gamma$, black). The lower panel represents the evolution of sky-average (global) 21cm signal from the dark ages to the reionization. The frequency range of the two absorption through and the emission regions exactly matches the  corresponding regions in the upper panel. Figure from Pritchard and Loeb, 2011 \cite{21century}}
+\label{fig:global_signal_pritchard_loeb}
+\end{figure}
 %-----------------------------------------------------------
 \section{Simulating the global 21cm signal}
 \subsection{The Accelerated Reionization Era Simulations (ARES)}
@@ -555,6 +574,7 @@ Standard Deviation & $1.81616137 \times 10^{-1}$ & $1.56788160 \times 10^{2}$ & 
 \end{tabular}
 \end{table}
 We again run the MCMC from the drawn samples. The results are shown in table \ref{tab:mcmc_results_known_curve}. Figure \ref{fig:csq_trend_knwon_curve} and \ref{fig:corner_plots_known_curve} present the trend of values of chi-square throughout the chain and corner plots of parameters.Figure \ref{fig:csq_trend_knwon_curve} and \ref{fig:corner_plots_known_curve} present the trend of values of chi-square throughout the chain and corner plots of parameters.\par
+
 \begin{table}
 \centering
 \caption[Results of fitting EDGES data with MCMC chain]{Results of fitting EDGES data with MCMC chain}
@@ -693,7 +713,7 @@ I will write this section after the literature review
 \section{Contributions and significance of the research}
 \section{Limitations}
 We faced certain limitation while working on this research. Most of those emerged during the implementation of python script. 
-The method described in chapter \ref{chap:method}, is flexible to the change of parameters included in ARES's documentation\footnote{ARES documentation can be found \hyperlink{https://ares.readthedocs.io/en/latest/}{here}}. However, these parameters are only physically meaningful in a limited region of phase space. Going beyond this safe region will result in a failure in calculating the global 21cm curve due to ARES's inability to handle the combination of parameters. The code presented in this thesis is designed to handle this issue and stop it from aborting the whole run \footnote{The MCMC will return an arbitrary large chi-square for those combination of parameters which ARES is unable to handle. Therefore, the probability of these points getting accepted into the chain will be systematically low.}, but the MCMC might not be able to reach convergence if the algorithm faces a lot of samples beyond the allowed region.\par
+The method described in chapter \ref{chap:method}, is flexible to the change of parameters included in ARES's documentation\footnote{ARES documentation can be found \hyperlink{https://ares.readthedocs.io/en/latest/}{here}}. However, these parameters are only physically meaningful in a limited region of phase space. Going beyond this safe region will result in a failure in calculating the global 21cm curve due to ARES's inability to handle the combination of parameters. The code presented in this thesis is designed to handle this issue and stop it from aborting the whole run \footnote{The developed script for the MCMC is designed such that it will return an arbitrary large chi-square for those combination of parameters which ARES is unable to handle. Therefore, the probability of these points getting accepted into the chain will be systematically low.}, but the MCMC might not be able to reach convergence if the algorithm faces a lot of samples beyond the allowed region.\par
 Another strongly limiting obstacle is the ARES's run time which is in the order of a few seconds per each simulation (approximately 4 to 5 seconds for different combination of parameters). Given than ARES is computationally heavy, it will make it hard to use algorithms based on using ARES on each iteration \footnote{ As an example, the run time for the MCMC results presented in chapter \ref{chap:results} was approximately 13 hours.}. This was main reason that led us to combine the MCMC with LM in order to have a more efficient chain and guarantee the convergence.\par 
 %----------------------------------------------------------------------------
 \section{Future work}
