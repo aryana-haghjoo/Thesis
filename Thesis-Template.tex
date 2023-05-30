@@ -27,6 +27,8 @@
 \usepackage{fancyhdr}
 \usepackage{lmodern}
 \usepackage{listings}
+\usepackage{soul}
+\usepackage{todonotes}
 \usepackage{diagbox} % for diagonal line command
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}} % Ensure List of Figs, ToC, and glossary are named in the header
 
@@ -134,21 +136,21 @@
 \chapter*{Abstract}\markboth{Abstract}{}
 	\label{chap:engAbstract}
 %	\addcontentsline{toc}{section}{\nameref{chap:engAbstract}}
-The global 21cm signal has emerged as a crucial observable in cosmology and astrophysics, providing valuable insights in the of study of the period between the end of the cosmic dark ages and the formation of the first stars and galaxies.\par
-The 21cm signal is sensitive to the density and temperature of neutral hydrogen in the early universe and the presence of the first stars and galaxies. Therefore, any deviation from the predictions of the standard cosmological model of this signal could indicate the presence of new physics beyond the standard model. In this study, we explore the potential of this signal to reveal non-standard physics by means of providing a new path to test fundamental physical theories. \par
-The literature review  provides a comprehensive overview of the global 21cm signal by exploring the physical principles, simulations, imprints of non-standard effects, parameter estimation, and observation attempts associated with the global 21cm signal. The physical principles encompass the mechanisms involved in forming the global 21cm signal and its evolution through cosmic history. Simulations play a pivotal role in generating models of the global 21cm signal, aiding in understanding the influence of different astrophysical scenarios on the ultimate behaviour of this signal. Furthermore, the effects of non-standard physics on the global 21cm signal are examined, encompassing scenarios such as cosmic strings, exotic particle interactions, or additional dark matter components. Additionally, parameter estimation techniques are discussed, highlighting the methodologies employed to extract valuable astrophysical information from observed 21cm data. The review also delves into the ongoing efforts and challenges in observing the global 21cm signal and complexities of foreground removal.\par
-Ultimately, this thesis focuses on a specific parameter estimation method. We adopt the Markov Chain Monte Carlo (MCMC) method combined with the Levenberg Marquardt (LM) algorithm to estimate the best-fit physical parameters (e.g., clumping factor, star formation efficiency) of the theoretical 21cm curves. We use the Accelerated Reionization Era Simulations (ARES) to generate models for the global 21-cm signal. La méthode susmentionnée nous donne un contrôle total sur les paramètres de l'algorithme, ce qui permet de sélectionner n'importe quelle combinaison de paramètres disponible dans le cadre d'ARES.\par
+The global $21cm$ signal has emerged as a crucial observable in cosmology and astrophysics, providing valuable insights in the of study of the period between the end of the cosmic dark ages and the formation of the first stars and galaxies.\par
+The $21cm$ signal is sensitive to the density and temperature of neutral hydrogen in the early universe and the presence of the first stars and galaxies. Therefore, any deviation from the predictions of the standard cosmological model of this signal could indicate the presence of new physics beyond the standard model. In this study, we explore the potential of this signal to reveal non-standard physics by means of providing a new path to test fundamental physical theories. \par
+The literature review  provides a comprehensive overview of the global $21cm$ signal by exploring the physical principles, simulations, imprints of non-standard effects, parameter estimation, and observation attempt. The physical principles encompass the mechanisms involved in forming the global $21cm$ signal and its evolution through cosmic history. Simulations play a pivotal role in generating models of the global $21cm$ signal, aiding in understanding the influence of different astrophysical scenarios on the ultimate behaviour of this signal. Furthermore, the effects of non-standard physics on the global $21cm$ signal are examined, including scenarios such as cosmic strings, exotic particle interactions, or additional dark matter components. Additionally, parameter estimation techniques are discussed, highlighting the methodologies employed to extract valuable astrophysical information from the observed $21cm$ data. The review also delves into the ongoing efforts and challenges in observing the global $21cm$ signal and complexities of foreground removal.\par
+Ultimately, this thesis focuses on a specific parameter estimation method. We adopt the Markov Chain Monte Carlo (MCMC) method combined with the Levenberg Marquardt (LM) algorithm to estimate the best-fit physical parameters of the theoretical $21cm$ curves. We use the Accelerated Reionization Era Simulations (ARES) to generate models for the global $21cm$ signal. The above method provides comprehensive control over the parameters of the algorithm, allowing to opt for any combination of parameters available within the ARES framework.\par
 The knowledge of these best-fit parameters will help us to constrain future proposed models and set theoretical limits for the precision of upcoming experiments to observe non-standard effects.\par
 \chapter*{Résumé}\markboth{Résumé}{}
 	\label{chap:frAbstract}
 %	\addcontentsline{toc}{section}{\nameref{chap:frAbstract}}
-Le signal global à 21 cm est devenu une observable cruciale en cosmologie et en astrophysique, fournissant des informations précieuses pour l'étude de la période entre la fin des âges sombres cosmiques et la formation des premières étoiles et galaxies.\par
+Le signal global $21cm$ est devenu une observable cruciale en cosmologie et en astrophysique, fournissant des informations précieuses pour l'étude de la période entre la fin des âges sombres cosmiques et la formation des premières étoiles et galaxies.\par
 
-Le signal à 21 cm est sensible à la densité et à la température de l'hydrogène neutre dans l'univers primitif et à la présence des premières étoiles et galaxies. Par conséquent, tout écart par rapport aux prédictions du modèle cosmologique standard de ce signal pourrait indiquer la présence d'une nouvelle physique au-delà du modèle standard. Dans cette étude, nous explorons le potentiel de ce signal à révéler une physique non standard en fournissant une nouvelle voie pour tester les théories physiques fondamentales. \par
+Le signal $21cm$ est sensible à la densité et à la température de l'hydrogène neutre dans l'univers primitif et à la présence des premières étoiles et galaxies. Par conséquent, toute déviation de ce signal par rapport aux prédictions du modèle cosmologique standard pourrait indiquer la présence d'une nouvelle physique au-delà du modèle standard. Dans cette étude, nous explorons le potentiel de ce signal à révéler une physique non standard en fournissant une nouvelle voie pour tester les théories physiques fondamentales. \par
 
-La revue de la littérature fournit une vue d'ensemble du signal global de 21 cm en explorant les principes physiques, les simulations, les empreintes d'effets non standard, l'estimation des paramètres et les tentatives d'observation associées au signal global de 21 cm. Les principes physiques englobent les mécanismes impliqués dans la formation du signal global à 21 cm et son évolution au cours de l'histoire cosmique. Les simulations jouent un rôle essentiel dans la génération de modèles du signal global de 21 cm, aidant à comprendre l'influence de différents scénarios astrophysiques sur le comportement final de ce signal. En outre, les effets de la physique non standard sur le signal global de 21 cm sont examinés, englobant des scénarios tels que les cordes cosmiques, les interactions de particules exotiques ou des composants supplémentaires de matière noire. En outre, les techniques d'estimation des paramètres sont discutées, mettant en évidence les méthodologies employées pour extraire des informations astrophysiques précieuses des données observées à 21 cm. La revue se penche également sur les efforts et les défis en cours dans l'observation du signal global de 21cm et sur les complexités de l'élimination de l'avant-plan.\par
+La revue de la littérature fournit une vue d'ensemble du signal global $21cm$ en explorant les principes physiques, les simulations, les empreintes d'effets non-standard, l'estimation des paramètres, et les tentatives d'observation. Les principes physiques englobent les mécanismes impliqués dans la formation du signal global de $21cm$ et son évolution au cours de l'histoire cosmique. Les simulations jouent un rôle essentiel dans la génération de modèles du signal global de $21cm$, aidant à comprendre l'influence de différents scénarios astrophysiques sur le comportement final de ce signal. En outre, les effets de la physique non standard sur le signal global $21cm$ sont examinés, y compris les scénarios tels que les cordes cosmiques, les interactions de particules exotiques, ou les composants supplémentaires de matière noire. En outre, les techniques d'estimation des paramètres sont discutées, mettant en évidence les méthodologies employées pour extraire des informations astrophysiques précieuses des données $21cm$ observées. La revue se penche également sur les efforts et les défis en cours dans l'observation du signal global de $21cm$ et les complexités de l'élimination de l'avant-plan.\NCette thèse se concentre finalement sur l'étude de la matière noire.\par
 
-En fin de compte, cette thèse se concentre sur une méthode spécifique d'estimation des paramètres. Nous adoptons la méthode de Monte Carlo par chaîne de Markov (MCMC) combinée à l'algorithme de Levenberg Marquardt (LM) pour estimer les paramètres physiques les mieux ajustés (par exemple, le facteur d'agglomération, l'efficacité de la formation d'étoiles) des courbes théoriques à 21 cm. Nous utilisons les simulations de l'ère de réionisation accélérée (ARES) pour générer des modèles pour le signal global de 21 cm. Notre méthode est flexible quant au choix des paramètres d'ARES.\par
+En fin de compte, cette thèse se concentre sur une méthode spécifique d'estimation des paramètres. Nous adoptons la méthode de Monte Carlo par chaîne de Markov (MCMC) combinée à l'algorithme de Levenberg Marquardt (LM) pour estimer les paramètres physiques les mieux ajustés des courbes théoriques de $21cm$. Nous utilisons les simulations de l'ère de réionisation accélérée (ARES) pour générer des modèles pour le signal global de $21cm$. La méthode ci-dessus offre un contrôle complet sur les paramètres de l'algorithme, permettant d'opter pour n'importe quelle combinaison de paramètres disponibles dans le cadre d'ARES.\par
 
 La connaissance de ces paramètres les mieux adaptés nous aidera à contraindre les modèles proposés à l'avenir et à fixer des limites théoriques pour la précision des expériences à venir visant à observer des effets non standard.\par
 
@@ -183,36 +185,38 @@ Furthermore, I would like to acknowledge the significant role that my therapist 
 %###########################################################
 \chapter{Introduction}
 \label{chap:intro}
-Reminder: The preface can be expanded, I should come back to writing this chapter after I am done with chapter 2 and 3. I guess it would help to have some addressing of those information here. \par
-21cm cosmology in a relatively new opened window in the study of universe during its early states. It has been proven to be one of the only available probes of large-scale structure in the most distant reaches of the universe\cite{primordial_universe}.\par
-In this chapter we will talk bout the importance of this signal and its applications. Then, we will describe the motivations of this research to clarify the effects of non-standard physics on this signal. It is worth mentioning that we will only focus on the global 21cm signal.\par
-Finally, in the last section of this chapter, we will briefly go over all the materials provided in this thesis.\par
+$21cm$ cosmology is a relatively new opened window in the study of universe during its early stages of evolution. Its applications ranges from the study cosmic down and epoch of reionization(EoR) to cosmic structure formation an dark matter investigations\cite{SKA_dark_ages}.\par
+In this chapter we will talk bout the importance of this signal and its applications. Then, we will describe the motivations of this research to clarify the effects of non-standard physics on this signal. It is worth mentioning that in this thesis we will only focus on the global $21cm$ signal as the subject of study. Finally, in the last section of this chapter, we will briefly go over all the materials provided in this thesis.\par
 %-----------------------------------------------------------
 \section{Background and motivation}
-Not very long after the big bang ($200 \lesssim z \lesssim 1100$), before the formation of stars and galaxies, the universe was composed of huge clouds of gas ($75\%$ hydrogen, the rest helium and small amounts of heavy elements\cite{21century}), and the remaining photons from the big bang called cosmic microwave background (CMB) \cite{map_universe}. \par
-Since neutral hydrogen is the most frequent component of the intergalactic medium (IGM), it provides us a convenient tracer for the behaviour of baryonic matter in the early universe. Neutral hydrogen has a hyperfine splitting on its 1S ground state caused by the interaction between the magnetic moment of the proton and electron ($\Delta E = 5.9 \times 10 ^{-6}eV$\cite{21century}). This spin-flip transition results in absorption or emission of a radio signal with the frequency of $1420.4057MHz$\cite{low_frequency} corresponding to a wavelength of $21.1cm$\cite{21century}\footnote{The existence of this spectral line was theoretically predicted by van de Hulst in 1942 and the first ever detection was reported by Ewen and Purcell in 1951\cite{21century}.}.\par
-As the universe undergoes expansion, the redshifting of CMB photons leads to a specific phase where their wavelengths approach those closely resembling the intrinsic bands of hydrogen. 
-During this period, a significant phenomenon occurs as hydrogen molecules interact with CMB photons. This interaction takes place approximately between the dark ages and the epoch of reionization (EoR). As a consequence of this interaction, the brightness temperature of the 21cm line experiences a notable alteration\footnote{This interaction will be discussed in detail in Chapter \ref{chap:global21cm} as the coupling of the spin temperature ($T_s$) with the kinetic temperature of the gas ($T_k$).}. By employing modern radio interferometers, equipped with precise observation capabilities, this alteration can be effectively detected. It is worth noting that due to the redshift, the 21cm signal attains frequencies ranging from approximately 30 to 200 MHz, rendering it readily accessible to our radio interferometers\cite{low_frequency}.
+Following the events of the big bang, before the formation of stars and galaxies ($200 \lesssim z \lesssim 1100$), the universe was composed of huge clouds of gas ($75\%$ hydrogen, the rest helium and small amounts of heavy elements\cite{21century}), and the remaining photons from the big bang called cosmic microwave background (CMB) \cite{map_universe}. \par
+Since neutral hydrogen is the most frequent component of the intergalactic medium (IGM), it provides a convenient tracer for the behaviour of baryonic matter in the early universe. Neutral hydrogen has a hyperfine splitting on its 1S ground state caused by the interaction between the magnetic moment of the proton and electron (Figure \ref{fig:spinflip}). This spin-flip transition results in absorption or emission of a photon with the frequency of $1420.4057\hspace{0.21cm} MHz$\cite{low_frequency} corresponding to a wavelength of $21.1cm$\cite{21century}\footnote{The existence of this spectral line was theoretically predicted by van de Hulst in 1942 and the first ever detection was reported by Ewen and Purcell in 1951\cite{21century}.}.\par
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.4]{spinflip.jpg}
+\caption[Spin-flip Transition of Neutral Hydrogen]{A basic depiction of the spin-flip transition on the ground energy state of the neutral hydrogen. The upper and lower plots indicate the triplet and singlet state respectively. The energy difference associated with this transition is $\Delta E = 5.9 \times 10 ^{-6}eV$\cite{21century}. Figure from Kit Gerodias\cite{kit_thesis}.}
+\label{fig:spinflip}
+\end{figure}
+Since the CMB spectrum includes photons with the wavelength of $21cm$, hydrogen atoms are able to interact with CMB in order to absorb the $21cm$ photon. This interaction takes place approximately during the dark ages and the EoR. As a consequence of this interaction, the brightness temperature of the $21cm$ line experiences a notable alteration\footnote{This interaction will be discussed in detail in Chapter \ref{chap:global21cm} as the coupling of the spin temperature ($T_s$) with the kinetic temperature of the gas ($T_k$).}. By employing modern radio interferometers, equipped with precise observation capabilities, this alteration can be effectively detected. It is worth noting that due to the redshift, the 21cm signal attains frequencies ranging from approximately 30 to 200 $MHz$, rendering it readily accessible to our radio interferometers\cite{low_frequency}.
 These observations are capable of giving us valuable information about the distribution of neutral hydrogen and evolution of cosmic structure over time\cite{low_frequency}.\par
-The global 21cm signal is the average over the brightness temperature of 21cm line across the entire sky. It is a measure of overall state of intergalactic medium (IGM) which might present as an excess absorption or emission in different redshift regions. This radiation is an observational evidence for certain characteristics of the IGM in the early universe (e.g. temperature, density and reionization state). These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}.\par
-Besides all the above-mentioned applications, the global 21cm signal is a \textbf{strong probe for non-standard physics} during the dark ages. It has the potential to shed a light on mysteries surrounding dark matter/dark energy, existence of cosmic strings, and even certain particle interaction (citation) \footnote{These effects will be discussed more in \ref{chap:global21cm,sub:non_standard}.}. This capacity of the global 21cm signal is the main motivation of this research.\par
+The global $21cm$ signal is the average over the brightness temperature of $21cm$ line across the entire sky. It is a measure of overall state of intergalactic medium (IGM) which might present as an excess absorption or emission in different redshift regions. This radiation is an observational evidence for certain characteristics of the IGM in the early universe (e.g. temperature, density and reionization state). These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}.\par
+Besides all the above-mentioned applications, the global $21cm$ signal is a \textbf{strong probe for non-standard physics} during the dark ages. It has the potential to shed a light on mysteries surrounding dark matter/dark energy, existence of cosmic strings, and even certain particle interaction \cite{dark_nature_21} \cite{constrain_dm_21} \cite{cosmic_string_brandenberger} \cite{ee_interaction_21}\cite{neutrino_21} \footnote{These effects will be discussed more in \ref{chap:global21cm,sub:non_standard}.}. This capacity of the global $21cm$ signal is the main motivation of this research.\par
 %-----------------------------------------------------------
 \section{Research questions and objectives}
-Reminder: citations \par
-The effects of non-standard physics in 21cm signal has gained lots of attraction in the recent literature (cite). Many reported effects has been investigated only using analytical methods, regardless of the observational data (citation).\par
-We aim to fill this research gap by probing these effects using semi-analytical simulations of the global 21cm signal. With the recently released data at one's disposal (cite edges), we use certain fitting algorithms to compare them to theoretical simulated models (cite ares). We first estimate the physical parameters of theses curves by only taking the standard physical mechanisms into account.\par
-In future studies, we will include a realistic foreground model. and upgrade our simulator to include arbitrary non-standard effects. We will again fit the observational data to the upgraded version of theoretical model to check if any of the best-fit physical parameters show patterns of change.\par
+The effects of non-standard physics in $21cm$ signal has gained lots of attraction in the recent literature \hl{(cite)}. Many reported effects has been investigated only using analytical methods, regardless of the observational data \hl{(citation)}.\par \todo{Add these citations after you have read the relevant papers}
+We aim to fill this research gap by probing these effects using semi-analytical simulations of the global $21cm$ signal. With the recently released data at one's disposal \cite{edges}, we use certain fitting algorithms to compare them to theoretical simulated models\cite{ares2014jordan}. We first estimate the physical parameters of theses curves by only taking the standard physical mechanisms into account.\par
+In future studies, we will include a realistic foreground model. and upgrade our simulator to include arbitrary non-standard effects. We will again fit the observational data to the upgraded version of theoretical model to check if any of the best-fit physical parameters show patterns of change. The insights from this study will be used to constrain the physical parameters found by new proposed models. Moreover, it will empower us to determine whether the upcoming radio interferometers have enough precision to detect our desired non-standard effects.\par
 %-----------------------------------------------------------
 \section{Overview of the thesis}
 Reminder: citations\par
 This thesis consists of two major components: the literature review and the research.\par
-In the literature review chapters (chapters \ref{chap:global21cm} and \ref{chap:observations}), we first talk about the global 21cm signal and the its physical principals in chapter \ref{chap:global21cm}. In section \ref{chap:global21cm,sub:non_standard}, we explore the effects of non-standard physics on global 21cm signal mentioned in the literature. Finally, in section \ref{chap:global21cm,sub:parameter_estimation}, we talk about the importance of estimating the parameters of this signal and how these estimations affects future proposed observations. Furthermore, we briefly talk about different methods used to serve this purpose and advantages of each one.\par
-In chapter \ref{chap:observations} we will briefly introduce all of the past, present and future observational project who aim to detect the global 21cm signal. From all these experiments, we will specifically talk about two of them in detail.\par
-In the research half of this thesis, we will talk about the parameter estimation of global 21cm signal. The specific method used in this this study is described in chapter \ref{chap:method} thoroughly. Subsequently, we apply this method to fit the chosen observational data. The results are demonstrated in chapter \ref{chap:results}. Finally, in chapter \ref{chap:discussion}, we interpret the outcome and talk the implications of these results for cosmology and astrophysics. Also, the limitations and the future prospective of the project is mentioned in this chapter.\par
+In the literature review chapters (chapters \ref{chap:global21cm} and \ref{chap:observations}), we first talk about the global $21cm$ signal and the its physical principals in chapter \ref{chap:global21cm}. In section \ref{chap:global21cm,sub:non_standard}, we explore the effects of non-standard physics on global $21cm$ signal mentioned in the literature. Finally, in section \ref{chap:global21cm,sub:parameter_estimation}, we talk about the importance of estimating the parameters of this signal and how these estimations affects future proposed observations. Furthermore, we briefly talk about different methods used to serve this purpose and advantages of each one.\par
+In chapter \ref{chap:observations} we will briefly introduce all of the past, present and future observational project who aim to detect the global 21cm signal. From all these experiments, we will specifically talk about the Experiment to Detect the Global EoR Signature (EDGES) and the Small Array for Research in Astrophysics of the South (SARAS) in detail\footnote{The reason behind choosing these two experiments is related to the fact that they specifically focused on observing the global 21cm signal rather than the spatial fluctuations ad have released their data.}.\par
+In the research half of this thesis (chapters \ref{chap:method} and \ref{chap:results}), we will talk about the parameter estimation of global $21cm$ signal. The specific method used in this this study is described in chapter \ref{chap:method} thoroughly. Subsequently, we apply this method to fit the chosen observational data. The results are demonstrated in chapter \ref{chap:results}. Finally, in chapter \ref{chap:discussion}, we interpret the outcome and talk about the implications of these results for cosmology and astrophysics. Also, the limitations and the future prospective of the project is mentioned in this chapter.\par
 %###########################################################
 \chapter{The Global 21cm Signal}
 \label{chap:global21cm}
-As previously mentioned, the global 21cm signal is a new window to extract data and build a better understanding of the early universe. To achieve this goal, we need to carefully construct the physical theory, try to simulate the signal, build radio telescopes to observe it and finally, analyse the observational data and compare them to our theoretical models.\par
+As previously mentioned, the global $21cm$ signal is a new window to extract data and build a better understanding of the early universe. To achieve this goal, we need to carefully construct the physical theory, try to simulate the signal, build radio telescopes to observe it and finally, analyse the observational data and compare them to our theoretical models.\par
 In this chapter, we will present the latest findings about the physical background, simulations and effects of non-standard physics on global 21cm signal. In the last section of this chapter, we will talk about the importance of parameter estimation and its methods.\par
 In chapter \ref{chap:observations}, we will talk about the attempts of observing this signal and foreground removal challenges.\par
 %-----------------------------------------------------------
@@ -222,58 +226,54 @@ Reminder: read the more precise papers and add the exact redshift ranges \par
 400000 years after the Big Bang, the universe becomes cool enough for subatomic particles to combine and form neutral hydrogen. As a result, baryonic matter experiences thermal decoupling from the CMB, making it possible for the non-relativistic gas to cool adiabatically with the expansion of universe\cite{21century}. The temperature of the gas and CMB drops as $T\propto a^{-2}$ and $T\propto a^{-1}$ respectively\footnote{a is the expansion scale factor}. This rate discrepancy leaves the gas cooler than radiation, while effectively stopping the heat exchange between these two components. As a result, the gas spin temperate decouples from the CMB temperature. Since the gas density is sufficiently high, the effect of collisional coupling becomes significant and force the spin temperature to couple to the gas kinetic temperate ($T_S \rightarrow T_K$). Consequently, the 21cm brightness temperature becomes negative (compared to the CMB background) in the average spectrum corresponding to this redshift\cite{map_universe}.\par
 As the density keeps dropping, the influence of collisional couplings becomes less important, causing the spin temperature to again couple with the CMB temperature ($T_S \rightarrow T_\gamma$). Thus, the 21cm brightness signal goes back to zero again\cite{map_universe}. The first blue regions in the upper panel of figure \ref{fig:global_signal_pritchard_loeb} and corresponding absorption through in the lower panel depict the above-mentioned process.\par
 The second fluctuation in figure \ref{fig:global_signal_pritchard_loeb} is emerged though the formation of first stars and galaxies. As large halos begin to collapse to form first stars and galaxies, they generate $Ly\alpha$ photons through two mechanisms: 1) Continuum radiation redshifted to $Ly\alpha$ wavelength and 2) Ionization and deexcitation of IGM gas. This produced $Ly\alpha$ background, strongly couples the excitation of the 21cm line spin states and the gas spin temperature ($T_S \rightarrow T_K$) through the Wouthuysen-Field effect. Therefore, we will again observe the 21cm absorption through\cite{map_universe}\cite{21century}.\par
-Eventually, the gas is reheated by ionizing x-ray photons from galaxies\cite{21century}, and the 21cm brightness temperature goes back to zero (second absorption through in the lower panel of figure \ref{fig:global_signal_pritchard_loeb}). The influence of this reheating mechanism is such strong that we even expect to observe 21cm emission in this redshift range (red region in the upper panel of figure \ref{fig:global_signal_pritchard_loeb}). From this point on in the thermal history of universe, we do not expect to see anymore 21cm signal from IGM since most of the gas will be ionized by emergent stars, galaxies and accreting blackholes. Therefore, the 21cm brightness temperature goes to zero (black region in the upper panel of figure \ref{fig:global_signal_pritchard_loeb}). However, in the regions with higher recombination rate inside galaxies and dark matter halos, the neutral hydrogen is shielded and preserved. Thus, its 21cm signature originating from inside the galaxies is still observable\cite{map_universe}.\par
+Eventually, the gas is reheated by ionizing x-ray photons from galaxies\cite{21century}, and the 21cm brightness temperature goes back to zero (second absorption through in the lower panel of figure \ref{fig:global_signal_pritchard_loeb}). The influence of this reheating mechanism is such strong that we even expect to observe 21cm emission in this redshift range (red region in the upper panel of figure \ref{fig:global_signal_pritchard_loeb}). From this point on in the thermal history of universe, we do not expect to see anymore 21cm signal from IGM since most of the gas will be ionized by emergent stars, galaxies and accreting blackholes. Therefore, the 21cm brightness temperature goes to zero (black region in the upper panel of figure \ref{fig:global_signal_pritchard_loeb}). However, in the regions with higher recombination rate inside galaxies and dark matter halos, the neutral hydrogen is shielded and preserved. Thus, its 21cm signature originating from inside the galaxies will continue to exist\cite{map_universe}.\par
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.8]{global_signal_pritchard_loeb.jpg}
-\caption[Time evolution of the fluctuations in the 21cm brightness temperature]{Time evolution of the fluctuations in the 21cm brightness temperature compared to the CMB background (dashed line). The top panel is a color plot showing fluctuations arising from variation in density. The coloration clearly shows the two absorption phases of 21cm brightness temperature (coupling of $T_S$ to $T_K$, blue), emission phase (red), and the regions where it disappears completely (coupling of $T_S$ to $T_\gamma$, black). The lower panel represents the evolution of sky-average (global) 21cm signal from the dark ages to the reionization. The frequency range of the two absorption through and the emission regions exactly matches the  corresponding regions in the upper panel. Figure from Pritchard and Loeb, 2011 \cite{21century}}
+\caption[Time evolution of the fluctuations in the 21cm brightness temperature]{Time evolution of the fluctuations in the 21cm brightness temperature (soli line) compared to the CMB background (dashed line). The top panel is a color plot showing fluctuations arising from variation in density. The coloration clearly shows the two absorption phases of 21cm brightness temperature (coupling of $T_S$ to $T_K$, blue), emission phase (red), and the regions where it disappears completely (coupling of $T_S$ to $T_\gamma$, black). The lower panel represents the evolution of sky-average (global) 21cm signal from the dark ages to the reionization. The frequency range of the two absorption through and the emission regions exactly matches the  corresponding regions in the upper panel. Figure from Pritchard and Loeb, 2011 \cite{21century}. The precise details of the shape of this signal is still unidentified due to our lack of knowledge on the nature of first galaxies\cite{liu2013global}.}
 \label{fig:global_signal_pritchard_loeb}
 \end{figure}
 %-----------------------------------------------------------
 \section{Simulating the global 21cm signal}
 \subsection{The Accelerated Reionization Era Simulations (ARES)}
+\cite{ares2014jordan}
 \subsection{21cmFast}
 %------------------------------------------------------------
 \section{Effects of non-standard physics on the global 21cm signal}
 \label{chap:global21cm,sub:non_standard}
 \subsection{Cosmic Strings}
+\cite{cosmic_string_brandenberger} \cite{cosmic_string_oscar} \cite{WF_effect_oscar}
 \subsection{Dark Matter}
+\cite{constrain_dm_21} \cite{dark_cosmology_21} \cite{noncold_dm_21} \cite{snowmass_dm} \cite{dark_nature_21}
 \subsection{Other non-standard effects}
+\cite{ee_interaction_21}
+\cite{neutrino_21}
 \section{Parameter estimation of global 21cm signal}
 \label{chap:global21cm,sub:parameter_estimation}
 talk about different methods used to serve this purpose and advantages of each one\par
-While neural networks have been shown to be effective, one drawback is the lack of clear physical interpretation of the resulting parameter values. In contrast, sampling algorithms like Markov chain Monte Carlo (MCMC), which preserve the basis vectors of the parameter space, can overcome this limitation. The parameters used in these methods are directly linked to the underlying physical mechanisms of the model.
+Sampling algorithms like MCMC allow us to map out the full likelihood surface which in our case, is achievable. However, neural nets are usually preserved for problems in which mapping the whole likelihood surface  becomes too complicated.
+
 \subsection{Machine Learning}
 \subsection{MCMC}
 %##############################################################
 \chapter{Observations of the Global 21cm Signal}
 \label{chap:observations}
-List of experiments (reminder: rephrasing and citing each of them,  things that I need for each experiment: dipole antenna, location, time frame of results, frequency range):\par
+List of experiments (reminder: rephrasing and citing each of them,  things that I need for each experiment: dipole antenna, location, time frame of results, frequency range), only mention the global 21cm ones not all 21cm:\par
+ While most experiments in this field focus on spatial fluctuations of the 21cm signal to study the large-scale structure of the universe, there are a few experiments specifically designed to detect the global $21cm$ signal:
 \begin{enumerate}
-\item EDGES (Experiment to Detect the Global EoR Signature): This was the first experiment to report a detection of the global 21cm signal in 2018, by measuring the absorption of radio waves from distant sources by neutral hydrogen in the intergalactic medium.
+\item EDGES (Experiment to Detect the Global EoR Signature): This was the first experiment to report a detection of the global 21cm signal in 2018, by measuring the absorption of radio waves from distant sources by neutral hydrogen in the intergalactic medium \cite{edges}.
 
 \item SARAS (Small Array for Research in Astrophysics of the South): This is a radio telescope located in India that has been used to study the global 21cm signal since 2015.
 
+\item PRIZM (Probing Radio Intensity at high-Z from Marion): is an experiment that has been designed to study cosmic dawn in the universe using 50-150 MHz observations of globally averaged 21-cm emission. The experiment consists of two modified four-square antennas, operating at center frequencies of 70 and 100 MHz, and a dual-polarization spectrometer back end. PRIZM deployed in April 2017 to Marion Island, an exceptionally isolated and radio-quiet location in the sub-Antarctic, and science observations are currently in progress.
+
+\item REACH (Radio Experiment for the Analysis of Cosmic Hydrogen)
+
+\item SKA \cite{SKA_global_21}
 \item SCI-HI (Small Radio Telescope for Cosmic Hydrogen Intensity Mapping): This is a low-frequency radio telescope located in the United States that was designed to detect the global 21cm signal during the epoch of reionization.
 
 \item BIGHORNS (Broadband Instrument for Global HydrOgen ReioNisation Signal): This is a radio interferometer located in Australia that was designed to detect the global 21cm signal during the epoch of reionization.
 
-\item HERA (Hydrogen Epoch of Reionization Array): This is a radio interferometer located in South Africa that is designed to detect the global 21cm signal during the epoch of reionization and cosmic dawn.
-
-\item Tianlai: This is a radio interferometer located in China that is designed to detect the global 21cm signal during the epoch of reionization and cosmic dawn.
-
-\item Murchison Widefield Array: This is a radio interferometer located in Australia that is used to study the early Universe, including the global 21cm signal.
-
-\item LOFAR (Low-Frequency Array): This is a radio interferometer located in the Netherlands that is used to study a wide range of astrophysical phenomena, including the global 21cm signal.
-
-\item SKA
-\item REACH
-\item PRIZM (Polarized Radiometer In Space) is another experiment designed to study the global 21cm signal. It is a small satellite mission developed by NASA's Goddard Space Flight Center in collaboration with the Korean Astronomy and Space Science Institute (KASI).
-
-The PRIZM mission aims to detect the global 21cm signal from the cosmic dawn era using a radiometer operating at a frequency range of 30-50 MHz. The satellite was launched in December 2018 as a secondary payload on a SpaceX Falcon 9 rocket and is in a low-Earth orbit.
-
-PRIZM's scientific goals include measuring the temperature and polarization of the cosmic microwave background radiation, studying the reionization epoch, and detecting the global 21cm signal. It is expected to be the first space-based mission to detect the global 21cm signal and could provide crucial insights into the early Universe.
-These are just a few of the experiments designed to detect the global 21cm signal. Other experiments include the Canadian Hydrogen Intensity Mapping Experiment (CHIME), the Dark Ages Radio Explorer (DARE), and the Square Kilometer Array (SKA).
 \end{enumerate}
 %--------------------------------------------------------------
 \section{Experiment to Detect the Global EoR Signature (EDGES)}
@@ -284,99 +284,103 @@ These are just a few of the experiments designed to detect the global 21cm signa
 %#################################################################
 \chapter{Parameter Estimation Methods}
 \label{chap:method}
-We formerly discussed the parameter estimation and model fitting of global 21cm in \ref{chap:global21cm,sub:parameter_estimation}. Various computational algorithms, including machine learning and neural networks, have been used to accomplish this task. While neural networks have been shown to be effective, certain drawbacks put sampling algorithms like MCMC on an advantaged position for global 21cm applications.\par
+We formerly discussed the parameter estimation and model fitting of global 21cm in \ref{chap:global21cm,sub:parameter_estimation}. Various computational algorithms, including machine learning and neural networks, have been used to accomplish this task \hl{(cite)} \todo{Add the citation after you have read the relevant papers completely}. While neural networks have been shown to be effective, certain drawbacks put sampling algorithms like MCMC on an advantaged position for global 21cm applications.\par
 In this chapter, we describe the main fitting algorithm used in our study, which combines Levenberg-Marquardt and MCMC. We explain the reason behind utilzing both of these algorithms for this particular fitting challenge and provide a detailed explanation of the procedure to combine them. We also discuss two different tests used to measure the quality of the proposed fit.\par
 In chapter \ref{chap:results}, we present the results of applying this fitting method to the observed global 21cm curve\footnote{released by the EDGES group} and its corresponding theoretical model\footnote{generated using ARES}.
 %------------------------------------------------------------------
 \section{Levenberg-Marquardt (LM)}
 \label{chap:method,sub:LM}
-The Levenberg-Marquardt (LM) algorithm, also known as the damped least-squares (DLS) method, is a fitting algorithm used for non-linear least-squares problems. This iterative algorithm is based on another gradient decent method referred to as "Newton's method".\par
-LM is perfectly capable of fitting models with Gaussian-shaped likelihood spaces. However, it's abilities are limited when it comes to more complicated surfaces.\par
-We continue this chapter by deriving the basic analytical definition of this method. In order to do so, we start by defining the matrix form of chi-square. Subsequently, we attempt to calculate the second order derivative of chi-square with respect to the parameters of the model. We will show that this calculation leads to defining the covariance matrix, which will be later used as our basis to generate correlated noise (\ref{chap:method,sub:correlated noise}).\par
+The Levenberg-Marquardt (LM) algorithm, also known as the damped least-squares (DLS) method, is a fitting algorithm used for non-linear least-squares problems. This iterative algorithm is based on another root-finding method referred to as "Newton's method".\par
+LM is perfectly capable of fitting models with Gaussian-shaped likelihood spaces. However, it's abilities are limited when it comes to fitting error bars.\par
+We continue this chapter by deriving the basic analytical definition of this method. In order to do so, we start by defining the matrix form of chi-square. Subsequently, we attempt to calculate the second order derivative of chi-square with respect to the parameters of the model. We will show that this calculation leads to defining the covariance matrix, which will be later used as our basis to generate correlated noise for the MCMC algorithm.(\ref{chap:method,sub:correlated noise}).\par
 \subsection{Covariance Matrix}
 \label{chap:method,sub:cov_mat}
-The goal of gradient decent algorithms is to minimize the following sum called the "chi-square":
+A traditional fitting problem is normally defined as trying to find the theoretical model which can best explain a set of data and its associated noise. The quality of this fit is usually measured by the value of likelihood. If we assume the noise to be Gaussian, the effort to maximize the likelihood in the presence of Gaussian noise leads to the minimization of the following expression called the "chi-square":
 \begin{gather}
-    \chi^2 \equiv \sum \frac {(x_i - \mu_i)^2}{\sigma^2_{i}}
-    \label{eq: chi-sqaure simple}
-\end{gather}
-Where $x_i$ is the observed data, $\mu_i$ is the expected value with respect to the theoretical model, and $\sigma$ is the error associated with each data point. Is it often much easier to calculate the derivatives if we write the above expression in the language of linear algebra. $\mu$ can be defined as $\mu_i=<d_i>=A_i(m)$, where A is the model which is dependent on the set of parameters m (the dependency can be nonlinear). We can also define a diagonal noise matrix $N$, where $N_{i, i} = \sigma^2_{i}$. Substituting these two in equation \ref{eq: chi-sqaure simple} we get:
-\begin{gather}
-    \chi^2 = (d-A(m))^T N^{-1} (d-A(m))
+    \chi^2 \equiv \left (d-A\left(m\right)\right)^T N^{-1} \left(d-A\left(m\right)\right) 
     \label{eq:chi-square matrix}
 \end{gather}
-Where d is the array containing the data points.\par
+Where $d$ is the array containing the data points and $A$ is the model which is dependent on the set of parameters m (the dependency can be nonlinear). Thus, $A(m)$ gives the expected value of the data with respect to the theoretical model. N is also defined as the noise matrix which in general can be non-diagonal. The above definition is written in the language of linear algebra.\par
+In the case of a diagonal noise matrix, expression \ref{eq:chi-square matrix} takes the following form:
+\begin{gather}
+    \chi^2 = \sum \frac {\left(x_i - \mu_i\right)^2}{\sigma^2_{i}}
+    \label{eq: chi-sqaure simple}
+\end{gather}
+Where $x_i$ is the observed data, $\mu_i$ is the expected value ($\mu_i=\left<d_i\right>=A_i\left(m\right)$), and $\sigma$ is the error associated with each data point ($N_{i, i} = \sigma^2_{i}$). \par
 We continue by calculating the first two derivatives of the above expression, leading to the construction of the gradient decent method.
 \begin{gather}
-        \frac{d \chi^2}{dm} = - (\frac{dA(m)}{dm})^T N^{-1} (d-A(m)) - (d-A(m))^T N^{-1} \frac{dA(m)}{dm} \label{eq:csq_first_deriv}
+        \frac{d \chi^2}{dm} = - \left(\frac{dA\left(m\right)}{dm}\right)^T N^{-1} (d-A(m)) - \left(d-A\left(m\right)\right)^T N^{-1} \left(\frac{dA(m)}{dm}\right ) 
 \end{gather}
+We define $A' \equiv\frac{dA(m)}{dm}$, and $r \equiv d - A(m)$. Thus the above expression takes the form:
+\begin{equation}
+    \frac{d \chi^2}{dm} = - \left(A'\right)^T N^{-1} r - r^T N^{-1} A'
+    \label{eq:csq_first_deriv}
+\end{equation}
 Since we know that:
 \begin{gather}
-    (N^{-1})^T = N^{-1}\\
-    [\frac{dA(m)}{dm} N^{-1} (d-A(m))]^T = (d-A(m))^T N^{-1} \frac{dA(m)}{dm}
+    \left(N^{-1}\right)^T = N^{-1}\\
+    \left[A' N^{-1} r\right]^T = r^T N^{-1} \left(A'\right)^T
 \end{gather}
 Substituting in \ref{eq:csq_first_deriv}, we get:
 \begin{align}
-    \frac{d \chi^2}{dm} = -2 (\frac{dA(m)}{dm})^T N^{-1} (d-A(m))\\
+    \frac{d \chi^2}{dm} = -2 \left(A'\right)^T N^{-1} r
 \end{align}
 Thus, we can calculate the second derivative:
 \begin{align}
-    \frac{d^2 \chi^2}{dm^2} = -2 (\frac{d^2A(m)}{dm^2})^T N^{-1} (d - A(m)) -2 ( \frac{dA(m)}{dm}) ^T N^{-1} (-\frac{d\chi^2}{dm})
+    \frac{d^2 \chi^2}{dm^2} = -2 \left(\frac{dA'}{dm}\right)^T N^{-1} r -2 \left(A'\right) ^T N^{-1} \left(-A'\right)
 \end{align}
-The first term can simply be neglected due to the following reasons:\par
-\begin{enumerate}
-    \item The $(d - A(m))$ component, which is the residual comparing the model to data, can take both negative and positive values; Thus on average, it will be close to zero.
-    \item The best-fit model is expected to mimic the behavior of data closely. Therefore, we the residuals must have a small value: $(d - A(m)) \approx 0$
-\end{enumerate}
+It is usually safe to ignore the first term since the $r$ component, which is the residual of comparing the model to data, can take both negative and positive values; Thus on average, it will be close to zero. The deeper reason behind this neglecting is that our ultimate desire is to set the gradient of chi-square to zero. Therefore, it is still accepted if the curvature is slightly off, as long as we reach the maximum of likelihood \footnote{As mentioned before, we are only using LM to generate a covariance matrix for our MCMC. As a result, the calculated covariance matrix does not need to be perfect.}.\par
+
 Finally, using the above mentioned logic, we are left with:
 \begin{align}
-         \frac{d^2 \chi^2}{dm^2} = 2 (\frac{dA(m)}{dm})^T N^{-1} (\frac{dA(m)}{dm}) \label{eq:csq_second_deriv}
+         \frac{d^2 \chi^2}{dm^2} = 2 \left(A'\right)^T N^{-1} A' \label{eq:csq_second_deriv}
 \end{align}
-Which is the definition of the \textbf{Covariance Matrix}. The dimensions of this square matrix is the the same as that of $m$. The diagonal elements of this matrix are simply the inverse of variance on each parameter ($\sigma_{i, i}$), while the off-diagonal elements represent the inverse of covariance, measuring the dependency of a pair of parameters ($\sigma_{i, j}$). If calculated correctly, this matrix is always semi-positive definite\footnote{A positive definite matrix only posses positive eigenvalues. However, for a semi-positive definitive matrix, eigenvalues are non-negative.}.\par
+Which is the definition of the \textbf{Covariance Matrix}. The dimensions of this square matrix is the same as that of $m$. The diagonal elements of this matrix are simply the variance on each parameter ($\sigma_{i, i}$), while the off-diagonal elements represent the covariance, measuring the dependency of a pair of parameters ($\sigma_{i, j}$). In general, we expect the covariance matrix to be semi-positive definite\footnote{A positive definite matrix only posses positive eigenvalues. However, for a semi-positive definitive matrix, eigenvalues are non-negative.}.\par
 %----------------------------------------------------------------------
 \subsection{Derivation of the Levenberg-Marquardt Algorithm}
 In LM method, on each iteration, the set of parameters m is replaced with $m+\delta m$. To find the $\delta m$, the function $\chi^2 (m +\delta m)$ is approximated by its linearization: 
 \begin{gather}
-    \chi^2 (m) = (d-A(m))^T N^{-1} (d-A(m))\\
-    \chi^2 (m + \delta m) =  \chi^2 (m) + \frac{d \chi^2}{dm} \delta m \label{eq:csq_perturb_deriv}
+    \chi^2 \left(m\right) = r^T N^{-1} r\\
+    \chi^2 \left(m + \delta m\right) =  \chi^2 \left(m\right) + \left(\frac{d \chi^2}{dm}\right) \delta m \label{eq:csq_perturb_deriv}
 \end{gather}
 Similar to the procedure done in section \ref{chap:method,sub:LM}, we calculate the derivative of \ref{eq:csq_perturb_deriv}:
 \begin{gather}
-    \frac{d \chi^2 (m +\delta m)}{dm} = \frac{d}{dm} (\chi^2) + \frac{d}{dm} (\frac{d\chi^2}{dm} \delta m)
+    \frac{d \chi^2 \left(m +\delta m\right)}{dm} = \frac{d}{dm} \left(\chi^2\right) + \frac{d}{dm} \left(\frac{d\chi^2}{dm} \delta m\right)
 \end{gather}
 We already have the expression for the first order derivative of chi-square in \ref{eq:csq_first_deriv}. Therefore:
 \begin{gather}
-   \frac{d \chi^2 (m +\delta m)}{dm} =  -2 (\frac{dA(m)}{dm})^T N^{-1} (d-A(m)) + \frac{d^2 \chi^2}{dm^2} \delta m + \frac{d\chi^2}{dm} \frac{d}{dm} (\delta m)
+   \frac{d \chi^2 \left(m +\delta m\right)}{dm} =  -2 \left(A'\right)^T N^{-1} r + \left(\frac{d^2 \chi^2}{dm^2}\right) \delta m + \frac{d\chi^2}{dm} \left(\frac{d}{dm} (\delta m)\right)
 \end{gather}
 Where the last term equals zero since $\delta m$ does not have any fundamental dependencies on $m$. Looking at the second term, it is simply inferred that we have already found the expression for second derivative of chi-square in \ref{eq:csq_second_deriv}. Thus, we are left with:
 \begin{gather}
-    \frac{d \chi^2 (m +\delta m)}{dm} =  -2 (\frac{dA(m)}{dm})^T N^{-1} (d-A(m)) + 2 (\frac{dA(m)}{dm})^T N^{-1} (\frac{dA(m)}{dm})
+    \frac{d \chi^2 (m +\delta m)}{dm} =  -2 \left(A'\right)^T N^{-1} r + 2 \left(A'\right)^T N^{-1} A'\delta m
 \end{gather}
-We define  $d-A(m) \equiv r$, and $\frac{dA(m)}{dm} \equiv A'$, so the expression takes the following form:
+Setting $\frac{d \chi^2 (m +\delta m)}{dm} = 0$, we get:
 \begin{gather}
     A'^{T} N^{-1}A' \delta m = A'^T N^{-1} r \\
-    \delta m = (A'^{T} N^{-1}A')^{-1} A'^T N^{-1} r \label{eq:newton's_method}   
+    \delta m = \left(A'^{T} N^{-1}A'\right)^{-1} A'^T N^{-1} r \label{eq:newton's_method}   
 \end{gather}
 Equation \ref{eq:newton's_method} represents the basis for \textbf{Newton's method}. However, as previously mentioned, this method suffers from convergence issues, especially on complicated likelihood surfaces. To overcome this obstacle, we add a new term to the left-hand side of \ref{eq:newton's_method}. This term includes a control parameter $\Lambda$ that is updated on each iteration depending on the quality of fit. \par
 \begin{gather}
-    (A'^{T} N^{-1}A' + \Lambda I)\delta m = A'^T N^{-1} r\\
-    \delta m = (A'^{T} N^{-1}A' + \Lambda I)^{-1} A'^T N^{-1} r
+    \left(A'^{T} N^{-1}A' + \Lambda I\right)\delta m = A'^T N^{-1} r\\
+    \delta m = \left(A'^{T} N^{-1}A' + \Lambda I\right)^{-1} A'^T N^{-1} r \label{eq:LM}
 \end{gather}
 Now the basic idea is apparent: On each iteration, a set of parameters $m$ will be replaced by $m+\delta m$ and the chi-square is calculated based on the perturbed parameters. Subsequently, the new chi-square is compared to its value in the last step. If we encounter a higher value, the $\Lambda$ will be multiplied to a constant arbitrary number ($>1$). Otherwise, it will be divided with another constant value ($>1$). For practical purposes, if $\Lambda$ takes a value lower than a constant small arbitrary number, we set it equal to zero. If the $\Lambda$ is zero, and the chi-square is less than an arbitrary threshold value, we declare the \textbf{convergence} of the algorithm.\par
 A flow chart summary of this method is shown in \ref{fig:LM_flow}. The Python code for LM is also available in appendix \ref{chap:appendix,sub:LM}.
 \begin{figure}[h!]
 \centering
-\includegraphics[scale =0.9]{LM_flow.png}
-\caption{Flow chart of Levenberg-Marquardt algorithm}
+\includegraphics[scale =0.75]{LM_flow.png}
+\caption[Flow chart of LM]{Flow chart depicting the Levenberg-Marquardt algorithm. The algorithm starts with the calculation of the $\chi^2$ based on the theoretical model predicted by the initial set of parameters. Then, the new new $\delta m$ is found using \ref{eq:LM} and its associated $\chi^2$ is calculated. The new $\chi^2$ is compared to its value from the last iteration and the value of the $\Lambda$ is determined upon the success or failure of the current iteration. The algorithm is considered as converged if $\Lambda = 0$ and the $\chi^2$ decreases less than a certain threshold amount.}
 \label{fig:LM_flow}
 \end{figure}
 %--------------------------------------------------------------------------------
 \section{Markov Chain Monte Carlo (MCMC)}
 Given that Levenberg-Marquardt (LM) is not always effective in finding the best-fit point for complex likelihood spaces, a more powerful algorithm such as Markov Chain Monte Carlo (MCMC) is necessary in many real-life applications. \par
-MCMC is particularly effective in fitting non-Gaussian likelihood spaces and has a guaranteed convergence, regardless of the starting point in parameter space. However, the algorithm is computationally heavy due to its iterative process, which is based on the evaluation of chi-square on each step. Initially, an arbitrary point in parameter space is given to MCMC as its initial trial step and the associated chi-square is calculated. Then, a random point is drawn from a Gaussian distribution, where the mean is set at the last point in the chain\footnote{In Python applications, the numpy.randn function is used to serve this purpose.}. Subsequently, the new chi-square is compared to the previous one from the last trial step. If the new chi-square is lower, the new trial point is accepted in the chain. If the new chi-square is higher, the trial point is accepted with a probability determined by a specific criterion.\par
+MCMC is particularly effective in fitting non-Gaussian likelihood spaces and has a guaranteed convergence, regardless of the starting point in parameter space. However, the algorithm is computationally heavy due to its iterative nature, which is based on the evaluation of chi-square on each step. Initially, an arbitrary point in parameter space is given to MCMC as its initial trial step and the associated chi-square is calculated. Then, a random point is drawn from a Gaussian distribution, where the mean is set at the last point in the chain\footnote{In Python applications, the numpy.randn function is used to serve this purpose.}. Subsequently, the new chi-square is compared to the previous one from the last trial step. If the new chi-square is lower, the new trial point is accepted in the chain. If the new chi-square is higher, the trial point is accepted with a probability determined by a specific criterion.\par
 The above-mentioned probability threshold is typically defined as:
 \begin{equation}
-    Probability = e^{\frac{-1}{2}(\chi_{new}^2 - \chi^2)}
+    Probability = e^{\frac{-1}{2}\left(\chi_{new}^2 - \chi^2\right)} 
+    \label{eq:mcmc_probability}
 \end{equation}
 Which again has Gaussian insights.\par
 As a measure of MCMC performance, the acceptance ratio is used to determine the fraction of trial steps that end up getting accepted into the chain. An ideal MCMC would typically have an acceptance ratio of 25 percent. However, even with a lower acceptance ratio, the MCMC can still converge, but it will require more trial steps.\par
@@ -384,7 +388,7 @@ A visual summary of MCMC algorithm is shown in \ref{fig:MCMC_flow}, and the Pyth
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.9]{MCMC_flow.png}
-\caption{Flow chart of MCMC algorithm}
+\caption[Flow chart of MCMC]{Flow chart depicting the Markov Chain Monte Carlo algorithm. The algorithm starts with the calculation of the $\chi^2$ based on the theoretical model predicted by the initial set of parameters. Then, a new set of parameters are drawn from independent one-dimensional gaussian distributions and the associated $\chi^2$ is calculated. The new $\chi^2$ is compared to its value from the last iteration. If $\chi^2$ has lowered, the new combination of parameters are accepted into the chain. Otherwise, the parameters will be accepted by the probability defined in \ref{eq:mcmc_probability}. The algorithm itself is not capable of testing its own convergence. Therefore, one needs to seek other approaches.}
 \label{fig:MCMC_flow}
 \end{figure}
 %-----------------------------------------------------------------------------
@@ -394,26 +398,27 @@ The power spectrum represents the distribution of power at different frequencies
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.9]{mcmc_uncoverged.jpg}
-\caption[An unconverged MCMC chain and its power spectrum]{An unconverged MCMC chain (left panel) and its power spectrum (right panel): The power tend to increase in lower frequencies, the chain itself does not indicate the behaviour of white noise, plot from Jonathan Sievers}
+\caption[An unconverged MCMC chain and its power spectrum]{An unconverged MCMC chain (left panel) and its power spectrum (right panel): A converged MCMC chain is expected to exhibit the behaviour of a white noise. Thus, on the power spectrum, the power shall be uniformly distributed among different frequencies (after the burn-in phase of the MCMC). Here, the power tends to increase in lower frequencies, and the chain itself does not indicate the behaviour of white noise. Therefore, this chain is not yet converged. Figure from Jonathan Sievers}
 \label{fig:MCMC_unconverged}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.9]{mcmc_converged.jpg}
-\caption[A converged MCMC chain and its power spectrum]{A converged MCMC chain (left panel) and its power spectrum (right panel): Note the flatness on low frequencies, plot from Jonathan Sievers}
+\caption[A converged MCMC chain and its power spectrum]{A converged MCMC chain (left panel) and its power spectrum (right panel): A converged MCMC chain is expected to exhibit the behaviour of a white noise. Thus, on the power spectrum, the power shall be uniformly distributed among different frequencies (after the burn-in phase of the MCMC). Here, the flat behaviour of the power spectrum is evident and the chain itself represents white noise. Figure from Jonathan Sievers}
 \label{fig:MCMC_converged}
 \end{figure}
+
 %------------------------------------------------------------------------------------------------------
 \section{Combination of MCMC and LM}
-As mentioned before, MCMC is a computationally heavy algorithm due to its iterative nature. If calculating the chi-square takes a long time on each step, the MCMC itself will have a rather long run time before reaching the converged state. Different methods have been proposed to deal with this issue and help the MCMC to converge faster, one of which is to use the insights from running LM.\par
-We previously discussed that parameters of a model might be correlated (\ref{chap:method,sub:cov_mat}). During a simple MCMC, we are drawing random samples from a gaussian distribution. This samples do not take the possible correlations into account. However, if we generate samples with such characteristics, the probability of them getting accepted into the actual chain is higher. Therefore, this approach (feeding the MCMC with a posterior distribution) will eventually assist the MCMC to explore more efficient regions of parameter space, and converge faster. Figure \ref{fig:combined_flow} illustrates this technique briefly.\par
+As mentioned before, MCMC is a computationally heavy algorithm due to its iterative nature. If calculating the chi-square takes a long time on each step, the MCMC itself will have a rather long run time before reaching the converged state. Different methods have been proposed to deal with this issue and help the MCMC to converge faster, one of which is to use the insights from running LM \footnote{It worth to again mention that our sole rationale to use LM in our application is to generate a covariance matrix for the MCMC.}.\par
+We previously discussed that parameters of a model might be correlated (\ref{chap:method,sub:cov_mat}). During a simple MCMC, we draw random samples from independent one-dimensional Gaussian distributions for each of the parameters. This samples do not take the possible correlations of parameters into account. On the other hand, generating samples using multivariate Gaussian distribution (joint normal distribution), will give us the capacity to encompass such characteristics. Eventually, the probability of them getting accepted into the actual chain will be higher. Eventually, we are able to summarize that this approach (feeding the MCMC with a posterior distribution) will eventually assist the MCMC to explore more efficient regions of parameter space, and converge faster. Figure \ref{fig:combined_flow} illustrates this technique briefly.\par
 Since the covariance matrix of these needed samples is already in hand, we are able to easily generate a set of correlated noise samples from that. This procedure is described in the following section.\par
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.9]{combined_flow.png}
-\caption{Flow chart of the procedure to combine MCMC and LM}
+\caption[Flow chart of the procedure to combine MCMC and LM]{Flow chart of the procedure to combine MCMC and LM. We start by an arbitrary combination pf parameters in phase space and run the LM algorithm to find the best-fit point and the covariance matrix. Then, we draw sufficient samples from the covariance matrix to use them as the posterior distribution of our MCMC. Eventually, the output of this method is a set of best-fit parameters and their associated error bars.}
 \label{fig:combined_flow}
 \end{figure}
 
@@ -427,7 +432,7 @@ The Python implementation of the above-mentioned procedure is given in \ref{chap
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.6]{corner_plot_chain.png}
-\caption[Corner plots of an MCMC chain]{Corner plots (parameter vs parameter) of a typical MCMC chain imposed on a four-variable gaussian model. The lower right panel clearly shows patterns of correlation between a pair of parameters. Sampling from a multivariate normal distribution based on the covariance matrix of these samples helps taking the correlations between these parameters into account.}
+\caption[Corner plots of an MCMC chain]{Corner plots (parameter vs parameter) of a typical MCMC chain from a four-variable Gaussian model. The lower right panel clearly shows patterns of correlation between a pair of parameters. Sampling from a multivariate normal distribution based on the covariance matrix associated with these samples will take the correlations into account.}
 \label{fig:corner_plots}
 \end{figure}
 
@@ -441,7 +446,8 @@ Figure \ref{fig:csq_test} shows an example of the distribution of difference bet
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.9]{chi-sqaure test.jpg}
-\caption[Histogram of difference in the chi-square values of drawn samples]{Histogram illustrating the distribution of the values of difference between the chi-squares of drawn samples for a four variable model. The average is 3.97 and the standard deviation is 2.83, in agreement with our expectations. The best-fit parameters is considered as a "good fit".}
+\caption[Histogram of difference in the chi-square values of drawn samples]{Histogram illustrating the distribution of the values of difference between the chi-squares of drawn samples for a four variable Gaussian model. The samples are drawn from the covariance matrix calculated at the point of best-fit (output of LM). We expect the average difference in the $\chi^2$ statistics for two different samples to be of order unity per each parameter.
+On this plot, the average of difference is 3.97 and the standard deviation is 2.83, in acceptable agreement with our expectations. Therefore, the best-fit parameters are considered as a "good fit".}
 \label{fig:csq_test}
 \end{figure}
 \subsection{Chi-Square vs Parameters Plots}
@@ -451,7 +457,7 @@ Figure \ref{fig:csq_params} demonstrates chi-square vs parameters plots for the 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.9]{csq_params.jpg}
-\caption[Chi-Square vs parameters plots]{Plots of the values of chi-square of drawn samples versus the values of parameters for a four variable model. The parabolic behaviour is obvious.}
+\caption[Chi-Square vs parameters plots]{Figures demonstrating the values of chi-square associated with the drawn samples versus the values of parameters for a four variable Gaussian model. The $\chi^2$ is expected to have a parabolic dependency on the value of parameters based on its definition (\ref{eq:chi-square matrix}). This is a test to confirm the accuracy of covariance matrix and the procedure of sample drawing.}
 \label{fig:csq_params}
 \end{figure}
 %###################################################################################
