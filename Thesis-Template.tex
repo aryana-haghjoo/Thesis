@@ -33,6 +33,7 @@
 \usepackage{todonotes}
 \usepackage{diagbox} % for diagonal line command
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}} % Ensure List of Figs, ToC, and glossary are named in the header
+\usepackage{xcolor} % Required for text highlighting
 
 \setglossarystyle{long}
 \renewcommand{\glsnamefont}[1]{\textbf{#1}}
@@ -135,36 +136,44 @@
 \setlength{\voffset}{2cm}
 \renewcommand{\chaptermark}[1]{%
 	\markboth{\thechapter.\ #1}{}}
+ %--------------------------------------------------------------------------------------------------------------
 \chapter*{Abstract}\markboth{Abstract}{}
 	\label{chap:engAbstract}
 %	\addcontentsline{toc}{section}{\nameref{chap:engAbstract}}
 The global $21cm$ signal has emerged as a crucial observable in cosmology and astrophysics, providing valuable insights in the of study of the period between the end of the cosmic dark ages and the formation of the first stars and galaxies.\par
+
 The $21cm$ signal is sensitive to the density and temperature of neutral hydrogen in the early universe and the presence of the first stars and galaxies. Therefore, any deviation from the predictions of the standard cosmological model of this signal could indicate the presence of new physics beyond the standard model. In this study, we explore the potential of this signal to reveal non-standard physics by means of providing a new path to test fundamental physical theories. \par
-\hl{The literature review provides a comprehensive overview of the global $21cm$ signal by exploring the physical principles, simulations, imprints of non-standard effects, parameter estimation, and observation attempt. The physical principles encompass the mechanisms forming the global $21cm$ signal and its evolution through cosmic history. Simulations play a pivotal role in generating models of the global $21cm$ signal, aiding in understanding the influence of different astrophysical scenarios on the ultimate behaviour of this signal. Furthermore, the effects of non-standard physics on the global $21cm$ signal are examined, including scenarios such as cosmic strings, exotic particle interactions, or additional dark matter components. Additionally, parameter estimation techniques are discussed, highlighting the methodologies employed to extract valuable astrophysical information from the observed $21cm$ data. The review also delves into the ongoing efforts and challenges in observing the global $21cm$ signal and complexities of foreground removal.}\par
-Ultimately, this thesis focuses on a specific parameter estimation method. We adopt the Markov Chain Monte Carlo (MCMC) method combined with the Levenberg Marquardt (LM) algorithm to estimate the best-fit physical parameters of the theoretical $21cm$ curves. We use the Accelerated Reionization Era Simulations (ARES) to generate models for the global $21cm$ signal. \hl{The above method provides comprehensive control over the parameters of the algorithm, allowing to opt for any combination of parameters available within the ARES framework.}\par
-The knowledge of these best-fit parameters will help us to constrain future proposed models and set theoretical limits for the precision of upcoming experiments to observe non-standard effects.\par
+
+\hl{The literature review of this thesis provides a comprehensive overview by exploring the physical principles, simulations, imprints of non-standard effects, and observation attempts of the global $21cm$ signal. The physical principles encompass the mechanisms forming the global $21cm$ signal and its evolution through cosmic history. Simulations play a pivotal role in generating models of the global $21cm$ signal, aiding in understanding the influence of different astrophysical scenarios on the ultimate behavior of this signal. Furthermore, the effects of non-standard physics on the global $21cm$ signal are examined, including scenarios such as cosmic strings, exotic particle interactions, or additional dark matter components. The review also explores ongoing efforts and challenges in observing the global $21cm$ signal and the complexities of foreground removal.}\par
+
+\hl{Furthermore, parameter estimation techniques are discussed, highlighting the methodologies employed to extract valuable astrophysical information from the observed $21cm$ data.} Ultimately, this thesis focuses on a specific parameter estimation method, which adopts the combinations of Markov Chain Monte Carlo (MCMC) with the Levenberg Marquardt (LM) algorithm to estimate the best-fit physical parameters of the $21cm$ curves. Accelerated Reionization Era Simulations (ARES) is employed to generate theoretical models of the global $21cm$ signal. \hl{This method provides comprehensive control over the parameters of the algorithm, allowing to opt for any combination of parameters available within the ARES framework.}\par
+
+The knowledge of these best-fit parameters is expected to assist in constraining future proposed models and set theoretical limits for the precision of upcoming experiments to observe desired non-standard effects.\par
+%-----------------------------------------------------------------------------------------------------------
 \chapter*{Résumé}\markboth{Résumé}{}
 	\label{chap:frAbstract}
 %	\addcontentsline{toc}{section}{\nameref{chap:frAbstract}}
 Le signal global $21cm$ est devenu une observable cruciale en cosmologie et en astrophysique, fournissant des informations précieuses pour l'étude de la période entre la fin des âges sombres cosmiques et la formation des premières étoiles et galaxies.\par
 
-Le signal $21cm$ est sensible à la densité et à la température de l'hydrogène neutre dans l'univers primitif et à la présence des premières étoiles et galaxies. Par conséquent, toute déviation de ce signal par rapport aux prédictions du modèle cosmologique standard pourrait indiquer la présence d'une nouvelle physique au-delà du modèle standard. Dans cette étude, nous explorons le potentiel de ce signal à révéler une physique non standard en fournissant une nouvelle voie pour tester les théories physiques fondamentales. \par
+Le signal $21cm$ est sensible à la densité et à la température de l'hydrogène neutre dans l'univers primitif et à la présence des premières étoiles et galaxies. Par conséquent, toute déviation de ce signal par rapport aux prédictions du modèle cosmologique standard pourrait indiquer la présence d'une nouvelle physique au-delà du modèle standard. Dans cette étude, nous explorons le potentiel de ce signal à révéler une physique non standard en fournissant une nouvelle voie pour tester les théories physiques fondamentales.\par 
 
-La revue de la littérature fournit une vue d'ensemble du signal global $21cm$ en explorant les principes physiques, les simulations, les empreintes d'effets non-standard, l'estimation des paramètres, et les tentatives d'observation. Les principes physiques englobent les mécanismes impliqués dans la formation du signal global de $21cm$ et son évolution au cours de l'histoire cosmique. Les simulations jouent un rôle essentiel dans la génération de modèles du signal global de $21cm$, aidant à comprendre l'influence de différents scénarios astrophysiques sur le comportement final de ce signal. En outre, les effets de la physique non standard sur le signal global $21cm$ sont examinés, y compris les scénarios tels que les cordes cosmiques, les interactions de particules exotiques, ou les composants supplémentaires de matière noire. En outre, les techniques d'estimation des paramètres sont discutées, mettant en évidence les méthodologies employées pour extraire des informations astrophysiques précieuses des données $21cm$ observées. La revue se penche également sur les efforts et les défis en cours dans l'observation du signal global de $21cm$ et les complexités de l'élimination de l'avant-plan. thèse se concentre finalement sur l'étude de la matière noire.\par
+La revue de la littérature de cette thèse fournit une vue d'ensemble complète en explorant les principes physiques, les simulations, les empreintes d'effets non-standard, et les tentatives d'observation du signal global $21cm$. Les principes physiques englobent les mécanismes qui forment le signal global $21cm$ et son évolution au cours de l'histoire cosmique. Les simulations jouent un rôle essentiel dans la génération de modèles du signal global $21cm$, aidant à comprendre l'influence de différents scénarios astrophysiques sur le comportement final de ce signal. En outre, les effets de la physique non standard sur le signal global $21cm$ sont examinés, y compris les scénarios tels que les cordes cosmiques, les interactions de particules exotiques ou les composants supplémentaires de matière noire. L'étude se penche également sur les efforts en cours et les défis posés par l'observation du signal global de $21cm$, ainsi que sur la complexité de l'élimination des avant-plans.\par
 
-En fin de compte, cette thèse se concentre sur une méthode spécifique d'estimation des paramètres. Nous adoptons la méthode de Monte Carlo par chaîne de Markov (MCMC) combinée à l'algorithme de Levenberg Marquardt (LM) pour estimer les paramètres physiques les mieux ajustés des courbes théoriques de $21cm$. Nous utilisons les simulations de l'ère de réionisation accélérée (ARES) pour générer des modèles pour le signal global de $21cm$. La méthode ci-dessus offre un contrôle complet sur les paramètres de l'algorithme, permettant d'opter pour n'importe quelle combinaison de paramètres disponibles dans le cadre d'ARES.\par
+En outre, les techniques d'estimation des paramètres sont discutées, mettant en évidence les méthodologies employées pour extraire des informations astrophysiques précieuses des données $21cm$ observées. Enfin, cette thèse se concentre sur une méthode spécifique d'estimation des paramètres, qui adopte les combinaisons de la chaîne de Markov Monte Carlo (MCMC) avec l'algorithme de Levenberg Marquardt (LM) pour estimer les paramètres physiques les mieux ajustés des courbes de $21cm$. La méthode ARES (Accelerated Reionization Era Simulations) est utilisée pour générer des modèles théoriques du signal global de $21cm$. Cette méthode offre un contrôle complet sur les paramètres de l'algorithme, permettant d'opter pour n'importe quelle combinaison de paramètres disponibles dans le cadre de l'ARES.\par
 
-La connaissance de ces paramètres les mieux adaptés nous aidera à contraindre les modèles proposés à l'avenir et à fixer des limites théoriques pour la précision des expériences à venir visant à observer des effets non standard.\par
-
+La connaissance de ces paramètres les mieux adaptés devrait permettre de contraindre les modèles proposés à l'avenir et de fixer des limites théoriques pour la précision des expériences à venir afin d'observer les effets non standard souhaités.\par
+%--------------------------------------------------------------------------------------------------------------
 \chapter*{Acknowledgements}\markboth{Acknowledgements}{}
 	\label{chap:acknowledgments}
 %	\addcontentsline{toc}{section}{\nameref{chap:acknowledgments}}
+I would like to express my gratitude to my supervisors, Jonathan Sievers and Oscar Hernandez, for their invaluable help and patience throughout this project. I would like to thank the \emph{Digital Research Alliance of Canada} for offering the computational resources needed for the analysis of this thesis.\par
+I am deeply grateful to my parents for their unwavering support and enthusiasm. Even though we were thousands of kilometers apart, I could always rely on them being there for me. They kept me motivated during my hard days by reminding me of my reasons for pursuing physics academically. I wish that one day I will be able to return their kindness.\par
+Additionally, I want to thank my roommates and new friends in Montreal for the joyful moments, unique adventures, and wonderful experiences we shared. Our late-night scientific debates were an inspiration for my research. \par
+Furthermore, I would like to acknowledge the significant role of the staff at McGill Wellness Hub. They kindly helped me to overcome the health issues I faced during my graduate journey. Their constant presence and willingness to support was a true blessing.\par
+I learned a lot during the past two years, both scientifically and non-scientifically. To recap all the experiences in a sentence, I would say that I entered my master's as a young inexperienced girl, but I am leaving it as a grown-up educated woman.\par
 
-
-Reminder: name of my friends, my roommates, something in Persian if allowed, computational resources Niagara \par 
-I would like to express my gratitude to my supervisors, Jonathan Sievers and Oscar Hernandez, for their invaluable support throughout this project. I am also deeply grateful to my parents for their unwavering support, even from thousands of kilometers away. Additionally, I want to thank my new friends in Montreal for the wonderful experiences we shared.\par
-Furthermore, I would like to acknowledge the significant role that my therapist at McGill Wellness Hub, Romeo Bidar, played in my graduate journey. His constant presence was a true blessing.\par
- To all the lifelong learners and doers: you are changing the world every day.
+ To all the lifelong learners and doers: you are changing the world every day!
+ %---------------------------------------------------------------------------------------------------------------
  % Start of ToC, LoT, gls
 	\tableofcontents\thispagestyle{plain}
 
@@ -187,38 +196,39 @@ Furthermore, I would like to acknowledge the significant role that my therapist 
 %###########################################################
 \chapter{Introduction}
 \label{chap:intro}
-$21cm$ cosmology is a relatively new opened window in the study of universe during its early stages of evolution. Its applications ranges from the study cosmic down and epoch of reionization(EoR) to cosmic structure formation an dark matter investigations\cite{SKA_dark_ages}.\par
-In this chapter we will talk bout the importance of this signal and its applications. Then, we will describe the motivations of this research to clarify the effects of non-standard physics on this signal. It is worth mentioning that in this thesis we will only focus on the global $21cm$ signal as the subject of study.\par
+$21cm$ cosmology is a relatively new opened window in the study of the universe during its early stages of evolution. Its applications range from the study of cosmic dawn and epoch of reionization (EoR) to cosmic structure formation and dark matter investigations\cite{SKA_dark_ages}.\par
+In this chapter, we will talk bout the importance of this signal and its applications. Then, we will describe the motivations of this research to clarify the effects of non-standard physics on this signal. It is worth mentioning that in this thesis, we will only focus on the global $21cm$ signal as the subject of study.\par
 Finally, in the last section of this chapter, we will briefly go over all the materials provided in this thesis.\par
 %-----------------------------------------------------------
 \section{Background and motivation}
-\hl{Following the events of the big bang, before the formation of first stars and galaxies ($200 \lesssim z \lesssim 1100$), the universe was composed of gas} ($75\%$ hydrogen, the rest helium and small amounts of heavy elements), free electrons (much less compared to the gas), and the remaining photons from the big bang called cosmic microwave background (CMB) \cite{map_universe, 21century}. \par
-Since neutral hydrogen is the most frequent component of the intergalactic medium (IGM), it provides a convenient tracer for the behavior of baryonic matter in the early universe. Neutral hydrogen has a hyperfine splitting on its 1S ground state caused by the interaction between the magnetic moment of the proton and electron (Figure \ref{fig:spinflip}). This spin-flip transition results in absorption or emission of a photon with the frequency of $1420.4057\hspace{0.21cm} MHz$\cite{low_frequency} corresponding to a wavelength of $21.1cm$\cite{21century}\footnote{The existence of this spectral line was theoretically predicted by van de Hulst in 1942 and the first ever detection was reported by Ewen and Purcell in 1951\cite{21century}.}.\par
+\hl{After the occurrence of the big bang, prior to the formation of the first stars and galaxies ($200 \lesssim z \lesssim 1100$), the universe was primarily composed of gas (with hydrogen constituting approximately 75\% and helium, along with trace quantities of heavy elements, comprising the remaining portion). Additionally, there existed a comparatively smaller amount of free electrons relative to the gas, accompanied by the residual photons originating from the initial big bang, commonly referred to as the cosmic microwave background (CMB) }\cite{map_universe, 21century}.
+
+Since neutral hydrogen is the most frequent component of the intergalactic medium (IGM), it provides a convenient tracer for the behavior of baryonic matter in the early universe. Neutral hydrogen has a hyperfine splitting on its 1S ground state caused by the interaction between the magnetic moment of the proton and electron (Figure \ref{fig:spinflip}). This spin-flip transition results in the absorption or emission of a photon with the frequency of $1420.4057\hspace{0.1cm} MHz$\cite{low_frequency} corresponding to a wavelength of $21.1cm$\footnote{The existence of this spectral line was theoretically predicted by van de Hulst in 1942 and the first ever detection was reported by Ewen and Purcell in 1951\cite{21century}.} \cite{21century}.\par
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.4]{spinflip.jpg}
-\caption[Spin-flip Transition of Neutral Hydrogen]{\hl{A basic depiction of the spin-flip transition on the ground energy state of the neutral hydrogen. The upper and lower plots indicate the triplet and singlet state respectively. The energy difference associated with this transition is $\Delta E = 5.9 \times 10 ^{-6}eV$ \cite{21century}. Figure from Kit Gerodias \cite{kit_thesis}.}}
+\caption[Spin-flip Transition of Neutral Hydrogen]{\hl{A basic depiction of the spin-flip transition on the ground energy state of the neutral hydrogen. The upper and lower plots indicate the triplet and singlet state respectively. The energy difference associated with this transition is $\Delta E = 5.9 \times 10 ^{-6}eV$ }\cite{21century}. Figure from Kit Gerodias \cite{kit_thesis}.}
 \label{fig:spinflip}
 \end{figure}
-\hl{Since the CMB spectrum includes photons with the wavelength of $21cm$, hydrogen atoms are able to interact with CMB in order to absorb the $21cm$ photon. This interaction takes place approximately during the dark ages and the EoR. As a consequence of this interaction, the brightness temperature of the $21cm$ line experiences a notable alteration\footnote{This interaction will be discussed in detail in Chapter \ref{chap:global21cm} as the coupling of the spin temperature ($T_s$) with the kinetic temperature of the gas ($T_k$).}. By employing modern radio interferometers, equipped with precise observation capabilities, this alteration can be effectively detected. It is worth noting that due to the redshift, the 21cm signal attains frequencies ranging from approximately 30 to 200 $MHz$, rendering it readily accessible to our radio interferometers \cite{low_frequency}}.
-These observations are capable of giving us valuable information about the distribution of neutral hydrogen and evolution of cosmic structure over time\cite{low_frequency}.\par
-The global $21cm$ signal is the average over the brightness temperature of $21cm$ line across the entire sky. It is a measure of overall state of intergalactic medium (IGM) which might present as an excess absorption or emission in different redshift regions. This radiation is an observational evidence for certain characteristics of the IGM in the early universe (e.g. temperature, density and reionization state). These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}.\par
-Besides all the above-mentioned applications, the global $21cm$ signal is a \textbf{strong probe for non-standard physics} during the dark ages. It has the potential to shed a light on mysteries surrounding dark matter/dark energy, existence of cosmic strings, and even certain particle interaction  \cite{dark_nature_21, constrain_dm_21, cosmic_string_brandenberger, ee_interaction_21, neutrino_21} \footnote{These effects will be discussed more in \ref{chap:global21cm,sub:non_standard}.}. This capacity of the global $21cm$ signal is the main motivation of this research.\par
+\hl{Given that the CMB encompasses photons with the wavelength of $21cm$, hydrogen atoms are able to engage in interactions with the CMB, thereby facilitating the absorption of the $21cm$ photon. This interaction takes place approximately during the dark ages and the EoR. As a consequence of this interaction, the brightness temperature of the $21cm$ line experiences a notable alteration\footnote{This interaction will be discussed in detail in Chapter \ref{chap:global21cm} as the coupling of the spin temperature $T_s$ with the kinetic temperature of the gas $T_k$.}. By employing modern radio interferometers equipped with precise observation capabilities, this alteration can be effectively detected. It is worth noting that due to the redshift, the 21cm signal attains frequencies ranging from approximately 30 to 200 $MHz$, rendering it readily accessible to our radio interferometers} \cite{low_frequency}.
+These observations are capable of giving us valuable information about the distribution of neutral hydrogen and the evolution of cosmic structure over time\cite{low_frequency}.\par
+The global $21cm$ signal is the average over the brightness temperature of the $21cm$ line across the entire sky. It is a measure of the overall state of the intergalactic medium (IGM) and presents as an excess absorption or emission in different redshift regions. This radiation is an observational evidence for certain characteristics of the IGM in the early universe (e.g., temperature, density, and reionization state). These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}.\par
+Besides all the above-mentioned applications, the global $21cm$ signal is a \textbf{strong probe for non-standard physics} during the dark ages. It has the potential to shed light on mysteries surrounding dark matter/dark energy, the existence of cosmic strings, and even certain particle interaction  \cite{dark_nature_21, constrain_dm_21, cosmic_string_brandenberger, ee_interaction_21, neutrino_21} \footnote{These effects will be discussed more in \ref{chap:global21cm,sub:non_standard}.}. This capacity of the global $21cm$ signal is the main motivation of this research.\par
 %-----------------------------------------------------------
 \section{Research questions and objectives}
-The effects of non-standard physics in $21cm$ signal has gained lots of attraction in the recent literature (cite). 
-Theses effects were investigated through the the application of analytical and semi-analytical methods, although the majority of the studies were predominantly analytical in nature, regardless of the observational data (citation).\par \todo{Add these citations after you have read the relevant papers}.
-We aim to fill this research gap by continuing the semi-analytical efforts to simulate the global $21cm$ signal with an aim to prob these non-standard effects. With the recently released data at one's disposal \cite{edges}, we use certain fitting algorithms to compare them to theoretical simulated models\cite{ares2014jordan}. We first estimate the physical parameters of theses curves by only taking the standard physical mechanisms into account.\par
-In future studies, we will include a realistic foreground model and upgrade our simulator to include arbitrary non-standard effects. We will again fit the observational data to the upgraded version of theoretical model to check if any of the best-fit physical parameters show patterns of change. The insights from this study will be used to constrain the physical parameters found by new proposed models. Moreover, it will empower us to determine whether the upcoming radio interferometers have enough precision to detect our desired non-standard effects.\par
+The effects of non-standard physics in $21cm$ signal have gained lots of attraction in the recent literature (cite) \todo{Add these citations}. These effects were investigated through the application of analytical and semi-analytical methods. However, the majority of the studies were predominantly analytical in nature, regardless of the observational data (citation).\par \todo{Add these citations}
+We aim to fill this research gap by continuing the semi-analytical efforts to simulate the global $21cm$ signal with an aim to prob these non-standard effects. With the recently released data at one's disposal \cite{edges}, we use certain fitting algorithms to compare them to theoretically simulated models\cite{ares2014jordan}. 
+The first step is to estimate the physical parameters of these curves by only taking the standard physical mechanisms into account.\par
+In future studies, we will include a realistic foreground model and upgrade our simulator to include desired non-standard effects. We will again fit the observational data to the upgraded version of the theoretical model to investigate patterns of change in the best-fit physical parameters. The insights from this study will be used to constrain the physical parameters found by newly proposed models. Moreover, it will empower us to determine whether the upcoming radio interferometers have enough precision to detect our targeted non-standard effects.\par
 %-----------------------------------------------------------
 \section{Overview of the thesis}
 This thesis consists of two major components: the literature review and the research.\par
-In the literature review chapters (chapters \ref{chap:global21cm} and \ref{chap:observations}), we first talk about the global $21cm$ signal and the its physical principals. We continue by exploring the effects of non-standard physics on global $21cm$ signal mentioned in the recent literature. \par
-In chapter \ref{chap:observations}, we will briefly introduce all of the present and future observational projects aiming to detect the global 21cm signal. From all these experiments, we will thoroughly discuss the Experiment to Detect the Global EoR Signature (EDGES) and the Small Array for Research in Astrophysics of the South (SARAS)\footnote{\hl{The reason behind choosing these two experiments is related to the fact that they specifically focused on observing the global 21cm signal rather than the spatial fluctuations and have released their data.}}.\par
+In the literature review chapters (chapters \ref{chap:global21cm} and \ref{chap:observations}), we first talk about the global $21cm$ signal and its physical principles. We continue by exploring the effects of non-standard physics on the global $21cm$ signal in the recent literature. \par
+In chapter \ref{chap:observations}, we will briefly introduce all of the present and future observational projects aiming to detect the global 21cm signal. From all these experiments, we will thoroughly discuss the Experiment to Detect the Global EoR Signature (EDGES) and the Small Array for Research in Astrophysics of the South (SARAS)\footnote{\hl{The selection of these two experiments is justified by their explicit emphasis on observing the global 21cm signal rather than spatial fluctuations, coupled with the availability of their released data.}}.\par
 In the research half of this thesis (chapters \ref{chap:method} and \ref{chap:results}), we place a stronger emphasis on computational aspects. 
-In chapter \ref{chap:method}, we talk about the importance of estimating the parameters of global $21cm$ signal and how these estimations affects future proposed theoretical models and observations. Furthermore, we briefly describe different methods used to serve this purpose and advantages of each one.
+In chapter \ref{chap:method}, we examine the importance of estimating the parameters of the global $21cm$ signal and how these estimations affect future proposed theoretical models and observations. Furthermore, we briefly describe different methods used to serve this purpose and the advantages of each one.
 Subsequently, we will Bring forth the details of the specific method used in this study. 
-Chapter \ref{chap:results}, demonstrates the results of applying this computational method to an actual observational data.\par
+Chapter \ref{chap:results}, demonstrates the results of applying this computational method to EDGES observational data.\par
 
 Finally, in chapter \ref{chap:discussion}, we interpret the outcome and talk about the implications of these results for cosmology and astrophysics. Also, the limitations and the future prospective of the project is mentioned in this chapter.\par
 %###########################################################
@@ -229,6 +239,8 @@ In this chapter, we will present the latest findings about the physical backgrou
 In chapter \ref{chap:observations}, we will talk about the attempts of observing this signal and foreground removal challenges.\par
 %-----------------------------------------------------------
 \section{Theoretical basis and physical principles of the 21cm signal}
+\label{chap:global21cm,sub:physics}
+
 \subsection{Physics of the 21cm spectral line}
 The characteristics of the $21cm$ line depends on the radiative transfer along the line sight. To find the brightness temperature of the $21cm$ line, we start by the basic radiative transfer equation for the specific intensity $I_{\nu}$:
 \begin{equation}
@@ -241,12 +253,14 @@ We work in the Rayleigh Jeans limit, which gives us: $I_\nu = 2k_B T \nu^2 /c^2$
     T^{obs}_b = T_{ex} \left(1-e^{-\tau_\nu} \right) + T_R \left (\nu \right) e ^{-\tau_\nu}
 \end{equation}
 For $21cm$ applications, the excitation temperature is known as spin temperature $T_S$. The definition of spin temperature is dependant on the number densities of hydrogen atoms in triplet ($n_0$) and singlet state ($n_1$).
+\begin{gather}
+    \frac{n_1}{n_0} = \frac{g_1}{g_0} e ^ {-\frac{T_*}{T_S}}\\
+    g_0 =1, g_1 =3\\
+     T_* \equiv \frac{E_{10}}{K_B T_S} = \frac {hc}{k\lambda_{21cm}} = 0.068 K
+\end{gather}
+where $g_1/g_0 = 3$ is the ratio of the statistical degeneracy factors of the two levels, and $T_* \equiv hc/k\lambda_{21cm} = 0.068 K$. With this definition, the optical depth of a cloud of hydrogen is then 
 \begin{equation}
-    \frac{n_1}{n_0} = \frac{g_1}{g_0} e ^ {-\frac{T_*}{T_S}}
-\end{equation}
-where $g_1/g_0 = 3$ is the ratio of the statistical degeneracy factors of the two levels, and $T_* \equiv hc/k\lambda_{21cm} = 0.068 K$. With this definition, the optical depth of a clud of hydrogen is then 
-\begin{equation}
-    \tau_\nu=\int \mathrm{d} s\left[1- e^{ \frac {-E_{10}}{ k_B T_S}}\right] \sigma_0 \phi(v) n_0,
+    \tau_\nu=\int \mathrm{d} s\left[1- e^{ \frac {T_*}{ T_S}}\right] \sigma_0 \phi(v) n_0,
 \end{equation}
 Where $n_0 = n_H /4$ with $n_H$ being the hydrogen density, and we have denoted the $21cm$ cross-section as $\sigma_0 \equiv 3c^2 A_{10}/8\pi \nu^2$, where $A_{10} = 2.85 \times 10^{-15} s^{-1}$ is the spontaneous decay rate of the spin-flip transition, and the line profile normalized so that $\int \phi \left(\nu\right) =1$. $A_{10}$ is a very small rate. Rare occurrence of the transition implies that the faintness of the 2cm signal \cite{kit_thesis}. The deviation of the spin temperature from the background temperature will is the key that makes this signal detectable\footnote{Although it is possible to choose a radio-loud point source as the background, but since the order of fluctuations in the CMB temperature is insignificant in our study ($\delta T_{CMB} \approx 10 ^{-5}$), the CMB is a great candidate as a source of uniform brightness\cite{21century}.}. Thus, in the study of physics of 21cm signal, we mainly focus of the fluctuations of the spin temperature.\par
 Three competing processes influence the spin temperature: 1) interaction of $21cm$ photons with the background (mostly CMB), 2) collisions with other particles (hydrogen atoms, free electrons and protons\cite{low_frequency} but mostly hydrogen atoms), and 3) resonant scattering of $Ly\alpha$ photons that cause a spin-flip with the meddling of an intermediate excited state. Therefore, the spin temperature can be found using the equilibrium between these mechanisms and their corresponding Einstein coefficients. After simplifications, we have:
@@ -262,7 +276,7 @@ The $Ly\alpha$ coupling coefficient can be written as a function of scattering r
     x_\alpha = \frac{4P_\alpha}{27 A_{10}} \frac{T_*}{T_\gamma}
 \end{equation}
 
-\subsection{evolution of global 21cm signal through cosmic history}
+\subsection{Evolution of the Global 21cm Signal Through Cosmic History}
 To describe the fluctuations of global 21cm through the thermal history of the universe and the physical mechanisms behind them, we split the early universe era into different redshift regions:\par
 \begin{itemize}
 \item $200 \lesssim z \lesssim 1100$: Compton scattering maintains the thermal coupling of gas to the CMB temperature through the residual free electrons after the recombination ($T_K = T_\gamma$). Due to the high density of the gas, the collisional coupling is dominant, forcing the spin temperature to the kinetic temperature of the gas. Therefore, the brightness temperature of the 21cm signal is zero during this redshift regime \cite{21century}.\par
@@ -282,10 +296,6 @@ To describe the fluctuations of global 21cm through the thermal history of the u
 \caption[Time evolution of the fluctuations in the 21cm brightness temperature]{Time evolution of the fluctuations in the 21cm brightness temperature (soli line) compared to the CMB background (dashed line). The top panel is a color plot showing fluctuations arising from variation in density. The coloration clearly shows the two absorption phases of 21cm brightness temperature (coupling of $T_S$ to $T_K$, blue), emission phase (red), and the regions where it disappears completely (coupling of $T_S$ to $T_\gamma$, black). The lower panel represents the evolution of sky-average (global) 21cm signal from the dark ages to the reionization. The frequency range of the absorption and emission regions exactly matches the corresponding regions in the upper panel. Figure from Pritchard and Loeb, 2011 \cite{21century}. The precise details of the shape of this signal are still unidentified due to our lack of knowledge on the nature of first galaxies\cite{liu2013global}.}
 \label{fig:global_signal_pritchard_loeb}
 \end{figure}
-\subsection{Key Astrophysical Parameters in the Global 21cm Signal}
-According to the described physics of the $21cm$ signal, the shape and amplitude of this signal are intensely dependent on underlying astrophysical processes, especially those related to the star formation and reheating of the IGM. In this section, we will take the discussion further and address our current understanding of this dependency on four specific parameters.\par
-
-By effectively constraining these parameters, significant progress can be made in comprehending the thermal history of the intergalactic medium (IGM) and the population of x-ray sources during high-redshift epochs \cite{21century}.\par
 %-----------------------------------------------------------
 \section{Simulating the global 21cm signal}
 Talk about the difference between ARES and 21cmFast and we chose ARES\\
@@ -317,7 +327,7 @@ List of experiments (reminder: rephrasing and citing each of them,  things that 
 
 \item SARAS (Small Array for Research in Astrophysics of the South): This is a radio telescope located in India that has been used to study the global 21cm signal since 2015.
 
-\item PRIZM (Probing Radio Intensity at high-Z from Marion): is an experiment that has been designed to study cosmic dawn in the universe using 50-150 MHz observations of globally averaged 21-cm emission. The experiment consists of two modified four-square antennas, operating at center frequencies of 70 and 100 MHz, and a dual-polarization spectrometer back end. PRIZM deployed in April 2017 to Marion Island, an exceptionally isolated and radio-quiet location in the sub-Antarctic, and science observations are currently in progress.
+\item PRIZM \cite{prizm_2017} (Probing Radio Intensity at high-Z from Marion): is an experiment that has been designed to study cosmic dawn in the universe using 50-150 MHz observations of globally averaged 21-cm emission. The experiment consists of two modified four-square antennas, operating at center frequencies of 70 and 100 MHz, and a dual-polarization spectrometer back end. PRIZM deployed in April 2017 to Marion Island, an exceptionally isolated and radio-quiet location in the sub-Antarctic, and science observations are currently in progress.
 initially called SCI-HI (Small Radio Telescope for Cosmic Hydrogen Intensity Mapping)
 \item REACH (Radio Experiment for the Analysis of Cosmic Hydrogen)
 
@@ -328,10 +338,12 @@ initially called SCI-HI (Small Radio Telescope for Cosmic Hydrogen Intensity Map
 \end{enumerate}
 %--------------------------------------------------------------
 \section{Experiment to Detect the Global EoR Signature (EDGES)}
+put a picture of the antenna
 \subsection{error bars and foreground removal}
 \subsection{theoretical model and associated parameters}
 %---------------------------------------------------------------
 \section{Small Array for Research in Astrophysics of the South (SARAS)}
+put a picture of the antenna
 %#################################################################
 \chapter{Parameter Estimation Methods}
 \label{chap:method}
@@ -518,12 +530,34 @@ Figure \ref{fig:csq_params} demonstrates chi-square vs parameters plots for the 
 \label{chap:results}
 Reminder: citations for physical explanation of parameters, I guess it is better to address pop\_rad\_yields with the physical meaning, but mention that the name is different in ARES documentary.\par
 Chapter \ref{chap:method} carefully described a specific method to fit an experimental data set to its corresponding theoretical model. In this chapter, we are going to impose this method to actual global 21cm curves. We chose to use ARES as our simulator to generate these curves. \par
-As discussed in chapter \ref{chap:global21cm}, the physical model of 21cm curve is dependent on a large number of parameters. However, this model can be effectively described using the following parameters:
+
+\section{Key Astrophysical Parameters in the Global 21cm Signal}
+According to the discussed physics of the $21cm$ signal in section \ref{chap:global21cm,sub:physics}, the shape and amplitude of this signal are intensely dependent on underlying astrophysical processes, especially those related to the star formation and reheating of the IGM. In this section, we will take the discussion further and address our current understanding of this dependency on four specific parameters which are able to effectively span the global $21cm$.\par
+By effectively constraining these parameters, significant progress can be made in comprehending the thermal history of the intergalactic medium (IGM) and the population of x-ray sources during high-redshift epochs \cite{21century}.\par
+
 \begin{enumerate}
-    \item \textbf{$N_{lw}$}: Number of photons emitted in the Lyman-Werner band ($11.2-13.6eV$) per baryon of star formation (This parameter is referred to as \emph{pop\_rad\_yield\_0\_} in ARES documentation)
+    \item \textbf{$f_X$}: High-redshift normalization factor in the relation between X-ray luminosity and SFR\\
+    X-ray photons generated by galaxies and quasars are likely the most important cause of heating the IGM. Considering the fact that the nature of high-redshift objects are not very well identified, it is not possible to give an exact theory for the high-redshift X-ray background. The safest course of action is to assume that the correlation between X-ray luminosity and SFR in high redshift is only an extrapolation of its local format.
+    \begin{equation}
+        L_X = 3.4 \times 10^{40} f_X \left( \frac{SFR}{1 \hspace{0.1cm} M_{\odot} \hspace{0.1cm} yr^{-1}}\right) \hspace{0.1cm} erg \hspace{0.1cm}s^{-1}
+    \end{equation}
+    Where $f_X$ is an unknown normalization factor at high redshift and is believed to evolve by redshift. The normalization was chosen so that, with $f_X =1$, the total X-ray luminosity per unit SFR is consistent with that observed in starburst galaxies at the present epoch \cite{low_frequency, 21century}.
+    
+    \item \textbf{$N_{lw}$}: Number of photons emitted in the Lyman-Werner band ($11.2-13.6eV$) per baryon of star formation (This parameter is referred to as \emph{pop\_rad\_yield\_0\_} in ARES documentation), cite ARES documentation
+    
     \item \textbf{$N_{ion}$}: Mean number of ionizing photons produced per baryon of star formation (This parameter is referred to as \emph{pop\_rad\_yield\_2\_} in ARES documentation)
-    \item \textbf{$f_{esc}$}: Fraction of ionizing photons that escape their host galaxy into the IGM
-    \item \textbf{$f_X$}: High-redshift normalization factor in the relation between X-ray luminosity and SFR
+    
+    \item \textbf{$f_{esc}$}: Fraction of ionizing photons that escape their host galaxy into the IGM\\
+    $f_{esc}$ and $N_{ion}$ are both defined in the process of calculating the evolution of ionization fraction $\bar{x}_i$:
+    \begin{gather}
+        \bar{x}_i = \frac{\zeta f_{coll}}{1 + \bar{n}_{rec}}\\
+        f_{coll} = \int_{m_{min}}^\infty dm \hspace{0.1cm} m \hspace{0.1cm} n\left(m\right)\\
+        \zeta = A_{He} \hspace{0.1cm} f_* \hspace{0.1cm} f_{esc} \hspace{0.1cm} N_{ion}
+    \end{gather}
+    
+    $f_{coll}$ is the collapse fraction (fraction of gas inside collapsed objects, fraction of mass in halos more massive than $m_{min})$, $\bar{n}_{rec}$ is the mean number of recombinations per ionized hydrogen atom, $\zeta$ is the ionizing efficiency, $f_*$ is the star formation efficiency (fraction of baryons converted into stars), and $A_{He} = 4/(4 - 3Y_p) = 1.22$, where $Y_p$ is the mass fraction
+    of helium, is a correction factor to convert the number of ionizing photons per baryon in stars to the fraction of ionized hydrogen. Our limited understanding of the mass distribution of the emitting stars introduces an uncertainty in the number of ionizing photons per baryon $N_{ion}$ that is emitted by galaxies. There is also considerable uncertainty in the fraction of ionizing photons $f_{esc}$ that escape the host galaxy to ionize the IGM. That's why we chose these parameters. Observations will help to constrain them.\\
+    These parameters enter our model as a factor multiplying the SFR and are, therefore, individually degenerate with the star-formation efficiency $f_*$. That's why we did not choose to use $f_*$  \cite{low_frequency, 21century}.
 \end{enumerate}
 Figure \ref{fig:sensivity} shows the effect of changing these parameters on an actual 21cm curve.\par
 
