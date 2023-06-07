@@ -166,7 +166,7 @@ La connaissance de ces paramètres les mieux adaptés devrait permettre de contr
 \chapter*{Acknowledgements}\markboth{Acknowledgements}{}
 	\label{chap:acknowledgments}
 %	\addcontentsline{toc}{section}{\nameref{chap:acknowledgments}}
-I would like to express my gratitude to my supervisors, Jonathan Sievers and Oscar Hernandez, for their invaluable help and patience throughout this project. I would like to thank the \emph{Digital Research Alliance of Canada} for offering the computational resources needed for the analysis of this thesis.\par
+I would like to express my gratitude to my supervisors, Jonathan Sievers and Oscar Hernandez, for their invaluable help and patience throughout this project. I must acknowledge Jordan Mirocha for developing the ARES code and responding to my questions on my specific application of this package. I would like to thank the \emph{Digital Research Alliance of Canada} for offering the computational resources needed for the analysis of this thesis.\par
 I am deeply grateful to my parents for their unwavering support and enthusiasm. Even though we were thousands of kilometers apart, I could always rely on them being there for me. They kept me motivated during my hard days by reminding me of my reasons for pursuing physics academically. I wish that one day I will be able to return their kindness.\par
 Additionally, I want to thank my roommates and new friends in Montreal for the joyful moments, unique adventures, and wonderful experiences we shared. Our late-night scientific debates were an inspiration for my research. \par
 Furthermore, I would like to acknowledge the significant role of the staff at McGill Wellness Hub. They kindly helped me to overcome the health issues I faced during my graduate journey. Their constant presence and willingness to support was a true blessing.\par
@@ -248,7 +248,7 @@ The characteristics of the $21cm$ line depends on the radiative transfer along t
     \label{eq:RT}
 \end{equation}
 Where $\alpha_\nu$ and $j_\nu$ are absorption and emission coefficients respectively. It is essential to note that this equation is written under the assumption of zero scattering. \par
-We work in the Rayleigh Jeans limit, which gives us: $I_\nu = 2k_B T \nu^2 /c^2$. We also know that the absorption coefficient $\alpha_\nu$ can be related to the definition of optical depth along the line of sight: $\int ds \alpha_\nu \left(s\right)$. Now, we may rewrite equation \ref{eq:RT} to find the observed brightness temperature $T^{obs}_b$ at a frequency $\nu$ along the line of sight from a background radio source through a cloud of optical depth $\tau_\nu$ and uniform excitation temperature $T_{ex}$:
+We work in the Rayleigh Jeans limit, which gives us: $I_\nu = 2k_B T \nu^2 /c^2$. We also know that the absorption coefficient $\alpha_\nu$ can be related to the definition of optical depth along the line of sight: $\int ds \alpha_\nu \left(s\right)$ where $ds$ is a path length. Now, we may rewrite equation \ref{eq:RT} to find the observed brightness temperature $T^{obs}_b$ at a frequency $\nu$ along the line of sight from a background radio source through a cloud of optical depth $\tau_\nu$ and uniform excitation temperature $T_{ex}$:
 \begin{equation}
     T^{obs}_b = T_{ex} \left(1-e^{-\tau_\nu} \right) + T_R \left (\nu \right) e ^{-\tau_\nu}
 \end{equation}
@@ -269,19 +269,27 @@ Three competing processes influence the spin temperature: 1) interaction of $21c
 \end{equation}
 Where $T_\gamma$ is the temperature of the surrounding bath of radio photons ($T_\gamma = T_{CMB}$). $T_\alpha$ is the color temperature of the $Ly\alpha$ radiation field at the $Ly\alpha$ frequency and is closely coupled to the gas kinetic temperature $T_K$ by recoil during repeated scattering. $x_c$ and $x_\alpha$ are the coupling coefficients due to atomic collisions and scattering of $Ly\alpha$ photons, respectively. The spin temperature becomes strongly coupled to the gas temperature when $x_c + x_\alpha \gtrsim 1$ and relaxes to $T_\gamma$ when $x_c + x_\alpha << 1$. 
 \subsubsection{Wouthuysen-Field Coupling}
-As previously mentioned, a hydrogen atom in the early universe can interact with CMB photons that had frequencies matching the energy gaps of hydrogen atoms, especially in the $Ly\alpha$ band. However, with the onset of star formation, CMB will no longer be the only source of photons for the hydrogen atom to interact with. The newly formed compact objects are able to generate UV photons including $Ly\alpha$, and reheat the IGM. These photons are injected into the $Ly\alpha$ frequency band by resonant scattering rather than being redshifted from outside the line. The existence of this second channel increase coupling ability of hydrogen-background interaction, further assisting the spin temperature $T_S$ in coupling to $T_K$.\par
+As previously mentioned, a hydrogen atom in the early universe can interact with CMB photons that had frequencies matching the energy gaps of hydrogen atoms, especially in the $Ly\alpha$ band. However, with the onset of star formation, CMB will no longer be the only source of photons for the hydrogen atom to interact with. The newly formed compact objects are capable of generating UV photons, including $Ly\alpha$, and reheating the IGM. These photons are injected into the $Ly\alpha$ frequency band by resonant scattering rather than being redshifted from outside the line. The existence of this second channel increases the coupling ability of the hydrogen-background interaction, further assisting the spin temperature $T_S$ in coupling to $T_K$.\par
 The process of coupling the spin temperature of neutral hydrogen to the background radiation $Ly\alpha$ is called \textbf{Wouthuysen-Field Coupling} \cite{barkana2001beginning}\footnote{The Wouthuysen-Field effect is named after two physicists who independently described the phenomenon in 1952 and 1958: Robert H. Wouthuysen \cite{wouthuysen_original}, and George B. Field \cite{field_original}.}. This process plays a pivotal role in the observability of the global $21cm$ signal during dark ages by forcing the signal to deviate from the temperature of the CMB.\par
-The $Ly\alpha$ coupling coefficient can be written as a function of scattering rate $P_\alpha$:
+The $Ly\alpha$ coupling coefficient can be written as a function of scattering rate $P_\alpha$ \cite{low_frequency}:
 \begin{equation}
     x_\alpha = \frac{4P_\alpha}{27 A_{10}} \frac{T_*}{T_\gamma}
+    \label{eq:x_a}
 \end{equation}
 
-\subsection{Evolution of the Global 21cm Signal Through Cosmic History}
+\subsection{Sky-Averaged 21cm Signal}
+\label{chap:global21cm,sub:physics,sub:global}
+Based on the discussions of the last section, the equation for the sky-averaged $21cm$ signal can be written as \cite{low_frequency}:
+\begin{equation}
+    \delta T_b \approx 27 \left(1- \bar{x}_i\right) \left(\frac{\Omega_{b, 0}h^2}{0.023}\right) \left( \frac{0.15}{\Omega_{m, 0}h^2} \frac{1+z}{10}\right)^{1/2}\left(1-\frac{T_\gamma}{T_S}\right)
+    \label{eq:global_curve}
+\end{equation}
+Where $x_i$ is the ionization fraction, $h$ is the dimension-less Hubble constant, $\Omega_{b, 0}$ and $\Omega_{m, 0}$ are the current ratio of the energy density of baryonic and total matter to the critical density of the universe.\par
 To describe the fluctuations of global 21cm through the thermal history of the universe and the physical mechanisms behind them, we split the early universe era into different redshift regions:\par
 \begin{itemize}
 \item $200 \lesssim z \lesssim 1100$: Compton scattering maintains the thermal coupling of gas to the CMB temperature through the residual free electrons after the recombination ($T_K = T_\gamma$). Due to the high density of the gas, the collisional coupling is dominant, forcing the spin temperature to the kinetic temperature of the gas. Therefore, the brightness temperature of the 21cm signal is zero during this redshift regime \cite{21century}.\par
 
-\item $40 \lesssim z \lesssim 200$: The universe becomes cool enough for subatomic particles to combine and form neutral hydrogen. As a result, baryonic matter experiences thermal decoupling from the CMB, making it possible for the non-relativistic gas to cool adiabatically with the expansion of the universe \cite{21century}. The temperature of the gas and CMB drops as $T\propto a^{-2}$ and $T\propto a^{-1}$ respectively\footnote{"\emph{a}" is the expansion scale factor}. This rate discrepancy leaves the gas cooler than radiation while effectively stopping the heat exchange between these two components. As a result, the gas spin temperate decouples from the CMB temperature. Since the effect of collisional coupling is still significant, we have $T_S = T_K$. Consequently, the 21cm brightness temperature becomes negative (compared to the CMB background) in the average spectrum corresponding to this redshift \cite{map_universe, 21century}.\par
+\item $40 \lesssim z \lesssim 200$: The universe becomes cool enough for subatomic particles to combine and form neutral hydrogen. As a result, baryonic matter experiences thermal decoupling from the CMB, making it possible for the non-relativistic gas to cool adiabatically with the expansion of the universe \cite{21century}. The temperature of the gas and CMB drops as $T\propto a^{-2}$ and $T\propto a^{-1}$ respectively\footnote{"\emph{a}" is the expansion scale factor}. This rate discrepancy leaves the gas cooler than radiation while effectively stopping heat exchange between these two components. As a result, the gas spin temperate decouples from the CMB temperature. Since the effect of collisional coupling is still significant, we have $T_S = T_K$. Consequently, the 21cm brightness temperature becomes negative (compared to the CMB background) in the average spectrum corresponding to this redshift \cite{map_universe, 21century}.\par
 
 \item $z_* \lesssim z \lesssim 40$\footnote{There is still considerable uncertainty in the exact values of this redshift range and the sequence of events due to our ignorance of early sources. This uncertainty is such significant that there might even be an overlap between the regions discussed above \cite{21century}.}: As the density keeps dropping through the expansion, the influence of collisional couplings becomes less significant, causing the spin temperature to again couple with the CMB temperature ($T_S \rightarrow T_\gamma$). Thus, the 21cm brightness signal goes back to zero again\cite{map_universe}. The first blue regions in the upper panel of figure \ref{fig:global_signal_pritchard_loeb} and corresponding absorption through in the lower panel depict the above-mentioned process \cite{map_universe, 21century}.\par
 
@@ -298,14 +306,38 @@ To describe the fluctuations of global 21cm through the thermal history of the u
 \end{figure}
 %-----------------------------------------------------------
 \section{Simulating the global 21cm signal}
-Talk about the difference between ARES and 21cmFast and we chose ARES\\
-21cmFast calculates the fluctuations and then the global curve which is a kind of overkill cause we only need the global signal.\\
-put a plot comparing the two simulated signals, Ask Jordan
-\subsection{The Accelerated Reionization Era Simulations (ARES)}
-\cite{ares2014jordan}
+put a plot comparing the two simulated signal \par
+With the advancement of radio telescopes, we have entered a data-driven era in 21-cm cosmology, which allows us to place initial limitations on the properties of astrophysical sources responsible for generating this signal. Nevertheless, extracting astrophysical insights from the collected data is a complex task that necessitates the generation of theoretical templates that span various astrophysical parameters in a fast and efficient manner \cite{emulate_21cm}. Computationally expensive simulators will considerably limit our ability to search the parameters space \cite{ares2014jordan}.\par
+In this section, we introduce two powerful tools capable of simulating the theoretical 21cm curve. The first one is 21cmFast which calculates the global 21cm curve by averaging over all of the fluctuations of the 21cm signal. Another one is The Accelerated Reionization Era Simulations (ARES), which straightly calculates the global curve by using a novel approach to solving the cosmological radiative transfer equation (RTE) \cite{ares2014jordan}. Although 21cmFast is perfectly capable of doing the same job as ARES, we will use 21cmFast in our analysis, since
+the utilization of 21cmFast is excessive for generating the global 21cm curve.
+
 \subsection{21cmFast}
 \cite{21cmfast_c}
 \cite{21cmfast_python}
+
+\subsection{The Accelerated Reionization Era Simulations (ARES)}
+The Accelerated Reionization Era Simulations, or in the short form \emph{ARES}, is a Python package for quick and efficient generation of 21cm curves \footnote{Documentation: \hyperlink{https://ares.readthedocs.io/en/latest/}{https://ares.readthedocs.io/en/latest/}} \footnote{GitHub Repository: \hyperlink{https://github.com/mirochaj/ares}{https://github.com/mirochaj/ares}}\cite{ares2014jordan}. Alongside global 21cm curve applications, it can be used for stand-alone non-equilibrium chemistry solver, global radiation background calculator,  galaxy semi-analytic modeling \cite{jordan_galaxy_1, jordan_galaxy_2, jordan_galaxy_3}, PopIII star modeling \cite{jordan_star}, 1D radiative transfer, and spectral energy distribution (SED) optimization \cite{jordan_SED}.\par
+ARES draws the globally-averaged $21cm$ curve through the numerical calculation of equation \ref{eq:global_curve}. To do so, we need to evaluate the spin temperature $T_S$, which is dependent on coupling coefficients $x_\alpha$ and $x_c$. The collisional coupling $x_c$ is found using the tabulated values in \cite{ares_collision_coeff}, and the $Ly\alpha$ coupling coefficient is calculated using equation \ref{eq:x_a}. By ignoring detailed line profile effects, this expression can be written in the following form \cite{ares_lya_coeff_1, ares_lya_coeff_2, ares_lya_coeff_3} as a function of the angle-averaged $Ly\alpha$ back-ground intensity $\widehat{J}_\alpha$ which determines the strength of Wouthuysen-Field coupling \cite{ares2014jordan}: 
+
+\begin{equation}
+    x_\alpha = 1.81 \times 10^{11} \frac{\widehat{J}_\alpha}{1+z}
+    \label{eq:x_a}
+\end{equation}
+Where $\widehat{J}_\alpha$ itself can be written using the general definition of angle-averaged back-ground intensity as a function co-moving volume density \cite{ares2014jordan}:
+\begin{equation}
+    \widehat{J}_\nu (z)=\frac{c}{4 \pi}(1+z)^2 \int_z^{z_{\mathrm{f}}} \frac{\hat{\epsilon}_{\nu^{\prime}}\left(z^{\prime}\right)}{H\left(z^{\prime}\right)} \mathrm{e}^{-\bar{\tau}_\nu} \mathrm{~d} z^{\prime}
+    \footnote{In this expression the $\widehat{J}_v(z)$ and $\hat{\epsilon}_{\nu^{\prime}}$  are in units of photon number density:
+    $\left[\hat{J}_v\right]=\mathrm{s}^{-1} \mathrm{~cm}^{-2} \mathrm{~Hz}^{-1} \mathrm{sr}^{-1}$,
+    $\left[\hat{\epsilon}_v\right]=\mathrm{s}^{-1} \mathrm{~Hz}^{-1} \mathrm{cMpc}^{-3}$.} 
+\end{equation}  
+Numerical evaluation of this expression is generally computationally heavy, mostly due to the optical depth ($\tau_\nu$) term. One solution is to tabulate the optical depth values on an arbitrary number of redshift points. However, the accuracy of this method is dependent on the number of chosen redshift points in the look-up table, and undersampling might result in large deviations in background radiation intensity.\par
+ARES uses the above-mentioned approach to evaluate equation \ref{eq:global_curve} and simulate the global 21cm curve. A typical ARES-generated globa 21cm curve is presented in \ref{fig:ares_Curve}. \par
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale =0.7]{ares_curve.jpg}
+    \caption[Typical global 21cm curve generated using ARES]{An example of a global 21cm signal generated using ARES. The fluctuations discussed in section \ref{chap:global21cm,sub:physics,sub:global} are perfectly illustrated in the simulated signal. Note the similarities to corresponding regions in figure \ref{fig:global_signal_pritchard_loeb}. Figure from Jordan Mirocha in the \hyperlink{https://ares.readthedocs.io/en/latest/examples/example_gs_standard.html}{ARES documentation}}
+    \label{fig:ares_Curve}
+\end{figure}
 %------------------------------------------------------------
 \section{Effects of non-standard physics on the global 21cm signal}
 \label{chap:global21cm,sub:non_standard}
@@ -348,7 +380,7 @@ put a picture of the antenna
 \chapter{Parameter Estimation Methods}
 \label{chap:method}
 talk about different methods used to serve this purpose and advantages of each one\par
-Now that we have talked about the theoretical global 21cm signal and the attempts to observe it, we shall proceed by talking about the parameter estimation of this signal. Various computational algorithms, including machine learning and neural networks, have been used to accomplish this task (cite) \todo{Add the citation after you have read the relevant papers}. While neural networks have been shown to be effective, certain drawbacks \todo{mention which draw backs} put sampling algorithms like MCMC on an advantaged position for global 21cm applications.\par
+Now that we have talked about the theoretical global 21cm signal and the attempts to observe it, we shall proceed by talking about the parameter estimation of this signal. Various computational algorithms, including machine learning and neural networks, have been used to accomplish this task (cite) \todo{Add the citation}. While neural networks have been shown to be effective, certain drawbacks \todo{mention which draw backs} put sampling algorithms like MCMC on an advantaged position for global 21cm applications.\par
 Sampling algorithms like MCMC allow us to map out the full likelihood surface which in our case, is achievable. However, neural nets are usually preserved for problems in which mapping the whole likelihood surface  becomes too complicated.
 In this chapter, we describe the main fitting algorithm used in our study, which combines Levenberg-Marquardt and MCMC. We explain the reason behind utilzing both of these algorithms for this particular fitting challenge and provide a detailed explanation of the procedure to combine them. We also discuss two different tests used to measure the quality of the proposed fit.\par
 In chapter \ref{chap:results}, we present the results of applying this fitting method to the observed global 21cm curve\footnote{released by the EDGES group} and its corresponding theoretical model\footnote{generated using ARES}.
