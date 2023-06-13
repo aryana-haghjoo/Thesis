@@ -172,7 +172,7 @@ Additionally, I want to thank my roommates and new friends in Montreal for the j
 Furthermore, I would like to acknowledge the significant role of the staff at McGill Wellness Hub. They kindly helped me to overcome the health issues I faced during my graduate journey. Their constant presence and willingness to support was a true blessing.\par
 I learned a lot during the past two years, both scientifically and non-scientifically. To recap all the experiences in a sentence, I would say that I entered my master's as a young inexperienced girl, but I am leaving it as a grown-up educated woman.\par
 
- To all the lifelong learners and doers: you are changing the world every day!
+ Finally, I would like to dedicate thie work to all lifelong learners and doers: you are changing the world every day!
  %---------------------------------------------------------------------------------------------------------------
  % Start of ToC, LoT, gls
 	\tableofcontents\thispagestyle{plain}
@@ -196,9 +196,8 @@ I learned a lot during the past two years, both scientifically and non-scientifi
 %###########################################################
 \chapter{Introduction}
 \label{chap:intro}
-$21cm$ cosmology is a relatively new opened window in the study of the universe during its early stages of evolution. Its applications range from the study of cosmic dawn and epoch of reionization (EoR) to cosmic structure formation and dark matter investigations\cite{SKA_dark_ages}.\par
-In this chapter, we will talk bout the importance of this signal and its applications. Then, we will describe the motivations of this research to clarify the effects of non-standard physics on this signal. It is worth mentioning that in this thesis, we will only focus on the global $21cm$ signal as the subject of study.\par
-Finally, in the last section of this chapter, we will briefly go over all the materials provided in this thesis.\par
+$21cm$ cosmology is a relatively new opened window in the study of the universe during its early stages of evolution. Its applications range from the study of cosmic dawn and epoch of reionization (EoR) to cosmic structure formation and dark matter investigations\cite{SKA_dark_ages}. The field holds great potential for revolutionizing our understanding of the first stars, galaxies, and black holes by leveraging the temporal and spatial information embedded in the cosmic 21-cm signal\cite{21cmfast_c}.\par
+In this chapter, we first will talk bout the importance of this signal and its applications. Then, we will describe the motivations of this research to clarify the effects of non-standard physics on this signal \footnote{It is worth emphasizing that in this thesis, we will only focus on the global $21cm$ signal as the subject of study.}. Finally, in the last section of this chapter, we will briefly go over all the materials provided in this thesis.\par
 %-----------------------------------------------------------
 \section{Background and motivation}
 \hl{After the occurrence of the big bang, prior to the formation of the first stars and galaxies ($200 \lesssim z \lesssim 1100$), the universe was primarily composed of gas (with hydrogen constituting approximately 75\% and helium, along with trace quantities of heavy elements, comprising the remaining portion). Additionally, there existed a comparatively smaller amount of free electrons relative to the gas, accompanied by the residual photons originating from the initial big bang, commonly referred to as the cosmic microwave background (CMB) }\cite{map_universe, 21century}.
@@ -238,10 +237,10 @@ As previously mentioned, the global $21cm$ signal is a new window to extract dat
 In this chapter, we will present the latest findings about the physical background, simulations and effects of non-standard physics on global 21cm signal. In the last section of this chapter, we will talk about the importance of parameter estimation and its methods.\par
 In chapter \ref{chap:observations}, we will talk about the attempts of observing this signal and foreground removal challenges.\par
 %-----------------------------------------------------------
-\section{Theoretical basis and physical principles of the 21cm signal}
+\section{Theoretical basis of the 21cm signal}
 \label{chap:global21cm,sub:physics}
 
-\subsection{Physics of the 21cm spectral line}
+\subsection{Physical Principles of the 21cm spectral line}
 The characteristics of the $21cm$ line depends on the radiative transfer along the line sight. To find the brightness temperature of the $21cm$ line, we start by the basic radiative transfer equation for the specific intensity $I_{\nu}$:
 \begin{equation}
     \frac{dI_\nu}{ds} = - \alpha_\nu + j_\nu
@@ -306,15 +305,20 @@ To describe the fluctuations of global 21cm through the thermal history of the u
 \end{figure}
 %-----------------------------------------------------------
 \section{Simulating the global 21cm signal}
-put a plot comparing the two simulated signal \par
-With the advancement of radio telescopes, we have entered a data-driven era in 21-cm cosmology, which allows us to place initial limitations on the properties of astrophysical sources responsible for generating this signal. Nevertheless, extracting astrophysical insights from the collected data is a complex task that necessitates the generation of theoretical templates that span various astrophysical parameters in a fast and efficient manner \cite{emulate_21cm}. Computationally expensive simulators will considerably limit our ability to search the parameters space \cite{ares2014jordan}.\par
-In this section, we introduce two powerful tools capable of simulating the theoretical 21cm curve. The first one is 21cmFast which calculates the global 21cm curve by averaging over all of the fluctuations of the 21cm signal. Another one is The Accelerated Reionization Era Simulations (ARES), which straightly calculates the global curve by using a novel approach to solving the cosmological radiative transfer equation (RTE) \cite{ares2014jordan}. Although 21cmFast is perfectly capable of doing the same job as ARES, we will use 21cmFast in our analysis, since
-the utilization of 21cmFast is excessive for generating the global 21cm curve.
+With the advancement of radio telescopes, we have entered a data-driven era in 21-cm cosmology, which allows us to place constraints on the properties of astrophysical sources responsible for generating this signal. Nevertheless, extracting astrophysical insights from the collected data is a complex task that necessitates the generation of theoretical templates that span various astrophysical parameters in a fast and efficient manner \cite{emulate_21cm}. In order to do so, fully hydrodynamic simulations of the 3D evolution of the brightness temperature of the 21cm spectral line have been proposed previously \cite{21cmfast_c}. However, these simulations are computationally expensive, and this issue will considerably limit our ability to search the parameters space \cite{ares2014jordan}. To solve this, a middle-ground solution between these simulations and fully analytical studies has been proposed: semi-analytical methods. The results of these semi-analytical calculations are comparable to hydrodynamic simulation and consume a significantly lower amount of run-time. \par
+In this section, we introduce two powerful tools capable of simulating the theoretical 21cm curve. The first one is 21cmFast which calculates the global 21cm curve by averaging over all of the spatial fluctuations. Another one is The Accelerated Reionization Era Simulations (ARES), which straightly calculates the global curve by using a novel approach to solving the cosmological radiative transfer equation (RTE) \cite{ares2014jordan}. Although 21cmFast is perfectly capable of doing the same job as ARES, we will use 21cmFast in our analysis, since the utilization of 21cmFast is excessive for generating the global 21cm curve.
 
-\subsection{21cmFast}
-\cite{21cmfast_c}
-\cite{21cmfast_python}
-
+\subsection{21cmFAST}
+21cmFAST is a Python-integrated C package designed to produce 3D cosmological realizations of physical fields playing a role in the early universe. It is based on a semi-numerical approach combining the excursion set formalism with perturbation theory. 21cmFAST is capable of simulating the 3D realizations of density, peculiar velocity, halo, ionization, spin temperature fields, $21cm$, and ionizing flux fields\footnote{Documentation: \hyperlink{https://21cmfast.readthedocs.io/en/latest/}{https://21cmfast.readthedocs.io/en/latest/}}\footnote{GitHub Repository: \hyperlink{https://github.com/21cmfast/21cmFAST}{https://github.com/21cmfast/21cmFAST}} \cite{21cmfast_c, 21cmfast_python}.\par
+As mentioned above, the original simulation was developed as a C script. Later, in 2020, the equivalent Python package was introduced as the third version of 21cmFAST. The core C code is a high-performance script that uses the excursion set formalism to identify regions of ionized hydrogen atop a cosmological density field evolved using first- or second-order Lagrangian perturbation theory, tracking the thermal and ionization state of the intergalactic medium, and computing
+X-ray, soft UV, and ionizing UV cosmic radiation fields based on parameterized galaxy models \cite{21cmfast_c}. \par
+An example of a mean temperature curve generated using 21cmFAST is shown in \ref{fig:21cmfast_curve}.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale = 0.7]{21cm_curve.jpg}
+    \caption[Evolution of the mean temperature generated using 21cmFAST]{Evolution of mean the temperature generated using 21cmFAST. Solid, dashed and dotted curves represent the spin temperature, the kinetic temperature of the gas, and CMB temperature (equivalent to background temperature in $21cvm$ applications) respectively. Figure from \cite{21cmfast_python}}
+    \label{fig:21cmfast_curve}
+\end{figure}
 \subsection{The Accelerated Reionization Era Simulations (ARES)}
 The Accelerated Reionization Era Simulations, or in the short form \emph{ARES}, is a Python package for quick and efficient generation of 21cm curves \footnote{Documentation: \hyperlink{https://ares.readthedocs.io/en/latest/}{https://ares.readthedocs.io/en/latest/}} \footnote{GitHub Repository: \hyperlink{https://github.com/mirochaj/ares}{https://github.com/mirochaj/ares}}\cite{ares2014jordan}. Alongside global 21cm curve applications, it can be used for stand-alone non-equilibrium chemistry solver, global radiation background calculator,  galaxy semi-analytic modeling \cite{jordan_galaxy_1, jordan_galaxy_2, jordan_galaxy_3}, PopIII star modeling \cite{jordan_star}, 1D radiative transfer, and spectral energy distribution (SED) optimization \cite{jordan_SED}.\par
 ARES draws the globally-averaged $21cm$ curve through the numerical calculation of equation \ref{eq:global_curve}. To do so, we need to evaluate the spin temperature $T_S$, which is dependent on coupling coefficients $x_\alpha$ and $x_c$. The collisional coupling $x_c$ is found using the tabulated values in \cite{ares_collision_coeff}, and the $Ly\alpha$ coupling coefficient is calculated using equation \ref{eq:x_a}. By ignoring detailed line profile effects, this expression can be written in the following form \cite{ares_lya_coeff_1, ares_lya_coeff_2, ares_lya_coeff_3} as a function of the angle-averaged $Ly\alpha$ back-ground intensity $\widehat{J}_\alpha$ which determines the strength of Wouthuysen-Field coupling \cite{ares2014jordan}: 
@@ -335,7 +339,7 @@ ARES uses the above-mentioned approach to evaluate equation \ref{eq:global_curve
 \begin{figure}[h!]
     \centering
     \includegraphics[scale =0.7]{ares_curve.jpg}
-    \caption[Typical global 21cm curve generated using ARES]{An example of a global 21cm signal generated using ARES. The fluctuations discussed in section \ref{chap:global21cm,sub:physics,sub:global} are perfectly illustrated in the simulated signal. Note the similarities to corresponding regions in figure \ref{fig:global_signal_pritchard_loeb}. Figure from Jordan Mirocha in the \hyperlink{https://ares.readthedocs.io/en/latest/examples/example_gs_standard.html}{ARES documentation}}
+    \caption[Typical global 21cm curve generated using ARES]{An example of a global 21cm signal generated using ARES, illustrating the evolution of the brightness temperature of $21cm$ line against the background radio sources as a function of frequency. The fluctuations discussed in section \ref{chap:global21cm,sub:physics,sub:global} are perfectly demonstrated in the simulated signal. Note the similarities to corresponding regions in figure \ref{fig:global_signal_pritchard_loeb}. Figure from Jordan Mirocha in the \hyperlink{https://ares.readthedocs.io/en/latest/examples/example_gs_standard.html}{ARES documentation}}
     \label{fig:ares_Curve}
 \end{figure}
 %------------------------------------------------------------
@@ -353,6 +357,16 @@ ARES uses the above-mentioned approach to evaluate equation \ref{eq:global_curve
 \chapter{Observations of the Global 21cm Signal}
 \label{chap:observations}
 List of experiments (reminder: rephrasing and citing each of them,  things that I need for each experiment: dipole antenna, location, time frame of results, frequency range), only mention the global 21cm ones not all 21cm:\par
+why is it hard: Unavoidable (beam-averaged)
+foregrounds which are > ~10%
+times larger than the signal.
+• Beam chromaticity mixes spatial
+and spectral structure of the
+foregrounds with that of the
+instrument.
+• Also: Ionospheric effects (see
+Datta et al. 2016), RFI, radio Solar
+emissions.\par
  While most experiments in this field focus on spatial fluctuations of the 21cm signal to study the large-scale structure of the universe, there are a few experiments specifically designed to detect the global $21cm$ signal:
 \begin{enumerate}
 \item EDGES (Experiment to Detect the Global EoR Signature): This was the first experiment to report a detection of the global 21cm signal in 2018, by measuring the absorption of radio waves from distant sources by neutral hydrogen in the intergalactic medium \cite{edges}.
@@ -709,9 +723,9 @@ We again run the MCMC from the drawn samples. The results are shown in table \re
 \hline
 \diagbox{Value}{Parameter} & \emph{pop\_rad\_yield\_0\_} & \emph{pop\_rad\_yield\_2\_} & \emph{$f_{esc}$} & \emph{$f_X$}\\
 \hline
-Fitted values & $9.99998275 \times 10^ {3}$ & $9.99419824 \times 10^ {2}$ & $1.00025031 \times 10^ {-1}$ & $1.00001169 \times 10^ {-1}$ \\
+Fitted values & $9.999 \times 10^ {3}$ & $9.994 \times 10^ {2}$ & $1.000 \times 10^ {-1}$ & $1.000 \times 10^ {-1}$ \\
 \hline
-Error-bar of fit & $3.54171104 \times 10^ {-2}$ & $3.86126208 \times 10^ {0}$& $3.57822431 \times 10^ {-4}$ & $3.39295495 \times 10^ {-6}$ \\
+Error-bar of fit & $3.541 \times 10^ {-2}$ & $3.861 \times 10^ {0}$& $3.578 \times 10^ {-4}$ & $3.392\times 10^ {-6}$ \\
 \hline
 \end{tabular}
 \end{table}
