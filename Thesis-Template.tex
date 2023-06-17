@@ -23,6 +23,7 @@
 \usepackage[table]{xcolor}
 \usepackage{nomencl}
 \usepackage[nonumberlist,nogroupskip,xindy]{glossaries}
+\usepackage{glossaries}
 \usepackage{floatrow}
 \usepackage{wrapfig}
 \renewcommand{\baselinestretch}{2}
@@ -80,7 +81,7 @@
 \input{glossary}
 \makeindex
 \makeglossaries
-\import{./}{definitions.tex}
+
 % Set page numbering to roman
 \setcounter{page}{2}\renewcommand{\thepage}{\roman{page}}
 
@@ -176,10 +177,13 @@ I learned a lot during the past two years, both scientifically and non-scientifi
  %---------------------------------------------------------------------------------------------------------------
  % Start of ToC, LoT, gls
 	\tableofcontents\thispagestyle{plain}
-
+ \glsunsetall
 	\listoffigures\thispagestyle{plain}
+ \glsresetall
 %	\addcontentsline{toc}{section}{\listfigurename}
+ \glsunsetall
 	\listoftables
+  \glsresetall
 %	\addcontentsline{toc}{section}{\listtablename}
 	\glsaddall
 	\setlength\LTleft{0pt}
@@ -200,7 +204,7 @@ $21cm$ cosmology is a relatively new opened window in the study of the universe 
 In this chapter, we will first talk about the importance of this signal and its applications. Then, we will describe the motivations of this research to clarify the effects of non-standard physics on this signal \footnote{It is worth emphasizing that in this thesis, we will only focus on the global $21cm$ signal as the subject of study.}. Finally, in the last section of this chapter, we will briefly go over all the materials provided in this thesis.\par
 %-----------------------------------------------------------
 \section{Background and motivation}
-\hl{After the occurrence of the big bang, prior to the formation of the first stars and galaxies ($200 \lesssim z \lesssim 1100$), the universe was primarily composed of gas (with hydrogen constituting approximately 75\% and helium, along with trace quantities of heavy elements, comprising the remaining portion). Additionally, there existed a comparatively smaller amount of free electrons relative to the gas, accompanied by the residual photons originating from the initial big bang, commonly referred to as the \gls{cmb} }\cite{map_universe, 21century}.
+\hl{After the occurrence of the big bang, prior to the formation of the first stars and galaxies ($200 \lesssim z \lesssim 1100$), the universe was primarily composed of gas (with hydrogen constituting approximately 75\% and helium, along with trace quantities of heavy elements, comprising the remaining portion). Additionally, there existed a comparatively smaller amount of free electrons relative to the gas, accompanied by the residual photons originating from the initial big bang, commonly referred to as the} \gls{cmb}\cite{map_universe, 21century}.
 
 Since neutral hydrogen is the most frequent component of the intergalactic medium (IGM), it provides a convenient tracer for the behavior of baryonic matter in the early universe. Neutral hydrogen has a hyperfine splitting in its 1S ground state caused by the interaction between the magnetic moment of the proton and the electron (Figure \ref{fig:spinflip}). This spin-flip transition results in the absorption or emission of a photon with the frequency of $1420.4057\hspace{0.1cm} MHz$\cite{low_frequency} corresponding to a wavelength of $21.1cm$\footnote{The existence of this spectral line was theoretically predicted by van de Hulst in 1942, and Ewen and Purcell reported the first ever detection in 1951\cite{21century}.} \cite{21century}.\par
 \begin{figure}[h!]
@@ -240,7 +244,7 @@ As we move along to the last section, we pursue our discussion by the latest fin
 \section{Theoretical basis of the 21cm signal}
 \label{chap:global21cm,sub:physics}
 \subsection{Physical Principles of the 21cm spectral line}
-Based on the prior well-accepted knowledge that the $21cm$ signal is a result of interaction between the CMB and the matter along its way, we expect the characteristics of the signal to depend on the radiative transfer along the line of sight. As a result, to find the brightness temperature of the $21cm$ line, we start with the basic Radiative Transfer Equation (RTE) for the specific intensity $I_{\nu}$:
+Based on the prior well-accepted knowledge that the $21cm$ signal is a result of interaction between the \gls{cmb} and the matter along its way, we expect the characteristics of the signal to depend on the radiative transfer along the line of sight. As a result, to find the brightness temperature of the $21cm$ line, we start with the basic \gls{rte} for the specific intensity $I_{\nu}$:
 \begin{equation}
     \frac{dI_\nu}{ds} = - \alpha_\nu + j_\nu ,
     \label{eq:RT}
@@ -256,7 +260,7 @@ For $21cm$ applications, the excitation temperature is referred to as spin tempe
     g_0 =1, g_1 =3\\
      T_* \equiv \frac{E_{10}}{K_B T_S} = \frac {hc}{k\lambda_{21cm}} = 0.068 K
 \end{gather}
-$g_0$ and $g_1$ are the statistical degeneracy factors, and $T_*$ is a factor with dimensions of temperature defined for convenience. The deviation of the spin temperature from the background temperature is the key to the detectability of this signal\footnote{Although it is possible to choose a radio-loud point source as the background template, however since the order of fluctuations in the CMB temperature is insignificant in our study ($\delta T_{CMB} \approx 10 ^{-5}$), the CMB is a great candidate as a source of uniform brightness\cite{21century}.}. Thus, in the study of the physics of the $21cm$ signal, we mainly focus on the fluctuations of the spin temperature.\par
+$g_0$ and $g_1$ are the statistical degeneracy factors, and $T_*$ is a factor with dimensions of temperature defined for convenience. The deviation of the spin temperature from the background temperature is the key to the detectability of this signal\footnote{Although it is possible to choose a radio-loud point source as the background template, however since the order of fluctuations in the \gls{cmb} temperature is insignificant in our study ($\delta T_{CMB} \approx 10 ^{-5}$), the \gls{cmb} is a great candidate as a source of uniform brightness\cite{21century}.}. Thus, in the study of the physics of the $21cm$ signal, we mainly focus on the fluctuations of the spin temperature.\par
 With this expression, we calculate the optical depth of a cloud of hydrogen as \cite{21century, low_frequency}:
 \begin{gather}
     \tau_\nu=\int \mathrm{d} s\left[1- e^{ \frac {T_*}{ T_S}}\right] \sigma_0 \phi(v) n_0 ,\\
@@ -265,15 +269,15 @@ With this expression, we calculate the optical depth of a cloud of hydrogen as \
 \end{gather}
 where $\phi_\nu$ accounts for the line profile, normalized so that $\int \phi \left(\nu\right) =1$. $n_H$ is the hydrogen number density, and the $1/4$ factor is the ratio of hydrogen atoms in the hyperfine triplet state. $\sigma_0$ represents the $21cm$ cross-section dependant on the spontaneous decay rate of the spin-flip transition $A_{10} = 2.85 \times 10^{-15} s^{-1}$ \cite{21century, low_frequency}. The very small value of $A_{10}$ implies the rare occurrence of the transition and explains the faintness of the 2cm signal \cite{kit_thesis}. 
 
-Three competing processes influence the spin temperature: 1) interaction of $21cm$ photons with the radio background (mostly CMB), 2) collisions with other particles (a mixture of hydrogen atoms, free electrons, and protons with hydrogen atoms as the leading component), and 3) resonant scattering of $Ly\alpha$ photons that cause a spin-flip transition with through the meddling of an intermediate excited state. Therefore, the spin temperature will be expressed using the equilibrium between these mechanisms and their corresponding Einstein coefficients. After algebraic simplifications, we have \cite{low_frequency,21century}:
+Three competing processes influence the spin temperature: 1) interaction of $21cm$ photons with the radio background (mostly \gls{cmb}), 2) collisions with other particles (a mixture of hydrogen atoms, free electrons, and protons with hydrogen atoms as the leading component), and 3) resonant scattering of \gls{lya} photons that cause a spin-flip transition with through the meddling of an intermediate excited state. Therefore, the spin temperature will be expressed using the equilibrium between these mechanisms and their corresponding Einstein coefficients. After algebraic simplifications, we have \cite{low_frequency,21century}:
 \begin{equation}
     T^{-1}_S = \frac{T^{-1}_\gamma + x_\alpha T^{-1}_\alpha + x_c T^{-1}_K}{1 + x_\alpha + x_c}.
 \end{equation}
-Where $T_\gamma$ is the temperature of the surrounding bath of radio photons ($T_\gamma = T_{CMB}$). $T_\alpha$ is the color temperature of the $Ly\alpha$ radiation field (at the $Ly\alpha$ frequency). Normally, it is assumed to have the same value as the gas kinetic temperature $T_K$ as a result of repeated scatterings and their recoils. $x_c$ and $x_\alpha$ are the coupling coefficients due to atomic collisions and scattering of $Ly\alpha$ photons, respectively. The spin temperature becomes strongly coupled to the gas temperature when terms with coupling coefficients become dominant: $x_c + x_\alpha \gtrsim 1$. On the other hand, it relaxes to $T_\gamma$ when the coefficients are relatively small: $x_c + x_\alpha << 1$ \cite{21century, low_frequency}. 
-\subsubsection{Wouthuysen-Field Coupling}
-As previously mentioned, a hydrogen atom in the early universe can interact with CMB photons that had frequencies matching the energy gaps of hydrogen atoms, especially in the $Ly\alpha$ band. However, with the onset of star formation, CMB will no longer be the only source of photons for the hydrogen atom to interact with. The newly formed compact objects are capable of generating UV photons, including $Ly\alpha$, and reheating the IGM. These photons are injected into the $Ly\alpha$ frequency band by resonant scattering rather than being redshifted from outside the line. The existence of this second channel increases the coupling ability of the hydrogen-background interaction, further assisting the spin temperature $T_S$ in coupling to $T_K$.\par
-The process of coupling the spin temperature of neutral hydrogen to the background radiation $Ly\alpha$ is called \textbf{Wouthuysen-Field Coupling} \cite{barkana2001beginning}\footnote{The Wouthuysen-Field effect is named after two physicists who independently described the phenomenon in 1952 and 1958: Robert H. Wouthuysen \cite{wouthuysen_original}, and George B. Field \cite{field_original}.}. This process plays a pivotal role in the observability of the global $21cm$ signal during dark ages by forcing the signal to deviate from the temperature of the CMB.\par
-The $Ly\alpha$ coupling coefficient can be written as a function of scattering rate $P_\alpha$ \cite{low_frequency}:
+Where $T_\gamma$ is the temperature of the surrounding bath of radio photons ($T_\gamma = T_{CMB}$). $T_\alpha$ is the color temperature of the \gls{lya} radiation field (at the \gls{lya} frequency). Normally, it is assumed to have the same value as the gas kinetic temperature $T_K$ as a result of repeated scatterings and their recoils. $x_c$ and $x_\alpha$ are the coupling coefficients due to atomic collisions and scattering of \gls{lya} photons, respectively. The spin temperature becomes strongly coupled to the gas temperature when terms with coupling coefficients become dominant: $x_c + x_\alpha \gtrsim 1$. On the other hand, it relaxes to $T_\gamma$ when the coefficients are relatively small: $x_c + x_\alpha << 1$ \cite{21century, low_frequency}. 
+\subsubsection{\gls{wf} Coupling}
+As previously mentioned, a hydrogen atom in the early universe is able to interact with \gls{cmb} photons that had frequencies matching the energy gaps of hydrogen atoms, especially in the \gls{lya} band. However, with the onset of star formation, \gls{cmb} will no longer be the only source of photons for the hydrogen atom to interact with. The newly formed compact objects are capable of generating \gls{uv} photons, including \gls{lya}, and reheating the \gls{igm}. These photons are injected into the \gls{lya} frequency band by resonant scattering rather than being redshifted from outside the line. The existence of this second channel increases the coupling ability of the hydrogen-background interaction, further assisting the spin temperature $T_S$ in coupling to $T_K$ \cite{21century, low_frequency}.\par
+The process of coupling the spin temperature of neutral hydrogen to the \gls{lya} background is called \textbf{\gls{wf} effect} \cite{barkana2001beginning}\footnote{The \gls{wf} coupling is named after two physicists who independently described the phenomenon in 1952 and 1958: Robert H. Wouthuysen \cite{wouthuysen_original}, and George B. Field \cite{field_original}.}. This process plays a pivotal role in the observability of the global $21cm$ signal during the dark ages by forcing the signal to deviate from the temperature of the \gls{cmb}.\par
+The \gls{lya} coupling coefficient, indicating the strength of \gls{wf} effect is expressed as a function of scattering rate $P_\alpha$ \cite{low_frequency}:
 \begin{equation}
     x_\alpha = \frac{4P_\alpha}{27 A_{10}} \frac{T_*}{T_\gamma}
     \label{eq:x_a}
@@ -281,21 +285,26 @@ The $Ly\alpha$ coupling coefficient can be written as a function of scattering r
 
 \subsection{Sky-Averaged 21cm Signal}
 \label{chap:global21cm,sub:physics,sub:global}
-Based on the discussions of the last section, the equation for the sky-averaged $21cm$ signal can be written as \cite{low_frequency}:
+We previously mentioned that the global $21cm$ signal is the average over all the spatial fluctuations of the $21cm$ signal. Generally, we study the behavior of this signal in comparison to a roughly uniform source of radio background. Thus, we define the differential brightness temperature of the global $21cm$ signal as the excess brightness temperature (due to emission or absorption) of the global $21cm$ signal with respect to that of the background, which in our case, is assumed to be \gls{cmb}. Therefore,
+\begin{equation}
+    \delta T_b = T_{S} - T_{\gamma} = T_S - T_{CMB}.
+\end{equation}
+Based on the discussions of the last section, this differential brightness temperature is found using the following expression \cite{low_frequency}:
 \begin{equation}
     \delta T_b \approx 27 \left(1- \bar{x}_i\right) \left(\frac{\Omega_{b, 0}h^2}{0.023}\right) \left( \frac{0.15}{\Omega_{m, 0}h^2} \frac{1+z}{10}\right)^{1/2}\left(1-\frac{T_\gamma}{T_S}\right)
     \label{eq:global_curve}
 \end{equation}
-Where $x_i$ is the ionization fraction, $h$ is the dimension-less Hubble constant, $\Omega_{b, 0}$ and $\Omega_{m, 0}$ are the current ratio of the energy density of baryonic and total matter to the critical density of the universe.\par
-To describe the fluctuations of global 21cm through the thermal history of the universe and the physical mechanisms behind them, we split the early universe era into different redshift regions:\par
+Where $x_i$ is the ionization fraction, and $h$ is the dimensionless Hubble constant. $\Omega_{b, 0}$ and $\Omega_{m, 0}$ are the ratio of the current energy density of baryonic and total matter with respect to the critical energy density of the universe.\par
+To further investigate the fluctuations of the global $21cm$ through the thermal history of the universe and the physical mechanisms behind the troughs, we split the early universe era into different redshift regions\footnote{It is crucial to mention that there is still considerable uncertainty in the exact values of the redshift bounds and the sequence of events due to our highly limited knowledge on the characteristics and effects of early sources. This uncertainty is such significant that there might even be an overlap between these discussed regions \cite{21century}.}:\par
 \begin{itemize}
-\item $200 \lesssim z \lesssim 1100$: Compton scattering maintains the thermal coupling of gas to the CMB temperature through the residual free electrons after the recombination ($T_K = T_\gamma$). Due to the high density of the gas, the collisional coupling is dominant, forcing the spin temperature to the kinetic temperature of the gas. Therefore, the brightness temperature of the 21cm signal is zero during this redshift regime \cite{21century}.\par
+\item $200 \lesssim z \lesssim 1100$: The universe is filled with high-density gas and the residual free electrons from the recombination. Compton scattering maintains the thermal coupling of gas to \gls{cmb} temperature through the electrons ($T_K = T_\gamma$). Due to the high density, the collisional coupling is dominant, forcing the spin temperature to the kinetic temperature of the gas ($T_S = T_K$). 
+Therefore, the differential brightness temperature of the $21cm$ signal is zero during this redshift regime ($T_S = T_\gamma$)\cite{21century}.\par
 
-\item $40 \lesssim z \lesssim 200$: The universe becomes cool enough for subatomic particles to combine and form neutral hydrogen. As a result, baryonic matter experiences thermal decoupling from the CMB, making it possible for the non-relativistic gas to cool adiabatically with the expansion of the universe \cite{21century}. The temperature of the gas and CMB drops as $T\propto a^{-2}$ and $T\propto a^{-1}$ respectively\footnote{"\emph{a}" is the expansion scale factor}. This rate discrepancy leaves the gas cooler than radiation while effectively stopping heat exchange between these two components. As a result, the gas spin temperate decouples from the CMB temperature. Since the effect of collisional coupling is still significant, we have $T_S = T_K$. Consequently, the 21cm brightness temperature becomes negative (compared to the CMB background) in the average spectrum corresponding to this redshift \cite{map_universe, 21century}.\par
+\item $40 \lesssim z \lesssim 200$ (Dark Ages): The universe becomes cool enough for subatomic particles to combine and form neutral hydrogen. As a natural result, baryonic matter experiences thermal decoupling from the \gls{cmb}, making it possible for the non-relativistic gas to cool adiabatically with the expansion of the universe \cite{21century}. The temperature of the gas and \gls{cmb} drops as $T\propto a^{-2}$ and $T\propto a^{-1}$ respectively\footnote{"\emph{a}" is the expansion scale factor.}. This rate discrepancy leaves the gas cooler than radiation while effectively stopping heat exchange between these two components. Therefore, the gas spin temperate decouples from that of \gls{cmb}. Since collisional coupling is still significantly strong, the spin temperature remains in coupled to the gas kinetic temperature ($T_S = T_K$). Consequently, the $21cm$ differential brightness temperature becomes negative (absorption) in this redshift region \cite{map_universe, 21century}.\par
 
-\item $z_* \lesssim z \lesssim 40$\footnote{There is still considerable uncertainty in the exact values of this redshift range and the sequence of events due to our ignorance of early sources. This uncertainty is such significant that there might even be an overlap between the regions discussed above \cite{21century}.}: As the density keeps dropping through the expansion, the influence of collisional couplings becomes less significant, causing the spin temperature to again couple with the CMB temperature ($T_S \rightarrow T_\gamma$). Thus, the 21cm brightness signal goes back to zero again\cite{map_universe}. The first blue regions in the upper panel of figure \ref{fig:global_signal_pritchard_loeb} and corresponding absorption through in the lower panel depict the above-mentioned process \cite{map_universe, 21century}.\par
+\item $z_* \lesssim z \lesssim 40$: As the density keeps dropping through the expansion, the influence of collisional couplings becomes less significant, causing the spin temperature to again couple with the \gls{cmb} temperature ($T_S \rightarrow T_\gamma$). Thus, the $21cm$ differential brightness signal goes back to zero again\cite{map_universe}. The first blue regions in the upper panel of figure \ref{fig:global_signal_pritchard_loeb} and the corresponding absorption trough in the lower panel depict the above-mentioned process \cite{map_universe, 21century}.\par
 
-\item $z_\alpha \lesssim z \lesssim z_*$: The second fluctuation in figure \ref{fig:global_signal_pritchard_loeb} emerged through the formation of the first stars and galaxies. As large halos begin to collapse to form first stars and galaxies, they generate both x-ray and $Ly\alpha$ emissions. Two mechanisms create the $Ly\alpha$ photons: 1) Continuum radiation redshifted to the $Ly\alpha$ wavelength and 2) Ionization and deexcitation of IGM gas. Since the emissivity required for the $Ly\alpha$ coupling is less significantly less than that for heating $T_k$ above $T_\gamma$, the spin temperature tends to couple to cold gas ($T_S \rightarrow T_K$) through the Wouthuysen-Field effect. Therefore, we will again observe the $21cm$ absorption through \cite{map_universe, 21century}.\par
+\item $z_\alpha \lesssim z \lesssim z_*$: The second trough in figure \ref{fig:global_signal_pritchard_loeb} emerged through the formation of the first structures. As large halos begin to collapse to form first stars and galaxies, they generate both x-ray and \gls{lya} emissions. Two mechanisms create the \gls{lya} photons: 1) Continuous redshifting of background radiation to the \gls{lya} wavelength and 2) Ionization and deexcitation of \gls{igm} gas. Since the emissivity required for the \gls{lya} coupling is significantly less than that for heating $T_k$ above $T_\gamma$, the spin temperature tends to couple to cold gas ($T_S \rightarrow T_K$) through the \gls{wf} effect. Therefore, we will again observe the global $21cm$ signal in absorption \cite{map_universe, 21century}.\par
 
 \item $z_r \lesssim z \lesssim z_\alpha$: Eventually, the gas is reheated by ionizing x-ray photons from galaxies \cite{21century}, and the 21cm brightness temperature goes back to zero (second absorption through in the lower panel of figure \ref{fig:global_signal_pritchard_loeb}). The influence of this reheating mechanism is such strong that we even expect to observe 21cm emission in this redshift range (red region in the upper panel of figure \ref{fig:global_signal_pritchard_loeb}). From this point on in the thermal history of universe, we do not expect to see anymore 21cm signal from IGM since most of the gas will be ionized by emergent stars, galaxies and accreting blackholes. Therefore, the 21cm brightness temperature goes to zero (the black region in the upper panel of figure \ref{fig:global_signal_pritchard_loeb}). However, in the regions with higher recombination rate inside galaxies and dark matter halos, the neutral hydrogen is shielded and preserved. Thus, the 21cm signature originating from inside the galaxies will continue to exist\cite{map_universe, 21century}.\par
 \end{itemize}
