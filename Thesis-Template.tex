@@ -4,6 +4,7 @@
 
 \documentclass[12pt, TexShade, letterpaper]{report}
 \usepackage[utf8]{inputenc}
+\usepackage{tcolorbox}
 \usepackage{palatino}
 \usepackage{comment}
 \usepackage{amsmath}
@@ -35,7 +36,17 @@
 \usepackage{diagbox} % for diagonal line command
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}} % Ensure List of Figs, ToC, and glossary are named in the header
 \usepackage{xcolor} % Required for text highlighting
-
+\newtcolorbox{highlightbox}{
+  colback=yellow,
+  colframe=yellow,
+  boxsep=0pt,
+  arc=0pt,
+  boxrule=0pt,
+  left=0pt,
+  right=0pt,
+  top=0pt,
+  bottom=0pt,
+}
 \setglossarystyle{long}
 \renewcommand{\glsnamefont}[1]{\textbf{#1}}
 
@@ -200,38 +211,41 @@ I learned a lot during the past two years, both scientifically and non-scientifi
 %###########################################################
 \chapter{Introduction}
 \label{chap:intro}
-$21cm$ cosmology is a relatively new opened window in the study of the universe during its early stages of evolution. Its applications range from the study of cosmic dawn and \gls{eor} to cosmic structure formation and dark matter investigations\cite{SKA_dark_ages}. The field holds great potential for revolutionizing our understanding of the first stars, galaxies, and black holes by leveraging the temporal and spatial information embedded in the cosmic 21-cm signal\cite{21cmfast_c}.\par
+$21cm$ cosmology is a relatively new opened window in the study of the universe during its early stages of evolution. Its applications range from the study of cosmic dawn and \gls{eor} to cosmic structure formation and dark matter investigations\cite{SKA_dark_ages}. The field holds great potential for revolutionizing our understanding of the first stars, galaxies, and black holes by leveraging the temporal and spatial information embedded in the cosmic $21cm$ signal\cite{21cmfast_c}.\par
 In this chapter, we will first talk about the importance of this signal and its applications. Then, we will describe the motivations of this research to clarify the effects of non-standard physics on this signal \footnote{It is worth emphasizing that in this thesis, we will only focus on the global $21cm$ signal as the subject of study.}. Finally, in the last section of this chapter, we will briefly go over all the materials provided in this thesis.\par
 %-----------------------------------------------------------
 \section{Background and motivation}
 \hl{After the occurrence of the big bang, prior to the formation of the first stars and galaxies ($200 \lesssim z \lesssim 1100$), the universe was primarily composed of gas (with hydrogen constituting approximately 75\% and helium, along with trace quantities of heavy elements, comprising the remaining portion). Additionally, there existed a comparatively smaller amount of free electrons relative to the gas, accompanied by the residual photons originating from the initial big bang, commonly referred to as the} \gls{cmb}\cite{map_universe, 21century}.
 
-Since neutral hydrogen is the most frequent component of the intergalactic medium (IGM), it provides a convenient tracer for the behavior of baryonic matter in the early universe. Neutral hydrogen has a hyperfine splitting in its 1S ground state caused by the interaction between the magnetic moment of the proton and the electron (Figure \ref{fig:spinflip}). This spin-flip transition results in the absorption or emission of a photon with the frequency of $1420.4057\hspace{0.1cm} MHz$\cite{low_frequency} corresponding to a wavelength of $21.1cm$\footnote{The existence of this spectral line was theoretically predicted by van de Hulst in 1942, and Ewen and Purcell reported the first ever detection in 1951\cite{21century}.} \cite{21century}.\par
+Since neutral hydrogen is the most frequent component of the \gls{igm}, it provides a convenient tracer for the behavior of baryonic matter in the early universe. Neutral hydrogen has a hyperfine splitting in its 1S ground state caused by the interaction between the magnetic moment of the proton and the electron (Figure \ref{fig:spinflip}). This spin-flip transition results in the absorption or emission of a photon with the frequency of $1420.4057\hspace{0.1cm} MHz$\cite{low_frequency} corresponding to a wavelength of $21.1cm$ \footnote{The existence of this spectral line was theoretically predicted by van de Hulst in 1942, and Ewen and Purcell reported the first ever detection in 1951\cite{21century}.} \cite{21century}.\par
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.4]{spinflip.jpg}
 \caption[Spin-flip Transition of Neutral Hydrogen]{\hl{A basic depiction of the spin-flip transition on the ground energy state of the neutral hydrogen. The upper and lower plots indicate the triplet and singlet states, respectively. The energy difference associated with this transition is $\Delta E = 5.9 \times 10 ^{-6}eV$ }\cite{21century}. Figure from Kit Gerodias \cite{kit_thesis}.}
 \label{fig:spinflip}
 \end{figure}
-\hl{Given that the CMB encompasses photons with the wavelength of $21cm$, hydrogen atoms are able to engage in interactions with the CMB, thereby facilitating the absorption of the $21cm$ photon. This interaction takes place approximately during the dark ages and the EoR. As a consequence of this interaction, the brightness temperature of the $21cm$ line experiences a notable alteration\footnote{This interaction will be discussed in detail in Chapter \ref{chap:global21cm} as the coupling of the spin temperature $T_s$ with the kinetic temperature of the gas $T_k$.}. Using modern radio interferometers equipped with precise observation capabilities, this alteration can be detected effectively. It should be noted that due to the redshift, the 21 cm signal attains frequencies ranging from approximately 30 to 200 $MHz$, rendering it easily accessible to our radio interferometers} \cite{low_frequency}.
+\begin{highlightbox}
+Given that the \gls{cmb} encompasses photons with the wavelength of $21cm$, hydrogen atoms are able to engage in interactions with the \gls{cmb}, thereby facilitating the absorption of the $21cm$ photon. This interaction takes place approximately during the dark ages and the \gls{eor}. As a consequence of this interaction, the brightness temperature of the $21cm$ line experiences a notable alteration\footnote{This interaction will be discussed in detail in Chapter \ref{chap:global21cm} as the coupling of the spin temperature $T_s$ with the kinetic temperature of the gas $T_k$.}. Using modern radio interferometers equipped with precise observation capabilities, this alteration can be detected effectively. It should be noted that due to the redshift, the $21cm$ signal attains frequencies ranging from approximately 30 to 200 $MHz$, rendering it easily accessible to our radio interferometers \cite{low_frequency}.
+\end{highlightbox}
 These observations are capable of giving us valuable information about the distribution of neutral hydrogen and the evolution of cosmic structure over time\cite{low_frequency}.\par
-The global $21cm$ signal is the average over the brightness temperature of the $21cm$ line across the entire sky. It is a measure of the overall state of the intergalactic medium (IGM) and presents itself as an excess absorption or emission in different redshift regions. This radiation is an observational evidence for certain characteristics of the IGM in the early universe (e.g., temperature, density, and reionization state). These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}.\par
+The global $21cm$ signal is the average over the brightness temperature of the $21cm$ line across the entire sky. It is a measure of the overall state of the \gls{igm} and presents itself as an excess absorption or emission in different redshift regions. This radiation is a piece of observational evidence for certain characteristics of the \gls{igm} in the early universe (e.g., temperature, density, and reionization state). These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}.\par
 Besides all the above-mentioned applications, the global $21cm$ signal is a \textbf{strong probe for non-standard physics} during the dark ages. It has the potential to shed light on mysteries surrounding dark matter/dark energy, the existence of cosmic strings, and even certain particle interaction  \cite{dark_nature_21, constrain_dm_21, cosmic_string_brandenberger, ee_interaction_21, neutrino_21} \footnote{These effects will be discussed more in \ref{chap:global21cm,sub:non_standard}.}. This capacity of the global $21cm$ signal is the main motivation of this research.\par
 %-----------------------------------------------------------
 \section{Research questions and objectives}
-The effects of non-standard physics in $21cm$ signal have gained lots of attraction in the recent literature (cite) \todo{Add these citations}. These effects were investigated through the application of analytical and semi-analytical methods. However, the majority of the studies were predominantly analytical in nature, regardless of the observational data (citation).\par \todo{Add these citations}
-We aim to fill this research gap by continuing the semi-analytical efforts to simulate the global $21cm$ signal with an aim to prob these non-standard effects. With the recently released data at our disposal \cite{edges}, we use certain fitting algorithms to compare them to theoretically simulated models\cite{ares2014jordan}. 
+\begin{highlightbox}
+    The effects of non-standard physics in $21cm$ signal have gained lots of attraction in the recent literature \cite{WF_effect_oscar, constrain_dm_21, bh_cosmioc_dawn}. These effects were investigated through the application of analytical and semi-analytical methods. However, the majority of the studies were predominantly analytical in nature, and the results were not evaluated against the observational data. We aim to fill this research gap by continuing the semi-analytical efforts with an aim to introduce a generalized framework to prob these non-standard effects.\par \end{highlightbox}
+With the recently released data at our disposal \cite{edges}, we use certain fitting algorithms to compare them to theoretically simulated models\cite{ares2014jordan}. 
 The first step is to estimate the physical parameters of these curves by only taking the standard physical mechanisms into account.\par
 In future studies, we will include a realistic foreground model and upgrade our simulator to include desired non-standard effects. We will again fit the observational data to the upgraded version of the theoretical model to investigate patterns of change in the best-fit physical parameters. The insights from this study will be used to constrain the physical parameters found by the newly proposed models. Moreover, it will empower us to determine whether the upcoming radio interferometers have enough precision to detect our targeted non-standard effects.\par
 %-----------------------------------------------------------
 \section{Overview of the thesis}
 This thesis consists of two major components: the literature review and the research.\par
 In the literature review chapters (chapters \ref{chap:global21cm} and \ref{chap:observations}), we first talk about the global $21cm$ signal and its physical principles. We continue by exploring the effects of non-standard physics on the global $21cm$ signal in the recent literature. \par
-In chapter \ref{chap:observations}, we will briefly introduce all of the present and future observational projects aiming to detect the global 21cm signal. From all these experiments, we will thoroughly discuss the Experiment to Detect the Global EoR Signature (EDGES) and the Small Array for Research in Astrophysics of the South (SARAS)\footnote{\hl{The selection of these two experiments is justified by their explicit emphasis on observing the global 21cm signal rather than spatial fluctuations, coupled with the availability of their released data.}}.\par
+In chapter \ref{chap:observations}, we will briefly introduce all of the present and future observational projects aiming to detect the global 21cm signal. From all these experiments, we will thoroughly discuss the \gls{edges} and the \gls{saras}\footnote{\hl{The selection of these two experiments is justified by their explicit emphasis on observing the global 21cm signal rather than spatial fluctuations, coupled with the availability of their released data.}}.\par
 In the research half of this thesis (chapters \ref{chap:method} and \ref{chap:results}), we place a stronger emphasis on computational aspects. 
 In chapter \ref{chap:method}, we examine the importance of estimating the parameters of the global $21cm$ signal and how these estimations affect future proposed theoretical models and observations. Furthermore, we briefly describe different methods used to serve this purpose and the advantages of each one.
 Subsequently, we will Bring forth the details of the specific method used in this study. 
-Chapter \ref{chap:results}, demonstrates the results of applying this computational method to EDGES observational data.\par
+Chapter \ref{chap:results}, demonstrates the results of applying this computational method to \gls{edges} observational data.\par
 
 Finally, in chapter \ref{chap:discussion}, we interpret the outcome and talk about the implications of these results for cosmology and astrophysics. Also, the limitations and the future prospects of the project are mentioned in this chapter.\par
 %###########################################################
@@ -411,7 +425,8 @@ Another possibility is to investigate the effect of decay of cosmic string cusps
 %##############################################################
 \chapter{Observations of the Global 21cm Signal}
 \label{chap:observations}
-List of experiments (reminder: rephrasing and citing each of them,  things that I need for each experiment: dipole antenna, location, time frame of results, frequency range), only mention the global 21cm ones not all 21cm:\par
+\begin{comment}
+    List of experiments (reminder: rephrasing and citing each of them,  things that I need for each experiment: dipole antenna, location, time frame of results, frequency range), only mention the global 21cm ones not all 21cm:\par
 why is it hard: Unavoidable (beam-averaged)
 foregrounds which are > ~10%
 times larger than the signal.
@@ -422,17 +437,23 @@ instrument.
 • Also: Ionospheric effects (see
 Datta et al. 2016), RFI, radio Solar
 emissions.\par
+\end{comment}
+
  While most experiments in this field focus on spatial fluctuations of the 21cm signal to study the large-scale structure of the universe, there are a few experiments specifically designed to detect the global $21cm$ signal:
 \begin{enumerate}
-\item EDGES (Experiment to Detect the Global EoR Signature): This was the first experiment to report a detection of the global 21cm signal in 2018, by measuring the absorption of radio waves from distant sources by neutral hydrogen in the intergalactic medium \cite{edges}.
+\item EDGES (Experiment to Detect the Global EoR Signature): \cite{edges}.
 
-\item SARAS (Small Array for Research in Astrophysics of the South): This is a radio telescope located in India that has been used to study the global 21cm signal since 2015.
+\item SARAS (Small Array for Research in Astrophysics of the South): .
 
-\item PRIZM \cite{prizm_2017} (Probing Radio Intensity at high-Z from Marion): is an experiment that has been designed to study cosmic dawn in the universe using 50-150 MHz observations of globally averaged 21-cm emission. The experiment consists of two modified four-square antennas, operating at center frequencies of 70 and 100 MHz, and a dual-polarization spectrometer back end. PRIZM deployed in April 2017 to Marion Island, an exceptionally isolated and radio-quiet location in the sub-Antarctic, and science observations are currently in progress.
-initially called SCI-HI (Small Radio Telescope for Cosmic Hydrogen Intensity Mapping)
+\item SCI-HI and PRIZM \cite{prizm_2017} 
+%(Probing Radio Intensity at high-Z from Marion): is an experiment that has been designed to study cosmic dawn in the universe using 50-150 MHz observations of globally averaged 21-cm emission. The experiment consists of two modified four-square antennas, operating at center frequencies of 70 and 100 MHz, and a dual-polarization spectrometer back end. PRIZM deployed in April 2017 to Marion Island, an exceptionally isolated and radio-quiet location in the sub-Antarctic, and science observations are currently in progress.initially called SCI-HI (Small Radio Telescope for Cosmic Hydrogen Intensity Mapping)
 \item REACH (Radio Experiment for the Analysis of Cosmic Hydrogen)
 
-\item SKA \cite{SKA_global_21}
+%\item SKA \cite{SKA_global_21}
+\item LEDA
+\item HYPEREION
+\item SAFARI
+\item EIGSEP
 
 \item BIGHORNS (Broadband Instrument for Global HydrOgen ReioNisation Signal): This is a radio interferometer located in Australia that was designed to detect the global 21cm signal during the epoch of reionization.
 
