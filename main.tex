@@ -216,17 +216,17 @@ $21cm$ cosmology is a relatively new opened window in the study of the universe 
 In this chapter, our initial focus will be on providing a concise introduction to the global $21cm$ signal and its various applications. Subsequently, we will delve into the reasons behind conducting this research, aiming to elucidate the impact of non-standard physics on this signal. Lastly, within the final section of this chapter, we will provide an overview of all the materials furnished in this thesis.\par
 %\footnote{It is worth emphasizing that in this thesis, we will only focus on the global $21cm$ signal as the subject of study.}
 %-----------------------------------------------------------
-\section{Background and motivation}
+\section{Background and Motivation}
 The global $21cm$ signal is the average over the brightness temperature of the $21cm$ line across the entire sky. It is a measure of the overall state of the \gls{igm} and presents itself as an excess absorption or emission in different redshift regions. This radiation is a piece of observational evidence for certain characteristics of the \gls{igm} in the early universe (e.g., temperature, density, and reionization state). These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}.\par
 Besides all the above-mentioned applications, the global $21cm$ signal is a \textbf{strong probe for non-standard physics} during the dark ages. It has the potential to shed light on mysteries surrounding dark matter/dark energy, the existence of cosmic strings, and even certain particle interaction  \cite{dark_nature_21, constrain_dm_21, cosmic_string_brandenberger, ee_interaction_21, neutrino_21} \footnote{These effects will be discussed more in \ref{chap:global21cm,sub:non_standard}.}. This capacity of the global $21cm$ signal is the main motivation of this research.\par
 %-----------------------------------------------------------
-\section{Research questions and objectives}
+\section{Research Questions and Objectives}
 The effects of non-standard physics in $21cm$ signal have gained lots of attraction in the recent literature \cite{WF_effect_oscar, constrain_dm_21, bh_cosmioc_dawn, cosmic_string_oscar}. These effects were investigated through the application of analytical and semi-analytical methods. However, the majority of the studies were predominantly analytical in nature, and the results were not evaluated against the observational data\footnote{For most of these studies, the appropriate observational data did not exist at the time of publications.}. We aim to fill this research gap by continuing the semi-analytical efforts with an aim to introduce a generalized framework to probe these non-standard effects.\par
 With the recently released data at our disposal \cite{edges}, we use certain fitting algorithms to compare them to theoretically simulated models\cite{ares2014jordan}. 
 The first step is to estimate the physical parameters of these curves by only taking the standard physical mechanisms into account.\par
 In future studies, we will include a realistic foreground model and upgrade our simulator to include desired non-standard effects. We will again fit the observational data to the upgraded version of the theoretical model to investigate patterns of change in the best-fit physical parameters. The insights from this study will be used to constrain the physical parameters found by the newly proposed models. Moreover, it will empower us to determine whether the upcoming radio interferometers have enough precision to detect our targeted non-standard effects.\par
 %-----------------------------------------------------------
-\section{Overview of the thesis}
+\section{Overview of The Thesis}
 This thesis consists of two major components: the literature review and the research.\par
 In the literature review chapters (chapters \ref{chap:global21cm} and \ref{chap:observations}), we first talk about the global $21cm$ signal and its physical principles. We continue by exploring the effects of non-standard physics on the global $21cm$ signal in the recent literature. \par
 In chapter \ref{chap:observations}, we will briefly introduce all of the present and future observational projects aiming to detect the global 21cm signal. From all these experiments, we will thoroughly discuss the results from the \gls{edges} and the \gls{saras}\footnote{The selection of these two experiments is justified by their explicit emphasis on observing the global $21cm$ signal rather than spatial fluctuations, coupled with the availability of their released cosmological data.}.\par
@@ -680,10 +680,12 @@ An alternative approach for result verification involves creating plots that dep
 %###################################################################################
 \chapter{Results and Analysis}
 \label{chap:results}
-Reminder: citations for physical explanation of parameters, I guess it is better to address pop\_rad\_yields with the physical meaning, but mention that the name is different in ARES documentary, talk about why we work with astrophysical parameters rather than cosmological ones\par
-Chapter \ref{chap:method} carefully described a specific method to fit an experimental data set to its corresponding theoretical model. In this chapter, we are going to impose this method to actual global 21cm curves. We chose to use ARES as our simulator to generate these curves. \par
+Following the discussions of chapter \ref{chap:method} to formulate a specific data fitting algorithm based on the synchronized utilization of \gls{lm} and \gls{mcmc}, this chapter is devoted to demonstrating the results of applying this method to the global $21cm$ signal. Our ultimate goal is to offer a theoretical fit for the \gls{edges} data. However, this goal might not be feasible, given the amplitude and shape of the reported signal.\par
+An essential step in the process of model fitting is to determine the parameters of the physical model. As we choose to use \gls{ares} for generating the theoretical curve, the parameterization of theory is restricted to the notation employed by \gls{ares}. We will briefly introduce our chosen parameters and revisit their connection to the underlying physics of the $21cm$ line. We proceed by evaluating the quality of fit by estimating the parameters of a mock data set, which in fact, is an \gls{ares}-generated curve. The reliability of the results is proven by considering the values of estimated parameters and the assumed error bars of the mock data. \par
+Finally, we represent the results of parameter estimation for the half-amplitude \gls{edges} data\footnote{The reason behind choosing this value for the multiplication factor is discussed in section \ref{chap:results,sub:edges,subsub:m_factor}}. However, in agreement with our earlier expectation, even a multiplication factor of 0.5 is not a sufficient component to explain the behavior of \gls{edges} data with the predictions of the standard physics. \par
 
 \section{Key Astrophysical Parameters in the Global 21cm Signal}
+Reminder: citations for physical explanation of parameters, I guess it is better to address pop\_rad\_yields with the physical meaning, but mention that the name is different in ARES documentary, talk about why we work with astrophysical parameters rather than cosmological ones\par
 According to the discussed physics of the $21cm$ signal in section \ref{chap:global21cm,sub:physics}, the shape and amplitude of this signal are intensely dependent on underlying astrophysical processes, especially those related to the star formation and reheating of the IGM. In this section, we will take the discussion further and address our current understanding of this dependency on four specific parameters which are able to effectively span the global $21cm$.\par
 By effectively constraining these parameters, significant progress can be made in comprehending the thermal history of the intergalactic medium (IGM) and the population of x-ray sources during high-redshift epochs \cite{21century}.\par
 
@@ -782,6 +784,7 @@ It is worth mentioning that the method described in chapter \ref{chap:method} an
 %-----------------------------------------------------------------------------------
 \section{Parameter estimates of EDGES data and uncertainties}
 \subsection{Choice of "multiplication factor"}
+\label{chap:results,sub:edges,subsub:m_factor}
 \subsection{error bar calculation}
 Reminder: not exactly sure where this equation comes from\par
 
