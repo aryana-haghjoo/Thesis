@@ -3,6 +3,7 @@
 % Edit: 2020.04.16
 
 \documentclass[12pt, TexShade, letterpaper]{report}
+\usepackage{bm}
 \usepackage[utf8]{inputenc}
 \usepackage{tcolorbox}
 \usepackage{palatino}
@@ -218,7 +219,7 @@ In this chapter, our initial focus will be on providing a concise introduction t
 %-----------------------------------------------------------
 \section{Background and Motivation}
 The global $21cm$ signal is the average over the brightness temperature of the $21cm$ line across the entire sky. It is a measure of the overall state of the \gls{igm} and presents itself as an excess absorption or emission in different redshift regions. This radiation is a piece of observational evidence for certain characteristics of the \gls{igm} in the early universe (e.g., temperature, density, and reionization state). These properties are determined by the complex interplay between the cosmic radiation field, the formation and evolution of the first stars and galaxies, and the feedback processes that these sources exert on their surroundings\cite{21century}.\par
-Besides all the above-mentioned applications, the global $21cm$ signal is a \textbf{strong probe for non-standard physics} during the dark ages. It has the potential to shed light on mysteries surrounding dark matter/dark energy, the existence of cosmic strings, and even certain particle interaction  \cite{dark_nature_21, constrain_dm_21, cosmic_string_brandenberger, ee_interaction_21, neutrino_21} \footnote{These effects will be discussed more in \ref{chap:global21cm,sub:non_standard}.}. This capacity of the global $21cm$ signal is the main motivation of this research.\par
+Besides all the above-mentioned applications, the global $21cm$ signal is a \textbf{strong probe for non-standard physics} during the dark ages and \gls{eor}. It has the potential to shed light on mysteries surrounding dark matter/dark energy, the existence of cosmic strings, and even certain particle interaction  \cite{dark_nature_21, constrain_dm_21, cosmic_string_brandenberger, ee_interaction_21, neutrino_21} \footnote{These effects will be discussed more in \ref{chap:global21cm,sub:non_standard}.}. This capacity of the global $21cm$ signal is the main motivation of this research.\par
 %-----------------------------------------------------------
 \section{Research Questions and Objectives}
 The effects of non-standard physics in $21cm$ signal have gained lots of attraction in the recent literature \cite{WF_effect_oscar, constrain_dm_21, bh_cosmioc_dawn, cosmic_string_oscar}. These effects were investigated through the application of analytical and semi-analytical methods. However, the majority of the studies were predominantly analytical in nature, and the results were not evaluated against the observational data\footnote{For most of these studies, the appropriate observational data did not exist at the time of publications.}. We aim to fill this research gap by continuing the semi-analytical efforts with an aim to introduce a generalized framework to probe these non-standard effects.\par
@@ -321,9 +322,9 @@ Therefore, the differential brightness temperature of the $21cm$ signal is zero 
 
 \item $40 \lesssim z \lesssim 80$: As the density keeps dropping through the expansion, the influence of collisional couplings becomes less significant, causing the spin temperature to again couple with the \gls{cmb} temperature ($T_S \rightarrow T_\gamma$). Thus, the $21cm$ differential brightness signal goes back to zero again\cite{map_universe}. The first blue regions in the upper panel of figure \ref{fig:global_signal_pritchard_loeb} and the corresponding absorption trough in the lower panel depict the above-mentioned process \cite{map_universe, 21century}.\par
 
-\item $z_\alpha \lesssim z \lesssim z_*$: The second trough in figure \ref{fig:global_signal_pritchard_loeb} emerged through the formation of the first structures. As large halos begin to collapse to form first stars and galaxies, they generate both x-ray and \gls{lya} emissions. Two mechanisms create the \gls{lya} photons: 1) Continuous redshifting of background radiation to the \gls{lya} wavelength and 2) Ionization and deexcitation of \gls{igm} gas. Since the emissivity required for the \gls{lya} coupling is significantly less than that for heating $T_k$ above $T_\gamma$, the spin temperature tends to couple to cold gas ($T_S \rightarrow T_K$) through the \gls{wf} effect. Therefore, we will again observe the global $21cm$ signal in absorption \cite{map_universe, 21century}.\par
+\item $z_\alpha \lesssim z \lesssim z_*$: The second trough in figure \ref{fig:global_signal_pritchard_loeb} emerged through the formation of the first structures. As large halos begin to collapse to form first stars and galaxies, they generate both X-ray and \gls{lya} emissions. Two mechanisms create the \gls{lya} photons: 1) Continuous redshifting of background radiation to the \gls{lya} wavelength and 2) Ionization and deexcitation of \gls{igm} gas. Since the emissivity required for the \gls{lya} coupling is significantly less than that for heating $T_k$ above $T_\gamma$, the spin temperature tends to couple to cold gas ($T_S \rightarrow T_K$) through the \gls{wf} effect. Therefore, we will again observe the global $21cm$ signal in absorption \cite{map_universe, 21century}.\par
 
-\item $z_r \lesssim z \lesssim z_\alpha$ (Reionization): Eventually, the gas is reheated by ionizing x-ray photons from early sources \cite{21century}, and the $21cm$ differential brightness temperature goes back to zero (second absorption trough in the lower panel of figure \ref{fig:global_signal_pritchard_loeb}). The influence of this reheating mechanism is so strong that we even expect to observe $21cm$ emission in this redshift range (red region in the upper panel of figure \ref{fig:global_signal_pritchard_loeb}). From this point on in the thermal history of the universe, we do not expect to see any more $21cm$ radiation from IGM since the majority of the gas will be ionized by emergent stars, galaxies, and accreting black holes. Therefore, the $21cm$ differential brightness temperature goes to zero (the black region in the upper panel of figure \ref{fig:global_signal_pritchard_loeb}). However, in the regions with higher recombination rates inside galaxies and dark matter halos, the neutral hydrogen is shielded and preserved. Consequently, the 21cm signature originating from inside the galaxies will continue to be emitted\cite{map_universe, 21century}.\par
+\item $z_r \lesssim z \lesssim z_\alpha$ (Reionization): Eventually, the gas is reheated by ionizing X-ray photons from early sources \cite{21century}, and the $21cm$ differential brightness temperature goes back to zero (second absorption trough in the lower panel of figure \ref{fig:global_signal_pritchard_loeb}). The influence of this reheating mechanism is so strong that we even expect to observe $21cm$ emission in this redshift range (red region in the upper panel of figure \ref{fig:global_signal_pritchard_loeb}). From this point on in the thermal history of the universe, we do not expect to see any more $21cm$ radiation from IGM since the majority of the gas will be ionized by emergent stars, galaxies, and accreting black holes. Therefore, the $21cm$ differential brightness temperature goes to zero (the black region in the upper panel of figure \ref{fig:global_signal_pritchard_loeb}). However, in the regions with higher recombination rates inside galaxies and dark matter halos, the neutral hydrogen is shielded and preserved. Consequently, the 21cm signature originating from inside the galaxies will continue to be emitted\cite{map_universe, 21century}.\par
 \end{itemize}
 \begin{figure}[h!]
 
@@ -407,7 +408,7 @@ Moreover, it has been proved that particle \gls{dm} scenarios featuring a suppre
  It is expected that cosmic strings leave a distinguished signature on the $21cm$ signal in the form of wedge-shaped regions of extra emission or absorption, depending on the value of string tension $G\mu$. The capability of $21cm$ experiments in accessing higher redshift regions (compared to optical large-scale structure surveys) makes them a perfect candidate to search for the effects of cosmic strings  \cite{cosmic_string_brandenberger, structure_cosmic_string}.\par
 Two key types of cosmic strings are cosmic string loops and long strings. Long strings refer to the straight or curved sections of cosmic strings that extend over cosmic scales. These strings can be indefinitely long, potentially stretching across vast regions of the universe. Long strings are generally stable and do not decay over time. On the other hand, A cosmic string loop is a closed loop configuration of cosmic string that forms when the string self-intersects or undergoes a reconnection event. These loops are typically much smaller than the cosmic strings themselves and can have a variety of sizes. Cosmic string loops are dynamic structures that can oscillate, radiate gravitational waves, and eventually decay through various processes \cite{cosmic_strings_book}.  \par
 
-Long moving strings make wake regions in space-time. The presence of wakes can lead to the formation of overdense regions, to the point that the baryon density becomes twice that of the cosmic gas. Therefore, the column length line profile of $21cm$ differs from that of the surrounding \gls{igm}, which itself results in a stronger coupling of $T_S$ to $T_K$ in this region. In other words, the \gls{wf} coupling is stronger in the presence of cosmic strings \footnote{Cosmic strings are also expected to speed up the process of reionization due to their early generation of non-linear overdensities\cite{corre_21cm_cmb}.}\cite{cosmic_string_oscar}. With the assumption that x-ray heating is not significant in the \gls{igm}, the brightness temperature of the $21cm$ signal will be at least two times more negative when the effects of cosmic string wakes are included. \par
+Long moving strings make wake regions in space-time. The presence of wakes can lead to the formation of overdense regions, to the point that the baryon density becomes twice that of the cosmic gas. Therefore, the column length line profile of $21cm$ differs from that of the surrounding \gls{igm}, which itself results in a stronger coupling of $T_S$ to $T_K$ in this region. In other words, the \gls{wf} coupling is stronger in the presence of cosmic strings \footnote{Cosmic strings are also expected to speed up the process of reionization due to their early generation of non-linear overdensities\cite{corre_21cm_cmb}.}\cite{cosmic_string_oscar}. With the assumption that X-ray heating is not significant in the \gls{igm}, the brightness temperature of the $21cm$ signal will be at least two times more negative when the effects of cosmic string wakes are included. \par
 For string tensions $G\mu \gtrsim 3\times 10^ {-8}$, the signature of the effect of cosmic string wakes becomes larger than noise \cite{WF_effect_oscar}. The signature is also more evident in lower redshifts since string wake width increases as a function of time \cite{cosmic_string_brandenberger}. For small string tensions ($G\mu< 10 ^{-7}$), wake-induced shock heating is not expected. Consequently, the temperature of the gas inside the wake and the \gls{igm} are approximately equal \cite{cosmic_string_oscar}. On the other hand, the shock-heated cosmic string scenario yields an even stronger \gls{wf} coupling (and hence a stronger $21cm$ brightness temperature with a larger amplitude), but the effect from a diffuse wake is extended over a wider redshift interval \cite{oscar_robert_shock, WF_effect_oscar, cosmic_string_oscar}. By calculating the contribution of cosmic string network rather than a single string wake, it was found that the amplitude of the global $21cm$ signal will be enhanced between 10\% to a factor of 2 for string tension in the range of $10^{-8}\lesssim G\mu\lesssim10^{-7}$  \cite{cosmic_string_oscar}.\par
 
 Cosmic string loops are also expected to imprint a roughly elliptical region in redshift with an extra $21cm$ emission \cite{string_loop_robert}.
@@ -446,7 +447,7 @@ In the extra-galactic case, the emission is a cause of the \gls{agn}, star-formi
 Several methods have been proposed to remove the astronomical foregrounds from the highly contaminated raw data provided by global $21cm$ radiometers. Mapping of Galactic foregrounds, statistical techniques, including principal component analysis \cite{principal_component}, filtering \cite{filtering}, and machine learning algorithms \cite{removal_deep_learning, signal_reconstruction, signal_extraction, extract_foreground, pritchard_mcmc} appears to be the most promising\cite{thesis_pamela}.\par
 
 \subsection{Ionospheric Effects}
-The ionosphere is a layer in the Earth's upper atmosphere ($50km \lesssim h \lesssim 1000 km$). When high-energy particles or sunlight (which includes x-ray and \gls{uv} radiation) pass through the atmosphere, the interaction leaves the gas molecules ionized, resulting in the creation of plasma. The generated ions are capable of reflecting or absorbing radio emission and therefore interfere with other radio signals passing through this layer. This influence is even more severe in low frequencies, overlapping with the frequency range of the dark ages signal. The ionosphere is the primary origin of systematic aberration, impeding our capacity to investigate the low-frequency domain via radio interferometers \cite{thesis_pamela, ionosphere_ultra_low}.\par
+The ionosphere is a layer in the Earth's upper atmosphere ($50km \lesssim h \lesssim 1000 km$). When high-energy particles or sunlight (which includes X-ray and \gls{uv} radiation) pass through the atmosphere, the interaction leaves the gas molecules ionized, resulting in the creation of plasma. The generated ions are capable of reflecting or absorbing radio emission and therefore interfere with other radio signals passing through this layer. This influence is even more severe in low frequencies, overlapping with the frequency range of the dark ages signal. The ionosphere is the primary origin of systematic aberration, impeding our capacity to investigate the low-frequency domain via radio interferometers \cite{thesis_pamela, ionosphere_ultra_low}.\par
 The threshold frequency under which the ionosphere scatters absorbs all radio waves and becomes completely opaque is called the \emph{plasma cut-off frequency} \cite{ionosphere_effect_book, thesis_pamela}. This cut-off is a function of electron density in the ionosphere and generally varies between $2-20MHz$. The electron density itself depends on the time of day, season, altitude, and solar activity. This effect is more severe during the summer days and in regions with higher altitudes, forcing the cut-off frequency to higher amounts during these periods. Thus, winter nights in polar locations during the solar minima have the ideal features for earth-based low-frequency observations \footnote{Long winter nights allow ions to have more time to recombine. Also, being far from the magnetic poles leads to less auroral ionization \cite{prizm_thesis}.} \cite{thesis_pamela}.\par
 Constructing theoretical models for ionospheric effects is the key to effective mitigation of this foreground from data collected by Earth-based low-frequency observations and successful extraction of the original cosmological signal \cite{ionosphere_model, ionosphere_Bayesian}. However, the most effective way to avoid contamination of data with ionospheric influences is to observe from outside of Earth\cite{thesis_shedding}. A few such experiments have been proposed, yet none of them has been implemented thus far \cite{dare_1, dare_2, 21cm_space_interferometer, lunar_orbit_21cm}. \par
 
@@ -684,82 +685,40 @@ Following the discussions of chapter \ref{chap:method} to formulate a specific d
 An essential step in the process of model fitting is to determine the parameters of the physical model. As we choose to use \gls{ares} for generating the theoretical curve, the parameterization of theory is restricted to the notation employed by \gls{ares}. We will briefly introduce our chosen parameters and revisit their connection to the underlying physics of the $21cm$ line. We proceed by evaluating the quality of fit by estimating the parameters of a mock data set, which in fact, is an \gls{ares}-generated curve. The reliability of the results is proven by considering the values of estimated parameters and the assumed error bars of the mock data. \par
 Finally, we represent the results of parameter estimation for the half-amplitude \gls{edges} data\footnote{The reason behind choosing this value for the multiplication factor is discussed in section \ref{chap:results,sub:edges,subsub:m_factor}}. However, in agreement with our earlier expectation, even a multiplication factor of 0.5 is not a sufficient component to explain the behavior of \gls{edges} data with the predictions of the standard physics. \par
 
-\section{Key Astrophysical Parameters in the Global 21cm Signal}
-Reminder: citations for physical explanation of parameters, I guess it is better to address pop\_rad\_yields with the physical meaning, but mention that the name is different in ARES documentary, talk about why we work with astrophysical parameters rather than cosmological ones\par
-According to the discussed physics of the $21cm$ signal in section \ref{chap:global21cm,sub:physics}, the shape and amplitude of this signal are intensely dependent on underlying astrophysical processes, especially those related to the star formation and reheating of the IGM. In this section, we will take the discussion further and address our current understanding of this dependency on four specific parameters which are able to effectively span the global $21cm$.\par
-By effectively constraining these parameters, significant progress can be made in comprehending the thermal history of the intergalactic medium (IGM) and the population of x-ray sources during high-redshift epochs \cite{21century}.\par
-
+\section{Key Astrophysical Parameters}
+Based on the discussions of \ref{chap:global21cm,sub:physics}, the shape and amplitude of global $21cm$ signal are intensely dependent on underlying astrophysical processes, especially those related to the \gls{sfr} and reheating of the \gls{igm}. In this section, we will take the discussion further and address our current understanding of this dependency on four specific parameters which are able to map the parameter space of the global $21cm$ signal effectively. Constraining these parameters will result in improved comprehension of the thermal history of the \gls{igm} and the population of X-ray sources during high-redshift epochs \cite{21century}.\par
+It is essential to mention that although it is theoretically possible to investigate the cosmological parameters with this signal as well (refer to equation \ref{eq:global_curve} for the exact dependency of the global curve on cosmological parameters), the accuracy of the observational data is yet insufficient for constraining these parameters. Moreover, the $21cm$ signal is the only identified prob for some specific astrophysical mechanisms during the dark ages and \gls{eor}, while cosmological parameters can be studied using \gls{cmb} as well. Therefore, we introduce four astrophysical parameters hereunder, which will form the basis of our analysis. \par
 \begin{enumerate}
-    \item \textbf{$f_X$}: High-redshift normalization factor in the relation between X-ray luminosity and SFR\\
-    X-ray photons generated by galaxies and quasars are likely the most important cause of heating the IGM. Considering the fact that the nature of high-redshift objects are not very well identified, it is not possible to give an exact theory for the high-redshift X-ray background. The safest course of action is to assume that the correlation between X-ray luminosity and SFR in high redshift is only an extrapolation of its local format.
+    \item \bm{$f_X$}: \emph{High-redshift proportionality constant in X-ray luminosity and \gls{sfr} relation} \cite{ares_documentation}. 
+    X-ray photons generated by galaxies and quasars are likely the most important cause of heating the low-density IGM \cite{low_frequency}. Considering the fact that the nature of high-redshift objects is not properly studied, it is not possible to give an exact theory for the high-redshift X-ray background. The safest course of action is to assume that the relation between X-ray luminosity and \gls{sfr} in high redshift contains a proportionality constant $f_X$ which ascends with redshift\footnote{The primordial mass function is strongly weighted toward the high-redshift end, so the proportionality constant between X-ray production and \gls{sfr} is larger at high-redshift.}.
     \begin{equation}
         L_X = 3.4 \times 10^{40} f_X \left( \frac{SFR}{1 \hspace{0.1cm} M_{\odot} \hspace{0.1cm} yr^{-1}}\right) \hspace{0.1cm} erg \hspace{0.1cm}s^{-1}
     \end{equation}
-    Where $f_X$ is an unknown normalization factor at high redshift and is believed to evolve by redshift. The normalization was chosen so that, with $f_X =1$, the total X-ray luminosity per unit SFR is consistent with that observed in starburst galaxies at the present epoch \cite{low_frequency, 21century}.
+    The normalization was chosen such that, when $f_X =1$, the total X-ray luminosity per unit \gls{sfr} is consistent with that observed in starburst galaxies at the present epoch \cite{low_frequency, 21century}.
     
-    \item \textbf{$N_{lw}$}: Number of photons emitted in the Lyman-Werner band ($11.2-13.6eV$) per baryon of star formation (This parameter is referred to as \emph{pop\_rad\_yield\_0\_} in ARES documentation), cite ARES documentation\\ read the relevant section on this paper \cite{lw_background}
+    \item \bm{$N_{lw}$}: \emph{Number of photons emitted in the Lyman-Werner band ($11.5eV<E<13.6eV$) per baryon of star formation}. This parameter is referred to as \emph{pop\_rad\_yield\_0\_} in ARES documentation \cite{ares_documentation, lw_background}
     
-    \item \textbf{$N_{ion}$}: Mean number of ionizing photons produced per baryon of star formation (This parameter is referred to as \emph{pop\_rad\_yield\_2\_} in ARES documentation)
+    \item \bm{$N_{ion}$}: \emph{Mean number of ionizing photons ($E>13.6eV$) produced per baryon of star formation}. This parameter is referred to as \emph{pop\_rad\_yield\_2\_} in ARES documentation \cite{ares_documentation, 21century}
     
-    \item \textbf{$f_{esc}$}: Fraction of ionizing photons that escape their host galaxy into the IGM\\
+    \item \bm{$f_{esc}$}: \emph{Fraction of ionizing photons that escape their host galaxy into the \gls{igm}} \cite{ares_documentation}.
     $f_{esc}$ and $N_{ion}$ are both defined in the process of calculating the evolution of ionization fraction $\bar{x}_i$:
     \begin{gather}
         \bar{x}_i = \frac{\zeta f_{coll}}{1 + \bar{n}_{rec}}\\
         f_{coll} = \int_{m_{min}}^\infty dm \hspace{0.1cm} m \hspace{0.1cm} n\left(m\right)\\
-        \zeta = A_{He} \hspace{0.1cm} f_* \hspace{0.1cm} f_{esc} \hspace{0.1cm} N_{ion}
+        \zeta = A_{He} \hspace{0.1cm} f_* \hspace{0.1cm} f_{esc} \hspace{0.1cm} N_{ion} \label{eq:ionizing_efficiency}
     \end{gather}
     
-    $f_{coll}$ is the collapse fraction (fraction of gas inside collapsed objects, fraction of mass in halos more massive than $m_{min})$, $\bar{n}_{rec}$ is the mean number of recombinations per ionized hydrogen atom, $\zeta$ is the ionizing efficiency, $f_*$ is the star formation efficiency (fraction of baryons converted into stars), and $A_{He} = 4/(4 - 3Y_p) = 1.22$, where $Y_p$ is the mass fraction
-    of helium, is a correction factor to convert the number of ionizing photons per baryon in stars to the fraction of ionized hydrogen. Our limited understanding of the mass distribution of the emitting stars introduces an uncertainty in the number of ionizing photons per baryon $N_{ion}$ that is emitted by galaxies. There is also considerable uncertainty in the fraction of ionizing photons $f_{esc}$ that escape the host galaxy to ionize the IGM. That's why we chose these parameters. Observations will help to constrain them.\\
-    These parameters enter our model as a factor multiplying the SFR and are, therefore, individually degenerate with the star-formation efficiency $f_*$. That's why we did not choose to use $f_*$  \cite{low_frequency, 21century}.
+    $f_{coll}$ is the collapse fraction (fraction of gas inside collapsed objects, fraction of mass in halos more massive than $m_{min})$, $\bar{n}_{rec}$ is the mean number of recombinations per ionized hydrogen atom, $\zeta$ is the ionizing efficiency, $f_*$ is the star formation efficiency (fraction of baryons converted into stars), and $A_{He} = 4/(4 - 3Y_p) = 1.22$. The mass fraction of helium, $Y_p$, is a correction factor to convert the number of ionizing photons per baryon in stars to the fraction of ionized hydrogen. Our limited understanding of the mass distribution of the emitting stars introduces an uncertainty in the number of ionizing photons per baryon $N_{ion}$, that is emitted by galaxies. There is also considerable uncertainty in the fraction of ionizing photons $f_{esc}$ that escape the host galaxy to ionize the \gls{igm}. Therefore, our study is toward the urgent demand to constrain these parameters with observational data \cite{low_frequency, 21century}.\par
+    Alternatively, we could have utilized $f_*$ as a parameter of our model. However, since $f_{esc}$ and $N_{ion}$ act as multiplication factors to $f_*$ in the expression for ionizing efficiency \ref{eq:ionizing_efficiency}, thus, both of them are individually degenerate with star formation rate.
 \end{enumerate}
-Figure \ref{fig:sensivity} shows the effect of changing these parameters on an actual 21cm curve.\par
-
-We take the above-mentioned physical parameters as fitting parameters and we try to find their best-fit values and corresponding error-bars.\par
+Figure \ref{fig:sensivity} shows the influence of change in the values of the above-mentioned parameters on the global $21cm$ curve generated by \gls{ares}. It must be noted that these parameters are only physically meaningful in a limited region of phase space (A hypercube where the combination of parameters is physically meaningful). Going beyond this region will result in a failure in calculating the global $21cm$ curve. our developed script is designed to handle this issue and stop it from aborting the whole run \footnote{The Python code for the \gls{mcmc} is designed such that it will return an arbitrarily large chi-square for that combination of parameters beyond the permitted hypercube. Therefore, the probability of these points getting accepted into the chain will be automatically low.}, but the \gls{mcmc} might not be able to reach convergence if the algorithm faces a lot of samples beyond the allowed region.\par
 %-----------------------------------------------------------------------------------
-\section{Parameter Estimation of an ARES generated curve}
+\section{Parameter Estimation of Mock Data}
 \label{chap:results,sub:known_curve}
-Before using our developed script to fit actual data, we use it to fit a known ARES curve as a verification test. We generate an ARES curve with a fixed set of parameters and we use these curve as the imaginary "data". If the algorithm returns the same parameter values (with in the error-bar range), we can make sure that it is working correctly.\par
-We begin by using the LM and we find inverse of covariance matrix for our chosen combination of parameters, which we will later use to generate our correlated samples.\par
-Parameters:
-\begin{equation}
-\emph{pop\_rad\_yield\_0\_}: 10^4, \quad \emph{pop\_rad\_yield\_2\_}: 10^3,\quad f_{esc}: 0.1,\quad f_X: 0.1 
-\label{eq:parameter_values}
-\end{equation}
-Inverse of covariance matrix for this set of parameters:
-\begin{equation}
-\label{eq:cov_mat_known_curve}
-    \begin{pmatrix}
-    1.64\times 10^{-3} & 1.96 \times 10^{-2} &  -4.39 \times 10^{-7} &  -5.37 \times 10^{-8} \\
-    1.96 \times 10^{-2} &  1.60 \times 10^{1} &  -1.44 \times 10^{-3} &  -5.94 \times 10^{-6} \\
-    -4.39 \times 10^{-7} &  -1.44 \times 10^{-3} &  1.38 \times 10^{-7} &  2.15 \times 10^{-10} \\
-    -5.37 \times 10^{-8} &  -5.94 \times 10^{-6} &  2.15 \times 10^{-10} &  1.38 \times 10^{-11} 
-    \end{pmatrix}
-\end{equation}
-Now, we are prepared to draws our samples based on method described in \ref{chap:method,sub:correlated noise}. Figure \ref{fig:histogram_samples_known_curve} illustrates the distribution of samples for the above-mentioned four parameters. As a sanity check, we calculate the mean and standard deviation of these distribution. We expect the mean to be close to values of \ref{eq:parameter_values}. Table \ref{tab:samples_mean_known_curve} represents the values of mean and standard deviation, which is in agreement with the expectations.\par
-
-\begin{table}
-\centering
-\caption[Mean and standard deviation of samples]{Mean and standard deviation of samples drawn from the covariance matrix \ref{eq:cov_mat_known_curve}}
-\label{tab:samples_mean_known_curve}
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\diagbox{Value}{Parameter} & \emph{pop\_rad\_yield\_0\_} & \emph{pop\_rad\_yield\_2\_} & \emph{$f_{esc}$} & \emph{$f_X$}\\
-\hline
-Mean & $9.99999993 \times 10^{3}$ & $1.00002933 \times 10^{3}$ & $9.99962873 \times 10^{2}$ & $1.00000029 \times 10^{1}$\\
-\hline
-Standard Deviation & $4.08174690 \times 10^{2}$ & $4.03138658 \times 10^{0}$ & $3.74407952 \times 10^{4}$ & $3.72581029 \times 10^{6}$\\
-\hline
-\end{tabular}
-\end{table}
-
-
-In section \ref{chap:method,sub:test}, we introduced two methods to check the algorithm and the quality of fit. Performing the chi-square test on our samples showed that the average difference between the chi-square of drawn samples is 49.20, which we expected to be ~4. Although it is approximately one order of magnitude bigger that the expectations, it can be still considered a good fit.\par
-
-We proceed by performing the second test, which is plotting the values of ch-square of samples versus the parameter values. The results are shown in \ref{fig:csq_hist_known_curve}. In the hypothetical ideal case, We expected to see a parabolic behaviour. Figure \ref{fig:csq_vs_params_zoomed_known_curve} shows the zoomed version of results. We can infer a parabolic behaviour in low values of chi-square.\par
-
-Now that we have our samples, we proceed to run the MCMC chain with them. The overall results of the fit and the final resulting curve are shown in \ref{tab:mcmc_results_known_curve} and \ref{} respectively.
-Figure \ref{fig:chain_known_curve} indicates the white-noise behaviour of parameters throughout the chain which is consistent with our anticipation for a converged chain. We confirm the convergence by looking at the power spectrum in Figure \ref{fig:power_spectrum_known_curve}. Flat behaviour in low frequencies is apparent.\par
+Prior to applying our developed algorithm to fit real-world data, we perform a validation test by using it to fit a known \gls{ares} curve. We create the \gls{ares} curve using a predetermined set of parameters ($\emph{pop\_rad\_yield\_0\_}=10^4, \emph{pop\_rad\_yield\_2\_}=10^3, f_{esc}=0.1, f_X= 0.1$), treating it as mock data. By comparing the parameter values obtained from the algorithm to the expected values within the range of the assumed error bars, we can confirm the correct functioning of the algorithm.\par
+The results of this validation test are shown in table \ref{tab:mcmc_results_known_curve} and Figure{}. The output is an acceptable fit considering the overall shape and amplitude of the signal.
+Figure \ref{fig:chain_known_curve} indicates the white-noise behavior of parameters throughout the chain, which is in agreement with our anticipation for a converged chain. Performing \emph{chi-Square consistency test} on our samples showed that the average disparity between the chi-square of drawn samples is 49.20, roughly an order of magnitude larger than the expectation initial ($\approx4$) \todo{how to describe the issue}.\par
+We proceed by performing the \emph{chi-square parameter correlation test}. The results are depicted in Figure \ref{fig:csq_hist_known_curve}. In the hypothetical ideal case, we expect to see parabolic behavior. However, Figure \ref{fig:csq_vs_params_zoomed_known_curve}, which demonstrates the zoomed version of the \ref{fig:csq_hist_known_curve}, gives insights on parabolic behavior for lower values of chi-square.\par
 
 
 \begin{table}
@@ -772,17 +731,16 @@ Figure \ref{fig:chain_known_curve} indicates the white-noise behaviour of parame
 \hline
 True values & $1 \times 10^ {4}$ & $1 \times 10^ {3}$ & 0.1 & 0.1\\
 \hline
-Fitted values & $9.99998275 \times 10^ {3}$ & $9.99419824 \times 10^ {2}$ & $1.00025031 \times 10^ {-1}$ & $1.00001169 \times 10^ {-1}$ \\
+Fitted values & $9.9999 \times 10^ {3}$ & $9.9941 \times 10^ {2}$ & $1.0002 \times 10^ {-1}$ & $1.0000 \times 10^ {-1}$ \\
 \hline
-Error-bar of fit & $3.54171104 \times 10^ {-2}$ & $3.86126208 \times 10^ {0}$& $3.57822431 \times 10^ {-4}$ & $3.39295495 \times 10^ {-6}$ \\
+Error-bar of fit & $3.5417 \times 10^ {-2}$ & $3.8612 \times 10^ {0}$& $3.5782 \times 10^ {-4}$ & $3.3929 \times 10^ {-6}$ \\
 \hline
-Fitting Error & 0.00013093\% & 0.02645403 \%& 0.01527014\%& 0.00032365\%\\
+Fitting Error & 0.0001\% & 0.0264 \%& 0.0152\%& 0.0003\%\\
 \hline
 \end{tabular}
 \end{table}
-It is worth mentioning that the method described in chapter \ref{chap:method} and used in this section, is flexible to the change of parameters of the model (which in our case, is ARES.\footnote{List of parameters can be found in \hyperlink{https://ares.readthedocs.io/en/latest/}{ARES documentation}.}). However, these parameters are only physically meaningful in a limited region of phase space (A hypercube where the combination of parameters are physically meaningful). Going beyond this region will result in a failure in calculating the global 21cm curve. our developed script is designed to handle this issue and stop it from aborting the whole run \footnote{The python code for the MCMC is designed such that it will return an arbitrary large chi-square for those combination of parameters which ARES is unable to handle. Therefore, the probability of these points getting accepted into the chain will be systematically low.}, but the MCMC might not be able to reach convergence if the algorithm faces a lot of samples beyond the allowed region.\par
 %-----------------------------------------------------------------------------------
-\section{Parameter estimates of EDGES data and uncertainties}
+\section{Parameter Estimation of EDGES data}
 \subsection{Choice of "multiplication factor"}
 \label{chap:results,sub:edges,subsub:m_factor}
 \subsection{error bar calculation}
@@ -796,32 +754,7 @@ Where B is the bandwidth, t is the exposure time and $T_{sys}$ is the system tem
 $\delta T = 10 ^{-2}K = 10mK$
 \subsection{results}
 We proceed by doing the same procedure as section \ref{chap:results,sub:known_curve}. However, this time we use the EDGES data (with half of the actual amplitude) as our observational data in MCMC. This half amplitude is chosen using the insights from section \ref{chap:results,sub:m_factor}. One of the main issues is that since the shape of the EDGES data is not very close to the predicted theoretical curve, the resulting fit is not very perfect. We first run the LM to find the covariance matrix and generate our samples. 
-\begin{equation}
-\label{eq:cov_mat_edges}
-    \begin{pmatrix}
-    3.24\times 10^{4} & 5.68 \times 10^{6} &  -8.51 \times 10^{2} &  5.65 \times 10^{-1} \\
-    5.68 \times 10^{6} &  2.43 \times 10^{10} &  -3.63 \times 10^{6} &  5.64 \times 10^{0} \\
-    -8.51 \times 10^{2} &  -3.63 \times 10^{6} &  5.44 \times 10^{2} &  -9.80 \times 10^{-4} \\
-    5.65 \times 10^{-1} &  5.64\times 10^{00} &  -9.80\times 10^{-4} &  3.92 \times 10^{-5} 
-    \end{pmatrix}
-\end{equation}
 
-\begin{table}
-\centering
-\caption[Mean and standard deviation of samples]{Mean and standard deviation of samples drawn from the covariance matrix \ref{eq:cov_mat_edges}}
-\label{tab:samples_edges}
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\diagbox{Value}{Parameter} & \emph{pop\_rad\_yield\_0\_} & \emph{pop\_rad\_yield\_2\_} & \emph{$f_{esc}$} & \emph{$f_X$}\\
-\hline
-Mean & $4.54933238 \times 10^{3}$ & $2.47654876 \times 10^{3}$ & $3.70006283 \times 10^{-1}$ & $1.36397845 \times 10^{-1}$\\
-
-\hline
-Standard Deviation & $1.81616137 \times 10^{-1}$ & $1.56788160 \times 10^{2}$ & $2.34431702 \times 10^{-2}$ & $6.32705006 \times 10^{-6}$\\
-
-\hline
-\end{tabular}
-\end{table}
 We again run the MCMC from the drawn samples. The results are shown in table \ref{tab:mcmc_results_known_curve}. Figure \ref{fig:csq_trend_knwon_curve} and \ref{fig:corner_plots_known_curve} present the trend of values of chi-square throughout the chain and corner plots of parameters.Figure \ref{fig:csq_trend_knwon_curve} and \ref{fig:corner_plots_known_curve} present the trend of values of chi-square throughout the chain and corner plots of parameters.\par
 
 \begin{table}
@@ -844,13 +777,6 @@ Error-bar of fit & $3.541 \times 10^ {-2}$ & $3.861 \times 10^ {0}$& $3.578 \tim
 \includegraphics[scale =0.5]{sensivity.png}
 \caption[Behaviour of global 21cm model with respect to chosen parameters]{Behaviour of ARES-generated global 21cm models with respect to four parameters: \emph{pop\_rad\_yield\_0\_}, \emph{pop\_rad\_yield\_2\_}, $f_{esc}$, and $f_X$. In each panel, the corresponding parameter posses 10 different values and all other parameters are kept at default values by ARES}
 \label{fig:sensivity}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[scale =0.5]{histograms_known_curve.png}
-\caption[Histogram of distribution of samples]{Histogram of distribution of samples before feeding to MCMC, The mean of these distributions are consistent with values given in \ref{eq:parameter_values}.}
-\label{fig:histogram_samples_known_curve}
 \end{figure}
 
 \begin{figure}[h!]
@@ -881,19 +807,6 @@ Error-bar of fit & $3.541 \times 10^ {-2}$ & $3.861 \times 10^ {0}$& $3.578 \tim
 \label{fig:chain_known_curve}
 \end{figure}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[scale =0.5]{power_spectrum_known_curve.png}
-\caption[Power spectrum of the chain]{Power spectrum of the chain, Flat behaviour in low frequencies is in agreement with results of \ref{fig:chain_known_curve}.}
-\label{fig:power_spectrum_known_curve}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[scale =0.6]{csq_trend_knwon_curve.png}
-\caption[Trend of chi-square]{Trend of chi-square in the MCMC chain, The chain seems to have reached an equilibrium state.}
-\label{fig:csq_trend_knwon_curve}
-\end{figure}
 
 \begin{figure}[h!]
 \centering
@@ -902,46 +815,26 @@ Error-bar of fit & $3.541 \times 10^ {-2}$ & $3.861 \times 10^ {0}$& $3.578 \tim
 \label{fig:corner_plots_known_curve}
 \end{figure}
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-\begin{figure}[h!]
-\centering
-\includegraphics[scale =0.5]{histograms_edges.png}
-\caption[Histogram of distribution of samples]{Histogram of distribution of samples before feeding to MCMC, The mean of these distributions are consistent with values given in \ref{eq:parameter_values}.}
-\label{fig:histogram_samples_known_curve}
-\end{figure}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.7]{csq_hist_edges.png}
 \caption[Histogram of Chi-Square of drawn samples]{Histogram of Chi-Square of drawn samples, the mean is 49.20 with standard deviation of 41.98.}
-\label{fig:csq_hist_known_curve}
+\label{fig:csq_hist_edges}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.5]{csq_vs_params_edges.png}
 \caption[Chi-Square of Drawn samples vs parameter values]{Chi-Square of Drawn samples versus parameter values for a known ARES curve with four parameters, The parabolic behaviour is not obvious in these plots.}
-\label{fig:csq_vs_params_knwon_curve}
+\label{fig:csq_vs_params_edges}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.5]{chain_edges.png}
 \caption[Trend of parameters]{Trend of parameters in the MCMC chain, White noise behaviour is considered as a sign of convergence. The acceptance ratio of the chain is $22.12\%.$}
-\label{fig:chain_known_curve}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[scale =0.5]{power_spectrum_edges.png}
-\caption[Power spectrum of the chain]{Power spectrum of the chain, Flat behaviour in low frequencies is in agreement with results of \ref{fig:chain_known_curve}.}
-\label{fig:power_spectrum_known_curve}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[scale =0.6]{csq_trend_edges.png}
-\caption[Trend of chi-square]{Trend of chi-square in the MCMC chain, The chain seems to have reached an equilibrium state.}
-\label{fig:csq_trend_knwon_curve}
+\label{fig:chain_edges}
 \end{figure}
 
 \begin{figure}[h!]
