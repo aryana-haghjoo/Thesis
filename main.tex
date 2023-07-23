@@ -649,7 +649,7 @@ Two equivalent approaches can be used to generate correlated noise: Cholesky and
 To gain more precision, it is possible to use the eigenvalues decomposition of the normalized covariance matrix (where diagonal samples all equal unity). The normalization process is done by multiplying the covariance matrix with its own diagonal. Eventually, the drawn samples are denormalized by scaling them with the square root of the diagonal matrix.\par
 \begin{figure}[h!]
 \centering
-\includegraphics[scale =0.6]{corner_plot_chain.png}
+\includegraphics[scale =0.6]{corner_plots.png}
 \caption[Corner plots of an \gls{mcmc} chain]{\hl{Corner plots} (parameter vs. parameter) of a typical \gls{mcmc} chain from a four-variable Gaussian model. The lower right panel clearly shows patterns of correlation between a pair of parameters. Sampling from a multivariate normal distribution based on the covariance matrix associated with these samples will take the correlations into account.}
 \label{fig:corner_plots}
 \end{figure}
@@ -664,9 +664,9 @@ The primary focus of this approach lies in examining the results obtained from t
 Figure \ref{fig:csq_test} shows an example of the distribution of disparity between the chi-square values.\par
 \begin{figure}[h!]
 \centering
-\includegraphics[scale =0.8]{chi-sqaure test.jpg}
+\includegraphics[scale =0.8]{csq_hist.png}
 \caption[Histogram of disparity in the chi-square values of drawn samples]{Histogram illustrating the distribution of the disparity between the chi-squares of drawn samples for a four-variable Gaussian model. The samples are drawn from the covariance matrix calculated at the point of best fit (output of \gls{lm}). We expect the average difference in the $\chi^2$ statistics for two different samples to be of order unity per each parameter.
-On this plot, the average of disparity is 3.97, and the standard deviation is 2.83, in acceptable agreement with our expectations. Therefore, the best-fit parameters are considered a "good fit".}
+On this plot, the average of disparity is 4.03, and the standard deviation is 2.83, in acceptable agreement with our expectations. Therefore, the best-fit parameters are considered a "good fit".}
 \label{fig:csq_test}
 \end{figure}
 \subsection{The Chi-Square Parameter Correlation Test}
@@ -674,7 +674,7 @@ On this plot, the average of disparity is 3.97, and the standard deviation is 2.
 An alternative approach for result verification involves creating plots that depict the relationship between the chi-square values of drawn samples and individual parameters. With reference to the defined chi-square equation (see Equation \ref{eq:chi-square matrix}), which captures the non-linear dependence of chi-square on model parameters, it is anticipated that a parabolic trend will be observed. Figure \ref{fig:csq_params} illustrates plots of chi-square values against parameters for the identical mathematical model as presented in Figure \ref{fig:csq_test}. \par
 \begin{figure}[h!]
 \centering
-\includegraphics[scale =0.9]{csq_params.jpg}
+\includegraphics[scale =0.5]{csq_vs_params.png}
 \caption[Chi-Square vs. parameters plots]{Figures demonstrating the values of chi-square associated with the drawn samples versus the values of parameters for a four-variable Gaussian model. The $\chi^2$ is expected to have a parabolic dependency on the value of parameters based on its non-linear definition (\ref{eq:chi-square matrix}). This is a test to confirm the accuracy of the covariance matrix and the procedure of sample drawing.}
 \label{fig:csq_params}
 \end{figure}
@@ -683,7 +683,7 @@ An alternative approach for result verification involves creating plots that dep
 \label{chap:results}
 Following the discussions of chapter \ref{chap:method} to formulate a specific data fitting algorithm based on the synchronized utilization of \gls{lm} and \gls{mcmc}, this chapter is devoted to demonstrating the results of applying this method to the global $21cm$ signal. Our ultimate goal is to offer a theoretical fit for the \gls{edges} data. However, this goal might not be feasible, given the amplitude and shape of the reported signal.\par
 An essential step in the process of model fitting is to determine the parameters of the physical model. As we choose to use \gls{ares} for generating the theoretical curve, the parameterization of theory is restricted to the notation employed by \gls{ares}. We will briefly introduce our chosen parameters and revisit their connection to the underlying physics of the $21cm$ line. We proceed by evaluating the quality of fit by estimating the parameters of a mock data set, which in fact, is an \gls{ares}-generated curve. The reliability of the results is proven by considering the values of estimated parameters and the assumed error bars of the mock data. \par
-Finally, we represent the results of parameter estimation for the half-amplitude \gls{edges} data\footnote{The reason behind choosing this value for the multiplication factor is discussed in section \ref{chap:results,sub:edges,subsub:m_factor}}. However, in agreement with our earlier expectation, even a multiplication factor of 0.5 is not a sufficient component to explain the behavior of \gls{edges} data with the predictions of the standard physics. \par
+Finally, we represent the results of parameter estimation for the half-amplitude \gls{edges} data\footnote{The for the choice of multiplication factor will be discussed.}. However, in agreement with our earlier expectation, even a suppressing multiplication factor is not a sufficient component to explain the behavior of \gls{edges} data with the predictions of the standard physics. \par
 
 \section{Key Astrophysical Parameters}
 Based on the discussions of \ref{chap:global21cm,sub:physics}, the shape and amplitude of global $21cm$ signal are intensely dependent on underlying astrophysical processes, especially those related to the \gls{sfr} and reheating of the \gls{igm}. In this section, we will take the discussion further and address our current understanding of this dependency on four specific parameters which are able to map the parameter space of the global $21cm$ signal effectively. Constraining these parameters will result in improved comprehension of the thermal history of the \gls{igm} and the population of X-ray sources during high-redshift epochs \cite{21century}.\par
@@ -711,18 +711,20 @@ It is essential to mention that although it is theoretically possible to investi
     $f_{coll}$ is the collapse fraction (fraction of gas inside collapsed objects, fraction of mass in halos more massive than $m_{min})$, $\bar{n}_{rec}$ is the mean number of recombinations per ionized hydrogen atom, $\zeta$ is the ionizing efficiency, $f_*$ is the star formation efficiency (fraction of baryons converted into stars), and $A_{He} = 4/(4 - 3Y_p) = 1.22$. The mass fraction of helium, $Y_p$, is a correction factor to convert the number of ionizing photons per baryon in stars to the fraction of ionized hydrogen. Our limited understanding of the mass distribution of the emitting stars introduces an uncertainty in the number of ionizing photons per baryon $N_{ion}$, that is emitted by galaxies. There is also considerable uncertainty in the fraction of ionizing photons $f_{esc}$ that escape the host galaxy to ionize the \gls{igm}. Therefore, our study is toward the urgent demand to constrain these parameters with observational data \cite{low_frequency, 21century}.\par
     Alternatively, we could have utilized $f_*$ as a parameter of our model. However, since $f_{esc}$ and $N_{ion}$ act as multiplication factors to $f_*$ in the expression for ionizing efficiency \ref{eq:ionizing_efficiency}, thus, both of them are individually degenerate with star formation rate.
 \end{enumerate}
-Figure \ref{fig:sensivity} shows the influence of change in the values of the above-mentioned parameters on the global $21cm$ curve generated by \gls{ares}. It must be noted that these parameters are only physically meaningful in a limited region of phase space (A hypercube where the combination of parameters is physically meaningful). Going beyond this region will result in a failure in calculating the global $21cm$ curve. our developed script is designed to handle this issue and stop it from aborting the whole run \footnote{The Python code for the \gls{mcmc} is designed such that it will return an arbitrarily large chi-square for that combination of parameters beyond the permitted hypercube. Therefore, the probability of these points getting accepted into the chain will be automatically low.}, but the \gls{mcmc} might not be able to reach convergence if the algorithm faces a numerous samples beyond the allowed region.\par
+Figure \ref{fig:sensivity} shows the influence of change in the values of the above-mentioned parameters on the global $21cm$ curve generated by \gls{ares}. It must be noted that these parameters are only physically meaningful in a limited region of phase space (A hypercube where the combination of parameters is physically meaningful). Going beyond this region will result in a failure in calculating the global $21cm$ curve. our developed script is designed to handle this issue and stop it from aborting the whole run \footnote{The Python code for the \gls{mcmc} is designed such that it will return an arbitrarily large chi-square for that combination of parameters beyond the permitted hypercube. Therefore, the probability of these points getting accepted into the chain will be automatically low.}, but the \gls{mcmc} might not be able to reach convergence if the algorithm faces numerous samples beyond the allowed region.\par
 %-----------------------------------------------------------------------------------
 \section{Parameter Estimation of Mock Data}
 \label{chap:results,sub:known_curve}
-Prior to applying our developed algorithm to fit real-world data, we perform a validation test by using it to fit a known \gls{ares} curve. We create the \gls{ares} curve using a predetermined set of parameters ($\emph{pop\_rad\_yield\_0\_}=10^4, \emph{pop\_rad\_yield\_2\_}=10^3, f_{esc}=0.1, f_X= 0.1$), treating it as mock data. By comparing the parameter values obtained from the algorithm to the expected values within the range of the assumed error bars, we can confirm the correct functioning of the algorithm.\par
-The results of this validation test are shown in table \ref{tab:mcmc_results_known_curve} and Figure{}. The output is an acceptable fit considering the overall shape and amplitude of the signal.
-Figure \ref{fig:chain_known_curve} indicates the white-noise behavior of parameters throughout the chain, which is in agreement with our anticipation for a converged chain. Performing \emph{chi-Square consistency test} on our samples showed that the average disparity between the chi-square of drawn samples is 49.20, \hl{roughly an order of magnitude larger than the initial expectation ($\approx4$).}\par
-We proceed by performing the \emph{chi-square parameter correlation test}. The results are depicted in Figure \ref{fig:csq_hist_known_curve}. In the hypothetical ideal case, we expect to see parabolic behavior. However, Figure \ref{fig:csq_vs_params_zoomed_known_curve}, which demonstrates the zoomed version of the \ref{fig:csq_hist_known_curve}, gives insights on parabolic behavior for lower values of chi-square. Figure \ref{fig:corner_plots_known_curve} also shows the correlation between different parameters of the model.\par
+Prior to applying our developed algorithm to fit real-world data, we perform a validation test by using it to fit a mock data set. We create an \gls{ares} curve using a predetermined set of parameters, treating it as mock data with an assumed error bar of $10^{-3}K$ on each data point. we confirm the correct functioning of the algorithm by comparing the obtained fitted parameters to the expected values.\par
+The results of this validation test are shown in table \ref{tab:mcmc_results_known_curve}. The initial row contains the genuine parameters employed in generating the mock data, while the second row exhibits the fitting outcome. Subsequently, the third row displays the one-sigma error bar of the fit, which is based on the standard deviation of \gls{mcmc} chain. The lowest row demonstrates the relative fitting error, which serves as a measure for assessing the disparity between the true values of astrophysical parameters and the corresponding fit.\par 
+Figure \ref{fig:fit_curve_known_curve} is the illustration of the data in table \ref{tab:mcmc_results_known_curve}. 
+The blue dotted curve and the red curve on the left panel depict the mock data and the corresponding fit, respectively.
+On the other hand, the right panel, which is the zoomed version of the same plot, demonstrates the two-sigma confidence interval of the fit. The overall output is an acceptable fit considering both the shape and amplitude of the signal.\par
+Figure \ref{fig:chain_known_curve} indicates the white-noise behavior of parameters throughout the chain, which is in agreement with our anticipation for a converged chain. Performing \emph{chi-Square consistency test} on our samples showed that the average disparity between the chi-square of drawn samples is 49.20, roughly an order of magnitude larger than the initial expectation ($\approx4$) (refer to Figure \ref{fig:csq_hist_known_curve}). The \emph{chi-square parameter correlation test} (Figures \ref{fig:csq_vs_params_knwon_curve}) did not show parabolic behavior initially. However, Figure \ref{fig:csq_vs_params_zoomed_known_curve}, which demonstrates the zoomed version of the \ref{fig:csq_vs_params_knwon_curve}, gives insights on parabolic behavior for lower values of chi-square. Figure \ref{fig:corner_plots_known_curve} illustrates the corner plots of this chain. The lower left panel indicates that the $f_X$ and $pop\_rad\_ yield\_2$ have the highest amount of correlation in all pairs of parameters.\par
 
 \begin{table}
 \centering
-\caption[Results of fitting a known ARES curve with MCMC chain]{Results of fitting a known ARES curve with MCMC chain}
+\caption[Results of fitting a mock data set]{Results of fitting a mock data set with mock chain. The first row is the actual parameters used to generate the mock data. The second row is the fit value of the same astrophysical parameters. The third row is the one-sigma error bar of fit, and eventually, the fourth row represents the relative fitting error which is a measure of disparity between the values of the first and second rows.}
 \label{tab:mcmc_results_known_curve}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -732,7 +734,8 @@ True values & $1 \times 10^ {4}$ & $1 \times 10^ {3}$ & 0.1 & 0.1\\
 \hline
 Fitted values & $9.9999 \times 10^ {3}$ & $9.9941 \times 10^ {2}$ & $1.0002 \times 10^ {-1}$ & $1.0000 \times 10^ {-1}$ \\
 \hline
-Error-bar of fit & $3.5417 \times 10^ {-2}$ & $3.8612 \times 10^ {0}$& $3.5782 \times 10^ {-4}$ & $3.3929 \times 10^ {-6}$ \\
+Error-bar of fit & $3.4727 \times 10^ {-2}$ & $3.8932
+\times 10^ {0}$& $3.6299 \times 10^ {-4}$ & $3.3186 \times 10^ {-6}$ \\
 \hline
 Fitting Error & 0.0001\% & 0.0264 \%& 0.0152\%& 0.0003\%\\
 \hline
@@ -740,71 +743,82 @@ Fitting Error & 0.0001\% & 0.0264 \%& 0.0152\%& 0.0003\%\\
 \end{table}
 %-----------------------------------------------------------------------------------
 \section{Parameter Estimation of EDGES data}
-This section demonstrates the results of applying our developed method to the \gls{edges} data, which is the only available observational data set of the global $21cm$ signal. Based on the fact that the large amplitude of this data is not completely explainable by standard physics and it is roughly more than two times higher than the most optimistic theoretical curves, we tend to use the \gls{edges} data with half the amplitude. This argument is supported by the analysis of the section \ref{chap:results,sub:edges,subsub:m_factor}, which calculates this multiplication factor using \gls{lm}.
-Furthermore, as a matter of convenience in the first-step analysis, we refrain from employing the actual noise model used by the \gls{edges} group. Instead, we approximate the noise using the radiometer equation. The details of this approach is presented in section \ref{chap:results,sub:edges,subsub:error}.\par
-\subsection{Choice of "multiplication factor"}
-\label{chap:results,sub:edges,subsub:m_factor}
-\subsection{error bar calculation}
+This section demonstrates the results of applying our developed method to the \gls{edges} data, which is the only claimed observational data set of the global $21cm$ signal. 
+We formerly discussed that standard physical mechanisms are unable to explain the large amplitude of this data as it is roughly more than two times higher than the most optimistic theoretical curves. On the other hand, \gls{ares}, which generates the theoretical global $21cm$ curve, is based on the predictions of standard physics. Therefore, in order to gain a more realistic fit of the \gls{edges} data, we tend to use a suppressing multiplication factor which draws the amplitude of the data to half of its original value. Furthermore, as a matter of convenience in the first-step analysis, we refrain from employing the actual noise model used by the \gls{edges} group. Instead, we approximate the noise using the radiometer equation. The details of this approach is presented in section \ref{chap:results,sub:edges,subsub:error}.\par
+
+\subsection{Error Bar Calculation}
 \label{chap:results,sub:edges,subsub:error}
 In order to obtain the error bars of the \gls{edges} data for the parameter estimation process, we can directly use the \gls{edges} noise model. Another option is to take advantage of an approximation. The radiometer equation expresses the sensitivity of a radio antenna as a function of three parameters \cite{sensitivity_1, sensitivity_2}.\par
 \begin{equation}
     \frac{\delta T}{T_{sys}} = \frac{1}{\sqrt{Bt}}
 \end{equation}
-Where B is the bandwidth, t is the exposure time, and $T_{sys}$ is the system temperature. Assuming a bandwidth of $10^6Hz$, an exposure time of one day and temperature of $3000K$, we get: $\delta T = 10 ^{-2}K = 10mK$.
+Where B is the bandwidth, t is the exposure time, and $T_{sys}$ is the system temperature. Assuming a bandwidth of $10^6Hz$, an exposure time of one day, and a temperature of $3000K$, we get
+\begin{equation}
+   \delta T_{EDGES} = 10 ^{-2}K = 10mK. 
+\end{equation}
 
-\subsection{results}
- The results of applying our method to \gls{edges} data are shown in table \ref{tab:mcmc_results_edges} and Figure{}. The output is not a perfect fit considering the overall shape and amplitude of the signal.
+\subsection{Results}
+ The results of applying our method to \gls{edges} data are shown in table \ref{tab:mcmc_results_edges} and Figure \ref{fig:fit_curve_edges}. The output is not a perfect fit considering the overall shape and amplitude of the signal.
  Figure \ref{fig:chain_edges} indicates the white-noise behavior of parameters throughout the chain, which is in agreement with our anticipation for a converged chain. Performing \emph{chi-Square consistency test} on our samples showed that the average disparity between the chi-square of drawn samples is \hl{49.20, roughly an order of magnitude larger than the initial expectation ($\approx4$).}\par
  We proceed by performing the \emph{chi-square parameter correlation test}. The results are depicted in Figure \ref{fig:csq_hist_edges}. In the hypothetical ideal case, we expect to see parabolic behavior. Figure \ref{fig:corner_plots_edges} also shows the correlation between different parameters of the model.\par
  
  
 \begin{table}[h!]
 \centering
-\caption[Results of fitting EDGES data with MCMC chain]{Results of fitting EDGES data with MCMC chain}
+\caption[Results of fitting \gls{edges} data with \gls{mcmc} chain]{Results of fitting \gls{edges} data with \gls{mcmc} chain. The upper row is the fit value of four astrophysical parameters of the model, and the lower row is the one-sigma error bar of fit.}
 \label{tab:mcmc_results_edges}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 \diagbox{Value}{Parameter} & \emph{pop\_rad\_yield\_0\_} & \emph{pop\_rad\_yield\_2\_} & \emph{$f_{esc}$} & \emph{$f_X$}\\
 \hline
-Fitted values & $9.999 \times 10^ {3}$ & $9.994 \times 10^ {2}$ & $1.000 \times 10^ {-1}$ & $1.000 \times 10^ {-1}$ \\
+Fitted values & $4.5493 \times 10^ {3}$ & $2.4759 \times 10^ {3}$ & $3.7010 \times 10^ {-1}$ & $1.3639 \times 10^ {-1}$ \\
 \hline
-Error-bar of fit & $3.541 \times 10^ {-2}$ & $3.861 \times 10^ {0}$& $3.578 \times 10^ {-4}$ & $3.392\times 10^ {-6}$ \\
+Error-bar of fit & $1.8083 \times 10^ {-1}$ & $7.6298 \times 10^ {1}$& $1.1408 \times 10^ {-2}$ & $6.5033\times 10^ {-6}$ \\
 \hline
 \end{tabular}
 \end{table}
+
 % -------------------------------------------------------------------------------------
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.5]{sensivity.png}
-\caption[Behaviour of global 21cm model with respect to chosen parameters]{Behaviour of ARES-generated global 21cm models with respect to four parameters: \emph{pop\_rad\_yield\_0\_}, \emph{pop\_rad\_yield\_2\_}, $f_{esc}$, and $f_X$. In each panel, the corresponding parameter posses 10 different values and all other parameters are kept at default values by ARES}
+\caption[Behaviour of global $21cm$ theoretical model with respect to underlying astrophysical parameters]{Behaviour of ARES-generated global $21cm$ models with respect to four astrophysical parameters: \emph{pop\_rad\_yield\_0\_}, \emph{pop\_rad\_yield\_2\_}, $f_{esc}$, and $f_X$. In each panel, the corresponding parameter possesses 10 different values, and other parameters are kept at the values of  $10^4$, $10^5$, $0.2$, and $0.1$, respectively. Each parameter is capable of affecting the shape and depth of the absorption trough.}
 \label{fig:sensivity}
 \end{figure}
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 \begin{figure}[h!]
 \centering
+\includegraphics[scale =0.7]{fit_curve_mock.png}
+\caption[Results of fitting mock data]{Results of fitting mock data. On the \textbf{left panel}, the blue dotted curve represents the mock data and the assumed uncertainty ($10^{-3}K$) generated by feeding the parameters of table \ref{tab:mcmc_results_known_curve} to \gls{ares}. The red curve demonstrates the fit curve, which is an excellent fit to the data, further validating the developed fitting method. The \textbf{right panel}, is the zoomed version of the left figure, showing the two-sigma confidence interval of the fit, which is not visible on the left.}
+\label{fig:fit_curve_known_curve}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
 \includegraphics[scale =0.5]{chain_known_curve.png}
-\caption[Trend of parameters]{Trend of parameters in the MCMC chain, White noise behaviour is considered as a sign of convergence. The acceptance ratio of the chain is $22.12\%.$}
+\caption[Trend of parameters in the mock data \gls{mcmc} chain]{Trend of parameters in the mock data \gls{mcmc} chain. The depicted white noise behavior is considered as the sign of the convergence of the \gls{mcmc} chain (refer to \ref{chap:method,sub:mcmc,subsub:convergence}). The acceptance ratio of the chain is $20.5\%$, close to the ideal of $25\%$. The one-sigma error bar of the fit (table \ref{tab:mcmc_results_known_curve}) is the standard deviation of this chain.}
 \label{fig:chain_known_curve}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.7]{csq_hist_known_curve.png}
-\caption[Histogram of Chi-Square of drawn samples]{Histogram of Chi-Square of drawn samples, the mean is 49.20 with standard deviation of 41.98.}
+\caption[Histogram of disparity in the chi-square of drawn samples for the mock data \gls{mcmc} chain]{Histogram of disparity in the Chi-Square of drawn samples for the mock data \gls{mcmc} chain, the mean is 49.20 with a standard deviation of 41.98. Based on the discussions of \ref{chap:method,sub:test,subsub:chi}, we expected the mean to be approximately 4.}
 \label{fig:csq_hist_known_curve}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
-\includegraphics[scale =0.5]{csq_vs_params_knwon_curve.png}
-\caption[Chi-Square of Drawn samples vs parameter values]{Chi-Square of Drawn samples versus parameter values for a known ARES curve with four parameters, The parabolic behaviour is not obvious in these plots.}
+\includegraphics[scale =0.5]{csq_vs_params_known_curve.png}
+\caption[Chi-Square of Drawn samples as a function of parameter values for the mock data]{Figures demonstrating the values of chi-square associated with the drawn samples versus the values of parameters for the mock data set. The $\chi^2$ is
+expected to have a parabolic dependency on the value of parameters. However, the parabolic behavior is not obvious in these plots.}
 \label{fig:csq_vs_params_knwon_curve}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.5]{csq_vs_params_zoomed_known_curve.png}
-\caption[Chi-Square of Drawn samples vs parameter values, zoomed]{Zoomed version of figure \ref{fig:csq_vs_params_knwon_curve}, A weak parabolic behaviour is observed for low values of $\chi^2$.}
+\caption[Chi-Square of Drawn samples as a function of parameter values for the mock data, zoomed version]{Zoomed version of figure \ref{fig:csq_vs_params_knwon_curve}, A weak parabolic behaviour is observed for low values of $\chi^2$. However, the overall shape is not completely consistent with the expectations of Figure \ref{fig:csq_params}.}
 \label{fig:csq_vs_params_zoomed_known_curve}
 \end{figure}
 
@@ -812,36 +826,53 @@ Error-bar of fit & $3.541 \times 10^ {-2}$ & $3.861 \times 10^ {0}$& $3.578 \tim
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.6]{corner_plots_known_curve.png}
-\caption[Corner plots of the chain]{Corner plots of the chain indicating the correlation between the parameters specially in the lower left panel}
+\caption[Corner plots of the mock data chain]{Corner plots of the mock data chain indicate the correlation between the parameters. The lower left panel, which depicts the values of $f_X$ and $pop\_rad\_yield\_2$, shows the highest amount of correlation between a pair of parameters among all the six panels.}
 \label{fig:corner_plots_known_curve}
 \end{figure}
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 \begin{figure}[h!]
 \centering
+\includegraphics[scale =0.7]{fit_curve_edges.png}
+\caption[Results of fitting \gls{edges} data]{Results of fitting \gls{edges} data. On the \textbf{left panel}, the blue dotted curve represents the half-amplitude \gls{edges} data and the associated uncertainty calculated using the radiometer equation ($10mK$). The red curve demonstrates the fit curve (table \ref{tab:mcmc_results_edges}). Despite using the half-amplitude data, the fit portrays a significant discrepancy with respect to the observed data, further suggesting the impossibility of achieving the \gls{edges} curve with the current well-accepted standard physics. The \textbf{right panel} is the zoomed version of the left figure, showing the two-sigma confidence interval of the fit, which is not visible on the left.}
+\label{fig:fit_curve_edges}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
 \includegraphics[scale =0.5]{chain_edges.png}
-\caption[Trend of parameters]{Trend of parameters in the MCMC chain, White noise behaviour is considered as a sign of convergence. The acceptance ratio of the chain is $22.12\%.$}
+\caption[Trend of parameters in the \gls{edges} data \gls{mcmc} chain]{Trend of parameters in the \gls{edges} data \gls{mcmc} chain. The depicted white noise behavior is considered as the sign of the convergence of the \gls{mcmc} chain (refer to \ref{chap:method,sub:mcmc,subsub:convergence}). The acceptance ratio of the chain is  $23.02\%$, close to the ideal of $25\%$. The one-sigma error bar of the fit (table \ref{tab:mcmc_results_edges}) is the standard deviation of this chain.} 
 \label{fig:chain_edges}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.7]{csq_hist_edges.png}
-\caption[Histogram of Chi-Square of drawn samples]{Histogram of Chi-Square of drawn samples, the mean is 49.20 with standard deviation of 41.98.}
+\caption[Histogram of disparity in the Chi-Square of drawn samples for the \gls{EDGES} data \gls{mcmc} chain]{Histogram of disparity in the Chi-Square of drawn samples for the \gls{edges} data \gls{mcmc} chain, the mean is 0.28 with a standard deviation of 0.3. Based on the discussions of \ref{chap:method,sub:test,subsub:chi}, we expected the mean to be approximately 4.}
 \label{fig:csq_hist_edges}
 \end{figure}
+
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.5]{csq_vs_params_edges.png}
-\caption[Chi-Square of Drawn samples vs parameter values]{Chi-Square of Drawn samples versus parameter values for a known ARES curve with four parameters, The parabolic behaviour is not obvious in these plots.}
+\caption[Chi-Square of Drawn samples as a function of parameter values for \gls{edges} data]{Figures demonstrating the values of chi-square associated with the drawn samples versus the values of parameters for the \gls{edges} data set. The $\chi^2$ is
+expected to have a parabolic dependency on the value of parameters, which is only evident in two of the panels.}
 \label{fig:csq_vs_params_edges}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
+\includegraphics[scale =0.5]{csq_vs_params_zoomed_edges.png}
+\caption[Chi-Square of Drawn samples as a function of parameter values for the \gls{edges} data, zoomed version]{Zoomed version of the upper left and lower right panels of Figure \ref{fig:csq_vs_params_edges}. A weak parabolic behavior is observed for low values of $\chi^2$. However, the overall shape is not completely consistent with the expectations of Figure \ref{fig:csq_params}.}
+\label{fig:csq_vs_params_zoomed_edges}
+\end{figure}
+
+
+\begin{figure}[h!]
+\centering
 \includegraphics[scale =0.5]{corner_plots_edges.png}
-\caption[Corner plots of the chain]{Corner plots of the chain indicating the correlation between the parameters specially in the lower left panel}
-\label{fig:corner_plots_known_curve}
+\caption[Corner plots of the \gls{edges} data \gls{mcmc} chain]{Corner plots of the \gls{EDGES} data \gls{mcmc} chain indicate the correlation between the parameters. The middle left panel, which depicts the values of $f_X$ and $pop\_rad\_yield\_0$, appears to show the only correlation between a pair of parameters among all the six panels.}
+\label{fig:corner_plots_edges}
 \end{figure}
 %###################################################################################
 \chapter{Discussion and Conclusion}
@@ -865,6 +896,10 @@ We plan to take the analysis further and include a realistic foreground model. T
 \chapter{Appendices}
 %\section{Derivation of radiometer equation}
 \section{Code snippets and scripts}	
+Python Implementation of the analysis in chapter 5 is publically available on GitHub under the dedicated repository:\par
+\centering
+\href{https://github.com/aryana-haghjoo/My-Project/tree/main/code_final}{https://github.com/aryana-haghjoo/My-Project/tree/main/code\_final}
+
 \label{chap:appendix,sub:code}
 	% Begin Bibliography
 	{
