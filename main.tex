@@ -876,21 +876,25 @@ expected to have a parabolic dependency on the value of parameters. However, the
 \label{fig:corner_plots_edges}
 \end{figure}
 %###################################################################################
-\chapter{Discussion and Conclusion}
+\chapter{Final Remarks}
 \label{chap:discussion}
-say that the first step is to estimate the parameters of the standard curve, then we add the non-standard effects and do the parameter estimation again.
-\section{Interpretation of the results}
-%\section{Implications for cosmology and astrophysics}
-\section{Summary of the main findings}
-\section{Comparison with previous studies and observations}
-\section{Contributions and significance of the research}
+\section{Summary and Conclusion}
+Motivated by the findings of previous studies, in this thesis, we examined the capability of the global $21cm$ signal to assist us in our investigation of the existence of mechanisms beyond the standard model of cosmology and particle physics. The literature review provided a brief recap of the physics of the $21cm$ special line, its evolution through the thermal history of the universe, computational tools to simulate the global signal, and the signatures of non-standard physics. We also discussed the experimental efforts to observe this signal through the utilization of radio interferometers and the associated challenges and obstacles.\par
+Knowing the fact that the global $21cm$ signal is sensitive to the underlying astrophysical processes, it is expected that the majority of the suggested non-standard scenarios would leave imprints on the value of the corresponding parameters. Therefore, we are optimistic that if such theoretical proposals exist in the early universe era, they will be revealed through proper parameter estimation of the existing and upcoming data. Following this idea, we introduced a specific parameter estimation method based on the coordinated use of \gls{lm} and \gls{mcmc}, providing a robust framework for fitting the observed data and exploring the parameter space, respectively. By employing this method, we developed a Python script specially designed for global $21cm$ applications, which takes advantage of an efficient simulator, \gls{ares}, to generate the theoretical model.\par
+Finally, we presented the results of applying this method to the only claimed detection of global $21cm$ signal, the \gls{edges} data. Considering the anomalous amplitude and shape of the reported signal and the fact that the current version of our simulator \gls{ares} only contains the standard mechanisms, the output best-fit curve includes notable discrepancies with respect to the overall behavior of the empirical data. Although the developed method failed to provide us with an acceptable fit to the \gls{edges}, the process is entirely independent of the data and can be used for future released observational data sets. Furthermore, since \gls{ares} is an open-source Python module, it is possible to update the code such that it encompasses any arbitrary non-standard physics. This investigation is reserved for future studies.\par
+In summary, theoretical predictions of the influence of non-standard physics on global $21cm$ signal will result in the construction of a framework to decide whether the precision of prospective experiments is sufficient for observing non-standard effects.\par
+%-----------------------------------------------------------------------------
+\section{Discussion}
+%-----------------------------------------------------------------------------
 \section{Limitations}
-We faced certain limitation while working on this research. Most of those emerged during the implementation of python script. 
-An strongly limiting obstacle is related to the ARES's run time which is in the order of a few seconds per each simulation (approximately 4 to 5 seconds for different combination of parameters). Given that ARES is computationally heavy, it will make it hard to use algorithms based on using ARES on each iteration \footnote{ As an example, the run time for the MCMC results presented in chapter \ref{chap:results} was approximately 13 hours.}. This was main the reason that led us to combine the MCMC with LM in order to have a more efficient chain and guarantee the convergence.\par 
+We faced certain limitations while working on this research. The majority of those are associated with the implementation of the Python script. 
+A strongly limiting obstacle is related to the ARES's run-time, which is in the order of a few seconds per each simulation (approximately 4 to 5 seconds for different combinations of parameters). Given that ARES is computationally heavy, any iterative algorithm demanding to run \gls{ares} on each step is likely to require strong computational resources\footnote{ As an example, the run time for the MCMC results presented in chapter \ref{chap:results} was approximately 13 hours.}. This was the main reason that led us to combine the MCMC with LM in order to have a more efficient chain and guarantee its convergence.\par 
 %----------------------------------------------------------------------------
 \section{Future work}
-As the first step, the developed script is going to be published as a python package in near future. There will be a corresponding paper describing a summary of the results shown in chapter \ref{chap:results}.\par
-We plan to take the analysis further and include a realistic foreground model. Then, we will add some of the previously mentioned non-standard effects to ARES simulations and run the same described method to observe the difference the best-fit curve. \hl{The results will hopefully tell us if existing and future observational data (like EDGES) is a sign of new physics and can be explained through physics beyond standard cosmological model.}\par
+In the initial phase, the developed script is going to be published as a Python package in the near future. There will be a corresponding paper describing the user manual and a summary of the results shown in chapter \ref{chap:results}.
+Furthermore, we plan to take the analysis further and include a realistic noise model rather than an approximation. Subsequently, we shall incorporate certain non-standard effects into the \gls{ares} simulations. Same methodology will be executed to observe variations in the best-fit curve. 
+The results will hopefully aid us to realize if existing and future observational data (like \gls{edges})
+contain the signatures of new physics and can be explained through these proposed theories.\par
 
 %##############################################################################
 
