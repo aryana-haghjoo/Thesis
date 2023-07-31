@@ -113,28 +113,28 @@
 			
 			\textit{Aryana Haghjoo}
 			
-			\vspace{0.5cm}
+			\vspace{1cm}
 			
-			\includegraphics[width=0.6\textwidth]{McGill_logo.png}
+			\includegraphics[width=0.7\textwidth]{McGill_logo.png}
 			
 			\vspace{0.1cm}
 			
 			\Large
 			Department of Physics
 			
-			\vspace{-5mm}
+			\vspace{-6mm}
 			McGill University
 			
-			\vspace{-5mm}
+			\vspace{-6mm}
 			Trottier Space Institute
 			
-			\vspace{-5mm}
+			\vspace{-6mm}
 			Montr\'eal, Qu\'ebec, Canada
 			
 			\vspace{5mm}
 			August 2023
 			\small
-			\vspace{0.5cm}
+			\vspace{1cm}
 			{\color{red} \hrule height 0.75mm}
 			
 			\vspace{0.2cm}
@@ -244,7 +244,7 @@ The $21cm$ cosmology has been a rapidly evolving field of study since its onset 
 This chapter is specifically dedicated to the investigation of  \textbf{global 21cm signal}. In section \ref{chap:global21cm,sub:physics}, we initiate the discussion by describing the nature of the $21cm$ line and how the related interactions give rise to the global curve. Then we briefly portray the computational efforts in this field by introducing two famous semi-numerical simulations of this radiation.
 As we move along to the last section, we pursue our discussion by the latest findings on the signature of non-standard physics on the $21cm$ signal. These effects originate from corresponding theories beyond the standard model of cosmology and particle physics.\par
 %-----------------------------------------------------------
-\section{Theoretical basis of the 21cm signal}
+\section{Theoretical Basis of the 21cm Signal}
 \label{chap:global21cm,sub:physics}
 After the occurrence of the big bang, prior to the formation of the first stars and galaxies ($200 \lesssim z \lesssim 1100$), the universe was primarily composed of gas (with hydrogen constituting approximately 75\% and helium, along with trace quantities of heavy elements, comprising the remaining portion). Additionally, there existed a comparatively smaller amount of free electrons relative to the gas, accompanied by the residual photons originating from the initial big bang, commonly referred to as the \gls{cmb}\cite{map_universe, 21century}.
 
@@ -258,7 +258,7 @@ Since neutral hydrogen is the most frequent component of the \gls{igm}, it provi
 
 Given that the \gls{cmb} encompasses photons with the wavelength of $21cm$, hydrogen atoms are able to engage in interactions with the \gls{cmb}, thereby facilitating the absorption of the $21cm$ photon. This interaction takes place approximately during the dark ages and the \gls{eor}. As a consequence of this interaction, the brightness temperature of the $21cm$ line experiences a notable alteration\footnote{This interaction will be discussed in detail in Chapter \ref{chap:global21cm} as the coupling of the spin temperature $T_s$ with the kinetic temperature of the gas $T_k$.}. Using modern radio interferometers equipped with precise observation capabilities, this alteration can be detected effectively. It should be noted that due to the redshift, the $21cm$ signal attains frequencies ranging from approximately 30 to 200 $MHz$, rendering it easily accessible to our radio interferometers \cite{low_frequency}. These observations are capable of giving us valuable information about the distribution of neutral hydrogen and the evolution of cosmic structure over time\cite{low_frequency}.\par
 
-\subsection{Physical Principles of the 21cm spectral line}
+\subsection{Physical Principles of The 21cm Spectral Line}
 The $21cm$ signal is a result of interaction between the \gls{cmb} and the matter along its way, and the characteristics of the signal depend on the radiative transfer along the line of sight. To find the brightness temperature of the $21cm$ line, we start with the basic \gls{rte} for the specific intensity $I_{\nu}$:
 \begin{equation}
     \frac{dI_\nu}{ds} = - \alpha_\nu + j_\nu ,
@@ -334,7 +334,7 @@ Therefore, the differential brightness temperature of the $21cm$ signal is zero 
 \label{fig:global_signal_pritchard_loeb}
 \end{figure}
 %-----------------------------------------------------------
-\section{Simulating the global 21cm signal}
+\section{Simulating the Global 21cm Signal}
 With the current advancements in radio telescope instrumentation, we have entered a data-driven era in $21cm$ cosmology, empowering us to constrain the properties of astrophysical sources responsible for generating this signal. Nevertheless, extracting astrophysical insights from the collected data is a complex task that necessitates the fast and efficient generation of theoretical templates spanning over the parameter space \cite{emulate_21cm}. \par
 To reach this purpose, fully hydrodynamic simulations of the 3-dimensional evolution of the $21cm$ signal have been adapted \cite{hydrodynamic_sim}. However, these simulations are computationally expensive, and this restriction will considerably decrease our ability to search the parameters space \cite{ares2014jordan}. 
 Semi-analytical methods are the proposed state-of-the-art solutions employing a middle-ground approach between these simulations and fully analytical studies. The results of these semi-analytical calculations are in remarkable agreement with corresponding hydrodynamic simulations while consuming a significantly lower amount of run-time \cite{semi_analytic_1, semi_analytic_2, semi_analytic_3, semi_analytic_4, semi-analytic_5}. \par
@@ -447,7 +447,7 @@ Several methods have been proposed to remove the astronomical foregrounds from t
 
 \subsection{Ionospheric Effects}
 The ionosphere is a layer in the Earth's upper atmosphere ($50km \lesssim h \lesssim 1000 km$). When high-energy particles or sunlight (which includes X-ray and \gls{uv} radiation) pass through the atmosphere, the interaction leaves the gas molecules ionized, resulting in the creation of plasma. The generated ions are capable of reflecting or absorbing radio emission and therefore interfere with other radio signals passing through this layer. This influence is even more severe in low frequencies, overlapping with the frequency range of the dark ages signal. The ionosphere is the primary origin of systematic aberration, impeding our capacity to investigate the low-frequency domain via radio interferometers \cite{thesis_pamela, ionosphere_ultra_low}.\par
-The threshold frequency under which the ionosphere scatters absorbs all radio waves and becomes completely opaque is called the \emph{plasma cut-off frequency} \cite{ionosphere_effect_book, thesis_pamela}. This cut-off is a function of electron density in the ionosphere and generally varies between $2-20MHz$. The electron density itself depends on the time of day, season, altitude, and solar activity. This effect is more severe during the summer days and in regions with higher altitudes, forcing the cut-off frequency to higher amounts during these periods. Thus, winter nights in polar locations during the solar minima have the ideal features for earth-based low-frequency observations \footnote{Long winter nights allow ions to have more time to recombine. Also, being far from the magnetic poles leads to less auroral ionization \cite{prizm_thesis}.} \cite{thesis_pamela}.\par
+The threshold frequency under which the ionosphere scatters absorbs all radio waves and becomes completely opaque is called the \emph{plasma cut-off frequency} \cite{ionosphere_effect_book, thesis_pamela}. This cut-off is a function of electron density in the ionosphere and generally varies between $2-20MHz$. The electron density itself depends on the time of day, season, altitude, and solar activity. This effect is more severe during the summer days and in regions with higher altitudes, forcing the cut-off frequency to higher amounts during these periods. Thus, winter nights in polar locations during the solar minima have a balance of the best accessible features for earth-based low-frequency observations \footnote{Long winter nights allow ions to have more time to recombine. Also, being far from the magnetic poles leads to less auroral ionization \cite{prizm_thesis}.} \cite{thesis_pamela}.\par
 Constructing theoretical models for ionospheric effects is the key to effective mitigation of this foreground from data collected by Earth-based low-frequency observations and successful extraction of the original cosmological signal \cite{ionosphere_model, ionosphere_Bayesian}. However, the most effective way to avoid contamination of data with ionospheric influences is to observe from outside of Earth\cite{thesis_shedding}. A few such experiments have been proposed, yet none of them has been implemented thus far \cite{dare_1, dare_2, 21cm_space_interferometer, lunar_orbit_21cm}. \par
 
 \subsection{Radio Frequency Interference (RFI)}
@@ -473,7 +473,7 @@ The design was later progressed to avoid intense foreground and offer a better p
 The \gls{reach} experiment is another wideband global $21cm$ project led by Cambridge University, covering both the cosmic dawn and the epoch of reionization. The antenna is designed as a seven-pointed blade (hexagonal dipole) with conical log spirals, covering the frequency range of $50-135MHz$ ($7.5 < z < 28$). In the future, multiple antennas (scaled and/or different types) will be added to form a joint confident detection. \gls{reach} phase I was deployed in the \gls{rfi}-quiet Karoo radio astronomy reserve in South Africa in 2022 \cite{reach_z, reach, reach_design}. \par
 
 \subsubsection{Mapper of the IGM Spin Temperature (MIST)}
-The \gls{mist} experiment plans to perform measurements on the global radio spectrum within the frequency range of $25-150 MHz$, gathering data from exceptionally remote locations across the globe. This radiometer uses a blade dipole with two panels. This experiment is currently undergoing the construction procedure \cite{mist, mist_presentation, mist_website}.
+The \gls{mist} experiment plans to perform measurements of the global radio spectrum within the frequency range of $25-105 MHz$. The deployment took place in different remote locations, such as Axel Heiberg Island in Canadian Arctic. This radiometer uses a blade dipole with two panels. The first two antennas of this project are currently gathering data, and the third is undergoing the construction procedure \cite{mist, mist_presentation, mist_website}.
 
 \subsubsection{Large aperture Experiment to Detect the Dark Ages (LEDA)}
 Driven by the constraint of single-antenna experiments of the global $21cm$ signal, \gls{leda} collaboration constructed a single-layer multi-antenna instrument (array of simple dipole antennas) to observe the early universe in $30-85MHz$ band ($16 < z < 34$).
@@ -506,8 +506,8 @@ The \gls{bighorns} system is a portable total power radiometer that can be deplo
 %#################################################################
 \chapter{Parameter Estimation Methods}
 \label{chap:method}
-We formerly discussed the physics of global $21cm$ signal and associated observational attempts. We also pointed out the capacity of the global $21cm$ signal to constrain the cosmological and astrophysical parameters and demonstrate the signatures of theories beyond the standard model. However, the details of the process to extract this piece of information from the existing and upcoming observational data is yet to be addressed. The majority of proposed non-standard mechanisms are expected to leave their footprints on the value of physical parameters. Therefore, the urge to perform proper parameter estimation on the corresponding observational data is undeniable. Based on this knowledge, we dedicate this chapter to the construction of a firm computational framework specifically designed for the global $21cm$ parameter estimation. \par
-Previous studies have examined various computational algorithms to accomplish this task. The efforts include \gls{mcmc} \cite{pe_mcmc_1, pe_mcmc_2}, neural network methods \cite{pe_nn_1}, and even Fisher Matrix approaches \cite{pe_fisher_1, pe_fisher_2}. Sampling algorithms such as \gls{mcmc} are capable of exploring the entire likelihood surface in situations where it is feasible. On the other hand, neural networks are typically employed for problems where comprehensive mapping of the entire likelihood surface becomes excessively complex. This distinction positions \gls{mcmc} as advantageous for global 21cm applications.\par
+We formerly discussed the physics of global $21cm$ signal and associated observational attempts. We also pointed out the capacity of the global $21cm$ signal to constrain the cosmological and astrophysical parameters and demonstrate the signatures of theories beyond the standard model. However, the details of the process to extract this piece of information from the existing and upcoming observational data are yet to be addressed. The majority of proposed non-standard mechanisms are expected to leave their footprints on the value of physical parameters. Therefore, the urge to perform proper parameter estimation on the corresponding observational data is undeniable. Based on this knowledge, we dedicate this chapter to the construction of a firm computational framework specifically designed for the global $21cm$ parameter estimation. \par
+Previous studies have examined various computational algorithms to accomplish this task. The efforts include \gls{mcmc} \cite{pe_mcmc_1, pe_mcmc_2}, neural network methods \cite{pe_nn_1}, and even Fisher Matrix approaches \cite{pe_fisher_2}. Sampling algorithms such as \gls{mcmc} are capable of exploring the entire likelihood surface in situations where it is feasible. On the other hand, neural networks are typically employed for problems where comprehensive mapping of the entire likelihood surface becomes excessively complex. This distinction positions \gls{mcmc} as advantageous for global 21cm applications.\par
 We proceed by introducing the main parameter estimation algorithm used in our study, which is a combination of \gls{lm} and \gls{mcmc}. We explain the reason behind utilizing both of these algorithms for this particular fitting challenge and provide a detailed explanation of the procedure to combine them. We also discuss two different tests used to measure the quality of the proposed fit. Python implementation of these algorithms is accessible in \ref{chap:appendix,sub:code}.
 In chapter \ref{chap:results}, we present the results of applying this fitting method to the observed global $21cm$ curve and its corresponding theoretical model \footnote{We will use \gls{ares} to generate global $21cm$ curve to fit the data released by the \gls{edges} group.}.\par
 %------------------------------------------------------------------
@@ -641,7 +641,7 @@ By utilizing the covariance matrix provided by the \gls{lm} algorithm, we posses
 \label{fig:combined_flow}
 \end{figure}
 
-\subsection{Generating correlated noise}
+\subsection{Generating Correlated Noise}
 \label{chap:method,sub:correlated noise}
 Correlated noise, as opposed to white noise, refers to a type of noise or random variation in a set of samples that exhibits a correlation or relationship with another variable. In other words, it is a noise that is not completely random but instead has some level of dependence on other parameters. Fortunately enough, the mathematical tool to quantify these correlations is the covariance matrix, which is often used to characterize the statistical properties of the noise. \par
 The off-diagonal elements of a covariance matrix correspond to the covariance between each pair of parameters. Thus, by drawing samples from the covariance matrix, we are genuinely sampling from the multivariate normal distribution with the deviation values describing the uncertainties in the parameters.
@@ -650,7 +650,7 @@ To gain more precision, it is possible to use the eigenvalues decomposition of t
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.6]{corner_plots.png}
-\caption[Corner plots of an \gls{mcmc} chain]{Corner plots (parameter vs. parameter) of a typical \gls{mcmc} chain from a four-variable Gaussian model. 
+\caption[Corner plots of an \gls{mcmc} chain]{Corner plots (pairwise parameter contours) of a typical \gls{mcmc} chain from a four-variable Gaussian model. 
  A corner plot is basically the pairwise scatter plots of all the parameters in a \gls{mcmc} chain, providing a visual assessment of the correlation between parameters. These plots are especially advantageous in dealing with high-dimensional parameter spaces. Corner plots are also capable of identifying possible degeneracies. In this figure, the lower right panel clearly shows patterns of correlation between a pair of parameters. Sampling from a multivariate normal distribution based on the covariance matrix associated with these samples will take the correlations into account.}
 \label{fig:corner_plots}
 \end{figure}
@@ -706,10 +706,10 @@ It is essential to mention that although it is theoretically possible to investi
     \begin{gather}
         \bar{x}_i = \frac{\zeta f_{coll}}{1 + \bar{n}_{rec}}\\
         f_{coll} = \int_{m_{min}}^\infty dm \hspace{0.1cm} m \hspace{0.1cm} n\left(m\right)\\
-        \zeta = A_{He} \hspace{0.1cm} f_* \hspace{0.1cm} f_{esc} \hspace{0.1cm} N_{ion} \label{eq:ionizing_efficiency}
+        \xi_{\text{ion}} = A_{He} \hspace{0.1cm} f_* \hspace{0.1cm} f_{esc} \hspace{0.1cm} N_{\text{ion}} \label{eq:ionizing_efficiency}
     \end{gather}
     
-    $f_{coll}$ is the collapse fraction (fraction of gas inside collapsed objects, fraction of mass in halos more massive than $m_{min})$, $\bar{n}_{rec}$ is the mean number of recombinations per ionized hydrogen atom, $\zeta$ is the ionizing efficiency, $f_*$ is the star formation efficiency (fraction of baryons converted into stars), and $A_{He} = 4/(4 - 3Y_p) = 1.22$. The mass fraction of helium, $Y_p$, is a correction factor to convert the number of ionizing photons per baryon in stars to the fraction of ionized hydrogen. Our limited understanding of the mass distribution of the emitting stars introduces an uncertainty in the number of ionizing photons per baryon $N_{ion}$, that is emitted by galaxies. There is also considerable uncertainty in the fraction of ionizing photons $f_{esc}$ that escape the host galaxy to ionize the \gls{igm}. Therefore, our study is toward the urgent demand to constrain these parameters with observational data \cite{low_frequency, 21century}.\par
+    $f_{coll}$ is the collapse fraction (fraction of gas inside collapsed objects, fraction of mass in halos more massive than $m_{min})$, $\bar{n}_{rec}$ is the mean number of recombinations per ionized hydrogen atom, $\xi_{\text{ion}}$ is the ionizing efficiency, $f_*$ is the star formation efficiency (fraction of baryons converted into stars), and $A_{He} = 4/(4 - 3Y_p) = 1.22$. The mass fraction of helium, $Y_p$, is a correction factor to convert the number of ionizing photons per baryon in stars to the fraction of ionized hydrogen. Our limited understanding of the mass distribution of the emitting stars introduces an uncertainty in the number of ionizing photons per baryon $N_{ion}$, that is emitted by galaxies. There is also considerable uncertainty in the fraction of ionizing photons $f_{esc}$ that escape the host galaxy to ionize the \gls{igm}. Therefore, our study is toward the urgent demand to constrain these parameters with observational data \cite{low_frequency, 21century}.\par
     Alternatively, we could have utilized $f_*$ as a parameter of our model. However, since $f_{esc}$ and $N_{ion}$ act as multiplication factors to $f_*$ in the expression for ionizing efficiency \ref{eq:ionizing_efficiency}, thus, both of them are individually degenerate with star formation rate.
 \end{enumerate}
 Figure \ref{fig:sensivity} shows the influence of change in the values of the above-mentioned parameters on the global $21cm$ curve generated by \gls{ares}. It must be noted that these parameters are only physically meaningful in a limited region of phase space (A hypercube where the combination of parameters is physically meaningful). Going beyond this region will result in a failure in calculating the global $21cm$ curve. our developed script is designed to handle this issue and stop it from aborting the whole run \footnote{The Python code for the \gls{mcmc} is designed such that it will return an arbitrarily large chi-square for that combination of parameters beyond the permitted hypercube. Therefore, the probability of these points getting accepted into the chain will be automatically low.}, but the \gls{mcmc} might not be able to reach convergence if the algorithm faces numerous samples beyond the allowed region.\par
@@ -884,6 +884,22 @@ Finally, we presented the results of applying this method to the only claimed de
 In summary, theoretical predictions of the influence of non-standard physics on global $21cm$ signal will result in the construction of a framework to decide whether the precision of prospective experiments is sufficient for observing non-standard effects.\par
 %-----------------------------------------------------------------------------
 \section{Discussion}
+Constraining the period between the dark ages and reionization with observations of the global 21 cm signal has been the focus of many studies. Therefore, they have conducted many different parameter estimation methods.
+In \cite{21cmpower_global_comnbine}, authors suggest that we can benefit from analyzing the data from a combined 21 cm power spectrum and global signal measurements. This parameterization reduces the number of parameters needed to describe the global signal, increasing the likelihood of a high-significance measurement.
+Adding 21 cm power spectrum information to existing constraints results in reduced errors on many cosmological parameters (in addition to producing the first measurements of the astrophysical parameters governing reionization). The further addition of global signal information, however, does little to improve parameter errors.\par
+
+In \cite{pe_galaxy_formation}, authors claim the first attempt to forecast constraints on astrophysical parameters of interest from mock observations of the global 21-cm signal. Constraints on the turning points constrain the model parameters well. Such measurements would simultaneously constrain the ionization and thermal state of the IGM. The used parameters: minimum virial temperature of star-forming $T_{min}$, \gls{lya} efficiency $\xi_{LW}$, X-ray efficiency $\xi_{X}$, Ionizing efficiency $\xi_{\text{ion}}$\par
+
+\cite{subtle_lya} Contrast to EDGES: new sources of heating: subtle effects of \gls{lya} radiation \gls{lya} heating, CMB heating (mediated by \gls{lya} photons), and multiple scattering of \gls{lya} photons. 165 mK at redshifts $z \approx 15-19$. This is in contrast with the predictions for a pure adiabatically cooling Universe, for which the deepest possible absorption is a monotonically decreasing function of cosmic time and is $-178 mK$ at z = 19 and $-216 mK$ at z = 15, dropping to even lower values at lower redshifts. 6 astrophysical parameters. although created by subtle physical processes, the newly included effects of the \gls{lya} background on the 21cm signal are important. The landscape of possible 21-cm signals is strongly modified when these effects are included,\par
+
+\cite{chart_param_space} Even with our wide selection of models, we still find clear correlations between the key features of the global 21cm signal and underlying astrophysical properties of the high redshift Universe, namely the \gls{lya} intensity, the X-ray heating rate, and the production rate of ionizing photons. These correlations can be used to directly link future measurements of the global 21cm signal to astrophysical quantities in a mostly model-independent way. We identify additional correlations that can be used as consistency checks. 4 astrophysical parameters\par
+
+\cite{pe_mcmc_1}five cosmological and seven related to the stellar populations. MCMC)-based parameter estimation package, CosmoReionMC, when we include the EDGES data in the analysis, we find that an early population of metal-free stars with efficient radio emission is necessary to match the absorption amplitude. The CosmoReionMC, require a radio-efficient short-lived population of metal-free (PopIII) stars which give rise to the absorption trough. The inclusion of the PopIII stars allow reionization histories that start earlier than what is found in the CMB+Quasar analysis. Our model can match the position and depth of the EDGES absorption trough, however, matching the exact shape would require more complex evolution of the PopIII star formation than what is assumed in this paper.\par
+
+\cite{pe_nn_1} we have used an artificial neural network (ANN) to extract the astrophysical parameters from these simulated data sets, We find that the reconstructed signal closely mimics the amplitude of the reported detection. The recovered parameters can be used to infer the physical state of the gas at high redshifts. We can see that by training our ANN with models, which include EDGES-like large absorption troughs apart from the traditional models, we get the predicted parameters that are used to reconstruct the signal. We can see that the magnitude of the signal is comparable to the EDGES detection, but the flattened nature of the EDGES signal cannot be reconstructed by the signal reconstructed by our models. parameters: $f_*, f_{esc}, f_X, f_{XH}, f_R, N_\alpha$, $f_R$ excess radio background.\par
+
+
+
 %-----------------------------------------------------------------------------
 \section{Limitations}
 We faced certain limitations while working on this research. The majority of those are associated with the implementation of the Python script. 
