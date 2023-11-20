@@ -252,8 +252,7 @@ As we move along to the last section, we pursue our discussion by stating the la
 %-----------------------------------------------------------
 \section{Theoretical Basis of the 21cm Signal}
 \label{chap:global21cm,sub:physics}
-After the occurrence of the big bang and recombination, prior to the formation of the first stars and galaxies ($200 \lesssim z \lesssim 1100$), the baryonic content of the universe was primarily composed of neutral gas ($\approx 75\% $ hydrogen, helium, and trace quantities of heavy elements). Additionally, there existed a comparatively smaller amount of free electrons relative to the gas, accompanied by the residual photons originating from the big bang (\gls{cmb}) \cite{map_universe, 21century}.\par
-Since neutral hydrogen is the most abundant component of the \gls{igm} before reionization, it provides a convenient tracer for the behavior of baryonic matter in the early universe. Neutral hydrogen has a hyperfine splitting in its 1s ground state caused by the interaction between the magnetic moment of the proton and the electron (Figure \ref{fig:spinflip}). This spin-flip transition results in the absorption or emission of a photon with the frequency of $\mathrm{1420.4057\hspace{0.1cm} MHz}$\cite{low_frequency} corresponding to a wavelength of $\mathrm{21.1cm}$ \cite{21century} \footnote{The existence of this spectral line was theoretically predicted by van de Hulst in 1942, and Ewen and Purcell reported the first ever detection in 1951\cite{21century}.}.\par
+After the occurrence of the big bang and recombination, prior to the formation of the first stars and galaxies ($200 \lesssim z \lesssim 1100$), the universe was composed of neutral gas($\approx 75\% $ hydrogen, helium, and trace quantities of heavy elements), free electrons, and the residual photons originating from the big bang (\gls{cmb}) \cite{map_universe, 21century}. Since neutral hydrogen is the most abundant component of the \gls{igm} before reionization, it provides a convenient tracer for the behavior of baryonic matter in the early universe. Neutral hydrogen has a hyperfine splitting in its 1s ground state caused by the interaction between the magnetic moment of the proton and the electron (Figure \ref{fig:spinflip}). This spin-flip transition results in the absorption or emission of a photon with the frequency of $\mathrm{1420.4057\hspace{0.1cm} MHz}$\cite{low_frequency} corresponding to a wavelength of $\mathrm{21.1cm}$ \cite{21century} \footnote{The existence of this spectral line was theoretically predicted by van de Hulst in 1942, and Ewen and Purcell reported the first ever detection in 1951\cite{21century}.}.\par
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.4]{spinflip.jpg}
@@ -600,7 +599,7 @@ Given that \gls{lm} is not always effective in finding the best-fit point for co
     Probability = e^{\frac{-1}{2}\left(\chi_{new}^2 - \chi^2\right)} 
     \label{eq:mcmc_probability}
 \end{equation}
-As a measure of \gls{mcmc} convergence speed, the "acceptance ratio" is used to determine the fraction of trial steps that end up getting accepted into the chain. An ideal \gls{mcmc} would have an acceptance ratio of 25 percent. It should be noted that the convergence of the \gls{mcmc} is not dependent on the value of the acceptance ratio, but it influences the number of trial steps before the algorithm reaches its convergence. A low acceptance ratio will result in the need for more trial steps, therefore, a longer period of run-time.\par
+As a measure of \gls{mcmc} convergence speed, the "acceptance ratio" is used to determine the fraction of trial steps that end up getting accepted into the chain. It should be noted that the convergence of the \gls{mcmc} is not dependent on the value of the acceptance ratio, but it influences the number of trial steps before the algorithm reaches its convergence. A low acceptance ratio will result in the need for more trial steps, therefore, a longer period of run-time.\par
 A visual summary of \gls{mcmc} algorithm is illustrated in Figure \ref{fig:MCMC_flow}.
 \begin{figure}[h!]
 \centering
@@ -795,8 +794,15 @@ Error-bar of fit & $1.8083 \times 10^ {-1}$ & $7.6298 \times 10^ {1}$& $1.1408 \
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.5]{chain_known_curve.png}
-\caption[Trend of parameters in the mock data \gls{mcmc} chain]{Trend of parameters in the $10^4$ steps \gls{mcmc} chain to fit the mock data. The depicted white noise behavior is considered as the sign of the convergence of the \gls{mcmc} chain (refer to \ref{chap:method,sub:mcmc,subsub:convergence}). The acceptance ratio of the chain is $20.5\%$, close to the ideal of $25\%$. The one-sigma error bar of the fit (table \ref{tab:mcmc_results_known_curve}) is the standard deviation of this chain.}
+\caption[Trend of parameters in the mock data \gls{mcmc} chain]{Trend of parameters in the $10^4$ steps \gls{mcmc} chain to fit the mock data. The depicted white noise behavior is considered as the sign of the convergence of the \gls{mcmc} chain (refer to section \ref{chap:method,sub:mcmc,subsub:convergence}). The acceptance ratio of the chain is $20.5\%$. The one-sigma error bar of the fit (table \ref{tab:mcmc_results_known_curve}) is the standard deviation of this chain.}
 \label{fig:chain_known_curve}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.5]{power_spectrum_known_curve.png}
+\caption[Power spectrum of mock data \gls{mcmc} chain]{Power Spectrum of the $10^4$ steps \gls{mcmc} chain to fit the mock data. The power is uniformly distributed among different frequencies after the burn-in phase. Therefore, this plot is the proof for convergence of the chain (refer to section \ref{chap:method,sub:mcmc,subsub:convergence}).}
+\label{fig:Power_spectrum_known_curve}
 \end{figure}
 
 \begin{figure}[h!]
@@ -839,8 +845,15 @@ expected to have a parabolic dependency on the value of parameters. However, the
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.5]{chain_edges.png}
-\caption[Trend of parameters in the \gls{edges} data \gls{mcmc} chain]{Trend of parameters in the $10^4$ steps \gls{mcmc} chain to fit the \gls{edges} data. The depicted white noise behavior is considered as the sign of the convergence of the \gls{mcmc} chain (refer to \ref{chap:method,sub:mcmc,subsub:convergence}). The acceptance ratio of the chain is  $23.02\%$, close to the ideal of $25\%$. The one-sigma error bar of the fit (table \ref{tab:mcmc_results_edges}) is the standard deviation of this chain.} 
+\caption[Trend of parameters in the \gls{edges} data \gls{mcmc} chain]{Trend of parameters in the $10^4$ steps \gls{mcmc} chain to fit the \gls{edges} data. The depicted white noise behavior is considered as the sign of the convergence of the \gls{mcmc} chain (refer to section \ref{chap:method,sub:mcmc,subsub:convergence}). The acceptance ratio of the chain is  $23.02\%$. The one-sigma error bar of the fit (table \ref{tab:mcmc_results_edges}) is the standard deviation of this chain.} 
 \label{fig:chain_edges}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale =0.5]{power_spectrum_edges.png}
+\caption[Power spectrum of \gls{edges} data \gls{mcmc} chain]{Power Spectrum of the $10^4$ steps \gls{mcmc} chain to fit the \gls{edges} data. The power is uniformly distributed among different frequencies after the burn-in phase. Therefore, this plot is the proof of convergence of the chain (refer to section \ref{chap:method,sub:mcmc,subsub:convergence}).}
+\label{fig:Power_spectrum_edges}
 \end{figure}
 
 \begin{figure}[h!]
