@@ -1,7 +1,3 @@
-% Authors: Simon Geoffroy-Gagnon and Farhad Shokraneh
-% Based on the Thesis by Rubana Bahar Priti
-% Edit: 2020.04.16
-
 \documentclass[12pt, TexShade, letterpaper]{report}
 \usepackage{bm}
 \usepackage[utf8]{inputenc}
@@ -376,9 +372,9 @@ Figure \ref{fig:ares_Curve} shows an \gls{ares}-generated global $\mathrm{21cm}$
 \label{chap:global21cm,sub:non_standard}
 %add the effects of primordial magnetic fields
 The physics of the $\mathrm{21cm}$ signal indicates that if the \gls{igm} ionization state is close to neutral and the coupling terms are dominant (equation \ref{eq:spin_temperature_coupling}), the brightness temperature of this line is strongly dependent on the temperature fluctuations of the \gls{igm}. Therefore, any physical process involving heat exchange with the \gls{igm} is expected to print their signature on the $\mathrm{21cm}$ global signal \cite{21century}. Many proposed models of physics beyond the standard model of cosmology and particle physics predict exotic heating of the 
-\gls{igm} \cite{21century}, Therefore, we dedicate this section to the investigation of these effects. The exact calculation of these fluctuations on the $\mathrm{21cm}$ signal will determine the ability of upcoming observational data to detect these effects.\par
+\gls{igm} \cite{21century}. Therefore, we dedicate this section to the investigation of these effects. The exact calculation of these fluctuations on the $\mathrm{21cm}$ signal will determine the ability of upcoming observational data to detect these effects.\par
 Among these beyond standard models, different dark matter candidates play a pivotal role. For example, it is expected that decaying or annihilating dark matter and evaporation of primordial black holes can inject energy into the \gls{igm} and lead to a stronger brightness temperature of 21cm signal through the \gls{eor}. Therefore, we might be able to constrain these theories by observing their features on the global $\mathrm{21cm}$ signal \cite{primordial_bh, new_physics_thesis, primordial_bh_binary, 21limit_dm_bh, bound_dm} or even rule out some of these candidates \cite{rule_out}.\par
-Another significant effect comes from the interactions associated with cosmic strings. The non-linear gravitational influence of cosmic string wakes or the decay of cosmic string cups has the ability to alter the brightness temperature of $\mathrm{21cm}$ signal \cite{WF_effect_oscar, cosmic_string_oscar, string_loop_robert}. \par
+Another significant effect comes from the interactions associated with cosmic strings. The non-linear gravitational influence of cosmic string wakes or the decay of cosmic string cusps has the ability to alter the brightness temperature of $\mathrm{21cm}$ signal \cite{WF_effect_oscar, cosmic_string_oscar, string_loop_robert}. \par
 Moreover, rapidly growing radio-luminous black holes of intermediate mass emit radio signals on their way to becoming supermassive black holes. Thus, they are a type of astrophysical radio source with the ability to enhance the amplitude of the global $\mathrm{21cm}$ signal \cite{bh_cosmioc_dawn} \footnote{The author of \cite{bh_cosmioc_dawn} claims that the effect of rapidly growing radio-luminous black holes is a reasonable explanation for the signal reported by \gls{edges}.}. \par
 In the remainder of this section, we will focus on two of these distinctive non-standard effects, which attracted the attention of the majority of recent literature related to this area of research.\par
 
@@ -614,14 +610,14 @@ The \gls{mcmc} algorithm requires to explore different regions of the parameter 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.9]{mcmc_uncoverged.jpg}
-\caption[An unconverged \gls{mcmc} chain and its power spectrum]{An unconverged \gls{mcmc} chain (left panel) and its power spectrum (right panel): A converged \gls{mcmc} chain is expected to exhibit the behavior of white noise. Thus, on the power spectrum, the power shall be uniformly distributed among different frequencies (after the burn-in phase of the \gls{mcmc}). Here, the power tends to increase in lower frequencies, and the chain itself does not indicate the behavior of white noise. Therefore, this chain is not yet converged. Figure from Jonathan Sievers \cite{mcmc_convergence_plot}}
+\caption[An unconverged \gls{mcmc} chain and its power spectrum]{An unconverged \gls{mcmc} chain (left panel) and its power spectrum (right panel): A converged \gls{mcmc} chain is expected to exhibit the behavior of white noise. Thus, on the power spectrum, the power shall be uniformly distributed among different frequencies (after the burn-in phase of the \gls{mcmc}). Here, the power tends to increase in lower frequencies, and the chain itself does not indicate the behavior of white noise. Therefore, this chain is not yet converged. Figure from Jonathan Sievers \cite{mcmc_convergence_plot}.}
 \label{fig:MCMC_unconverged}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.9]{mcmc_converged.jpg}
-\caption[A converged \gls{mcmc} chain and its power spectrum]{A converged \gls{mcmc} chain (left panel) and its power spectrum (right panel): A converged \gls{mcmc} chain is expected to exhibit the behavior of white noise. Thus, on the power spectrum, the power shall be uniformly distributed among different frequencies (after the burn-in phase of the \gls{mcmc}). Here, the flat behavior of the power spectrum is evident, and the chain itself represents white noise. Figure from Jonathan Sievers \cite{mcmc_convergence_plot}}
+\caption[A converged \gls{mcmc} chain and its power spectrum]{A converged \gls{mcmc} chain (left panel) and its power spectrum (right panel): A converged \gls{mcmc} chain is expected to exhibit the behavior of white noise. Thus, on the power spectrum, the power shall be uniformly distributed among different frequencies (after the burn-in phase of the \gls{mcmc}). Here, the flat behavior of the power spectrum is evident, and the chain itself represents white noise. Figure from Jonathan Sievers \cite{mcmc_convergence_plot}.}
 \label{fig:MCMC_converged}
 \end{figure}
 
@@ -661,6 +657,7 @@ To ensure the accuracy and reliability of the results produced with the describe
 \label{chap:method,sub:test,subsub:chi}
 The primary focus of this approach lies in examining the results obtained from the \gls{lm} and the associated drawn samples. Numerous samples are drawn from the covariance matrix, and their corresponding chi-square is computed. Given that the covariance matrix holds the information on parameter uncertainties, it is anticipated that, on average, the disparity in chi-square statistics between two distinct samples should be roughly equivalent to one unit per each parameter of the model. This expectation arises from the fact that the chi-square statistic scales according to the uncertainties inherent in both the data and model, which have magnitudes around one.\par
 Figure \ref{fig:csq_test} shows an example of the distribution of disparity between the chi-square values.\par
+
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.8]{csq_hist.png}
@@ -668,9 +665,11 @@ Figure \ref{fig:csq_test} shows an example of the distribution of disparity betw
 On this plot, the average of disparity is 4.03, and the standard deviation is 2.83, in acceptable agreement with our expectations. Therefore, the best-fit parameters are considered a "good fit".}
 \label{fig:csq_test}
 \end{figure}
+
 \subsection{The Chi-Square Parameter Correlation Test}
 \label{chap:method,sub:test,subsub:plot}
 An alternative approach for result verification involves creating plots that depict the relationship between the chi-square values of drawn samples and individual parameters. With reference to the defined chi-square equation (see Equation \ref{eq:chi-square matrix}), which captures the non-linear dependence of chi-square on model parameters, it is anticipated that a parabolic trend will be observed. Figure \ref{fig:csq_params} illustrates plots of chi-square values against parameters for the identical mathematical model as presented in Figure \ref{fig:csq_test}. \par
+
 \begin{figure}[h!]
 \centering
 \includegraphics[scale =0.5]{csq_vs_params.png}
@@ -684,6 +683,7 @@ Following the discussions of chapter \ref{chap:method} on formulating a data fit
 An essential step in the process of model fitting is to determine the parameters of the physical model. As we choose to use \gls{ares} for generating the theoretical curve, the parameterization is restricted to the notation employed by \gls{ares}. We will briefly introduce our chosen parameters and revisit their connection to the underlying physics of the global $\mathrm{21cm}$ line. We proceed by evaluating the quality of fit by estimating the parameters of a mock data set, which in fact, is an \gls{ares}-generated curve. The reliability of the results is proven by considering the values of estimated parameters and the assumed error bars of the mock data. \par
 Finally, we represent the results of parameter estimation for \gls{edges} data. These results will show us that the anomalous behavior of this data (with respect to theoretical expectations) is an obstacle to providing a fit to this signal.\par
 \section{Key Astrophysical Parameters}
+\label{chap:results,sub:parameters}
 Based on the discussions of \ref{chap:global21cm,sub:physics}, the shape and amplitude of the global $\mathrm{21cm}$ signal is dependent on underlying astrophysical processes, especially those related to the \gls{sfr} and reheating of the \gls{igm}. In this section, we will take the discussion further and address our current understanding of this dependency on four astrophysical parameters, which are able to map the parameter space of the global $\mathrm{21cm}$ signal. Constraining these parameters will result in improved comprehension of the thermal history of the \gls{igm} and the population of X-ray sources during high-redshift epochs \cite{21century}.\par
 It is essential to mention that although it is theoretically possible to investigate the cosmological parameters with this signal as well (refer to equation \ref{eq:global_curve} for the dependency of the global curve on cosmological parameters), the accuracy of the observational data is yet insufficient for constraining these parameters. Moreover, the $\mathrm{21cm}$ signal is the only identified probe for some astrophysical mechanisms during the dark ages and \gls{eor}, while cosmological parameters can be studied using \gls{cmb} as well. Therefore, we introduce four astrophysical parameters hereunder, which will form the basis of our analysis. \par
 \begin{enumerate}
@@ -727,7 +727,7 @@ The results of this validation test are shown in Table \ref{tab:mcmc_results_kno
 Figure \ref{fig:fit_curve_known_curve} is the illustration of the data in table \ref{tab:mcmc_results_known_curve}. 
 The blue dotted curve and the red curve on the left panel depict the mock data and the corresponding fit, respectively.
 On the other hand, the right panel, which is the zoomed version of the same plot, demonstrates the two-sigma confidence interval of the fit. The overall output is an acceptable fit considering both the shape and amplitude of the signal.\par
-Figure \ref{fig:chain_known_curve} indicates the white-noise behavior of parameters throughout the chain, which is in agreement with our anticipation for a converged chain. Performing \emph{chi-Square consistency test} on our samples showed that the average disparity between the chi-square of drawn samples is 49.20 (Figure \ref{fig:csq_hist_known_curve}), roughly an order of magnitude larger than the initial expectation ($\approx4$) (refer to Figure \ref{fig:csq_test}). The \emph{chi-square parameter correlation test} (Figures \ref{fig:csq_vs_params_knwon_curve}) did not show parabolic behavior initially. However, Figure \ref{fig:csq_vs_params_zoomed_known_curve}, which demonstrates the zoomed version of the \ref{fig:csq_vs_params_knwon_curve}, gives insights on parabolic behavior for lower values of chi-square. Figure \ref{fig:corner_plots_known_curve} illustrates the corner plots of this chain. The lower left panel indicates that the $f_X$ and $pop\_rad\_ yield\_2$ have the highest amount of correlation in all pairs of parameters.\par
+Figure \ref{fig:chain_known_curve} indicates the white-noise behavior of parameters throughout the chain, and Figure \ref{fig:Power_spectrum_known_curve} shows a flat behavior for the chain power spectrum, which is both in agreement with our anticipation for a converged chain. Performing \emph{chi-Square consistency test} on our samples showed that the average disparity between the chi-square of drawn samples is 49.20 (Figure \ref{fig:csq_hist_known_curve}), roughly an order of magnitude larger than the initial expectation ($\approx4$) (refer to Figure \ref{fig:csq_test}). The \emph{chi-square parameter correlation test} (Figures \ref{fig:csq_vs_params_knwon_curve}) did not show parabolic behavior initially. However, Figure \ref{fig:csq_vs_params_zoomed_known_curve}, which demonstrates the zoomed version of the \ref{fig:csq_vs_params_knwon_curve}, gives insights on parabolic behavior for lower values of chi-square. Figure \ref{fig:corner_plots_known_curve} illustrates the corner plots of this chain. The lower left panel indicates that the $f_X$ and $pop\_rad\_ yield\_2$ have the highest amount of correlation in all pairs of parameters.\par
 
 \begin{table}
 \centering
@@ -760,7 +760,7 @@ In order to obtain the error bars of the \gls{edges} data for the parameter esti
 \begin{equation}
     \frac{\delta T}{T_{sys}} = \frac{1}{\sqrt{Bt}},
 \end{equation}
-where B is the bandwidth, t is the exposure time, and $T_{sys}$ is the system temperature. Assuming a bandwidth of $10^6\mathrm{Hz}$, an exposure time of one day, and a temperature of $\mathrm{3000K}$, we get
+where B is the bandwidth, t is the exposure time, and $T_{sys}$ is the system temperature. Assuming a bandwidth of $10^6\mathrm{Hz}$, an exposure time of one day, and a temperature of $\mathrm{3000K}$, we get:
 \begin{equation}
    \delta T_{EDGES} = \mathrm{10 ^{-2}K} = \mathrm{10mK}. 
 \end{equation}
@@ -768,12 +768,14 @@ where B is the bandwidth, t is the exposure time, and $T_{sys}$ is the system te
 \subsection{Results}
 The outcomes obtained by applying our methodology to the \gls{edges} data are presented in Table \ref{tab:mcmc_results_edges}. In the first row, the best-fit parameters for the half-amplitude data are displayed. Subsequently, the second row exhibits the one-sigma error bar of the fit, derived from the standard deviation of the \gls{mcmc} chain. \par
 Figure \ref{fig:fit_curve_edges} is the visual demonstration of the data from Table \ref{tab:mcmc_results_edges}, with the blue dotted curve representing the data and the red curve portraying the corresponding fit on the left panel. The right panel, being a zoomed version of the same plot, illustrates the two-sigma confidence interval of the fit. The overall findings reveal a notable discrepancy when compared to the observed data, suggesting the implausibility of achieving the \gls{edges} curve by solely considering the expectations of standard physics.\par
-Figure \ref{fig:chain_edges} shows the white-noise behavior of parameters throughout the chain, confirming that it has converged. The performed \emph{chi-square consistency test} on the samples indicated an average disparity of 0.28 between the chi-square values of the drawn samples (Figure \ref{fig:csq_hist_edges}), significantly lower (roughly two orders of magnitude) than the initial expectation of approximately 4. The \emph{chi-square parameter correlation test} (Figures \ref{fig:csq_vs_params_edges}) revealed parabolic behavior only for parameters $pop\_rad\_yield\_2$ and $f_X$. However, upon examining the zoomed version of Figure \ref{fig:csq_vs_params_edges} in Figure \ref{fig:csq_vs_params_zoomed_edges}, it became evident that the two remaining parameters also exhibit parabolic behavior at lower values of chi-square.\par
-The chain's corner plots are depicted in Figure \ref{fig:corner_plots_edges}. Among all six panels, only the middle left panel, which represents the values of $f_X$ and $pop\_rad\_yield\_0$, demonstrates correlation between a pair of parameters.
+Figure \ref{fig:chain_edges} shows the white-noise behavior of parameters throughout the chain, and Figure \ref{fig:Power_spectrum_edges} shows a flat behavior for the chain power spectrum, confirming that it has converged. The performed \emph{chi-square consistency test} on the samples indicated an average disparity of 0.28 between the chi-square values of the drawn samples (Figure \ref{fig:csq_hist_edges}), significantly lower (roughly two orders of magnitude) than the initial expectation of approximately 4. The \emph{chi-square parameter correlation test} (Figures \ref{fig:csq_vs_params_edges}) revealed parabolic behavior only for parameters $pop\_rad\_yield\_2$ and $f_X$. However, upon examining the zoomed version of Figure \ref{fig:csq_vs_params_edges} in Figure \ref{fig:csq_vs_params_zoomed_edges}, it became evident that the two remaining parameters also exhibit parabolic behavior at lower values of chi-square.\par
+The chain's corner plots are depicted in Figure \ref{fig:corner_plots_edges}. Among all six panels, only the middle left panel, which represents the values of $f_X$ and $pop\_rad\_yield\_0$, demonstrates a correlation between a pair of parameters.\par
+While the results of the validity tests, including the chi-square consistency test and chi-square parameter correlation test, did not meet our initial expectations for both mock and \gls{edges} data, we have compelling evidence that the \gls{mcmc} chains have achieved complete convergence (refer to Figure \ref{fig:Power_spectrum_known_curve} and \ref{fig:Power_spectrum_edges}). Furthermore, we demonstrated that the same methodology successfully passed the validity tests when employing a simple four-variable Gaussian model (see \ref{fig:csq_test} and \ref{fig:csq_params}). Consequently, the discrepancy observed in the validity test results appears to stem from the theoretical model generator, \gls{ares}. It is plausible that the chosen parameterization is unsuitable, and the inherent degeneracy in parameter definitions may be contributing to the observed issues.\par
  
 \begin{table}[h!]
 \centering
-\caption[Results of fitting \gls{edges} data with \gls{mcmc} chain]{Results of fitting \gls{edges} data with \gls{mcmc} chain. The upper row is the fit value of four astrophysical parameters of the model, and the lower row is the one-sigma error bar of fit.}
+\caption[Results of fitting \gls{edges} data with \gls{mcmc} chain]{Results of fitting \gls{edges} data with \gls{mcmc} chain. The upper row is the fit value of four astrophysical parameters of the model, and the lower row is the one-sigma error bar of fit. 
+We anticipated the fitted value for $f_X$ to exceed 1, given that it is set to unity for the local universe. The observed discrepancy implies a potential issue either in the \gls{edges} data or in the assumptions made during the definition of $f_X$ (refer to section \ref{chap:results,sub:parameters} for the exact definition of $f_X$).}
 \label{tab:mcmc_results_edges}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -899,7 +901,7 @@ In \cite{pe_galaxy_formation}, authors reported one of the first attempts to for
 
 In an attempt to constrain astrophysical and cosmological parameters at the same time, the \emph{CosmoReionMC}, a \gls{mcmc}-based parameter estimation package, was introduced in 2021. The theoretical model of this analysis includes the effect of five cosmological and seven astrophysical parameters (related to stellar populations). Utilization of this package on \gls{edges} data showed that a short-lived population of metal-free (PopIII) stars with efficient radio emission is required to match the reported absorption amplitude. This new finding suggested an earlier reionization compared to the analysis only based on \gls{cmb} and quasar data. Although this method was successful in matching the position and depth of the \gls{edges} absorption trough, however, its abilities were limited in matching the exact shape of the signal \cite{pe_mcmc_1}.\par
 
-Besides the traditionally well-known \gls{mcmc} approaches, \gls{ann} may also be used to extract the astrophysical parameters from the simulated and observational data sets and infer the physical state of the gas at high redshifts. This method showed particular precision in the mock data and was able to construct the magnitude of the \gls{edges} data but faced difficulties in mimicking the flattened nature of this observational signal \cite{pe_nn_1}.\par
+Besides the traditionally well-known \gls{mcmc} approaches, \gls{ann}s may also be used to extract the astrophysical parameters from the simulated and observational data sets and infer the physical state of the gas at high redshifts. This method showed particular precision in the mock data and was able to construct the magnitude of the \gls{edges} data but faced difficulties in mimicking the flattened nature of this observational signal \cite{pe_nn_1}.\par
 
 Motivated by the findings of previous studies, in this thesis, we examined the capability of the global $\mathrm{21cm}$ signal to assist us in our investigation of the existence of mechanisms beyond the standard model of cosmology and particle physics. The literature review provided a recap of the physics of the $\mathrm{21cm}$ special line, its evolution through the thermal history of the universe, computational tools to simulate the global signal, and the signatures of non-standard physics. We also discussed the experimental efforts to observe this signal through the utilization of radio interferometers and the associated challenges and obstacles.\par
 
@@ -920,8 +922,6 @@ In future studies, we plan to take the analysis further and include a realistic 
 The results will hopefully aid us to realize if existing and future observational data (like \gls{edges}) contain the signatures of new physics and can be explained through these proposed theories.\par
 
 %##############################################################################
-
-\label{chap:appendix,sub:code}
 	% Begin Bibliography
 	{
 	
